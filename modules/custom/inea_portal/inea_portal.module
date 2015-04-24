@@ -1,0 +1,111 @@
+<?php
+/**
+ * @file
+ * Custom INEA module to render some pages and forms.
+ */
+
+
+/**
+ * Implements hook_info_alter().
+ */
+function inea_portal_form_project_node_form_alter(&$form, &$form_state, $form_id) {
+  // Unable field body.
+  $form['body']['#access'] = 0;
+}
+
+
+/**
+ * Implements hook_info_alter().
+ */
+function inea_portal_form_implementation_success_node_form_alter(&$form, &$form_state, $form_id) {
+  // Unable field body.
+  $form['body']['#access'] = 0;
+}
+
+/**
+ * Implements hook_menu_block_tree_alter().
+ */
+function inea_portal_menu_block_tree_alter(&$tree, &$config) {
+  if ($config['level'] == 2 && $config['depth'] == 2) {
+    $tree = _inea_portal_remove_menu_children($tree, 2);
+  }
+}
+
+/**
+ * Helper function prune menu items.
+ */
+function _inea_portal_remove_menu_children($array, $depth) {
+  foreach ($array as $key => $item) {
+    if ($item['link']['depth'] == $depth && count($item['below']) > 3) {
+      $item['below'] = array();
+    }
+    else {
+      $item['below'] = _inea_portal_remove_menu_children($item['below'], $depth);
+    }
+    $array[$key] = $item;
+  }
+  return $array;
+}
+
+function inea_portal_token_info(){
+  $info['tokens']['node']['programme'] = array(
+    'name' => t('Programme'),
+    'description' => t('Returns the url asociated to a programme'),
+  );
+  $info['tokens']['node']['country'] = array(
+    'name' => t('user dummy'),
+    'description' => t('Returns the country associated to the node'),
+  );
+  return $info;
+}
+
+function inea_portal_tokens($type, $tokens, $data, $options) {
+  $replacements = array();   
+  if ($type == 'node') {
+    $node = $data['node'];
+    if ($node->type == 'project') {
+      foreach ($tokens as $name => $original) {
+        switch ($name) {
+          case 'programme':
+            $tid = $node->field_tag_programme['und'][0]['tid'];
+            $term = taxonomy_term_load($tid);
+            switch ($term->name) {
+              case 'CEF-Energy':
+                $name = "connecting-europe-facility/cef-energy";
+                $replacements[$original] = $name;
+              break;
+              case 'CEF-Transport':
+                $name = "connecting-europe-facility/cef-transport";
+                $replacements[$original] = $name;
+              break;
+              case 'CEF-Telecom':
+                $name = "connecting-europe-facility/cef-telecom";
+                $replacements[$original] = $name;
+              break;
+              case 'TEN-T Projects':
+                $name = "ten-t/ten-t-projects";
+                $replacements[$original] = $name;
+              break;
+            }
+            $replacements[$original] = $name;
+          break;
+          case 'country':
+            $countries = $node->field_tag_country['und'];
+            if (count($countries) > 1) {
+              $name = 'multi-country';
+            } else {
+              $tid = $countries[0]['tid'];
+              $term = taxonomy_term_load($tid);
+              $name = str_replace(' ', '-', strtolower($term->name));
+              $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+            }
+            $replacements[$original] = $name;
+          break;
+        }
+      }
+
+    }
+  }
+
+  return $replacements;  
+}
