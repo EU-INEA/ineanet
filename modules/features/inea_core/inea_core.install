@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the INEA Core module.
+ */
+
+
+/**
+ * Implements hook_enable().
+ */
+function inea_core_enable() {
+
+  // Remove default blocks from sitewide context.
+  multisite_drupal_toolbox_remove_block_context('site_wide', 'system-user-menu');
+  multisite_drupal_toolbox_remove_block_context('site_wide', 'search-form');
+  multisite_drupal_toolbox_remove_block_context('site_wide', 'multisite_create_button-create-content-button');
+
+  // Set IPG classification.
+  variable_set('meta_configuration', '16000');
+
+  $module = system_get_info('module', 'inea_core');
+  drupal_set_message(t('INEA Core feature is now active on your site.', array('%v' => $module['version'])));
+}
+
+/**
+ * Implements hook_disable().
+ */
+function inea_core_disable() {
+  $module = system_get_info('module', 'inea_core');
+  drupal_set_message(t('INEA Core %v feature is now inactive on your site.', array('%v' => $module['version'])));
+}
+
+/**
+ * Implements hook_install().
+ */
+function inea_core_install() {
+  // Install scripts here.
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function inea_core_uninstall() {
+  // Uninstall scripts here.
+}

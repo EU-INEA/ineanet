@@ -29,7 +29,7 @@ class EventsMigration extends IneaBasicMigration {
     );
     $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'inea_migration') . '/sources/events.csv', array(), $options);
 
-    $this->destination = new MigrateDestinationNode('event_inea', array('text_format' => 'full_html'));
+    $this->destination = new MigrateDestinationNode('inea_events', array('text_format' => 'full_html'));
 
     $this->addFieldMapping('uid')
       ->defaultValue(1);
@@ -66,7 +66,10 @@ class EventsMigration extends IneaBasicMigration {
       $files = file_scan_directory(variable_get('file_default_scheme', 'public') . '://' . $row->gallery, '/.*\.(jpg|png|gif)$/', array('recurse' => FALSE));
       $fids = array();
       foreach ($files as $file) {
-        $fids[] = array('fid' => _inea_migration_create_file($file, $entity->uid));
+        $fid = _inea_migration_create_file($file, $entity->uid);
+        if ($fid) {
+          $fids[] = array('fid' => $fid);
+        }
       }
       $entity->field_event_picture_gallery['und'] = $fids;
     }

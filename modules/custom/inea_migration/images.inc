@@ -34,5 +34,7 @@ class ImagesMigration extends IneaBasicMigration {
       ->defaultValue(drupal_realpath(variable_get('file_default_scheme', 'public') . '://'));
     $this->addFieldMapping('file_replace')
       ->defaultValue(-1);
+    $this->addFieldMapping('preserve_files')
+      ->defaultValue(TRUE);
   }
 }

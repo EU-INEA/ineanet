@@ -47,7 +47,10 @@ function _inea_portal_remove_menu_children($array, $depth) {
   return $array;
 }
 
-function inea_portal_token_info(){
+/**
+ * Implements hook_token_info().
+ */
+function inea_portal_token_info() {
   $info['tokens']['node']['programme'] = array(
     'name' => t('Programme'),
     'description' => t('Returns the url asociated to a programme'),
@@ -59,8 +62,11 @@ function inea_portal_token_info(){
   return $info;
 }
 
+/**
+ * Implements hook_tokens().
+ */
 function inea_portal_tokens($type, $tokens, $data, $options) {
-  $replacements = array();   
+  $replacements = array();
   if ($type == 'node') {
     $node = $data['node'];
     if ($node->type == 'project') {
@@ -73,39 +79,44 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
               case 'CEF-Energy':
                 $name = "connecting-europe-facility/cef-energy";
                 $replacements[$original] = $name;
-              break;
+                break;
+
               case 'CEF-Transport':
                 $name = "connecting-europe-facility/cef-transport";
                 $replacements[$original] = $name;
-              break;
+                break;
+
               case 'CEF-Telecom':
                 $name = "connecting-europe-facility/cef-telecom";
                 $replacements[$original] = $name;
-              break;
+                break;
+
               case 'TEN-T Projects':
                 $name = "ten-t/ten-t-projects";
                 $replacements[$original] = $name;
-              break;
+                break;
+
             }
             $replacements[$original] = $name;
-          break;
+            break;
+
           case 'country':
             $countries = $node->field_tag_country['und'];
             if (count($countries) > 1) {
               $name = 'multi-country';
-            } else {
+            }
+            else {
               $tid = $countries[0]['tid'];
               $term = taxonomy_term_load($tid);
               $name = str_replace(' ', '-', strtolower($term->name));
               $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
             }
             $replacements[$original] = $name;
-          break;
+            break;
+
         }
       }
-
     }
   }
-
-  return $replacements;  
+  return $replacements;
 }

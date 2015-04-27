@@ -26,7 +26,7 @@ class TopicsMigration extends IneaBasicMigration {
     $this->destination = new MigrateDestinationTerm('tags');
 
     $this->addFieldMapping('vocabulary_machine_name', 'catalog');
-    $this->addFieldMapping('name', 'Name');
+    $this->addFieldMapping('name', 'name');
   }
 
   /**
@@ -34,7 +34,12 @@ class TopicsMigration extends IneaBasicMigration {
    */
   public function prepareRow(stdClass $row) {
     if ($row->catalog == 'Energy countries') {
-      $name = substr($row->Name, 0, -2);
+      if ($row->name == 'Multi-country actions_E') {
+        $name = 'Multi-country projects';
+      }
+      else {
+        $name = substr($row->name, 0, -2);
+      }
       $terms = taxonomy_get_term_by_name($name);
       if (!empty($terms)) {
         $term = reset($terms);
@@ -42,7 +47,7 @@ class TopicsMigration extends IneaBasicMigration {
         return FALSE;
       }
       else {
-        $row->Name = $name;
+        $row->name = $name;
         $row->catalog = 'countries';
       }
     }

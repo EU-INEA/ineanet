@@ -45,6 +45,8 @@ class ProjectsMigration extends IneaBasicMigration {
       ->sourceMigration('Images');
     $this->addFieldMapping('field_project_map:file_class')
       ->defaultValue('MigrateFileFid');
+    $this->addFieldMapping('field_project_map:preserve_files')
+      ->defaultValue(TRUE);
     $this->addFieldMapping('field_project_other_info', 'other_info');
     $this->addFieldMapping('field_project_tags', 'topics')
       ->separator(',')
@@ -70,13 +72,13 @@ class ProjectsMigration extends IneaBasicMigration {
       '112470114528950' => 'CEF-Energy',
     );
     $programme = $programme_map[$row->project_type];
-    
+
     $term = reset(taxonomy_get_term_by_name($programme));
     if (!empty($term)) {
-      $tid = array ('tid' => $term->tid);
+      $tid = array('tid' => $term->tid);
       $entity->field_tag_programme['und'][] = $tid;
     }
-    
+
     if (!empty($entity->field_project_tags)) {
       if (!is_array($entity->field_project_tags)) {
         $entity->field_project_tags = array($entity->field_project_tags);
@@ -88,22 +90,26 @@ class ProjectsMigration extends IneaBasicMigration {
           case 'countries':
             $entity->field_tag_country['und'][] = array('tid' => $tid);
             break;
+
           case 'transport_mode':
             $entity->field_tag_transport_mode['und'][] = array('tid' => $tid);
             break;
+
           case 'pps':
             $entity->field_tag_priority_projects['und'][] = array('tid' => $tid);
             break;
+
           case 'energy_10_pci':
             $entity->field_tag_energy_10_pci['und'][] = array('tid' => $tid);
             break;
+
           case 'energy_type':
             $entity->field_tag_energy_type['und'][] = array('tid' => $tid);
             break;
+
           case 'type_of_project':
             $entity->field_tag_type_of_project['und'][] = array('tid' => $tid);
             break;
-          
         }
       }
       unset($entity->field_project_tags);

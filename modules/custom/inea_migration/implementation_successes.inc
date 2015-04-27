@@ -7,8 +7,8 @@
 
 class ImplementationSuccessesMigration extends IneaBasicMigration {
   /**
-	 * Setup the field mappings between the source and destination.
-	 */
+   * Setup the field mappings between the source and destination.
+   */
   public function __construct($arguments) {
     parent::__construct($arguments);
     ini_set('auto_detect_line_endings', TRUE);
@@ -43,6 +43,8 @@ class ImplementationSuccessesMigration extends IneaBasicMigration {
       ->sourceMigration('Images');
     $this->addFieldMapping('field_is_map:file_class')
       ->defaultValue('MigrateFileFid');
+    $this->addFieldMapping('field_is_map:preserve_files')
+      ->defaultValue(TRUE);
     $this->addFieldMapping('field_is_other_info', 'other_info');
   }
 
@@ -68,18 +70,13 @@ class ImplementationSuccessesMigration extends IneaBasicMigration {
       $files = file_scan_directory(variable_get('file_default_scheme', 'public') . '://' . $row->gallery, '/.*\.(jpg|png|gif)$/', array('recurse' => FALSE));
       $fids = array();
       foreach ($files as $file) {
-        $fids[] = array('fid' => _inea_migration_create_file($file, $entity->uid));
+        $fid = _inea_migration_create_file($file, $entity->uid);
+        if ($fid) {
+          $fids[] = array('fid' => $fid);
+        }
       }
       $entity->field_is_picture_gallery['und'] = $fids;
     }
-    $parent_nid = _inea_migration_load_node_by_old_id('112470000394799');
-    if ($parent_nid) {
-      $menu = array();
-      $menu['enabled'] = TRUE;
-      $menu['link_title'] = $entity->title;
-      $menu['menu_name'] = 'main-menu';
-      $menu['plid'] = _inea_migration_get_node_mlid($parent_nid, 'main-menu');
-      $entity->menu = $menu;
-    }
   }
+
 }

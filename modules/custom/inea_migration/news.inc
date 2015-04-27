@@ -6,7 +6,7 @@
  */
 
 class NewsMigration extends IneaBasicMigration {
-  
+
   /**
    * Setup the field mappings between the source and destination.
    */
@@ -67,13 +67,13 @@ class NewsMigration extends IneaBasicMigration {
     );
     if (!empty($row->image)) {
       $news_type = $news_type_map[$row->image];
-      
+
     }
     if (empty($news_type)) {
-        $news_type = 'General';
+      $news_type = 'General';
     }
     $term = reset(taxonomy_get_term_by_name($news_type));
-    $tid = array ('tid' => $term->tid);
+    $tid = array('tid' => $term->tid);
     $entity->field_news_type['und'][] = $tid;
     if (!empty($row->gallery)) {
       $files = file_scan_directory(variable_get('file_default_scheme', 'public') . '://' . $row->gallery, '/.*\.(jpg|png|gif)$/', array('recurse' => FALSE));
