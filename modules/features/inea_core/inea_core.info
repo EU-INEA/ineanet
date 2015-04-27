@@ -13,3 +13,6 @@ dependencies[] = inea_portal
 dependencies[] = inea_migration
 features[features_api][] = api:2
 multisite_version = 1.7
+php = 5.2.4
+files[] = tests/inea_core.test
+
