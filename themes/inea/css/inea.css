@@ -104,12 +104,23 @@ h1.project-title{
   color: #e0922f;
 }
 
-div#content-wrapper div.node p, div#content-wrapper div.node a, div#content-wrapper div.node table,
-div#content-wrapper div.view p, div#content-wrapper div.view a, div#content-wrapper div.view table {
+div#content-wrapper div.node p, div#content-wrapper div.node a, div#content-wrapper div.node table, div#content-wrapper div.node ul li,
+div#content-wrapper div.view p, div#content-wrapper div.view a, div#content-wrapper div.view table, div#content-wrapper div.view ul li{
   font-size: 12px;
   padding: 0;
   margin: 0;
 }
+
+.node-type-page div#content-wrapper div.node table td {
+  display:table-cell;
+  padding: 8px 12px;
+}
+
+ div#content-wrapper div.node table {display:table; border-collapse: separate; border-spacing: 2px;}
+ div#content-wrapper div.node table tr {display:table-row; }
+ div#content-wrapper div.node table td {display:table-cell; padding: 16px 8px; }
+ div#content-wrapper div.node table td:first-child { width:30px; valign:middle; line-height: normal;} 
+
 
 div#content-wrapper div.node p,
 div#content-wrapper div.view p {
@@ -121,14 +132,16 @@ div#content-wrapper div.view a {
   color: #0000ff;
 }
 
-div#content-wrapper div.node h2,
-div#content-wrapper div.view h2 {
+div#content-wrapper div.node h2, div#content-wrapper div.node p.h2,
+div#content-wrapper div.view h2, div#content-wrapper div.view p.h2 {
   font-size: 18px;
   font-style: verdana, arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   color: #262261;
 }
+
+/*tm>*/
 
 div#content-wrapper div.node h4,
 div#content-wrapper div.view h4 {
@@ -142,7 +155,6 @@ div#content-wrapper div.view h4 {
 hr {
   margin: 6px 0;
 }
-
 /*
  *  Main Menu
  */
@@ -283,7 +295,7 @@ div.block.bottom-banner div.content p{
   margin: 0;
 }
 div.block.bottom-banner div.content  a{
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 div#block-views-latest-news-block div.panel-heading{

@@ -68,11 +68,11 @@ function inea_preprocess_page(&$variables) {
     'sm' => 12,
     'xs' => 12,
   );
-  
+
   $variables['page_type'] = 'common';
   $variables['title_image'] = '';
-  
-  if(isset($variables['node']) && $variables['node']->type == "project") {
+
+  if (isset($variables['node']) && $variables['node']->type == "project") {
     $variables['page_type'] = 'project';
     $node = $variables['node'];
     if (!empty($node->field_tag_transport_mode)) {
@@ -82,7 +82,6 @@ function inea_preprocess_page(&$variables) {
       $tid = $node->field_tag_energy_type['und'][0]['tid'];
     }
     $term_image = taxonomy_term_load($tid);
-    
   }
   else {
     $path = explode("/", current_path());
@@ -93,16 +92,16 @@ function inea_preprocess_page(&$variables) {
     }
   }
   if (!empty($term_image) && isset($term_image->field_term_image['und'])) {
-    $image =  theme('image', array(
+    $image = theme('image', array(
       'path' => $term_image->field_term_image['und'][0]['uri'],
-      'alt' => t($term_image->name),
-      'title' => t($term_image->name)
+      'alt' => $term_image->name,
+      'title' => $term_image->name,
     ));
     $path = _inea_generate_term_path($term_image);
     $variables['title_image'] = theme('link', array(
       'path' => $path,
       'text' => $image,
-      'options' => array('html' => TRUE,),
+      'options' => array('html' => TRUE),
     ));
   }
 }
@@ -137,7 +136,6 @@ function inea_preprocess_menu_block_wrapper(&$variables) {
       $variables['id'] = 'left-navigation';
     }
   }
-
 }
 
 /**
@@ -170,30 +168,42 @@ function _inea_preprocess_views_view__latest_news__block(&$variables) {
   $variables['footer'] = l(t("See more news"), "news-events/newsroom");
 }
 
+/**
+ * Helper function to preprocess CEF project views.
+ */
 function _inea_preprocess_views_view__cef_energy_countries(&$variables) {
   $term = _inea_generate_view_term($variables['view']);
   $variables['header'] = $term . $variables['header'];
 }
 
+/**
+ * Helper function to preprocess TEN-T project views.
+ */
 function _inea_preprocess_views_view__ten_t_projects_by_programme_and_other_tag(&$variables) {
   $term = _inea_generate_view_term($variables['view']);
   $variables['header'] = $term . $variables['header'];
 }
 
+/**
+ * Helper function to render a term associated with a view.
+ */
 function _inea_generate_view_term($view) {
-  if (is_array($view->args) && count($view->args)>1) {
+  if (is_array($view->args) && count($view->args) > 1) {
     $term_name = end($view->args);
   }
   if (!empty($term_name)) {
     $terms = taxonomy_get_term_by_name($term_name);
     if (!empty($terms)) {
       $term = reset($terms);
-      return render(taxonomy_term_view($term)); 
+      return render(taxonomy_term_view($term));
     }
   }
   return '';
 }
 
+/**
+ * Helper function to generate the view path for a term.
+ */
 function _inea_generate_term_path($term) {
   $alias = explode("/", drupal_get_path_alias(current_path()));
   $path[] = $alias[0];

@@ -2,6 +2,7 @@ name = inea_sub_theme
 description = Sub theme of default Multisite theme for the INEA portal
 package = Fpfis_cms_theme
 version = "7.x-1.0"
+multisite_version = "1.7"
 core = "7.x"
 base theme = ec_resp
 php = 5.2.4
@@ -35,8 +36,3 @@ settings[shortcut_module_link] = 0
 ; Information added by drupal . org packaging script on 2011-01-05
 project = "drupal"
 datestamp = "1294208756"
-
-
-; Information added by Acquia . com packaging script
-acquia = "1"
-
