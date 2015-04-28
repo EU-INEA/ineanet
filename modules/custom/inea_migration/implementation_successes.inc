@@ -27,7 +27,7 @@ class ImplementationSuccessesMigration extends IneaBasicMigration {
       'embedded_newlines' => 1,
       'escape' => ' ',
     );
-    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'inea_migration') . '/sources/successes.csv', array(), $options);
+    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/sites/inea/modules/content/successes.csv', array(), $options);
 
     $this->destination = new MigrateDestinationNode('implementation_success', array('text_format' => 'full_html'));
 
@@ -38,7 +38,7 @@ class ImplementationSuccessesMigration extends IneaBasicMigration {
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('field_content_migration_info', 'id');
     $this->addFieldMapping('field_is_summary', 'summary');
-    $this->addFieldMapping('body', 'body');
+    $this->addFieldMapping('field_is_description', 'body');
     $this->addFieldMapping('field_is_map', 'image')
       ->sourceMigration('Images');
     $this->addFieldMapping('field_is_map:file_class')

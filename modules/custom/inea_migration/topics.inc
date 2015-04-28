@@ -21,7 +21,7 @@ class TopicsMigration extends IneaBasicMigration {
       ),
     ), MigrateDestinationTerm::getKeySchema());
 
-    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'inea_migration') . '/sources/topics.csv', array(), array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/sites/inea/modules/content/topics.csv', array(), array('header_rows' => 1));
 
     $this->destination = new MigrateDestinationTerm('tags');
 

@@ -28,7 +28,7 @@ class NewsMigration extends IneaBasicMigration {
       'embedded_newlines' => 1,
       'escape' => ' ',
     );
-    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'inea_migration') . '/sources/news.csv', array(), $options);
+    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/sites/inea/modules/content/news.csv', array(), $options);
 
     $this->destination = new MigrateDestinationNode('news', array('text_format' => 'full_html'));
 
@@ -41,7 +41,7 @@ class NewsMigration extends IneaBasicMigration {
     $this->addFieldMapping('field_content_migration_info', 'id');
     $this->addFieldMapping('body', 'body');
     $this->addFieldMapping('body:summary', 'description');
-    $this->addFieldMapping('field_project_tags', 'topics')
+    $this->addFieldMapping('field_content_tags', 'topics')
       ->separator(',')
       ->sourceMigration('Topics');
   }

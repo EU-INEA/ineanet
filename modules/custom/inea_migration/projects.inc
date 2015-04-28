@@ -29,7 +29,7 @@ class ProjectsMigration extends IneaBasicMigration {
       'embedded_newlines' => 1,
       'escape' => ' ',
     );
-    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'inea_migration') . '/sources/projects.csv', array(), $options);
+    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/sites/inea/modules/content/projects.csv', array(), $options);
 
     $this->destination = new MigrateDestinationNode('project', array('text_format' => 'full_html'));
 
