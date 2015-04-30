@@ -68,68 +68,72 @@
 
   $block_no_body_class = array();
 
-  $panel = TRUE;
+  $panel = true;
   foreach ($block_no_panel as $key => $value) {
-    if ($block->module == $key) {
-      if (is_array($value)) {
-        foreach ($value as $delta) {
-          if ($block->delta == $delta) {
-            $panel = FALSE;
-            break;
+      if ($block->module == $key) {
+          if (is_array($value)) {
+              foreach ($value as $delta) {
+                  if ($block->delta == $delta) {
+                      $panel = false;
+                      break;
+                  }
+              }
           }
-        }
-      }
-      else {
-        if ($block->delta == $value) {
-          $panel = FALSE;
-          break;
-        }
+            else {
+                if ($block->delta == $value) {
+                    $panel = false;
+                    break;
+                }
+            }
       }
     }
-  }
 
-  $title = true;
-  foreach ($block_no_title as $key => $value) {
-    if ($block->module == $key) {
-      if (is_array($value)) {
-        foreach ($value as $delta) {
-          if ($block->delta == $delta) {
-            $title = false;
-            break;
-          }
+    $title = true;
+    foreach ($block_no_title as $key => $value) {
+        if ($block->module == $key) {
+            if (is_array($value)) {
+                foreach ($value as $delta) {
+                    if ($block->delta == $delta) {
+                        $title = false;
+                        break;
+                    }
+                }
+            }
+            else {
+                if ($block->delta == $value) {
+                    $title = false;
+                    break;
+                }
+            }
         }
-      }
-      else {
-        if ($block->delta == $value) {
-          $title = false;
-          break;
-        }
-      }
-    }
-  }   
+    }   
 
-  $body_class = true;
-  foreach ($block_no_body_class as $key => $value) {
-    if ($block->module == $key && $block->delta == $value) {
-      $body_class = false;
-    }
-  }      
+    $body_class = true;
+    foreach ($block_no_body_class as $key => $value) {
+        if ($block->module == $key && $block->delta == $value) {
+            $body_class = false;
+        }
+    }      
 ?>
 
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> <?php print $block->css_class; ?> <?php if ($panel) print 'panel panel-default clearfix'; ?>">
+<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> <?php print $block->css_class; ?> <?php if ($panel) { print 'panel panel-default clearfix'; 
+} ?>">
   
 <?php print render($title_prefix); ?>
-<?php if ($title && $block->subject): ?>
-  <div class="<?php if ($panel) print 'panel-heading'; ?>">
+<?php if ($title && $block->subject) : ?>
+  <div class="<?php if ($panel) { print 'panel-heading'; 
+} ?>">
     <?php print $block->subject ?>
   </div>
-<?php endif;?>
+<?php 
+endif;?>
 <?php print render($title_suffix); ?>
 
-  <div class="<?php if ($panel && $body_class) print 'panel-body'; ?> content"<?php print $content_attributes; ?>>
-  <?php 
+  <div class="<?php if ($panel && $body_class) { print 'panel-body'; 
+} ?> content"<?php print $content_attributes; ?>>
+    <?php 
     print $content;
-   ?>
+    ?>
   </div>
 
 </div>

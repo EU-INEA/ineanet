@@ -114,20 +114,22 @@ global $base_url;
     </div>
   </div><!-- /#layout-header -->
   
-  <div class="region-featured-wrapper <?php if ($has_responsive_sidebar) print 'sidebar-visible-sm'; ?>">
-    <?php if ($menu_visible || $has_responsive_sidebar): ?>
+  <div class="region-featured-wrapper <?php if ($has_responsive_sidebar) { print 'sidebar-visible-sm'; 
+} ?>">
+    <?php if ($menu_visible || $has_responsive_sidebar) : ?>
       <div class="mobile-user-bar navbar navbar-default visible-xs" data-spy="affix" data-offset-top="82">
         <div class="container">
 
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header" data-spy="affix" data-offset-top="165">
-            <?php if ($menu_visible): ?>
+            <?php if ($menu_visible) : ?>
               <button id="menu-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <div class="arrow-down"></div>
               </button>
-            <?php endif; ?>
+            <?php 
+endif; ?>
 
-            <?php if ($has_responsive_sidebar): ?>
+            <?php if ($has_responsive_sidebar) : ?>
               <div class="sidebar-button-wrapper">
                 <button class="sidebar-button">
                   <span class="icon-bar"></span>
@@ -135,23 +137,26 @@ global $base_url;
                   <span class="icon-bar"></span>
                 </button>
               </div>
-            <?php endif; ?>
+            <?php 
+endif; ?>
           </div>
         </div><!-- /.container -->
       </div><!-- /.navbar -->
-    <?php endif; ?>
+    <?php 
+endif; ?>
 
     <?php print $regions['featured']; ?>
 
   </div>
 
-  <?php if ($has_responsive_sidebar): ?>
+    <?php if ($has_responsive_sidebar) : ?>
     <div id="responsive-sidebar">
       <div id="responsive-header-right"></div>
       <div id="responsive-sidebar-left"></div>
       <div id="responsive-sidebar-right"></div>
     </div><!-- /#responsive-sidebar-->   
-  <?php endif; ?>
+    <?php 
+endif; ?>
 
   <div id="layout-body" class="container">
     <div class="row">
@@ -161,18 +166,20 @@ global $base_url;
       </div>
     </div>
 
-    <?php if ($messages): ?>
+    <?php if ($messages) : ?>
     <div id="messages">
         <?php print $messages; ?>
     </div><!-- /#messages -->
-    <?php endif; ?>
+    <?php 
+endif; ?>
         
     <div class="row">
-      <?php if ($regions['sidebar_left']): ?>
+        <?php if ($regions['sidebar_left']) : ?>
       <div id="sidebar-left" class="col-lg-<?php print ($cols['sidebar_left']['lg']); ?> col-md-<?php print ($cols['sidebar_left']['md']); ?> col-sm-<?php print ($cols['sidebar_left']['sm']); ?> col-xs-<?php print ($cols['sidebar_left']['xs']); ?> sidebar-left visible-lg visible-md">
         <?php print $regions['sidebar_left']; ?>
       </div>
-      <?php endif; ?>     
+        <?php 
+endif; ?>     
 
       <div id="content-wrapper" class="col-lg-<?php print $cols['content_main']['lg']; ?> col-md-<?php print $cols['content_main']['md']; ?> col-sm-<?php print $cols['content_main']['sm']; ?> col-md-<?php print $cols['content_main']['xs']; ?>">
         
@@ -180,14 +187,16 @@ global $base_url;
 
         <?php print render($title_prefix); ?>
 
-        <?php if ($title): ?>
+        <?php if ($title) : ?>
           <h1 class="col-lg-<?php print $cols['title']['lg']; ?> col-md-<?php print $cols['title']['md']; ?> col-sm-<?php print $cols['title']['sm']; ?> col-xs-<?php print $cols['title']['xs']; ?> <?php print $page_type;?>-title" id="page-title">
-            <?php if ($title_image): ?>
-              <?php print $title_image; ?>
-            <?php endif; ?>
+            <?php if ($title_image) : ?>
+                <?php print $title_image; ?>
+            <?php 
+endif; ?>
             <?php print $title; ?>
           </h1>
-        <?php endif; ?>
+        <?php 
+endif; ?>
       
         <?php print render($title_suffix); ?>
 
@@ -195,27 +204,29 @@ global $base_url;
 
         <a id="main-content"></a>
 
-        <?php if ($tabs): ?>
+        <?php if ($tabs) : ?>
         <div class="tabs">
-          <?php print render($tabs); ?>
+            <?php print render($tabs); ?>
         </div>
-        <?php endif; ?>
+        <?php 
+endif; ?>
 
         <?php print $regions['help']; ?>
         
-        <?php if ($action_links): ?>
+        <?php if ($action_links) : ?>
         <ul class="action-links">
-          <?php print render($action_links); ?>
+            <?php print render($action_links); ?>
         </ul>
-        <?php endif; ?>
+        <?php 
+endif; ?>
 
         <div class="row">
           <div class="col-lg-<?php print $cols['content']['lg']; ?> col-md-<?php print $cols['content']['md']; ?> col-sm-<?php print $cols['content']['sm']; ?> col-xs-<?php print $cols['content']['xs']; ?>">
-          <?php print $regions['content']; ?>
+            <?php print $regions['content']; ?>
           </div>
 
           <div class="col-lg-<?php print $cols['content_right']['lg']; ?> col-md-<?php print $cols['content_right']['md']; ?> col-sm-<?php print $cols['content_right']['sm']; ?> col-xs-<?php print $cols['content_right']['xs']; ?>">
-          <?php print $regions['content_right']; ?>
+            <?php print $regions['content_right']; ?>
           </div>
         </div>
         
@@ -225,27 +236,30 @@ global $base_url;
       </div>
 
       <div class="clearfix visible-sm visible-xs"></div>
-      <?php if ($cols['sidebar_right']['md'] == 12): ?>
+        <?php if ($cols['sidebar_right']['md'] == 12) : ?>
       <div class="clearfix visible-md"></div>
-      <?php endif; ?>
+        <?php 
+endif; ?>
 
-      <?php if ($regions['sidebar_right']): ?>
+        <?php if ($regions['sidebar_right']) : ?>
       <div id="sidebar-right" class="col-lg-<?php print ($cols['sidebar_right']['lg']); ?> col-md-<?php print ($cols['sidebar_right']['md']); ?> col-sm-<?php print ($cols['sidebar_right']['sm']); ?> col-xs-<?php print ($cols['sidebar_right']['xs']); ?> sidebar-right visible-lg visible-md">
         <?php print $regions['sidebar_right']; ?>
       </div>  
-      <?php endif; ?>
+        <?php 
+endif; ?>
     </div>
     <div class="row">
-      <?php if ($regions['site_bottom']): ?>
+        <?php if ($regions['site_bottom']) : ?>
       <div id="site-bottom" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 site-bottom visible-lg visible-md">
         <?php print $regions['site_bottom']; ?>
       </div>  
-      <?php endif; ?>
+        <?php 
+endif; ?>
     </div>
   </div><!-- /#layout-body -->
 
   <div id="layout-footer">
     <div class="container">
-      <?php print $regions['footer']; ?>
+        <?php print $regions['footer']; ?>
     </div>
   </div><!-- /#layout-footer -->
