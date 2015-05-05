@@ -87,7 +87,7 @@ class ProjectsMigration extends IneaBasicMigration {
         $term = taxonomy_term_load($tid);
         $vocabulary = taxonomy_vocabulary_load($term->vid);
         switch ($vocabulary->machine_name) {
-          case 'countries':
+          case 'country':
             $entity->field_tag_country['und'][] = array('tid' => $tid);
             break;
 
@@ -95,7 +95,7 @@ class ProjectsMigration extends IneaBasicMigration {
             $entity->field_tag_transport_mode['und'][] = array('tid' => $tid);
             break;
 
-          case 'pps':
+          case 'priority_project':
             $entity->field_tag_priority_projects['und'][] = array('tid' => $tid);
             break;
 
@@ -107,7 +107,7 @@ class ProjectsMigration extends IneaBasicMigration {
             $entity->field_tag_energy_type['und'][] = array('tid' => $tid);
             break;
 
-          case 'type_of_project':
+          case 'type':
             $entity->field_tag_type_of_project['und'][] = array('tid' => $tid);
             break;
         }

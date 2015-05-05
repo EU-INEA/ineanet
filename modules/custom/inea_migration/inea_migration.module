@@ -70,6 +70,8 @@ function _inea_migration_update_links_node($nid, &$context) {
   if (empty($context['sandbox'])) {
     $text_fields = array(
       'body',
+      'field_project_description',
+      'field_is_description',
       'field_project_summary',
       'field_project_other_info',
       'field_is_summary',
@@ -114,11 +116,14 @@ function _inea_migration_update_links($content) {
       $old_id = substr($link->getAttribute('id'), 4);
       $nid = _inea_migration_load_node_by_old_id($old_id);
       if ($nid) {
-        $href = '/' . drupal_get_path_alias('node/' . $nid);
-        $link->removeAttribute('id');
+        $href = base_path() . drupal_get_path_alias('node/' . $nid);
       }
       else {
-        $href = '/NO/OLD/NID/FOUND';
+        $view_map = _inea_migration_view_map();
+        $href = base_path() . $view_map[(integer) $old_id];
+      }
+      if (!isset($href)) {
+        $href = "/URL/NOT/FOUND";
       }
       $link->setAttribute('href', $href);
     }
@@ -200,4 +205,158 @@ function _inea_migration_get_mlid($path) {
     $mlid[] = $menu_info[$key]->mlid;
   }
   return $mlid;
+}
+
+/**
+ * Helper function to get a map of transformed views.
+ */
+function _inea_migration_view_map() {
+  $view_map = &drupal_static(__FUNCTION__);
+  if (!isset($view_map)) {
+    $view_map  = array(
+      // Ten-t projects by country.
+      '112470000000715' => 'ten-t/ten-t-projects/projects-by-country/italy.htm',
+      '112470000000537' => 'ten-t/ten-t-projects/projects-by-country.htm',
+      '112470000000712' => 'ten-t/ten-t-projects/projects-by-country/greece.htm',
+      '112470000000780' => 'ten-t/ten-t-projects/projects-by-country/united-kingdom.htm',
+      '112470000000709' => 'ten-t/ten-t-projects/projects-by-country/finland.htm',
+      '112470000000777' => 'ten-t/ten-t-projects/projects-by-country/slovenia.htm',
+      '112470000000706' => 'ten-t/ten-t-projects/projects-by-country/czech-republic.htm',
+      '112470000000774' => 'ten-t/ten-t-projects/projects-by-country/portugal.htm',
+      '112470000000703' => 'ten-t/ten-t-projects/projects-by-country/belgium.htm',
+      '112470000000719' => 'ten-t/ten-t-projects/projects-by-country/malta.htm',
+      '112470000000716' => 'ten-t/ten-t-projects/projects-by-country/latvia.htm',
+      '112470000000713' => 'ten-t/ten-t-projects/projects-by-country/hungary.htm',
+      '112470000003210' => 'ten-t/ten-t-projects/projects-by-country/multi-country-projects.htm',
+      '112470000000710' => 'ten-t/ten-t-projects/projects-by-country/france.htm',
+      '112470000000778' => 'ten-t/ten-t-projects/projects-by-country/spain.htm',
+      '112470000000707' => 'ten-t/ten-t-projects/projects-by-country/denmark.htm',
+      '112470000000775' => 'ten-t/ten-t-projects/projects-by-country/romania.htm',
+      '112470000000704' => 'ten-t/ten-t-projects/projects-by-country/bulgaria.htm',
+      '112470000000720' => 'ten-t/ten-t-projects/projects-by-country/netherlands.htm',
+      '112470000000717' => 'ten-t/ten-t-projects/projects-by-country/lithuania.htm',
+      '112470000000714' => 'ten-t/ten-t-projects/projects-by-country/ireland.htm',
+      '112470006418960' => 'ten-t/ten-t-projects/projects-by-country/croatia.htm',
+      '112470000000711' => 'ten-t/ten-t-projects/projects-by-country/germany.htm',
+      '112470000000779' => 'ten-t/ten-t-projects/projects-by-country/sweden.htm',
+      '112470000000779' => 'ten-t/ten-t-projects/projects-by-country/sweden.htm',
+      '112470000000708' => 'ten-t/ten-t-projects/projects-by-country/estonia.htm',
+      '112470000000776' => 'ten-t/ten-t-projects/projects-by-country/slovakia.htm',
+      '112470000000705' => 'ten-t/ten-t-projects/projects-by-country/cyprus.htm',
+      '112470000000773' => 'ten-t/ten-t-projects/projects-by-country/poland.htm',
+      '112470000000702' => 'ten-t/ten-t-projects/projects-by-country/austria.htm',
+      '112470000000718' => 'ten-t/ten-t-projects/projects-by-country/luxembourg.htm',
+      '112470000000718' => 'ten-t/ten-t-projects/projects-by-country/luxembourg.htm',
+      // Ten-trojects by transport.
+      '112470000511232' => 'ten-t/ten-t-projects/projects-by-transport-mode/ris.htm',
+      '112470000000662' => 'ten-t/ten-t-projects/projects-by-transport-mode/galileo.htm',
+      '112470000000659' => 'ten-t/ten-t-projects/projects-by-transport-mode/road.htm',
+      '112470000000656' => 'ten-t/ten-t-projects/projects-by-transport-mode/air.htm',
+      '112470000000539' => 'ten-t/ten-t-projects/projects-by-transport-mode.htm',
+      '112470003184569' => 'ten-t/ten-t-projects/projects-by-transport-mode/ppp.htm',
+      '112470000000663' => 'ten-t/ten-t-projects/projects-by-transport-mode/its-for-road.htm',
+      '112470000000660' => 'ten-t/ten-t-projects/projects-by-transport-mode/water.htm',
+      '112470000000657' => 'ten-t/ten-t-projects/projects-by-transport-mode/co-modality.htm',
+      '112470003184628' => 'ten-t/ten-t-projects/projects-by-transport-mode/greening transport.htm',
+      '112470000003768' => 'ten-t/ten-t-projects/projects-by-transport-mode/ertms.htm',
+      '112470000000661' => 'ten-t/ten-t-projects/projects-by-transport-mode/sesar.htm',
+      '112470000000658' => 'ten-t/ten-t-projects/projects-by-transport-mode/rail.htm',
+      // EERP projects.
+      '112470000128135' => 'ten-t/ten-t_projects/eerp_projects/eerp_projects.htm',
+      // Priority projects.
+      '112470000000098' => 'ten-t/ten-t-projects/projects-by-priority-project.htm',
+      '112470000000597' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_1/priority_project_1.htm',
+      '112470000000599' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_2/priority_project_2.htm',
+      '112470000000601' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_3/priority_project_3.htm',
+      '112470000000603' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_4/priority_project_4.htm',
+      '112470000000605' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_5/priority_project_5.htm',
+      '112470000000607' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_6/priority_project_6.htm',
+      '112470000000609' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_7/priority_project_7.htm',
+      '112470000000611' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_8/priority_project_8.htm',
+      '112470000000613' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_9/priority_project_9.htm',
+      '112470000000615' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_10/priority_project_10.htm',
+      '112470000000617' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_11/priority_project_11.htm',
+      '112470000000619' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_12/priority_project_12.htm',
+      '112470000000621' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_13/priority_project_13.htm',
+      '112470000000623' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_14/priority_project_14.htm',
+      '112470000000625' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_15/priority_project_15.htm',
+      '112470000000627' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_16/priority_project_16.htm',
+      '112470000000629' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_17/priority_project_17.htm',
+      '112470000000631' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_18/priority_project_18.htm',
+      '112470000000633' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_19/priority_project_19.htm',
+      '112470000000635' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_20/priority_project_20.htm',
+      '112470000000637' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_21/priority_project_21.htm',
+      '112470000000639' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_22/priority_project_22.htm',
+      '112470000000641' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_23/priority_project_23.htm',
+      '112470000000643' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_24/priority_project_24.htm',
+      '112470000000645' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_25/priority_project_25.htm',
+      '112470000000647' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_26/priority_project_26.htm',
+      '112470000000649' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_27/priority_project_27.htm',
+      '112470000000651' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_28/priority_project_28.htm',
+      '112470000000653' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_29/priority_project_29.htm',
+      '112470000000655' => 'ten-t/ten-t_projects/30_priority_projects/priority_project_30/priority_project_30.htm',
+      // Implementation successes.
+      '112470000394799' => 'ten-t/ten-t_implementation_successes/project_implementation_successes.htm',
+      // CEF projects by PCI.
+      '112470114517387' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-10.htm',
+      '112470114517373' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-6.htm',
+      '112470114517225' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-3.htm',
+      '112470114517187' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest',
+      '112470114517375' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-7.htm',
+      '112470114517229' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-4.htm',
+      '112470114517215' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-1.htm',
+      '112470114517383' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-9.htm',
+      '112470114517379' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-8.htm',
+      '112470114517231' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-5.htm',
+      '112470114517220' => 'cef/cef_energy/ten-e_projects/connecting-europe-facility/cef-energy/projects-by-common-interest/pci-2.htm',
+      // CEF projects by type.
+      '112470114521407' => 'connecting-europe-facility/cef-energy/projects-by-sector/oil.htm',
+      '112470114521402' => 'connecting-europe-facility/cef-energy/projects-by-sector/gas.htm',
+      '112470114521415' => 'connecting-europe-facility/cef-energy/projects-by-sector/smart-grids.htm',
+      '112470114521391' => 'connecting-europe-facility/cef-energy/projects-by-sector',
+      '112470114521399' => 'connecting-europe-facility/cef-energy/projects-by-sector/electricity.htm',
+      // CEF projects by country.
+      '112470114529042' => 'connecting-europe-facility/cef-energy/projects-by-country/italy.htm',
+      '112470114549881' => 'connecting-europe-facility/cef-energy/projects-by-country/norway.htm',
+      '112470114529021' => 'connecting-europe-facility/cef-energy/projects-by-country/greece.htm',
+      '112470114529133' => 'connecting-europe-facility/cef-energy/projects-by-country/united-kingdom.htm',
+      '112470114529000' => 'connecting-europe-facility/cef-energy/projects-by-country/finland.htm',
+      '112470114529112' => 'connecting-europe-facility/cef-energy/projects-by-country/slovenia.htm',
+      '112470114528979' => 'connecting-europe-facility/cef-energy/projects-by-country/czech-republic.htm',
+      '112470114529091' => 'connecting-europe-facility/cef-energy/projects-by-country/portugal.htm',
+      '112470114528958' => 'connecting-europe-facility/cef-energy/projects-by-country/belgium',
+      '112470114529070' => 'connecting-europe-facility/cef-energy/projects-by-country/malta.htm',
+      '112470114529049' => 'connecting-europe-facility/cef-energy/projects-by-country/latvia.htm',
+      '112470114549898' => 'connecting-europe-facility/cef-energy/projects-by-country/turkey.htm',
+      '112470114529028' => 'connecting-europe-facility/cef-energy/projects-by-country/hungary.htm',
+      '112470114529140' => 'connecting-europe-facility/cef-energy/projects-by-country/multi-country_projects.htm',
+      '112470114529007' => 'connecting-europe-facility/cef-energy/projects-by-country/france.htm',
+      '112470114529119' => 'connecting-europe-facility/cef-energy/projects-by-country/spain.htm',
+      '112470114528986' => 'connecting-europe-facility/cef-energy/projects-by-country/denmark.htm',
+      '112470114529098' => 'connecting-europe-facility/cef-energy/projects-by-country/romania.htm',
+      '112470114528965' => 'connecting-europe-facility/cef-energy/projects-by-country/bulgaria',
+      '112470114529077' => 'connecting-europe-facility/cef-energy/projects-by-country/netherlands.htm',
+      '112470114529056' => 'connecting-europe-facility/cef-energy/projects-by-country/lithuania.htm',
+      '112470114529154' => 'connecting-europe-facility/cef-energy/projects-by-country.htm',
+      '112470114529035' => 'connecting-europe-facility/cef-energy/projects-by-country/ireland.htm',
+      '112470114529147' => 'connecting-europe-facility/cef-energy/projects-by-country/croatia.htm',
+      '112470114529014' => 'connecting-europe-facility/cef-energy/projects-by-country/germany.htm',
+      '112470114529126' => 'connecting-europe-facility/cef-energy/projects-by-country/sweden.htm',
+      '112470114528993' => 'connecting-europe-facility/cef-energy/projects-by-country/estonia.htm',
+      '112470114529105' => 'connecting-europe-facility/cef-energy/projects-by-country/slovakia.htm',
+      '112470114528972' => 'connecting-europe-facility/cef-energy/projects-by-country/cyprus.htm',
+      '112470114529084' => 'connecting-europe-facility/cef-energy/projects-by-country/poland.htm',
+      '112470114528951' => 'connecting-europe-facility/cef-energy/projects-by-country/austria',
+      '112470114529063' => 'connecting-europe-facility/cef-energy/projects-by-country/luxembourg.htm',
+      // News lists.
+      '112470000470427' => 'news-events/newsroom/archive/2009',
+      '112470002387710' => 'news-events/newsroom/archive/2010',
+      '112470001027229' => 'news-events/newsroom/archive/2011',
+      '112470004509098' => 'news-events/newsroom/archive/2012',
+      '112470008075866' => 'news-events/newsroom/archive/2013',
+      '112470114336990' => 'news-events/newsroom/archive/2014',
+      '112470000000118' => 'news-events/newsroom',
+    );
+  }
+  return $view_map;
 }
