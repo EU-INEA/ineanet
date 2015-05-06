@@ -54,7 +54,7 @@ class EventsMigration extends IneaBasicMigration {
       return FALSE;
     }
     $content = explode("---", $row->content);
-    $row->body = $content[0];
+    $row->body = $row->other_info = str_replace(' "', '"', $content[0]);
   }
 
   /**
