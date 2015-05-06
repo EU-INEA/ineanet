@@ -58,9 +58,16 @@ class ProjectsMigration extends IneaBasicMigration {
    */
   public function prepareRow(stdClass $row) {
     $contents = explode("---", $row->contents);
+    $row->title = trim(strip_tags($contents[0]));
     $row->summary = strip_tags($contents[1]);
-    $row->body = $contents[3];
-    $row->other_info = $contents[4];
+    if (count($contents) > 7) {
+      $row->body = $contents[3] . $contents[5];
+    }
+    else {
+      $row->body = $contents[3];
+    }
+    $row->body = str_replace(' "', '"', $row->body);
+    $row->other_info = str_replace(' "', '"', $contents[4]);
   }
 
   /**

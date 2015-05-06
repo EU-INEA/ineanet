@@ -51,7 +51,7 @@ class NewsMigration extends IneaBasicMigration {
    */
   public function prepareRow(stdClass $row) {
     $contents = explode("---", $row->contents);
-    $row->body = $contents[0];
+    $row->body = str_replace(' "', '"', $contents[0]);
   }
 
   /**

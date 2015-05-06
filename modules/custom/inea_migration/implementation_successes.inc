@@ -58,8 +58,8 @@ class ImplementationSuccessesMigration extends IneaBasicMigration {
     $contents = explode("---", $row->contents);
 
     $row->summary = $contents[2];
-    $row->body = $contents[4];
-    $row->other_info = $contents[6];
+    $row->body = str_replace(' "', '"', $contents[4]);
+    $row->other_info = str_replace(' "', '"', $contents[6]);
   }
 
   /**

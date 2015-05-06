@@ -111,7 +111,7 @@ function _inea_migration_update_links($content) {
   $links = $dom->getElementsByTagName('a');
   foreach ($links as $link) {
     $id = trim($link->getAttribute('id'), "@");
-    if (preg_match('/PAGE[0-9]{15}/', $id)) {
+    if (preg_match('/PAGE[0-9]{15}/', $id) || preg_match('/LINK[0-9]{15}/', $id)) {
       $match = TRUE;
       $old_id = substr($link->getAttribute('id'), 4);
       $nid = _inea_migration_load_node_by_old_id($old_id);
