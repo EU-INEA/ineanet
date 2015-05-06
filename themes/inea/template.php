@@ -87,6 +87,10 @@ function inea_preprocess_page(&$variables) {
     $path = explode("/", current_path());
     $term_name = end($path);
     $terms = taxonomy_get_term_by_name($term_name);
+    if (empty($terms)) {
+      $term_name = str_replace("-", " ", $term_name);
+      $terms = taxonomy_get_term_by_name($term_name);
+    }
     if (!empty($terms)) {
       $term_image = reset($terms);
     }
