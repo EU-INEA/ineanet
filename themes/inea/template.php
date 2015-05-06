@@ -199,7 +199,8 @@ function _inea_generate_view_term($view) {
     $terms = taxonomy_get_term_by_name($term_name);
     if (!empty($terms)) {
       $term = reset($terms);
-      return render(taxonomy_term_view($term));
+      $term_view = taxonomy_term_view($term);
+      return render($term_view);
     }
   }
   return '';
@@ -218,4 +219,27 @@ function _inea_generate_term_path($term) {
   $path[] = 'projects-by-' . $machine_name;
   $path[] = strtolower($term->name);
   return implode("/", $path);
+}
+
+/**
+ * Implements theme_preprocess_node().
+ */
+function inea_preprocess_node(&$variables) {
+  if ($variables['node']->type == 'news') {
+    $creation_date = date("F j, Y", $variables['created']);
+    $variables['creation_date'] = '<b>Creation date: </b>' . $creation_date;
+  }
+}
+
+/**
+ * Implements theme_preprocess_node().
+ */
+function inea_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  if ($element['#field_name'] == 'field_project_map' || $element['#field_name'] == 'field_is_map') {
+    $variables['items'][0]['#suffix'] = '<p>Click map to view enlarged version<p>';
+  }
+  if ($element['#field_name'] == 'field_project_summary') {
+    $variables['items'][0]['#suffix'] = '<hr>';
+  }
 }
