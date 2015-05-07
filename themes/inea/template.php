@@ -255,3 +255,89 @@ function inea_preprocess_field(&$variables, $hook) {
     $variables['items'][0] = $item;
   }
 }
+
+/**
+ * Implements theme_preprocess_block().
+ */
+function inea_preprocess_block(&$variables) {
+
+  global $user, $language;
+  if (!empty($user) && 0 != $user->uid) {
+    $full_user = user_load($user->uid);
+    $name = (isset($full_user->field_firstname['und'][0]['value']) && isset($full_user->field_lastname['und'][0]['value']) ? $full_user->field_firstname['und'][0]['value'] . ' ' . $full_user->field_lastname['und'][0]['value'] : $user->name);
+    $variables['user_name'] = "<div class='username'>" . t('Welcome,') . ' <strong>' . $name . '</strong></div>';
+  }
+
+  $block_no_panel = array(
+    'search' => 'form',
+    'print' => 'print-links',
+    'print_ui' => 'print-links',
+    'workbench' => 'block',
+    'social_bookmark' => 'social-bookmark',
+    'views' => 'view_ec_content_slider-block',
+    'om_maximenu' => array('om-maximenu-1','om-maximenu-2'),
+    'menu' => 'menu-service-tools',
+    'cce_basic_config' => 'footer_ipg',
+  );
+
+  // List of all blocks that don't need their title to be displayed.
+  $block_no_title = array(
+    'fat_footer' => 'fat-footer',
+    'om_maximenu' => array('om-maximenu-1','om-maximenu-2'),
+    'menu' => 'menu-service-tools',
+    'cce_basic_config' => 'footer_ipg',
+  );
+
+  $block_no_body_class = array();
+
+  $panel = TRUE;
+  foreach ($block_no_panel as $key => $value) {
+    if ($variables['block']->module == $key) {
+      if (is_array($value)) {
+        foreach ($value as $delta) {
+          if ($variables['block']->delta == $delta) {
+            $panel = FALSE;
+            break;
+          }
+        }
+      }
+      else {
+        if ($variables['block']->delta == $value) {
+          $panel = FALSE;
+          break;
+        }
+      }
+    }
+  }
+
+  $title = TRUE;
+  foreach ($block_no_title as $key => $value) {
+    if ($variables['block']->module == $key) {
+      if (is_array($value)) {
+        foreach ($value as $delta) {
+          if ($variables['block']->delta == $delta) {
+            $title = FALSE;
+            break;
+          }
+        }
+      }
+      else {
+        if ($variables['block']->delta == $value) {
+          $title = FALSE;
+          break;
+        }
+      }
+    }
+  }
+
+  $body_class = TRUE;
+  foreach ($block_no_body_class as $key => $value) {
+    if ($variables['block']->module == $key && $variables['block']->delta == $value) {
+      $body_class = FALSE;
+    }
+  }
+
+  $variables['panel'] = $panel;
+  $variables['title'] = $title;
+  $variables['body_class'] = $body_class;
+}
