@@ -8,6 +8,7 @@
 
 body {
   background-color: #FFFFFF;
+  background-color: white;
   background-image: none;
 } 
 
@@ -58,10 +59,6 @@ body {
 #layout-footer div.container div.block.footer-block div.content{width:1170px}
 }
 
-@media (min-width:1200px){
-.container{width:960px}
-}
-
 div.region-footer div, div.region-footer div p{
   background: none;
   margin: 0;
@@ -100,46 +97,68 @@ h1#page-title{
   padding-left: 0px;
 }
 
-h1.project-title{
-  color: #e0922f;
-}
-
-div#content-wrapper div.node p, div#content-wrapper div.node a, div#content-wrapper div.node table, div#content-wrapper div.node ul li,
-div#content-wrapper div.view p, div#content-wrapper div.view a, div#content-wrapper div.view table, div#content-wrapper div.view ul li{
+/*<tm*/
+div#content-wrapper div.node p, div#content-wrapper div.node a, div#content-wrapper div.node table, div#content-wrapper div.node ul li {
   font-size: 12px;
   padding: 0;
   margin: 0;
 }
 
-.node-type-page div#content-wrapper div.node table td {
-  display:table-cell;
-  padding: 8px 12px;
-}
+hr { display:block;
+     border-style: inset;
+     border-width: 1px;
+      -webkit-margin-before: 0.5em;
+      -webkit-margin-after: 0.5em;
+      -webkit-margin-start: auto;
+      -webkit-margin-end: auto;}
 
- div#content-wrapper div.node table {display:table; border-collapse: separate; border-spacing: 2px;}
- div#content-wrapper div.node table tr {display:table-row; }
- div#content-wrapper div.node table td {display:table-cell; padding: 16px 8px; }
- div#content-wrapper div.node table td:first-child { width:30px; valign:middle; line-height: normal;} 
+ /*http://inea.multisite/en/newsroom/events*/
+ .page-node-28 div#content-wrapper table td {display:table-cell; }
+
+div#content-wrapper div.node table {display:table; border-collapse: separate; border-spacing: 2px;} /* border-spacing - provisional changes*/
+ 
+.node-type-page div#content-wrapper div.node table tr {display:table-row; }
+
+.node-type-page div#content-wrapper div.node table td {display:table-cell; padding: 2px; }
+
+.node-type-event div#content-wrapper div.node table td:first-child {width:30px; valign:middle; line-height: normal;} 
+
+.node-type-news div#content-wrapper div.node table td {display:table-cell; valign:middle; line-height: normal; }
 
 
 div#content-wrapper div.node p,
-div#content-wrapper div.view p {
+div#content-wrapper div.view p  {
   color: #151515;
 }
 div#content-wrapper div.node a,
-div#content-wrapper div.view a {
+div#content-wrapper div.view a  {
   text-decoration: underline;
   color: #0000ff;
 }
 
-div#content-wrapper div.node h2, div#content-wrapper div.node p.h2,
-div#content-wrapper div.view h2, div#content-wrapper div.view p.h2 {
-  font-size: 18px;
+/* Horizon2020 https://webgate.ec.europa.eu/playground-multisite/inea/en/horizon-2020 [page class =. id=#] */
+.page-node-14 div#content-wrapper p h3, 
+div#content-wrapper span h3, div#content-wrapper p.h3, 
+div#content-wrapper span.h3{
+ font-size: 14.4444px;
+}
+.page-node-14 div#content-wrapper div.node p.h2 a { 
+  font-size: 12.22222px; color: rgb(0, 0, 255);
+}
+
+div#content-wrapper div.node h2, 
+div#content-wrapper div.node p.h2, 
+div#content-wrapper div.node p.h2 a,
+div#content-wrapper div.view h2, 
+div#content-wrapper div.view p.h2 {
+  font-size: 17.77777px;
   font-style: verdana, arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   color: #262261;
 }
+
+div#content-wrapper div.node ul {line-height: normal;}
 
 /*tm>*/
 
@@ -152,9 +171,6 @@ div#content-wrapper div.view h4 {
   color: #262261;
 }
 
-hr {
-  margin: 6px 0;
-}
 /*
  *  Main Menu
  */
@@ -333,6 +349,9 @@ div#block-views-latest-news-block div.view-footer{
   padding: 0 0 0 25px;
 }
 
+/* Newsroom */
+
+
 /* Views */
 
 div.view div.views-field-field-term-image{
@@ -355,28 +374,78 @@ div.view div.views-field-body{
   line-height: normal;
 }
 
-/* Projects */
+/*News */
+.node-type-news .field-type-text-with-summary  { margin-top: 2%;}
 
-div.field-name-field-project-summary{
-  margin-left: 10%;
-  font-size: 18px;
-  color: #262261;
+/* Projects   */ 
+
+.node-type-project div#content-wrapper h1#page-title a, .page-ten-t div#content-wrapper h1#page-title a  {
+  font-size: 10px;
 }
 
-div.group-project-main{
-  width: 60%;
+.node-type-project div#content-wrapper div.node div.field-name-field-project-summary p{
+  font-size: 18px; color: #262261; padding:1% 8%; 
+}
+
+.node-type-project div#content-wrapper div.field-name-field-project-description{
+  width:55%; float:left; margin-right: 2%; 
+}
+.node-type-project div#content-wrapper div.field-name-field-project-description table{
+  border-spacing:2px; border-collapse: separate; border-color: gray;
+}
+.node-type-project div#content-wrapper div.field-name-field-project-description table td{
+  padding:2%; vertical-align: top;
+}
+
+.region-content-bottom h3 {
+  font-size: 14px;
+}
+
+/* Priority Projects */
+.vocabulary-priority-project div.field-name-field-pp-summary {
+  font-size: 14px;
+  color: #262261; 
+  margin: 2% 2% 2% 0;  
+}
+.vocabulary-priority-project div.field-type-image {
+  width:30%; 
+  clear:both; 
   float: left;
+  margin-right:2%;
+}
+.vocabulary-priority-project div.taxonomy-term-description {
+  line-height:normal; 
+  margin-bottom:15%;
+}
+.vocabulary-priority-project div.taxonomy-term-description p {
+  margin-bottom:0px; 
+  font-size:12px; 
 }
 
-div.group-project-sidebar{
-  width: 35%;
-  float: right;
+.view-ten-t-projects-by-programme-and-other-tag div.view-header h5{
+  clear:both;
+  color:#262261; 
+}
+.view-ten-t-projects-by-programme-and-other-tag div.view-header p{
+  font-size:12px; 
 }
 
-div.group-project-header{
-  border-bottom: solid 1px #dcd8d2;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+.view-ten-t-projects-by-programme-and-other-tag div.view-content {
+  margin-bottom: 35px;
+}
+
+.view-ten-t-projects-by-programme-and-other-tag div.view-content a{
+  font-size:12px;
+  background-image: url(../images/bullet_next.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 0 0 0 25px;
+}
+
+#block-system-main .view-ten-t-projects-by-programme-and-other-tag .view-content .views-row{
+  border-top: 0px solid #ddd;
 }
 
 
+/* Search Form */
+/*.page-search-site div#content-wrapper #search-form {width:75%; margin-left:33%; margin-top: -48px;}*/
