@@ -247,7 +247,7 @@ function inea_preprocess_field(&$variables, $hook) {
   if ($element['#field_name'] == 'field_tag_priority_projects') {
     $term = $variables['items'][0]['#options']['entity'];
     $href = _inea_generate_term_path($term);
-    $item = array (
+    $item = array(
       '#type' => 'link',
       '#title' => 'Part of ' . $variables['items'][0]['#title'],
       '#href' => $href,
