@@ -197,6 +197,10 @@ function _inea_generate_view_term($view) {
   }
   if (!empty($term_name)) {
     $terms = taxonomy_get_term_by_name($term_name);
+    if (empty($terms)) {
+      $term_name = str_replace("-", " ", $term_name);
+      $terms = taxonomy_get_term_by_name($term_name);
+    }
     if (!empty($terms)) {
       $term = reset($terms);
       $term_view = taxonomy_term_view($term);
@@ -217,7 +221,7 @@ function _inea_generate_term_path($term) {
   $vocabulary = taxonomy_vocabulary_load($vid);
   $machine_name = str_replace("_", "-", $vocabulary->machine_name);
   $path[] = 'projects-by-' . $machine_name;
-  $path[] = strtolower($term->name);
+  $path[] = str_replace(" ", "-", strtolower($term->name));
   return implode("/", $path);
 }
 
@@ -236,10 +240,18 @@ function inea_preprocess_node(&$variables) {
  */
 function inea_preprocess_field(&$variables, $hook) {
   $element = $variables['element'];
-  if ($element['#field_name'] == 'field_project_map' || $element['#field_name'] == 'field_is_map') {
+  if ($element['#field_name'] == 'field_project_map' || $element['#field_name'] == 'field_is_map'
+    || $element['#field_name'] == 'field_pp_map' || $element['#field_name'] == 'field_pp_map_2') {
     $variables['items'][0]['#suffix'] = '<p>Click map to view enlarged version<p>';
   }
-  if ($element['#field_name'] == 'field_project_summary') {
-    $variables['items'][0]['#suffix'] = '<hr>';
+  if ($element['#field_name'] == 'field_tag_priority_projects') {
+    $term = $variables['items'][0]['#options']['entity'];
+    $href = _inea_generate_term_path($term);
+    $item = array (
+      '#type' => 'link',
+      '#title' => 'Part of ' . $variables['items'][0]['#title'],
+      '#href' => $href,
+    );
+    $variables['items'][0] = $item;
   }
 }
