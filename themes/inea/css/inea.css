@@ -40,6 +40,7 @@ body {
   text-align: inherit;
   padding-top: 0;
   border: none;
+  margin-bottom: 0;
 
 }
 
@@ -180,26 +181,31 @@ div#content-wrapper div.view h4 {
   border: none;
   min-height: 40px;
 }
+#main-menu .navbar{
+  min-height: 0;
+  border: none;
+  background-color: #f0f0f0;
+}
+
 #main-menu .navbar-nav>li{
   padding: 0;
 }
-
 
 #main-menu .navbar-nav>li>a{
   padding-top: 10px;
   height: 40px;
   border: none;
   border-radius: 0;
-  border-right: solid 1px #e3e3e3;
   background-color: #f0f0f0;
   color: #262261;
   font-family: arial, helvetica, sans-serif;
   font-size: 11px;
   font-weight: normal;
   text-transform: uppercase;
-}
-#main-menu .navbar-nav>li.first>a{
   border-left: solid 1px #e3e3e3;
+}
+#main-menu .navbar-nav>li.last>a{
+  border-right: solid 1px #e3e3e3;
 }
 #main-menu .navbar-nav>li>a.active,
 #main-menu .navbar-nav>li>a.active-trail,
