@@ -229,6 +229,17 @@ function _inea_generate_term_path($term) {
  * Implements theme_preprocess_node().
  */
 function inea_preprocess_node(&$variables) {
+  $variables['prefix_display'] = FALSE;
+  $variables['suffix_display'] = FALSE;
+
+  if ((isset($variables['group_content_access'])) && (isset($variables['group_content_access']['und'])) && ($variables['group_content_access']['und'][0]['value'] == 2)) {
+    $variables['prefix_display'] = TRUE;
+  }
+
+  if ($variables['display_submitted']) {
+    $variables['suffix_display'] = TRUE;
+  }
+
   if ($variables['node']->type == 'news') {
     $creation_date = date("F j, Y", $variables['created']);
     $variables['creation_date'] = '<b>Creation date: </b>' . $creation_date;
@@ -340,4 +351,26 @@ function inea_preprocess_block(&$variables) {
   $variables['panel'] = $panel;
   $variables['title'] = $title;
   $variables['body_class'] = $body_class;
+}
+
+/**
+ * Implements theme_menu_link__main_menu().
+ */
+function inea_menu_link__main_menu(array $variables) {
+  $element = $variables['element'];
+  $dropdown = '';
+  $name_id = strtolower(strip_tags(str_replace(' ', '', $element['#title'])));
+  // Remove colons and anything past colons.
+  if (strpos($name_id, ':')) {
+    $name_id = substr($name_id, 0, strpos($name_id, ':'));
+  }
+  // Preserve alphanumerics and numbers, everything else goes away.
+  $pattern = '/([^a-z]+)([^0-9]+)/';
+  $name_id = preg_replace($pattern, '', $name_id);
+  $element['#attributes']['class'][] = 'item' . $element['#original_link']['mlid'];
+
+  $element['#localized_options']['html'] = TRUE;
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $dropdown . "</li>\n";
 }
