@@ -374,3 +374,15 @@ function inea_menu_link__main_menu(array $variables) {
 
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $dropdown . "</li>\n";
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function inea_form_alter(&$form, &$form_state, $form_id) {
+  if (strstr($form_id, 'webform_client_form')) {
+    $form['my_captcha_element'] = array(
+      '#type' => 'captcha',
+      '#captcha_type' => 'default',
+    );
+  }
+}
