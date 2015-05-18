@@ -151,7 +151,13 @@ hr { display:block;
    /*display:table-cell;*/
    padding: 4px;
    width: 75%;
- } 
+ }
+
+div#content-wrapper div.node table {
+  display:table; 
+  border-collapse: separate;
+  border-spacing: 2px;
+} 
  
 .node-type-page div#content-wrapper div.node table tr {
   display:table-row; 
@@ -493,6 +499,11 @@ div.view div.views-field-body{
   margin-right: 2%; 
   margin-top: 2%;
 }
+.node-type-project div#content-wrapper div.field-name-field-project-description table{
+  border-spacing:2px; 
+  border-collapse: separate; 
+  border-color: gray;
+}
 .node-type-project div#content-wrapper div.field-name-field-project-description table td{
   padding:2%; 
   vertical-align: top;
@@ -665,6 +676,11 @@ div#content-wrapper h3.seeproj{
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-map img {
   vertical-align: top;
   margin-top: 3%;
+}
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-description table{
+  border-spacing:2px; 
+  border-collapse: separate; 
+  border-color: gray;
 }
 
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery{
