@@ -188,11 +188,18 @@ div#content-wrapper div.node table {
   margin:0;
 }
 
+.page-news-events-newsroom #content-wrapper .view-content .views-field-body .field-content{
+  margin-left: 10%; 
+  margin-right:5%;
+}
+
+
 .page-news-events-newsroom #content-wrapper .view-header  td{
   padding-right: 2%;
   line-height:normal;
   margin:0;
 }
+
 
 .node-type-news div#content-wrapper div.node table td, node-type-news div#content-wrapper div.node p {
   display:table-cell; 
@@ -471,6 +478,11 @@ div.view div.views-field-body{
 
 /* Projects   */ 
 
+.node-type-project h1#page-title{
+  font-size: 30px;
+  color: #e0922f;
+}
+
 .node-type-project div#content-wrapper h1#page-title a, .page-ten-t div#content-wrapper h1#page-title a  {
   font-size: 10px;
 }
@@ -504,7 +516,9 @@ div.view div.views-field-body{
 .node-type-project div#content-wrapper div.field-name-field-project-map{
   margin-top: 2%;
 }
-
+.node .field-type-taxonomy-term-reference ul.links li{
+  float: none;
+}
 
 /* deprecated */
 div#content-wrapper h3.seeproj{
