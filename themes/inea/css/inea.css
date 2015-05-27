@@ -73,7 +73,7 @@ body {
 
 /* Responsive sidebar */ 
 #responsive-sidebar{
-  width:35%;
+  width:50%;
   background-color: white;
 }
 #layout-body.reduced {
@@ -157,6 +157,7 @@ div#content-wrapper div.node table {
   display:table; 
   border-collapse: separate;
   border-spacing: 2px;
+  width:100%;
 } 
  
 .node-type-page div#content-wrapper div.node table tr {
@@ -328,7 +329,7 @@ div#sidebar-left .panel {
   text-decoration: none;
 }
 
-#left-navigation a:hover, #left-navigation a:link{
+#left-navigation a:hover{
   background-color: #FFFFFF;
 }
 
@@ -477,9 +478,8 @@ div.view div.views-field-body{
 }
 
 /* Projects   */ 
-
 .node-type-project h1#page-title{
-  font-size: 30px;
+  font-size: 36px;
   color: #e0922f;
 }
 
@@ -487,25 +487,62 @@ div.view div.views-field-body{
   font-size: 10px;
 }
 
-.node-type-project div#content-wrapper div.node div.field-name-field-project-summary p{
+/* line underneath summary field. CEF Energy May 26 */
+.node-type-project div#content-wrapper .group-header {
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc; 
+}
+
+
+/* CEF Projects have smaller titles. May 26 */ 
+.node-type-project div#content-wrapper h1.project-cef-energy-title{
+  font-size: 18px;
+  font-weight: bold;
+  color: #ee8032;
+}
+
+
+/* No padding for projects (CEF ) without an image. May 26 */
+.node-type-project div#content-wrapper .project-cef-energy div.node div.field-name-field-project-summary p{
+  font-size: 18px; 
+  color: #262261; 
+  padding:1% 0%; 
+}
+
+
+
+/* TEN-T projects have an image and need padding */
+.node-type-project div#content-wrapper .project-ten-t-projects div.node div.field-name-field-project-summary p{
   font-size: 18px; 
   color: #262261; 
   padding:1% 8%; 
 }
 
+.node-type-project div#content-wrapper div.node div.field-name-field-tag-programme{
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+.node-type-project div#content-wrapper div.node div.field-name-field-tag-programme li{
+  color: #ee8032;
+  text-transform: uppercase;
+}
+
 .node-type-project div#content-wrapper div.field-name-field-project-description{
-  width:55%; 
+  width:55%;
   float:left; 
   margin-right: 2%; 
   margin-top: 2%;
 }
 .node-type-project div#content-wrapper div.field-name-field-project-description table{
-  border-spacing:2px; 
+  border-spacing:0px; 
   border-collapse: separate; 
   border-color: gray;
 }
 .node-type-project div#content-wrapper div.field-name-field-project-description table td{
-  padding:2%; 
+  /*padding:2% 1%; */
+  padding:5px 0 4px 3px;
   vertical-align: top;
 }
 
@@ -516,9 +553,7 @@ div.view div.views-field-body{
 .node-type-project div#content-wrapper div.field-name-field-project-map{
   margin-top: 2%;
 }
-.node .field-type-taxonomy-term-reference ul.links li{
-  float: none;
-}
+
 
 /* deprecated */
 div#content-wrapper h3.seeproj{
@@ -537,16 +572,30 @@ div#content-wrapper h3.seeproj{
   float: left;
   margin-right:2%;
 }
-.vocabulary-priority-project div.taxonomy-term-description {
+.vocabulary-priority-project .content {
   line-height:normal; 
   margin-bottom:2%;
-  padding-bottom: 3%;
   border-bottom: 1px solid rgb(238,238,238);
   border-bottom-style: inset;
+  overflow: hidden;
+}
+.vocabulary-priority-project div.taxonomy-term-description {
+  float:right;
+  width: 68%;
 }
 .vocabulary-priority-project div.taxonomy-term-description p {
   margin-bottom:0px; 
   font-size:12px; 
+}
+
+
+
+/* PCI */
+
+.vocabulary-common-interest .field-name-field-pci-summary {
+  color: #ee8032;
+  font-size: 18px;
+  
 }
 
 /* 30 priority project overview page */
@@ -563,6 +612,7 @@ div#content-wrapper h3.seeproj{
 }
 
 /* TEN-T projects by country */
+/* padding below map images */
 .page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view-content .grid-item {
   padding-bottom:5px;
 }
@@ -572,43 +622,45 @@ div#content-wrapper h3.seeproj{
 
 
 /* TEN-T Project views */
-.view-ten-t-projects-by-programme-and-other-tag div.view-header h5{
+.view-ten-t-projects-by-programme-and-other-tag div.view-header h5,
+.view-cef-energy-countries div.view-header h5{
   clear:both;
   color:#262261; 
 }
-.view-ten-t-projects-by-programme-and-other-tag div.view-header p{
+.view-ten-t-projects-by-programme-and-other-tag div.view-header p,
+.view-cef-energy-countries div.view-header p{
   font-size:12px; 
 }
 
-.view-ten-t-projects-by-programme-and-other-tag div.view-content {
+.view-ten-t-projects-by-programme-and-other-tag div.view-content,
+.view-cef-energy-countries div.view-content {
   margin-bottom: 35px;
 }
 
-.view-ten-t-projects-by-programme-and-other-tag div.view-content a 
+.view-ten-t-projects-by-programme-and-other-tag div.view-content a,
+.view-cef-energy-countries div.view-content a 
 {
   font-size:12px;
   background-image: url(../images/bullet_next.gif);
   background-repeat: no-repeat;
-  background-position: 5 5;
+  background-position: 3px 0px;
   padding: 0 0 4px 25px;
 }
-.view-ten-t-projects-by-programme-and-other-tag div.view-content .views-row p{
+.view-ten-t-projects-by-programme-and-other-tag div.view-content .views-row p,
+.view-cef-energy-countries div.view-content .views-row .views-field-title span{
   font-size:12px;
   padding: 0 0 0px 25px;
 }
 
 
-.view-ten-t-projects-by-programme-and-other-tag div.view-content .views-field-field-project-summary p{
+.view-ten-t-projects-by-programme-and-other-tag div.view-content .views-field-field-project-summary p,
+.view-cef-energy-countries div.view-content .views-field-title span{
   font-size: 11px;
-}
-#block-system-main .view-ten-t-projects-by-programme-and-other-tag .view-content .views-row{
-  border-top: 0px solid #ddd;   
-  margin-bottom: 0px; /*May 7th*/
+  color: #666666;
 }
 
 /* exception for this page: eerp projects */ 
 .page-ten-t-ten-t-projects-projects-by-type-eerp #block-system-main .view-ten-t-projects-by-programme-and-other-tag .view-content .views-row{
-  border-top: 1px solid #ddd;  
   padding-top: 4px; 
   margin-bottom: 0px; /*May 7th*/
 }
@@ -634,7 +686,6 @@ div#content-wrapper h3.seeproj{
 .page-ten-t-ten-t-projects-projects-by-transport-mode #content-wrapper .view div.views-row {
   margin:0;
   padding-top:2px;
-  border-bottom: 1px solid #666666;
 }
 
 
@@ -642,10 +693,17 @@ div#content-wrapper h3.seeproj{
  .page-connecting-europe-facility #content-wrapper .view-cef-projects-by-programme {
   font-size:12px;
 }
+
+/* May 26 */
+.view-cef-projects-by-programme .view-content .grid-item {
+  padding-bottom:7px;
+}
+
 .page-connecting-europe-facility #content-wrapper .view{
   font-size:12px;
 }
-.page-connecting-europe-facility #content-wrapper .view div.views-row {
+.page-connecting-europe-facility #content-wrapper .view div.views-row,
+.page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view div.views-row {
   margin:0;
   padding:5px 2px;
 }
@@ -683,16 +741,19 @@ div#content-wrapper h3.seeproj{
   border-color: gray;
 }
 
-.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery{
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery,
+.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga{
   clear: both;
 }
-.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery a{  
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery a,  
+.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga a{  
   float:left;
   margin-right:3%;
   margin-bottom:2%;
 }
 
-.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery div.field-label{  
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery div.field-label,  
+.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga div.field-label{  
   margin-top: 10%;
 }
 

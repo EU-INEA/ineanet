@@ -96,6 +96,9 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
                 $replacements[$original] = $name;
                 break;
 
+              default:
+                $name = str_replace(" ", "-", drupal_strtolower($term->name));
+                break;
             }
             $replacements[$original] = $name;
             break;

@@ -82,6 +82,12 @@ function inea_preprocess_page(&$variables) {
       $tid = $node->field_tag_energy_type['und'][0]['tid'];
     }
     $term_image = taxonomy_term_load($tid);
+    $tid = $node->field_tag_programme['und'][0]['tid'];
+    $project_type = taxonomy_term_load($tid);
+    if (!empty($project_type)) {
+      $type = str_replace(" ", "-", drupal_strtolower($project_type->name));
+      $variables['page_type'] = $variables['page_type'] . "-" . $type;
+    }
   }
   else {
     $path = explode("/", current_path());
