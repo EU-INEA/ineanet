@@ -115,7 +115,7 @@ function _inea_migration_update_links($content) {
     $id = trim($link->getAttribute('id'), "@");
     if (preg_match('/PAGE[0-9]{15}/', $id) || preg_match('/LINK[0-9]{15}/', $id)) {
       $match = TRUE;
-      $old_id = substr($link->getAttribute('id'), 4);
+      $old_id = substr($id, 4);
       $nid = _inea_migration_load_node_by_old_id($old_id);
       if ($nid) {
         $href = base_path() . drupal_get_path_alias('node/' . $nid);
