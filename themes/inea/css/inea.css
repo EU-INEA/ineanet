@@ -585,9 +585,7 @@ div#content-wrapper h3.seeproj{
   margin: 2% 2% 2% 0;  
 }
 .vocabulary-priority-project div.field-type-image {
-  width:30%; 
   clear:both; 
-  float: left;
   overflow:hidden;
   margin-right:2%;
 }
@@ -607,6 +605,10 @@ div#content-wrapper h3.seeproj{
   font-size:12px; 
 }
 
+.group-left-column {
+  float: left;
+  width: 30%;
+}
 
 
 /* 30 priority project overview page */
