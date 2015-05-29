@@ -758,6 +758,8 @@ div#content-wrapper h3.seeproj{
   clear: both;
 }
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery a,  
+.node-type-news div#content-wrapper div.field-name-field-news-picture-gallery a,  
+.node-type-project div#content-wrapper div.field-name-field-project-picture-gallery a,  
 .node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga a{  
   float:left;
   margin-right:3%;
