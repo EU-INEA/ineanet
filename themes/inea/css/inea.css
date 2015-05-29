@@ -181,6 +181,7 @@ div#content-wrapper div.node table {
 }
 
 
+
 /* Newsroom page view - p added May 8th. */
 
 .page-news-events-newsroom #content-wrapper .view-header  p{
@@ -193,6 +194,7 @@ div#content-wrapper div.node table {
   margin-left: 10%; 
   margin-right:5%;
 }
+
 
 
 .page-news-events-newsroom #content-wrapper .view-header  td{
@@ -221,12 +223,15 @@ div#content-wrapper div.view a  {
 
 /* Horizon2020 https://webgate.ec.europa.eu/playground-multisite/inea/en/horizon-2020 [page class =. id=#] */
 .page-node-14 div#content-wrapper p h3, 
-div#content-wrapper span h3, div#content-wrapper p.h3, 
+div#content-wrapper span h3, div#content-wrapper p.h3,
+.page-node div#content-wrapper p.h3, 
 div#content-wrapper span h3, div#content-wrapper p.h3 strong, 
 div#content-wrapper span.h3{
  font-size: 14.4444px;
  color: #262261;
 }
+
+
 .page-node-14 div#content-wrapper div.node p.h2 a { 
   font-size: 12.22222px; 
   color: rgb(0, 0, 255);
@@ -519,6 +524,12 @@ div.view div.views-field-body{
   padding:1% 8%; 
 }
 
+.view-cef-energy-countries .field-name-field-pci-summary{
+  font-size: 18px; 
+  color: #ee8032; 
+}
+
+
 .node-type-project div#content-wrapper div.node div.field-name-field-tag-programme{
   font-weight: bold;
   float: left;
@@ -535,6 +546,7 @@ div.view div.views-field-body{
   margin-right: 2%; 
   margin-top: 2%;
 }
+
 .node-type-project div#content-wrapper div.field-name-field-project-description table{
   border-spacing:0px; 
   border-collapse: separate; 
@@ -545,6 +557,12 @@ div.view div.views-field-body{
   padding:5px 0 4px 3px;
   vertical-align: top;
 }
+
+.node-type-project div#content-wrapper div.field-name-field-project-other-info{
+  overflow:hidden;
+}
+
+
 
 .node-type-project div#content-wrapper div.region-content-bottom h3{
   font-size: 14px;
@@ -570,12 +588,13 @@ div#content-wrapper h3.seeproj{
   width:30%; 
   clear:both; 
   float: left;
+  overflow:hidden;
   margin-right:2%;
 }
 .vocabulary-priority-project .content {
   line-height:normal; 
   margin-bottom:2%;
-  border-bottom: 1px solid rgb(238,238,238);
+  border-bottom: 1px solid #ccc;
   border-bottom-style: inset;
   overflow: hidden;
 }
@@ -589,14 +608,6 @@ div#content-wrapper h3.seeproj{
 }
 
 
-
-/* PCI */
-
-.vocabulary-common-interest .field-name-field-pci-summary {
-  color: #ee8032;
-  font-size: 18px;
-  
-}
 
 /* 30 priority project overview page */
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-header p,
@@ -649,7 +660,6 @@ div#content-wrapper h3.seeproj{
 .view-ten-t-projects-by-programme-and-other-tag div.view-content .views-row p,
 .view-cef-energy-countries div.view-content .views-row .views-field-title span{
   font-size:12px;
-  padding: 0 0 0px 25px;
 }
 
 
