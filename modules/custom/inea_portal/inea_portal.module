@@ -101,14 +101,14 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
 }
 
 /**
- * Implements hook_views_data_alter.
- */ 
+ * Implements hook_views_data_alter().
+ */
 function inea_portal_views_data_alter(&$data) {
-  $data['field_data_field_project_summary']['field_project_summary_value']['sort'] = array (
+  $data['field_data_field_project_summary']['field_project_summary_value']['sort'] = array(
     'field' => 'field_project_summary_value',
     'table' => 'field_data_field_project_summary',
     'handler' => 'views_handler_sort',
-    'additional_fields' => array ('field_project_summary_value','field_project_summary_format',),
+    'additional_fields' => array('field_project_summary_value','field_project_summary_format'),
     'field_name' => 'field_project_summary',
   );
 }
