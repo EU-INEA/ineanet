@@ -22,30 +22,6 @@ function inea_portal_form_implementation_success_node_form_alter(&$form, &$form_
   $form['body']['#access'] = 0;
 }
 
-/**
- * Implements hook_menu_block_tree_alter().
- */
-function inea_portal_menu_block_tree_alter(&$tree, &$config) {
-  if ($config['level'] == 2 && $config['depth'] == 2) {
-    $tree = _inea_portal_remove_menu_children($tree, 2);
-  }
-}
-
-/**
- * Helper function prune menu items.
- */
-function _inea_portal_remove_menu_children($array, $depth) {
-  foreach ($array as $key => $item) {
-    if ($item['link']['depth'] == $depth && count($item['below']) > 3) {
-      $item['below'] = array();
-    }
-    else {
-      $item['below'] = _inea_portal_remove_menu_children($item['below'], $depth);
-    }
-    $array[$key] = $item;
-  }
-  return $array;
-}
 
 /**
  * Implements hook_token_info().
