@@ -9,8 +9,6 @@ php = 5.2.4
 
 stylesheets[all][] = "css/inea.css"
 
-scripts[] = scripts/inea.js
-
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
 

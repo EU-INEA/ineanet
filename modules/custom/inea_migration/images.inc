@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate topics from INEA website
+ * Handler to migrate topics from INEA website.
  */
 
+/**
+ * Images migration class.
+ */
 class ImagesMigration extends IneaBasicMigration {
   /**
    * Setup the field mappings between the source and destination.
@@ -37,4 +40,5 @@ class ImagesMigration extends IneaBasicMigration {
     $this->addFieldMapping('preserve_files')
       ->defaultValue(TRUE);
   }
+
 }

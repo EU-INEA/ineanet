@@ -220,10 +220,10 @@ function _inea_migration_create_file($file, $uid) {
  */
 function _inea_migration_get_mlid($path) {
   $menu_info = db_select('menu_links', 'ml')
-  ->condition('ml.link_path', $path)
-  ->fields('ml', array('mlid', 'plid'))
-  ->execute()
-  ->fetchAll();
+    ->condition('ml.link_path', $path)
+    ->fields('ml', array('mlid', 'plid'))
+    ->execute()
+    ->fetchAll();
   foreach ($menu_info as $key => $value) {
     $mlid[] = $menu_info[$key]->mlid;
   }

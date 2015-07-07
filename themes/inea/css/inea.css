@@ -1,251 +1,252 @@
 /*
- * Custom css for the sub theme
+ * Custom css for the sub theme.
  */
 
-/* 
- * General
+/*
+ * General.
  */
 
 body {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-color: white;
   background-image: none;
-} 
+}
 
-.panel{
+.panel {
   border: none;
   box-shadow: none;
   padding: 0;
 }
 
-.panel-body{
+.panel-body {
   padding: 0;
 }
 
-.list-group-item{
+.list-group-item {
   border: none;
   padding: 0;
   display: inline-block;
 }
- 
-.panel .panel-body>p{
+
+.panel .panel-body>p {
   margin-bottom: 5px;
 }
 
-#sidebar-left .block{
+#sidebar-left .block {
   float: right;
 }
 
-#layout-footer{
+#layout-footer {
   text-align: inherit;
   padding-top: 0;
   border: none;
   margin-bottom: 0;
-
 }
 
-#layout-footer div.container{
-  width:100%;
+#layout-footer div.container {
+  width: 100%;
   padding: 0;
 }
 
-#layout-footer div.container div.block.footer-block div.content{
-  margin-right:auto;
-  margin-left:auto;
-  padding-left:15px;
-  padding-right:15px
+#layout-footer div.container div.block.footer-block div.content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@media (min-width:768px){
-#layout-footer div.container div.block.footer-block div.content{width:750px}
+@media (min-width:768px) {
+  #layout-footer div.container div.block.footer-block div.content {
+    width: 750px;
+  }
 }
 
-@media (max-width:751px){
-.region-featured #main-menu {padding-left:0}
+@media (max-width:751px) {
+  .region-featured #main-menu {
+    padding-left: 0;
+  }
 }
 
-@media (min-width:992px){
-#layout-footer div.container div.block.footer-block div.content{width:970px}
-}
-@media (min-width:1200px){
-#layout-footer div.container div.block.footer-block div.content{width:1170px}
+@media (min-width:992px) {
+  #layout-footer div.container div.block.footer-block div.content {
+    width: 970px;
+  }
 }
 
-/* Responsive sidebar */ 
-#responsive-sidebar{
-  width:50%;
+@media (min-width:1200px) {
+  #layout-footer div.container div.block.footer-block div.content {
+    width: 1170px;
+  }
+}
+
+/* Responsive sidebar */
+#responsive-sidebar {
+  width: 50%;
   background-color: white;
 }
+
 #layout-body.reduced {
-  left:35%;
-}
-/*  Responsive Main Menu */
-.region-featured #main-menu {
-  
+  left: 35%;
 }
 
-
-.field-items ol li { 
-  font-size:12px;
+.field-items ol li {
+  font-size: 12px;
 }
 
-div.region-footer div, div.region-footer div p{
+div.region-footer div,
+div.region-footer div p {
   background: none;
   margin: 0;
 }
-div.block.inea-footer{
+
+div.block.inea-footer {
   background-color: #0065a2;
   padding: 5px 50px;
   border-radius: 0;
 }
-div.block.inea-footer div.content  p{
-  display:inline-block;
-  color: #FFFFFF;
+
+div.block.inea-footer div.content  p {
+  display: inline-block;
+  color: #ffffff;
   font-family: arial, helvetica, sans-serif;
   font-size: 11px;
   line-height: 13px;
   vertical-align: top;
-  text-align:left;
-  /* new may 8 */
+  text-align: left;
   padding-right: 5%;
 }
 
-div.block.inea-contact{
+div.block.inea-contact {
   background-color: #262261;
   border-radius: 0;
 }
 
-div.block.inea-contact  div.content p a{
-  color: #FFFFFF;
+div.block.inea-contact  div.content p a {
+  color: #ffffff;
   font-family: arial, helvetica, sans-serif;
   font-size: 11px;
 }
 
-div.block#block-cce-basic-config-footer-ipg{
+div.block#block-cce-basic-config-footer-ipg {
   background-color: #e3e1d9;
   text-align: center;
 }
 
-h1#page-title{
+h1#page-title {
   padding-left: 0px;
 }
 
-/*<tm*/
-div#content-wrapper div.node p, div#content-wrapper div.node a, div#content-wrapper div.node table, div#content-wrapper div.node ul li {
+div#content-wrapper div.node p,
+div#content-wrapper div.node a,
+div#content-wrapper div.node table,
+div#content-wrapper div.node ul li {
   font-size: 12px;
   padding: 0;
   margin: 0;
 }
 
-hr { display:block;
-     border-style: inset;
-     border-width: 1px;
-     /* test this*/
-      -webkit-margin-before: 0.5em;
-      -webkit-margin-after: 0.5em;
-      -webkit-margin-start: auto;
-      -webkit-margin-end: auto;}
+hr {
+  display: block;
+  border-style: inset;
+  border-width: 1px;
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+}
 
- /*http://inea.multisite/en/newsroom/events*/
- .page-node-43 div#content-wrapper table td p{
-   /*display:table-cell;*/
-   padding: 4px;
-   width: 75%;
- }
+.page-node-43 div#content-wrapper table td p {
+  padding: 4px;
+  width: 75%;
+}
 
 div#content-wrapper div.node table {
-  display:table; 
+  display: table;
   border-collapse: separate;
   border-spacing: 2px;
-  width:100%;
-} 
- 
+  width: 100%;
+}
+
 .node-type-page div#content-wrapper div.node table tr {
-  display:table-row; 
+  display: table-row;
 }
 
 .node-type-page div#content-wrapper div.node table td {
-  display:table-cell; 
-  padding: 5px; 
+  display: table-cell;
+  padding: 5px;
 }
 
 .node-type-event div#content-wrapper div.node table td:first-child {
-  width:30px; 
-  valign:middle; 
+  width: 30px;
+  valign: middle;
   line-height: normal;
-} 
+}
 
 .node-type-inea-events div#content-wrapper div.node table td {
-  display:table-cell;
-  padding:5px;
+  display: table-cell;
+  padding: 5px;
 }
 
-
-
-/* Newsroom page view - p added May 8th. */
-
-.page-news-events-newsroom #content-wrapper .view-header  p{
-  font-size:12px;
-  line-height:normal;
-  margin:0;
+.page-news-events-newsroom #content-wrapper .view-header  p {
+  font-size: 12px;
+  line-height: normal;
+  margin: 0;
 }
 
-.page-news-events-newsroom #content-wrapper .view-content .views-field-body .field-content{
-  margin-left: 10%; 
-  margin-right:5%;
+.page-news-events-newsroom #content-wrapper .view-content .views-field-body .field-content {
+  margin-left: 10%;
+  margin-right: 5%;
 }
 
-
-
-.page-news-events-newsroom #content-wrapper .view-header  td{
+.page-news-events-newsroom #content-wrapper .view-header  td {
   padding-right: 2%;
-  line-height:normal;
-  margin:0;
+  line-height: normal;
+  margin: 0;
 }
 
-
-.node-type-news div#content-wrapper div.node table td, node-type-news div#content-wrapper div.node p {
-  display:table-cell; 
-  valign:middle; 
-  line-height: normal; 
+.node-type-news div#content-wrapper div.node table td,
+.node-type-news div#content-wrapper div.node p {
+  display: table-cell;
+  valign: middle;
+  line-height: normal;
 }
 
 /* News nodes */
 .node-type-news div#content-wrapper div.node p,
-.node-type-news div#content-wrapper div.view p  {
+.node-type-news div#content-wrapper div.view p {
   color: #151515;
 }
+
 div#content-wrapper div.node a,
-div#content-wrapper div.view a  {
+div#content-wrapper div.view a {
   text-decoration: underline;
   color: #0000ff;
 }
 
-/* Horizon2020 https://webgate.ec.europa.eu/playground-multisite/inea/en/horizon-2020 [page class =. id=#] */
-.page-node-14 div#content-wrapper p h3, 
-div#content-wrapper span h3, div#content-wrapper p.h3,
-.page-node div#content-wrapper p.h3, 
-div#content-wrapper span h3, div#content-wrapper p.h3 strong, 
-div#content-wrapper span.h3{
- font-size: 14.4444px;
- color: #262261;
+.page-node-14 div#content-wrapper p h3,
+div#content-wrapper span h3,
+div#content-wrapper p.h3,
+.page-node div#content-wrapper p.h3,
+div#content-wrapper span h3,
+div#content-wrapper p.h3 strong,
+div#content-wrapper span.h3 {
+  font-size: 14.4444px;
+  color: #262261;
 }
 
-
-.page-node-14 div#content-wrapper div.node p.h2 a { 
-  font-size: 12.22222px; 
+.page-node-14 div#content-wrapper div.node p.h2 a {
+  font-size: 12.22222px;
   color: rgb(0, 0, 255);
 }
-.page-node-14 div#content-wrapper div.node p { 
-  line-height:normal;
+
+.page-node-14 div#content-wrapper div.node p {
+  line-height: normal;
 }
 
-
-/* ---- */ 
-div#content-wrapper div.node h2, 
-div#content-wrapper div.node p.h2, 
+div#content-wrapper div.node h2,
+div#content-wrapper div.node p.h2,
 div#content-wrapper div.node p.h2 a,
-div#content-wrapper div.view h2, 
+div#content-wrapper div.view h2,
 div#content-wrapper div.view p.h2 {
   font-size: 17.77777px;
   font-style: verdana, arial, sans-serif;
@@ -254,9 +255,9 @@ div#content-wrapper div.view p.h2 {
   color: #262261;
 }
 
-div#content-wrapper div.node ul {line-height: normal;}
-
-/*tm>*/
+div#content-wrapper div.node ul {
+  line-height: normal;
+}
 
 div#content-wrapper div.node h4,
 div#content-wrapper div.view h4 {
@@ -271,24 +272,24 @@ div#content-wrapper div.view h4 {
  *  Main Menu
  */
 
-#main-menu{
+#main-menu {
   background-color: #f0f0f0;
   border: none;
   min-height: 40px;
   padding-left: 12%;
 }
-#main-menu .navbar{
+
+#main-menu .navbar {
   min-height: 0;
   border: none;
   background-color: #f0f0f0;
 }
 
-#main-menu .navbar-nav>li{
+#main-menu .navbar-nav>li {
   padding: 0;
 }
 
-
-#main-menu .navbar-nav>li>a{
+#main-menu .navbar-nav>li>a {
   padding-top: 10px;
   height: 40px;
   border: none;
@@ -301,13 +302,15 @@ div#content-wrapper div.view h4 {
   font-weight: normal;
   text-transform: uppercase;
 }
-#main-menu .navbar-nav>li.first>a{
+
+#main-menu .navbar-nav>li.first>a {
   border-left: solid 1px #e3e3e3;
 }
+
 #main-menu .navbar-nav>li>a.active,
 #main-menu .navbar-nav>li>a.active-trail,
-#main-menu .navbar-nav>li>a:hover{
-  background-color: #FFFFFF;
+#main-menu .navbar-nav>li>a:hover {
+  background-color: #ffffff;
   color: #262261;
   border-radius: 0;
 }
@@ -318,24 +321,24 @@ div#content-wrapper div.view h4 {
 
 div#sidebar-left .panel {
   margin-bottom: 0;
-} 
- 
+}
+
 #left-navigation {
   width: 156px;
 }
- 
+
 #left-navigation .parent-link {
   font-size: 18px;
   color: #262261;
   text-transform: uppercase;
-  
 }
-#left-navigation .parent-link:hover{
+
+#left-navigation .parent-link:hover {
   text-decoration: none;
 }
 
-#left-navigation a:hover{
-  background-color: #FFFFFF;
+#left-navigation a:hover {
+  background-color: #ffffff;
 }
 
 #left-navigation .greyline {
@@ -343,13 +346,13 @@ div#sidebar-left .panel {
   background-repeat: no-repeat;
   background-position: 0 10px;
   height: 20px;
-} 
- 
-#left-navigation .navbar-nav>li{
+}
+
+#left-navigation .navbar-nav>li {
   padding: 0;
 }
 
-#left-navigation .navbar-nav>li>a{
+#left-navigation .navbar-nav>li>a {
   padding: 0 0 15px 20px;
   color: #262261;
   font-family: Verdana, Arial, Sans-serif;
@@ -361,11 +364,11 @@ div#sidebar-left .panel {
   background-position: 0 4px;
 }
 
-#left-navigation .navbar-nav>li>a>b.caret{
-  display:none
+#left-navigation .navbar-nav>li>a>b.caret {
+  display: none;
 }
 
-#left-navigation li li.leaf{
+#left-navigation li li.leaf {
   font-family: Verdana, Arial, Sans-serif;
   font-size: 11px;
   font-weight: normal;
@@ -374,50 +377,55 @@ div#sidebar-left .panel {
   padding-bottom: 15px;
 }
 
-#left-navigation li li.leaf a{
+#left-navigation li li.leaf a {
   color: #888686;
 }
 
 #left-navigation .navbar-nav>li>a:hover,
-#left-navigation li li.leaf a:hover{
+#left-navigation li li.leaf a:hover {
   text-decoration: underline;
 }
- 
- /* 
+
+/*
  * Home section
  */
- 
+
 div.block.social-media {
   padding: 5px 15px;
   background-color: #f0f0f0;
   width: 156px;
   border-radius: 0;
 }
-div.block.social-media div.content  p{
+
+div.block.social-media div.content  p {
   margin: 10px 0;
 }
-div.block.social-media div.content a{
-  margin: 0 5px
+
+div.block.social-media div.content a {
+  margin: 0 5px;
 }
 
-div.region-site-bottom{
+div.region-site-bottom {
   text-align: center;
 }
+
 div.block.bottom-banner div.content {
   padding: 15px 15px;
   background-color: #f0f0f0;
-  display:inline-block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
-div.block.bottom-banner div.content p{
+
+div.block.bottom-banner div.content p {
   margin: 0;
 }
-div.block.bottom-banner div.content  a{
+
+div.block.bottom-banner div.content  a {
   margin: 0 10px;
 }
 
-div#block-views-latest-news-block div.panel-heading{
+div#block-views-latest-news-block div.panel-heading {
   background: none;
   border: none;
   font-size: 18px;
@@ -428,41 +436,38 @@ div#block-views-latest-news-block div.panel-heading{
   padding: 10px 15px 10px 0;
 }
 
-div#block-views-latest-news-block a{
+div#block-views-latest-news-block a {
   font-size: 12px;
   font-family: verdana, arial, helvetica, sans-serif;
   color: #0000ff;
   text-decoration: underline;
 }
 
-div#block-views-latest-news-block div.views-field-created{
+div#block-views-latest-news-block div.views-field-created {
   font-size: 11px;
   font-style: italic;
   color: #000000;
 }
 
-div#block-views-latest-news-block div.views-row{
+div#block-views-latest-news-block div.views-row {
   margin-bottom: 15px;
 }
 
-div#block-views-latest-news-block div.view-footer{
+div#block-views-latest-news-block div.view-footer {
   background-image: url(../images/bullet_next.gif);
   background-repeat: no-repeat;
   background-position: 4px 4px;
   padding: 0 0 0 25px;
 }
 
-/* Newsroom */
-
-
 /* Views */
 
-div.view div.views-field-field-term-image{
+div.view div.views-field-field-term-image {
   float: left;
   margin: 0 4px 0 0;
 }
 
-div.view div.views-field-created{
+div.view div.views-field-created {
   font-style: italic;
   font-family: verdana, arial, sans-serif;
   color: #000000;
@@ -470,7 +475,7 @@ div.view div.views-field-created{
   line-height: normal;
 }
 
-div.view div.views-field-body{
+div.view div.views-field-body {
   font-family: verdana, arial, sans-serif;
   color: #666666;
   font-size: 11px;
@@ -478,131 +483,122 @@ div.view div.views-field-body{
 }
 
 /*News */
-.node-type-news .field-type-text-with-summary  { 
+.node-type-news .field-type-text-with-summary {
   margin-top: 2%;
 }
 
-/* Projects   */ 
-.node-type-project h1#page-title{
+/* Projects */
+.node-type-project h1#page-title {
   font-size: 36px;
   color: #e0922f;
 }
 
-.node-type-project div#content-wrapper h1#page-title a, .page-ten-t div#content-wrapper h1#page-title a  {
+.node-type-project div#content-wrapper h1#page-title a,
+.page-ten-t div#content-wrapper h1#page-title a {
   font-size: 10px;
 }
 
-/* line underneath summary field. CEF Energy May 26 */
 .node-type-project div#content-wrapper .group-header {
   overflow: hidden;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
 }
 
-
-/* CEF Projects have smaller titles. May 26 */ 
-.node-type-project div#content-wrapper h1.project-cef-energy-title{
+.node-type-project div#content-wrapper h1.project-cef-energy-title {
   font-size: 18px;
   font-weight: bold;
   color: #ee8032;
 }
 
-
-/* No padding for projects (CEF ) without an image. May 26 */
-.node-type-project div#content-wrapper .project-cef-energy div.node div.field-name-field-project-summary p{
-  font-size: 18px; 
-  color: #262261; 
-  padding:1% 0%; 
+.node-type-project div#content-wrapper .project-cef-energy div.node div.field-name-field-project-summary p {
+  font-size: 18px;
+  color: #262261;
+  padding: 1% 0%;
 }
 
-
-
-/* TEN-T projects have an image and need padding */
-.node-type-project div#content-wrapper .project-ten-t-projects div.node div.field-name-field-project-summary p{
-  font-size: 18px; 
-  color: #262261; 
-  padding:1% 8%; 
+.node-type-project div#content-wrapper .project-ten-t-projects div.node div.field-name-field-project-summary p {
+  font-size: 18px;
+  color: #262261;
+  padding: 1% 8%;
 }
 
-.view-cef-energy-countries .field-name-field-pci-summary{
-  font-size: 18px; 
-  color: #ee8032; 
+.view-cef-energy-countries .field-name-field-pci-summary {
+  font-size: 18px;
+  color: #ee8032;
 }
 
-
-.node-type-project div#content-wrapper div.node div.field-name-field-tag-programme{
+.node-type-project div#content-wrapper div.node div.field-name-field-tag-programme {
   font-weight: bold;
   float: left;
   margin-right: 5px;
 }
-.node-type-project div#content-wrapper div.node div.field-name-field-tag-programme li{
+
+.node-type-project div#content-wrapper div.node div.field-name-field-tag-programme li {
   color: #ee8032;
   text-transform: uppercase;
 }
 
-.node-type-project div#content-wrapper div.field-name-field-project-description{
-  width:55%;
-  float:left; 
-  margin-right: 2%; 
+.node-type-project div#content-wrapper div.field-name-field-project-description {
+  width: 55%;
+  float: left;
+  margin-right: 2%;
   margin-top: 2%;
 }
 
-.node-type-project div#content-wrapper div.field-name-field-project-description table{
-  border-spacing:0px; 
-  border-collapse: separate; 
+.node-type-project div#content-wrapper div.field-name-field-project-description table {
+  border-spacing: 0px;
+  border-collapse: separate;
   border-color: gray;
 }
-.node-type-project div#content-wrapper div.field-name-field-project-description table td{
-  /*padding:2% 1%; */
-  padding:5px 0 4px 3px;
+
+.node-type-project div#content-wrapper div.field-name-field-project-description table td {
+  padding: 5px 0 4px 3px;
   vertical-align: top;
 }
 
-.node-type-project div#content-wrapper div.field-name-field-project-other-info{
-  overflow:hidden;
+.node-type-project div#content-wrapper div.field-name-field-project-other-info {
+  overflow: hidden;
 }
 
-
-
-.node-type-project div#content-wrapper div.region-content-bottom h3{
+.node-type-project div#content-wrapper div.region-content-bottom h3 {
   font-size: 14px;
 }
 
-.node-type-project div#content-wrapper div.field-name-field-project-map{
+.node-type-project div#content-wrapper div.field-name-field-project-map {
   margin-top: 2%;
 }
 
-
 /* deprecated */
-div#content-wrapper h3.seeproj{
+div#content-wrapper h3.seeproj {
   font-size: 14px;
 }
 
 /* Priority Projects */
 .vocabulary-priority-project div.field-name-field-pp-summary {
   font-size: 14px;
-  color: #262261; 
-  margin: 2% 2% 2% 0;  
+  color: #262261;
+  margin: 2% 2% 2% 0;
 }
+
 .vocabulary-priority-project div.field-type-image {
-  clear:both; 
-  overflow:hidden;
-  margin-right:2%;
+  clear: both;
+  overflow: hidden;
+  margin-right: 2%;
 }
 .vocabulary-priority-project .content {
-  line-height:normal; 
-  margin-bottom:2%;
+  line-height: normal;
+  margin-bottom: 2%;
   border-bottom: 1px solid #ccc;
   border-bottom-style: inset;
   overflow: hidden;
 }
 .vocabulary-priority-project div.taxonomy-term-description {
-  float:right;
+  float: right;
   width: 68%;
 }
 .vocabulary-priority-project div.taxonomy-term-description p {
-  margin-bottom:0px; 
-  font-size:12px; 
+  margin-bottom: 0px;
+  font-size: 12px;
 }
 
 .group-left-column {
@@ -615,34 +611,35 @@ div#content-wrapper h3.seeproj{
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-header p,
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-header ul li,
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-content .views-field-field-pp-summary a {
-  font-size:12px;
+  font-size: 12px;
   line-height: normal;
-} 
-.page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-content .views-row{
+}
+
+.page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-content .views-row {
   border-top: 0px;
   padding-top: 0px;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
 
 /* TEN-T projects by country */
 /* padding below map images */
 .page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view-content .grid-item {
-  padding-bottom:5px;
+  padding-bottom: 5px;
 }
-.page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view-content .grid-item a{
-  font-size:12px;
+.page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view-content .grid-item a {
+  font-size: 12px;
 }
 
 
 /* TEN-T Project views */
 .view-ten-t-projects-by-programme-and-other-tag div.view-header h5,
-.view-cef-energy-countries div.view-header h5{
-  clear:both;
-  color:#262261; 
+.view-cef-energy-countries div.view-header h5 {
+  clear: both;
+  color: #262261;
 }
 .view-ten-t-projects-by-programme-and-other-tag div.view-header p,
-.view-cef-energy-countries div.view-header p{
-  font-size:12px; 
+.view-cef-energy-countries div.view-header p {
+  font-size: 12px;
 }
 
 .view-ten-t-projects-by-programme-and-other-tag div.view-content,
@@ -651,29 +648,28 @@ div#content-wrapper h3.seeproj{
 }
 
 .view-ten-t-projects-by-programme-and-other-tag div.view-content a,
-.view-cef-energy-countries div.view-content a 
-{
-  font-size:12px;
+.view-cef-energy-countries div.view-content a {
+  font-size: 12px;
   background-image: url(../images/bullet_next.gif);
   background-repeat: no-repeat;
   background-position: 3px 0px;
   padding: 0 0 4px 25px;
 }
 .view-ten-t-projects-by-programme-and-other-tag div.view-content .views-row p,
-.view-cef-energy-countries div.view-content .views-row .views-field-title span{
+.view-cef-energy-countries div.view-content .views-row .views-field-title span {
   font-size:12px;
 }
 
 
 .view-ten-t-projects-by-programme-and-other-tag div.view-content .views-field-field-project-summary p,
-.view-cef-energy-countries div.view-content .views-field-title span{
+.view-cef-energy-countries div.view-content .views-field-title span {
   font-size: 11px;
   color: #666666;
 }
 
-/* exception for this page: eerp projects */ 
-.page-ten-t-ten-t-projects-projects-by-type-eerp #block-system-main .view-ten-t-projects-by-programme-and-other-tag .view-content .views-row{
-  padding-top: 4px; 
+/* exception for this page: eerp projects */
+.page-ten-t-ten-t-projects-projects-by-type-eerp #block-system-main .view-ten-t-projects-by-programme-and-other-tag .view-content .views-row {
+  padding-top: 4px;
   margin-bottom: 0px; /*May 7th*/
 }
 
@@ -689,11 +685,11 @@ div#content-wrapper h3.seeproj{
 /* Ten-T projects by transport mode view page */
 .page-ten-t-ten-t-projects-projects-by-transport-mode #content-wrapper .view-ten-t-projects-by-programme .field-content img {
   margin-bottom: 22%;
-}	
+}
 
 .page-ten-t-ten-t-projects-projects-by-transport-mode #content-wrapper .view-ten-t-projects-by-programme .field-content a {
   font-size:12px;
-}	
+}
 
 .page-ten-t-ten-t-projects-projects-by-transport-mode #content-wrapper .view div.views-row {
   margin:0;
@@ -702,34 +698,35 @@ div#content-wrapper h3.seeproj{
 
 
 /* CEF Projects */
- .page-connecting-europe-facility #content-wrapper .view-cef-projects-by-programme {
+.page-connecting-europe-facility #content-wrapper .view-cef-projects-by-programme {
   font-size:12px;
 }
 
 /* May 26 */
 .view-cef-projects-by-programme .view-content .grid-item {
-  padding-bottom:7px;
+  padding-bottom: 7px;
 }
 
-.page-connecting-europe-facility #content-wrapper .view{
-  font-size:12px;
+.page-connecting-europe-facility #content-wrapper .view {
+  font-size: 12px;
 }
 .page-connecting-europe-facility #content-wrapper .view div.views-row,
 .page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view div.views-row {
-  margin:0;
-  padding:5px 2px;
+  margin: 0;
+  padding: 5px 2px;
 }
 
-/* Implementation Successes -  Projects   */ 
+/* Implementation Successes -  Projects */
 
-.node-type-implementation-success div#content-wrapper h1#page-title a, .page-ten-t div#content-wrapper h1#page-title a  {
+.node-type-implementation-success div#content-wrapper h1#page-title a,
+.page-ten-t div#content-wrapper h1#page-title a {
   font-size: 10px;
 }
 
-.node-type-implementation-success div#content-wrapper div.node div.field-name-field-project-summary p{
-  font-size: 18px; 
-  color: #262261; 
-  padding:1% 8%; 
+.node-type-implementation-success div#content-wrapper div.node div.field-name-field-project-summary p {
+  font-size: 18px;
+  color: #262261;
+  padding: 1% 8%;
 }
 
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-summary {
@@ -738,42 +735,41 @@ div#content-wrapper h3.seeproj{
 }
 
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-description {
-  width:55%; 
-  float:left; 
+  width: 55%;
+  float: left;
   margin-right: 2%;
-  margin-top: 3%; 
+  margin-top: 3%;
 }
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-map img {
   vertical-align: top;
   margin-top: 3%;
 }
-.node-type-implementation-success div#content-wrapper div.field-name-field-is-description table{
-  border-spacing:2px; 
-  border-collapse: separate; 
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-description table {
+  border-spacing: 2px;
+  border-collapse: separate;
   border-color: gray;
 }
 
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery,
-.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga{
+.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga {
   clear: both;
 }
-.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery a,  
-.node-type-news div#content-wrapper div.field-name-field-news-picture-gallery a,  
-.node-type-project div#content-wrapper div.field-name-field-project-picture-gallery a,  
-.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga a{  
-  float:left;
-  margin-right:3%;
-  margin-bottom:2%;
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery a,
+.node-type-news div#content-wrapper div.field-name-field-news-picture-gallery a,
+.node-type-project div#content-wrapper div.field-name-field-project-picture-gallery a,
+.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga a {
+  float: left;
+  margin-right: 3%;
+  margin-bottom: 2%;
 }
 
-.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery div.field-label,  
-.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga div.field-label{  
+.node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery div.field-label,
+.node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga div.field-label {
   margin-top: 10%;
 }
 
-
-
-body{min-width:320px;
-  
-  background-repeat:repeat-x;filter:none', GradientType=0);
+body {
+  min-width: 320px;
+  background-repeat: repeat-x;
+  filter: none', GradientType=0);
 }
