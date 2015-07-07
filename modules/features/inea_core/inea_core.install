@@ -29,17 +29,3 @@ function inea_core_disable() {
   $module = system_get_info('module', 'inea_core');
   drupal_set_message(t('INEA Core %v feature is now inactive on your site.', array('%v' => $module['version'])));
 }
-
-/**
- * Implements hook_install().
- */
-function inea_core_install() {
-  // Install scripts here.
-}
-
-/**
- * Implements hook_uninstall().
- */
-function inea_core_uninstall() {
-  // Uninstall scripts here.
-}
