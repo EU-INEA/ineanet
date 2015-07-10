@@ -306,7 +306,7 @@ function inea_preprocess_block(&$variables) {
     'workbench' => 'block',
     'social_bookmark' => 'social-bookmark',
     'views' => 'view_ec_content_slider-block',
-    'om_maximenu' => array('om-maximenu-1','om-maximenu-2'),
+    'om_maximenu' => array('om-maximenu-1', 'om-maximenu-2'),
     'menu' => 'menu-service-tools',
     'cce_basic_config' => 'footer_ipg',
   );
@@ -314,7 +314,7 @@ function inea_preprocess_block(&$variables) {
   // List of all blocks that don't need their title to be displayed.
   $block_no_title = array(
     'fat_footer' => 'fat-footer',
-    'om_maximenu' => array('om-maximenu-1','om-maximenu-2'),
+    'om_maximenu' => array('om-maximenu-1', 'om-maximenu-2'),
     'menu' => 'menu-service-tools',
     'cce_basic_config' => 'footer_ipg',
   );

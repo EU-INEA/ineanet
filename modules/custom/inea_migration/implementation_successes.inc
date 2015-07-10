@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate topics from INEA website
+ * Handler to migrate topics from INEA website.
  */
 
+/**
+ * Implementation success migration class.
+ */
 class ImplementationSuccessesMigration extends IneaBasicMigration {
   /**
    * Setup the field mappings between the source and destination.

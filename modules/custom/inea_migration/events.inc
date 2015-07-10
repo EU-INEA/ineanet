@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate events from INEA website
+ * Handler to migrate events from INEA website.
  */
 
+/**
+ * Event migration class.
+ */
 class EventsMigration extends IneaBasicMigration {
   /**
    * Setup the field mappings between the source and destination.
@@ -76,4 +79,5 @@ class EventsMigration extends IneaBasicMigration {
     $parent_nid = _inea_migration_load_node_by_old_id('112470000000120');
     $mlids = _inea_migration_get_mlid('node/' . $parent_nid);
   }
+
 }
