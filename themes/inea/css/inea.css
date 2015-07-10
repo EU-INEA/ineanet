@@ -204,8 +204,7 @@ div#content-wrapper div.node table {
   margin: 0;
 }
 
-.node-type-news div#content-wrapper div.node table td,
-.node-type-news div#content-wrapper div.node p {
+.node-type-news div#content-wrapper div.node table td {
   display: table-cell;
   valign: middle;
   line-height: normal;
