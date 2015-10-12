@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate topics from INEA website
+ * Handler to migrate topics from INEA website.
  */
 
+/**
+ * Topic migration class.
+ */
 class TopicsMigration extends IneaBasicMigration {
 
   /**
@@ -116,4 +119,5 @@ class TopicsMigration extends IneaBasicMigration {
       ),
     );
   }
+
 }

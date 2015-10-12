@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate topics from INEA website
+ * Handler to migrate topics from INEA website.
  */
 
+/**
+ * Event migration class.
+ */
 class ProjectsMigration extends IneaBasicMigration {
 
   /**
@@ -122,4 +125,5 @@ class ProjectsMigration extends IneaBasicMigration {
       unset($entity->field_project_tags);
     }
   }
+
 }

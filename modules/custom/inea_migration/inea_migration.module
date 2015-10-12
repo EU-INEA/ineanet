@@ -80,6 +80,8 @@ function _inea_migration_update_links_node($nid, &$context) {
     $context['sandbox']['textfields'] = $text_fields;
   }
   $node = node_load($nid);
+  $node->title = decode_entities($node->title);
+  $node->title = trim($node->title, ":");
   foreach ($context['sandbox']['textfields'] as $textfield) {
     if (!empty($node->$textfield)) {
       $field = $node->$textfield;
@@ -113,7 +115,7 @@ function _inea_migration_update_links($content) {
     $id = trim($link->getAttribute('id'), "@");
     if (preg_match('/PAGE[0-9]{15}/', $id) || preg_match('/LINK[0-9]{15}/', $id)) {
       $match = TRUE;
-      $old_id = substr($link->getAttribute('id'), 4);
+      $old_id = substr($id, 4);
       $nid = _inea_migration_load_node_by_old_id($old_id);
       if ($nid) {
         $href = base_path() . drupal_get_path_alias('node/' . $nid);
@@ -126,6 +128,27 @@ function _inea_migration_update_links($content) {
         $href = "/URL/NOT/FOUND";
       }
       $link->setAttribute('href', $href);
+    }
+    else {
+      $href = $link->getAttribute('href');
+      $result = db_select('inea_url_mapping', 'm')
+        ->fields('m')
+        ->condition('URI', '%' . $href . '%', 'LIKE')
+        ->execute()
+        ->fetchAssoc();
+      if (!empty($result)) {
+        $new_href = '';
+        if (!empty($result['nid'])) {
+          $new_href = base_path() . drupal_get_path_alias("node/" . $result['nid']);
+        }
+        else {
+          $view_map = _inea_migration_view_map();
+          $new_href = base_path() . $view_map[(integer) $result['pageID']];
+        }
+        if (!empty($new_href)) {
+          $link->setAttribute('href', $new_href);
+        }
+      }
     }
   }
   // Get the new HTML.
@@ -197,10 +220,10 @@ function _inea_migration_create_file($file, $uid) {
  */
 function _inea_migration_get_mlid($path) {
   $menu_info = db_select('menu_links', 'ml')
-  ->condition('ml.link_path', $path)
-  ->fields('ml', array('mlid', 'plid'))
-  ->execute()
-  ->fetchAll();
+    ->condition('ml.link_path', $path)
+    ->fields('ml', array('mlid', 'plid'))
+    ->execute()
+    ->fetchAll();
   foreach ($menu_info as $key => $value) {
     $mlid[] = $menu_info[$key]->mlid;
   }

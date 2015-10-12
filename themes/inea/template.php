@@ -82,6 +82,12 @@ function inea_preprocess_page(&$variables) {
       $tid = $node->field_tag_energy_type['und'][0]['tid'];
     }
     $term_image = taxonomy_term_load($tid);
+    $tid = $node->field_tag_programme['und'][0]['tid'];
+    $project_type = taxonomy_term_load($tid);
+    if (!empty($project_type)) {
+      $type = str_replace(" ", "-", drupal_strtolower($project_type->name));
+      $variables['page_type'] = $variables['page_type'] . "-" . $type;
+    }
   }
   else {
     $path = explode("/", current_path());
@@ -256,14 +262,28 @@ function inea_preprocess_field(&$variables, $hook) {
     $variables['items'][0]['#suffix'] = '<p>Click map to view enlarged version<p>';
   }
   if ($element['#field_name'] == 'field_tag_priority_projects') {
-    $term = $variables['items'][0]['#options']['entity'];
-    $href = _inea_generate_term_path($term);
-    $item = array(
-      '#type' => 'link',
-      '#title' => 'Part of ' . $variables['items'][0]['#title'],
-      '#href' => $href,
-    );
-    $variables['items'][0] = $item;
+    foreach ($variables['items'] as $id => $item) {
+      $term = $item['#options']['entity'];
+      $href = _inea_generate_term_path($term);
+      $new_item = array(
+        '#type' => 'link',
+        '#title' => 'Part of ' . $item['#title'],
+        '#href' => $href,
+      );
+      $variables['items'][$id] = $new_item;
+    }
+  }
+  if ($element['#field_name'] == 'field_tag_energy_10_pci') {
+    foreach ($variables['items'] as $id => $item) {
+      $term = $item['#options']['entity'];
+      $href = _inea_generate_term_path($term);
+      $new_item = array(
+        '#type' => 'link',
+        '#title' => 'Part of ' . $item['#title'],
+        '#href' => $href,
+      );
+      $variables['items'][$id] = $new_item;
+    }
   }
 }
 
@@ -286,7 +306,7 @@ function inea_preprocess_block(&$variables) {
     'workbench' => 'block',
     'social_bookmark' => 'social-bookmark',
     'views' => 'view_ec_content_slider-block',
-    'om_maximenu' => array('om-maximenu-1','om-maximenu-2'),
+    'om_maximenu' => array('om-maximenu-1', 'om-maximenu-2'),
     'menu' => 'menu-service-tools',
     'cce_basic_config' => 'footer_ipg',
   );
@@ -294,7 +314,7 @@ function inea_preprocess_block(&$variables) {
   // List of all blocks that don't need their title to be displayed.
   $block_no_title = array(
     'fat_footer' => 'fat-footer',
-    'om_maximenu' => array('om-maximenu-1','om-maximenu-2'),
+    'om_maximenu' => array('om-maximenu-1', 'om-maximenu-2'),
     'menu' => 'menu-service-tools',
     'cce_basic_config' => 'footer_ipg',
   );
@@ -369,8 +389,45 @@ function inea_menu_link__main_menu(array $variables) {
   $name_id = preg_replace($pattern, '', $name_id);
   $element['#attributes']['class'][] = 'item' . $element['#original_link']['mlid'];
 
-  $element['#localized_options']['html'] = TRUE;
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  if ($element['#below'] && !theme_get_setting('disable_dropdown_menu')
+    && $element['#original_link']['depth'] > 1) {
+    // Menu item has dropdown.
+    if (!in_array('dropdown-submenu', $element['#attributes']['class'])) {
+      $element['#title'] .= '<b class="caret"></b>';
+    }
+
+    // Get first child item (we only need to add a class to the first item).
+    $current = current($element['#below']);
+    $id = $current['#original_link']['mlid'];
+
+    // Add class to specify it is a dropdown.
+    $element['#below'][$id]['#attributes']['class'][] = 'main_menu_dropdown';
+    if (!in_array('dropdown-submenu', $element['#attributes']['class'])) {
+      $element['#attributes']['class'][] = 'dropdown';
+    }
+
+    // Test if there is a sub-dropdown.
+    foreach ($element['#below'] as $key => $value) {
+      if (is_numeric($key) && $value['#below']) {
+        $sub_current = current($value['#below']);
+        $sub_id = $sub_current['#original_link']['mlid'];
+        // Add class to specify it is a sub-dropdown.
+        $element['#below'][$key]['#below'][$sub_id]['#attributes']['class'][] = 'main_menu_sub_dropdown';
+        $element['#below'][$key]['#attributes']['class'][] = 'dropdown-submenu';
+      }
+    }
+
+    $element['#attributes']['id'][] = $name_id;
+    $element['#localized_options']['html'] = TRUE;
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+    $dropdown = drupal_render($element['#below']);
+  }
+  else {
+    // No dropdown.
+    $element['#localized_options']['html'] = TRUE;
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  }
 
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $dropdown . "</li>\n";
 }

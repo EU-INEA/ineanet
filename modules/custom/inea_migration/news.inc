@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate topics from INEA website
+ * Handler to migrate topics from INEA website.
  */
 
+/**
+ * News migration class.
+ */
 class NewsMigration extends IneaBasicMigration {
 
   /**
@@ -84,4 +87,5 @@ class NewsMigration extends IneaBasicMigration {
       $entity->field_news_picture_gallery['und'] = $fids;
     }
   }
+
 }

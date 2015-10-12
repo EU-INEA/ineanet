@@ -2,9 +2,12 @@
 
 /**
  * @file
- * Handler to migrate events from INEA website
+ * Handler to migrate events from INEA website.
  */
 
+/**
+ * Event migration class.
+ */
 class EventsMigration extends IneaBasicMigration {
   /**
    * Setup the field mappings between the source and destination.
@@ -63,7 +66,7 @@ class EventsMigration extends IneaBasicMigration {
   public function prepare($entity, stdClass $row) {
 
     if (!empty($row->gallery)) {
-      $files = file_scan_directory(variable_get('file_default_scheme', 'public') . '://' . $row->gallery, '/.*\.(jpg|png|gif)$/', array('recurse' => FALSE));
+      $files = file_scan_directory(variable_get('file_default_scheme', 'public') . '://images' . $row->gallery, '/.*\.(jpg|png|gif)$/', array('recurse' => FALSE));
       $fids = array();
       foreach ($files as $file) {
         $fid = _inea_migration_create_file($file, $entity->uid);
@@ -71,9 +74,10 @@ class EventsMigration extends IneaBasicMigration {
           $fids[] = array('fid' => $fid);
         }
       }
-      $entity->field_event_picture_gallery['und'] = $fids;
+      $entity->field_inea_event_picture_ga['und'] = $fids;
     }
     $parent_nid = _inea_migration_load_node_by_old_id('112470000000120');
     $mlids = _inea_migration_get_mlid('node/' . $parent_nid);
   }
+
 }

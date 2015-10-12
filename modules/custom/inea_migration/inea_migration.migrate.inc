@@ -2,9 +2,7 @@
 
 /**
  * @file
- * Because the name of this file is the module name plus '.migrate.inc', when
- * hook_migrate_api is invoked by the Migrate module this file is automatically
- * loaded - thus, you don't need to implement your hook in the .module file.
+ * Inc file to include them igration api.
  */
 
 /**
@@ -61,4 +59,5 @@ abstract class IneaBasicMigration extends Migration {
     // Avoid known line ending issue: "Invalid data value".
     ini_set('auto_detect_line_endings', TRUE);
   }
+
 }

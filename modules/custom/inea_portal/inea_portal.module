@@ -4,7 +4,6 @@
  * Custom INEA module to render some pages and forms.
  */
 
-
 /**
  * Implements hook_info_alter().
  */
@@ -22,30 +21,6 @@ function inea_portal_form_implementation_success_node_form_alter(&$form, &$form_
   $form['body']['#access'] = 0;
 }
 
-/**
- * Implements hook_menu_block_tree_alter().
- */
-function inea_portal_menu_block_tree_alter(&$tree, &$config) {
-  if ($config['level'] == 2 && $config['depth'] == 2) {
-    $tree = _inea_portal_remove_menu_children($tree, 2);
-  }
-}
-
-/**
- * Helper function prune menu items.
- */
-function _inea_portal_remove_menu_children($array, $depth) {
-  foreach ($array as $key => $item) {
-    if ($item['link']['depth'] == $depth && count($item['below']) > 3) {
-      $item['below'] = array();
-    }
-    else {
-      $item['below'] = _inea_portal_remove_menu_children($item['below'], $depth);
-    }
-    $array[$key] = $item;
-  }
-  return $array;
-}
 
 /**
  * Implements hook_token_info().
@@ -96,6 +71,9 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
                 $replacements[$original] = $name;
                 break;
 
+              default:
+                $name = str_replace(" ", "-", drupal_strtolower($term->name));
+                break;
             }
             $replacements[$original] = $name;
             break;
@@ -119,4 +97,17 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
     }
   }
   return $replacements;
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function inea_portal_views_data_alter(&$data) {
+  $data['field_data_field_project_summary']['field_project_summary_value']['sort'] = array(
+    'field' => 'field_project_summary_value',
+    'table' => 'field_data_field_project_summary',
+    'handler' => 'views_handler_sort',
+    'additional_fields' => array('field_project_summary_value', 'field_project_summary_format'),
+    'field_name' => 'field_project_summary',
+  );
 }

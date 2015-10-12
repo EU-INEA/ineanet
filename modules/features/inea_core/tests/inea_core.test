@@ -3,11 +3,10 @@
 /**
  * @file
  * Tests for inea_core.module.
- * INEA
  */
 
 /**
- * Defines a base class for testing
+ * Defines a base class for testing.
  */
 class IneaQAWebTestCase extends DrupalWebTestCase {
   /**
@@ -87,4 +86,5 @@ class IneaQAWebTestCase extends DrupalWebTestCase {
     $this->assertTrue(strpos($data, $module . '_enable'), 'The module contains a hook_enable');
     $this->assertTrue(strpos($data, $module . '_disable'), 'The module contains a hook_disable');
   }
+
 }
