@@ -5,13 +5,11 @@
 /*
  * General.
  */
-
 body {
   background-color: #ffffff;
   background-color: white;
   background-image: none;
 }
-
 .panel {
   border: none;
   box-shadow: none;
@@ -60,7 +58,6 @@ body {
     width: 750px;
   }
 }
-
 @media (max-width:751px) {
   .region-featured #main-menu {
     padding-left: 0;
@@ -79,6 +76,91 @@ body {
   }
 }
 
+
+/* copied from css injector */
+/* To make sure all images are responsive */
+img {max-width:100%;}
+
+/* BREADCRUMB FONT */
+#path .menu-breadcrumb, #path .easy-breadcrumb  {font-size: 75%;}
+
+/* CEF Transport Project title spacing */
+@media (min-width:768px){
+    .node-type-project #content-wrapper .project-cef-transport-title
+    { 
+        padding-right:15%;
+    }
+}
+.node-type-project #content-wrapper .project-cef-transport-title a img
+    {   float:left;
+        margin-right: 5px;
+    }
+
+/* Corridor tag */
+.node-type-project div#content-wrapper div.node div.field-name-field-corridor li {
+    color: #ee8032;
+    text-transform: uppercase;
+    font-weight:700;
+}
+
+/* h1 -titles on all pages */
+h1 {color:#111; font-size:24px; }
+
+/* Content-and-title-padding-left */
+@media (min-width:990px){
+    .not-front #content-wrapper {padding-left:56px;}
+ 
+ /* Latest News Block */
+ div#block-views-latest-news-block div.panel-heading {
+    background-color: #0065a2;
+    border-color: #ddd;
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+}
+div#block-views-latest-news-block div.panel-body {
+    padding: 10px 10px 0px 15px;
+}
+div#block-views-latest-news-block .views-row {
+    padding-bottom:15px;
+    border-bottom: solid 1px #ccc;
+}
+
+/*Commission header FONT*/
+ div#layout-header div.container div#sub-title {
+     font-weight:bold;}
+
+/* sEARCH rESULTS */ 
+div#block-system-main.block.block-system.panel.panel-default.clearfix div.panel-body.content ol.search-results.apachesolr_search-results li.search-result div.search-snippet-info p.search-info 
+{display:none;}
+
+/* Simplenews author info hide */
+.node-simplenews.node-full.clearfix div.content.clearfix div.row.node-info div.node-info-submitted.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-6.col-md-offset-6.col-sm-offset-6 div.well.well-sm.node-submitted.clearfix 
+{display:none;}
+
+/* tax term hide on newsletters */
+.node-simplenews.node-full.clearfix div.content.clearfix div.field.field-name-field-simplenews-term.field-type-taxonomy-term-reference.field-label-hidden.clearfix ul.links li.taxonomy-term-reference-0 
+{display:none;}
+
+/* subscription box cef energy faq newsletter hide */
+div.region.region-content-bottom div#block-simplenews-365.block.block-simplenews.contextual-links-region.panel.panel-default.clearfix div.panel-heading {display:none;}
+@media (min-width:751px){
+    div.region.region-content-bottom div#block-simplenews-365.block.block-simplenews.panel.panel-default.clearfix {width:20%;}
+}
+#block-simplenews-365 div.panel-heading {display:none;}
+
+/* simplenews table formatting*/
+/* This is new for simplenews as of Sept 10th 2015 */
+.node-type-simplenews div#content-wrapper div.node table td {
+  display: table-cell;
+  padding: 5px;
+}
+
+/*  END --- copied from css injector */
+
+/* =====================================================================================================*/
 /* Responsive sidebar */
 #responsive-sidebar {
   width: 50%;
@@ -136,9 +218,11 @@ h1#page-title {
   padding-left: 0px;
 }
 
+/* changed to allow proper formatting in tables apart from projects. Oct 16, 2015
+This rule now only applies to projects */
 div#content-wrapper div.node p,
 div#content-wrapper div.node a,
-div#content-wrapper div.node table,
+.node-type-project div#content-wrapper div.node table,
 div#content-wrapper div.node ul li {
   font-size: 12px;
   padding: 0;
@@ -155,12 +239,17 @@ hr {
   -webkit-margin-end: auto;
 }
 
+
+/* Events page */
 .page-node-43 div#content-wrapper table td p {
   padding: 4px;
   width: 75%;
 }
 
-div#content-wrapper div.node table {
+
+/* changed to allow proper formatting in tables apart from projects. Oct 16, 2015
+This rule now only applies to projects */
+.node-type-project .div#content-wrapper div.node table {
   display: table;
   border-collapse: separate;
   border-spacing: 2px;
@@ -169,6 +258,12 @@ div#content-wrapper div.node table {
 
 .node-type-page div#content-wrapper div.node table tr {
   display: table-row;
+}
+
+/* This is new for simplenews as of Sept 10th 2015 */
+.node-type-simplenews div#content-wrapper div.node table td {
+  display: table-cell;
+  padding: 5px;
 }
 
 .node-type-page div#content-wrapper div.node table td {
@@ -275,7 +370,7 @@ div#content-wrapper div.view h4 {
   background-color: #f0f0f0;
   border: none;
   min-height: 40px;
-  padding-left: 12%;
+  padding-left: 0%;
 }
 
 #main-menu .navbar {
@@ -297,7 +392,8 @@ div#content-wrapper div.view h4 {
   background-color: #f0f0f0;
   color: #262261;
   font-family: arial, helvetica, sans-serif;
-  font-size: 11px;
+/* copied from cs injector */
+  font-size:13px; font-size:81.25%;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -389,139 +485,254 @@ div#sidebar-left .panel {
  * Home section
  */
 
+
+
 div.block.social-media {
+
   padding: 5px 15px;
+
   background-color: #f0f0f0;
+
   width: 156px;
+
   border-radius: 0;
+
 }
+
+
 
 div.block.social-media div.content  p {
+
   margin: 10px 0;
+
 }
+
+
 
 div.block.social-media div.content a {
+
   margin: 0 5px;
+
 }
+
+
 
 div.region-site-bottom {
+
   text-align: center;
+
 }
+
+
 
 div.block.bottom-banner div.content {
+
   padding: 15px 15px;
+
   background-color: #f0f0f0;
+
   display: inline-block;
+
   margin-left: auto;
+
   margin-right: auto;
+
 }
+
+
 
 div.block.bottom-banner div.content p {
+
   margin: 0;
+
 }
+
+
 
 div.block.bottom-banner div.content  a {
+
   margin: 0 10px;
+
 }
+
+
 
 div#block-views-latest-news-block div.panel-heading {
+
   background: none;
+
   border: none;
+
   font-size: 18px;
+
   font-family: verdana, arial, sans-serif;
+
   font-weight: normal;
+
   line-height: normal;
+
   color: #262261;
+
   padding: 10px 15px 10px 0;
+
 }
+
+
 
 div#block-views-latest-news-block a {
+
   font-size: 12px;
+
   font-family: verdana, arial, helvetica, sans-serif;
+
   color: #0000ff;
+
   text-decoration: underline;
+
 }
+
+
 
 div#block-views-latest-news-block div.views-field-created {
+
   font-size: 11px;
+
   font-style: italic;
+
   color: #000000;
+
 }
+
+
 
 div#block-views-latest-news-block div.views-row {
+
   margin-bottom: 15px;
+
 }
 
+
+
 div#block-views-latest-news-block div.view-footer {
+
   background-image: url(../images/bullet_next.gif);
+
   background-repeat: no-repeat;
+
   background-position: 4px 4px;
+
   padding: 0 0 0 25px;
+
 }
+
+
 
 /* Views */
 
+
+
 div.view div.views-field-field-term-image {
+
   float: left;
+
   margin: 0 4px 0 0;
+
 }
+
+
 
 div.view div.views-field-created {
+
   font-style: italic;
+
   font-family: verdana, arial, sans-serif;
+
   color: #000000;
+
   font-size: 11px;
+
   line-height: normal;
+
 }
+
+
 
 div.view div.views-field-body {
+
   font-family: verdana, arial, sans-serif;
+
   color: #666666;
+
   font-size: 11px;
+
   line-height: normal;
+
 }
+
+
 
 /*News */
+
 .node-type-news .field-type-text-with-summary {
+
   margin-top: 2%;
+
 }
+
+
 
 /* Projects */
+
 .node-type-project h1#page-title {
+
   font-size: 36px;
+
   color: #e0922f;
+
 }
+
+
 
 .node-type-project div#content-wrapper h1#page-title a,
+
 .page-ten-t div#content-wrapper h1#page-title a {
+
   font-size: 10px;
+
 }
+
+
 
 .node-type-project div#content-wrapper .group-header {
+
   overflow: hidden;
+
   padding-bottom: 20px;
+
   border-bottom: 1px solid #ccc;
+
 }
 
-.node-type-project div#content-wrapper h1.project-cef-energy-title {
+
+/* CEF Projects */
+.node-type-project div#content-wrapper h1.project-cef-energy-title,
+.node-type-project div#content-wrapper h1.project-cef-transport-title
+ {
   font-size: 18px;
   font-weight: bold;
   color: #ee8032;
 }
 
-.node-type-project div#content-wrapper .project-cef-energy div.node div.field-name-field-project-summary p {
+.node-type-project div#content-wrapper .project-cef-energy div.node div.field-name-field-project-summary p,
+.node-type-project div#content-wrapper .project-ten-t-projects div.node div.field-name-field-project-summary p,
+.node-type-project div#content-wrapper .project-cef-transport div.node div.field-name-field-project-summary p   {
   font-size: 18px;
   color: #262261;
   padding: 1% 0%;
 }
 
-.node-type-project div#content-wrapper .project-ten-t-projects div.node div.field-name-field-project-summary p {
-  font-size: 18px;
-  color: #262261;
-  padding: 1% 8%;
-}
-
-.view-cef-energy-countries .field-name-field-pci-summary {
+.view-cef-energy-countries .field-name-field-pci-summary,
+.view-cef-transport-countries .field-name-field-pci-summary {
   font-size: 18px;
   color: #ee8032;
 }
@@ -584,6 +795,7 @@ div#content-wrapper h3.seeproj {
   overflow: hidden;
   margin-right: 2%;
 }
+
 .vocabulary-priority-project .content {
   line-height: normal;
   margin-bottom: 2%;
@@ -591,10 +803,12 @@ div#content-wrapper h3.seeproj {
   border-bottom-style: inset;
   overflow: hidden;
 }
+
 .vocabulary-priority-project div.taxonomy-term-description {
   float: right;
   width: 68%;
 }
+
 .vocabulary-priority-project div.taxonomy-term-description p {
   margin-bottom: 0px;
   font-size: 12px;
@@ -605,7 +819,6 @@ div#content-wrapper h3.seeproj {
   width: 30%;
 }
 
-
 /* 30 priority project overview page */
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-header p,
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-header ul li,
@@ -613,7 +826,6 @@ div#content-wrapper h3.seeproj {
   font-size: 12px;
   line-height: normal;
 }
-
 .page-ten-t-ten-t-projects-projects-by-priority-project #content-wrapper .view-content .views-row {
   border-top: 0px;
   padding-top: 0px;
@@ -629,39 +841,44 @@ div#content-wrapper h3.seeproj {
   font-size: 12px;
 }
 
-
-/* TEN-T Project views */
+/* TEN-T andf CEF Project views */
 .view-ten-t-projects-by-programme-and-other-tag div.view-header h5,
-.view-cef-energy-countries div.view-header h5 {
+.view-cef-energy-countries div.view-header h5,
+.view-cef-transport-countries div.view-header h5 {
   clear: both;
   color: #262261;
 }
+
 .view-ten-t-projects-by-programme-and-other-tag div.view-header p,
-.view-cef-energy-countries div.view-header p {
+.view-cef-energy-countries div.view-header p,
+.view-cef-transport-countries div.view-header p {
   font-size: 12px;
 }
 
 .view-ten-t-projects-by-programme-and-other-tag div.view-content,
-.view-cef-energy-countries div.view-content {
+.view-cef-energy-countries div.view-content,
+.view-cef-transport-countries div.view-content {
   margin-bottom: 35px;
 }
 
 .view-ten-t-projects-by-programme-and-other-tag div.view-content a,
-.view-cef-energy-countries div.view-content a {
+.view-cef-energy-countries div.view-content a,
+.view-cef-transport-countries div.view-content a {
   font-size: 12px;
   background-image: url(../images/bullet_next.gif);
   background-repeat: no-repeat;
   background-position: 3px 0px;
   padding: 0 0 4px 25px;
 }
+
 .view-ten-t-projects-by-programme-and-other-tag div.view-content .views-row p,
-.view-cef-energy-countries div.view-content .views-row .views-field-title span {
+.view-cef-energy-countries div.view-content .views-row .views-field-title span,
+.view-cef-transport-countries div.view-content .views-row .views-field-title span {
   font-size:12px;
 }
-
-
 .view-ten-t-projects-by-programme-and-other-tag div.view-content .views-field-field-project-summary p,
-.view-cef-energy-countries div.view-content .views-field-title span {
+.view-cef-energy-countries div.view-content .views-field-title span,
+.view-cef-transport-countries div.view-content .views-field-title span {
   font-size: 11px;
   color: #666666;
 }
@@ -671,11 +888,9 @@ div#content-wrapper h3.seeproj {
   padding-top: 4px;
   margin-bottom: 0px; /*May 7th*/
 }
-
 .page-ten-t-ten-t-projects .taxonomy-term-description ol {
   font-size:12px;
 }
-
 /* 2007-2013 MAP Project Portfolio Review */
 .page-node-136 table td span {
   padding-left:3px;
@@ -689,12 +904,10 @@ div#content-wrapper h3.seeproj {
 .page-ten-t-ten-t-projects-projects-by-transport-mode #content-wrapper .view-ten-t-projects-by-programme .field-content a {
   font-size:12px;
 }
-
 .page-ten-t-ten-t-projects-projects-by-transport-mode #content-wrapper .view div.views-row {
   margin:0;
   padding-top:2px;
 }
-
 
 /* CEF Projects */
 .page-connecting-europe-facility #content-wrapper .view-cef-projects-by-programme {
@@ -709,6 +922,7 @@ div#content-wrapper h3.seeproj {
 .page-connecting-europe-facility #content-wrapper .view {
   font-size: 12px;
 }
+
 .page-connecting-europe-facility #content-wrapper .view div.views-row,
 .page-ten-t-ten-t-projects-projects-by-country #content-wrapper .view div.views-row {
   margin: 0;
@@ -716,7 +930,6 @@ div#content-wrapper h3.seeproj {
 }
 
 /* Implementation Successes -  Projects */
-
 .node-type-implementation-success div#content-wrapper h1#page-title a,
 .page-ten-t div#content-wrapper h1#page-title a {
   font-size: 10px;
@@ -739,10 +952,12 @@ div#content-wrapper h3.seeproj {
   margin-right: 2%;
   margin-top: 3%;
 }
+
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-map img {
   vertical-align: top;
   margin-top: 3%;
 }
+
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-description table {
   border-spacing: 2px;
   border-collapse: separate;
