@@ -224,9 +224,12 @@ div#content-wrapper div.node p,
 div#content-wrapper div.node a,
 .node-type-project div#content-wrapper div.node table,
 div#content-wrapper div.node ul li {
+ /* Nov 6, 2015  
   font-size: 12px;
   padding: 0;
   margin: 0;
+  see what effect this has.
+  */ 
 }
 
 hr {
@@ -337,6 +340,7 @@ div#content-wrapper span.h3 {
   line-height: normal;
 }
 
+/* commented out - Nov 5th, 2015
 div#content-wrapper div.node h2,
 div#content-wrapper div.node p.h2,
 div#content-wrapper div.node p.h2 a,
@@ -347,12 +351,15 @@ div#content-wrapper div.view p.h2 {
   font-weight: normal;
   line-height: normal;
   color: #262261;
-}
+}*/
 
 div#content-wrapper div.node ul {
   line-height: normal;
 }
 
+
+/**/
+/* commented out - Nov 5th, 2015
 div#content-wrapper div.node h4,
 div#content-wrapper div.view h4 {
   font-size: 12px;
@@ -360,7 +367,7 @@ div#content-wrapper div.view h4 {
   font-weight: bold;
   line-height: normal;
   color: #262261;
-}
+}*/
 
 /*
  *  Main Menu
@@ -391,7 +398,7 @@ div#content-wrapper div.view h4 {
   border-right: solid 1px #e3e3e3;
   background-color: #f0f0f0;
   color: #262261;
-  font-family: arial, helvetica, sans-serif;
+/* font-family: arial, helvetica, sans-serif;   commented out - Nov 5th, 2015 */
 /* copied from cs injector */
   font-size:13px; font-size:81.25%;
   font-weight: normal;
