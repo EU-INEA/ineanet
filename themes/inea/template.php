@@ -285,7 +285,7 @@ function inea_preprocess_field(&$variables, $hook) {
       $variables['items'][$id] = $new_item;
     }
   }
-    if ($element['#field_name'] == 'field_tag_corridor') {
+    if ($element['#field_name'] == 'field_corridor') {
       foreach ($variables['items'] as $id => $item) {
         $term = $item['#options']['entity'];
         $href = _inea_generate_term_path($term);
