@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the h2020 project feed feature.
+ */
+
+include_once 'h2020_project_feed.features.inc';
