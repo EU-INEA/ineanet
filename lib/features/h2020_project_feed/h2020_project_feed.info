@@ -1,8 +1,8 @@
-name = h2020 project feed
-description = Feed to import H2020 projects into site
+name = Inea H2020 Project Import
+description = Feed to import H2020 projects into Inea's website
 core = 7.x
-package = Features
-version = 7.x-1.0
+package = Inea
+version = 7.x-2.0
 dependencies[] = ctools
 dependencies[] = feeds
 features[ctools][] = feeds:feeds_importer_default:1
