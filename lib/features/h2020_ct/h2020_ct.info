@@ -1,5 +1,5 @@
-name = Inea_h2020_ct
-description = H2020 Project Content type for Inea
+name = INEA H2020 Project CT
+description = INEA H2020 Project Content type
 core = 7.x
 package = Inea
 version = 7.x-3.0
@@ -79,3 +79,4 @@ features[variable][] = node_options_h2020_project
 features[variable][] = node_preview_h2020_project
 features[variable][] = node_submitted_h2020_project
 features[variable][] = pathauto_taxonomy_term_country_pattern
+multisite_version = 2.1

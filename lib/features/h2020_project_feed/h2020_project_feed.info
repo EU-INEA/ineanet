@@ -2,6 +2,7 @@ name = Inea H2020 Project Import
 description = Feed to import H2020 projects into Inea's website
 core = 7.x
 package = Inea
+multisite_version = "2.1"
 version = 7.x-2.0
 dependencies[] = ctools
 dependencies[] = feeds
