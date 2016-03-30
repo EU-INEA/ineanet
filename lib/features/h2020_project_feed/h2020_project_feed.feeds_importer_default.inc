@@ -13,7 +13,7 @@ function h2020_project_feed_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'h2020_porjects';
+  $feeds_importer->id = 'h2020_projects';
   $feeds_importer->config = array(
     'name' => 'H2020 Projects',
     'description' => 'Import H2020 projects from Lucas\' spreadsheet',
@@ -50,80 +50,74 @@ function h2020_project_feed_feeds_importer_default() {
             'language' => 'und',
           ),
           1 => array(
+            'source' => 'Project Number',
+            'target' => 'field_inea_h2020_project_referen',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'Project Title',
+            'target' => 'field_inea_h2020_project_descrip',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
             'source' => 'Project Call Id',
             'target' => 'field_inea_h2020_call_for_propos',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          2 => array(
+          4 => array(
             'source' => 'Project Topic Code',
             'target' => 'field_inea_h2020_topic',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          3 => array(
+          5 => array(
             'source' => 'Project Acronym',
             'target' => 'field_inea_h2020_acronym',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          4 => array(
-            'source' => 'Project Title',
-            'target' => 'title',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          5 => array(
+          6 => array(
             'source' => 'Project Start Date',
             'target' => 'field_inea_h2020_duration:start',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          6 => array(
+          7 => array(
             'source' => 'Project End Date',
             'target' => 'field_inea_h2020_duration:end',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          7 => array(
-            'source' => 'Project Total Cost',
+          8 => array(
+            'source' => 'Project Total Costs',
             'target' => 'field_inea_h2020_total_costs',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          8 => array(
-            'source' => 'Project EU Contribution',
+          9 => array(
+            'source' => 'Project Requested EC Contribution',
             'target' => 'field_inea_h2020_eu_contribution',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          9 => array(
-            'source' => 'Project Funding Scheme',
+          10 => array(
+            'source' => 'Project TOA',
             'target' => 'field_inea_h2020_funding_scheme',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          10 => array(
-            'source' => 'Project Partner Countries',
-            'target' => 'field_inea_h2020_partner_countri',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
           11 => array(
-            'source' => 'Project Coordinator',
+            'source' => 'Coordinator',
             'target' => 'field_inea_h2020_coordinator',
             'unique' => FALSE,
             'language' => 'und',
           ),
           12 => array(
-            'source' => 'Project Cordis link',
-            'target' => 'field_inea_h2020_cordis_url:url',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          13 => array(
-            'source' => 'Prokect partners and contributions',
-            'target' => 'field_inea_h2020_participants',
+            'source' => 'Short Description',
+            'target' => 'field_inea_h2020_short_summary',
             'unique' => FALSE,
             'language' => 'und',
           ),
@@ -144,7 +138,7 @@ function h2020_project_feed_feeds_importer_default() {
     'import_on_create' => 1,
     'process_in_background' => 0,
   );
-  $export['h2020_porjects'] = $feeds_importer;
+  $export['h2020_projects'] = $feeds_importer;
 
   return $export;
 }

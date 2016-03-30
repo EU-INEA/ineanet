@@ -22,7 +22,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -33,8 +33,8 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_abstract',
-    'label' => 'h2020 Abstract',
-    'required' => 0,
+    'label' => 'Abstract',
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -96,7 +96,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -108,7 +108,7 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_acronym',
     'label' => 'h2020 acronym',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -169,7 +169,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -180,8 +180,8 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_call_for_propos',
-    'label' => 'Inea h2020 call for proposals',
-    'required' => 0,
+    'label' => 'Call for proposals',
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -241,7 +241,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -313,7 +313,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -324,7 +324,7 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_cordis_url',
-    'label' => 'Project Description on CORDIS',
+    'label' => 'Project description on CORDIS',
     'required' => 1,
     'settings' => array(
       'absolute_url' => 1,
@@ -368,15 +368,15 @@ function h2020_ct_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 17,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -387,8 +387,8 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_duration',
-    'label' => 'h2020_duration',
-    'required' => 0,
+    'label' => 'Duration',
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -426,7 +426,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -437,8 +437,8 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_eu_contribution',
-    'label' => 'EU Contribution',
-    'required' => 0,
+    'label' => 'EU contribution after total cost',
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -499,7 +499,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -566,20 +566,14 @@ function h2020_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'colorbox',
+        'label' => 'hidden',
+        'module' => 'image',
         'settings' => array(
-          'colorbox_caption' => 'auto',
-          'colorbox_caption_custom' => '',
-          'colorbox_gallery' => 'post',
-          'colorbox_gallery_custom' => '',
-          'colorbox_image_style' => '',
-          'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => '',
-          'colorbox_node_style_first' => '',
+          'image_link' => '',
+          'image_style' => '',
         ),
-        'type' => 'colorbox',
-        'weight' => 9,
+        'type' => 'image',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -591,46 +585,48 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_image',
     'label' => 'h2020 image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'avportal' => 0,
-          'dailymotion' => 0,
-          'node' => 0,
-          'private' => 0,
-          'public' => 'public',
-          'vimeo' => 0,
-          'youtube' => 0,
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
         ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'elibrary_browser_tab--media_browser_1' => 0,
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
-          'upload' => 0,
-        ),
+        'preview_image_style' => 'medium',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => 13,
     ),
   );
@@ -652,7 +648,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -664,7 +660,7 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_participants',
     'label' => 'Participants',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -715,48 +711,6 @@ function h2020_ct_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-h2020_project-field_inea_h2020_partner_countri'.
-  $field_instances['node-h2020_project-field_inea_h2020_partner_countri'] = array(
-    'bundle' => 'h2020_project',
-    'default_value' => array(
-      0 => array(
-        'tid' => 46,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 21,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_inea_h2020_partner_countri',
-    'label' => 'Inea h2020 Partner countries',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 19,
-    ),
-  );
-
-  // Exported field_instance:
   // 'node-h2020_project-field_inea_h2020_project_descrip'.
   $field_instances['node-h2020_project-field_inea_h2020_project_descrip'] = array(
     'bundle' => 'h2020_project',
@@ -765,11 +719,11 @@ function h2020_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -781,7 +735,7 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_project_descrip',
     'label' => 'inea h2020 project description',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -842,7 +796,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -853,7 +807,7 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_project_referen',
-    'label' => 'Inea h2020 Project Reference',
+    'label' => 'Project reference',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
@@ -915,7 +869,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -927,7 +881,7 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_short_summary',
     'label' => 'h2020 short summary',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -987,7 +941,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -999,7 +953,7 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_topic',
     'label' => 'Topic',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1059,7 +1013,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1070,8 +1024,8 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_total_costs',
-    'label' => 'Total Cost',
-    'required' => 0,
+    'label' => 'Total cost',
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1131,7 +1085,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1142,7 +1096,7 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_url',
-    'label' => 'Project Website',
+    'label' => 'Project website',
     'required' => 1,
     'settings' => array(
       'absolute_url' => 1,
@@ -1241,7 +1195,7 @@ function h2020_ct_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_term_image',
     'label' => 'Image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -1288,13 +1242,13 @@ function h2020_ct_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Abstract');
+  t('Call for proposals');
   t('Coordinator');
-  t('EU Contribution');
+  t('Duration');
+  t('EU contribution after total cost');
   t('Funding scheme');
   t('Image');
-  t('Inea h2020 Partner countries');
-  t('Inea h2020 Project Reference');
-  t('Inea h2020 call for proposals');
   t('Old ID');
   t('Participants');
   t('Please enter Project start and end dates.');
@@ -1303,15 +1257,14 @@ function h2020_ct_field_default_field_instances() {
   t('Please enter the url of the project on CORDIS ');
   t('Please enter total cost figure.');
   t('Project Abstract text field.');
-  t('Project Description on CORDIS');
-  t('Project Website');
+  t('Project description on CORDIS');
+  t('Project reference');
+  t('Project website');
   t('Topic');
-  t('Total Cost');
-  t('h2020 Abstract');
+  t('Total cost');
   t('h2020 acronym');
   t('h2020 image');
   t('h2020 short summary');
-  t('h2020_duration');
   t('inea h2020 project description');
 
   return $field_instances;
