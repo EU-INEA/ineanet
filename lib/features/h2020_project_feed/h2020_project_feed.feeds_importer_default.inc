@@ -121,6 +121,11 @@ function h2020_project_feed_feeds_importer_default() {
             'unique' => FALSE,
             'language' => 'und',
           ),
+          13 => array(
+            'source' => 'Cordis Link',
+            'target' => 'field_inea_h2020_cordis_url:url',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'skip',
