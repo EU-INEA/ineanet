@@ -125,6 +125,18 @@ function h2020_project_feed_feeds_importer_default() {
             'source' => 'Cordis Link',
             'target' => 'field_inea_h2020_cordis_url:url',
             'unique' => FALSE,
+            'language' => 'und',
+          ),
+          14 => array(
+            'source' => 'Project Number',
+            'target' => 'guid',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          15 => array(
+            'source' => 'Participant Legal Name',
+            'target' => 'field_inea_h2020_participants',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',
