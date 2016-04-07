@@ -134,7 +134,7 @@ function h2020_project_feed_feeds_importer_default() {
             'language' => 'und',
           ),
           15 => array(
-            'source' => 'Participant Legal Name',
+            'source' => 'Participant Short Name',
             'target' => 'field_inea_h2020_participants',
             'unique' => FALSE,
           ),
