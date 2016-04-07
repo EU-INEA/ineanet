@@ -1244,15 +1244,13 @@ div.block.social-media {
 }
  
  /* =======================================================================*/   
- 
- 
- 
  /* Bottom banner of our parent DGs */
     .bot-banner .pane-content p {
         padding-top: 50px;
         text-align: center;
         }
     
+
     /* H2020 Project pages */ 
     
     .node-type-h2020-project .group-left .field-label,
@@ -1261,34 +1259,9 @@ div.block.social-media {
         color: #e0922f;
         }
     .node-type-h2020-project .group-left .field-items,
-    .node-type-h2020-project .group-right .field-items     {
+    .node-type-h2020-project .group-right .field-items 
+     {
         margin-bottom: 20px;
         }
-    /*.node-type-h2020-project .field-type-taxonomy-term-reference li a,
-    .node-type-h2020-project .group-left .field-type-taxonomy-term-reference .links li a    {
-      float: left;
-      margin-bottom: 10px;
-    }*/
-/*    .node-type-h2020-project div#content-wrapper div.node ul li,*/
-    .node-type-h2020-project div#layout-body.container div#content-wrapper div.group-right div.field.field-name-field-inea-h2020-partner-countri.field-type-taxonomy-term-reference ul.links li {float: left; width: 100%;} 
     
-    .node-type-h2020-project div#layout-body.container div#content-wrapper div.group-right div.field.field-name-field-inea-h2020-partner-countri.field-type-taxonomy-term-reference ul.links li:last-child {margin-bottom: 20px;} 
-
-    /* General layout of page */
-    /* Width of left and right */
-    .node-type-h2020-project .ds-2col > .group-left {
-    float: left;
-    width: 55%;
-}
-.node-type-h2020-project .ds-2col > .group-right {
-    float: left;
-    width: 44%;
-    margin-left: 1%;
-}
-
-      /* Styling of individual fields */
-      .field-name-field-inea-h2020-acronym,
-      .field-name-field-inea-h2020-project-descrip { 
-        font-weight: bold;
-        font-size: 16px;
-      }
+    
