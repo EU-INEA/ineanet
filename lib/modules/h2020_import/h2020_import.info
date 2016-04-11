@@ -1,0 +1,6 @@
+name = "H2020_import"
+Description = "Migrate H2020 Projects from Corda"
+package = "Migration"
+core = "7.x"
+
+dependencies[] = "migrate"

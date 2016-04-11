@@ -150,7 +150,7 @@ function h2020_ct_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_inea_h2020_duration',
     'indexes' => array(),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'date',
     'settings' => array(
       'cache_count' => 4,

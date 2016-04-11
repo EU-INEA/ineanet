@@ -37,7 +37,9 @@ function h2020_ct_ds_layout_settings_info() {
         12 => 'field_inea_h2020_coordinator',
         13 => 'field_inea_h2020_url',
         14 => 'field_inea_h2020_cordis_url',
-        15 => 'field_inea_h2020_participants',
+        15 => 'field_inea_participant_country',
+        16 => 'field_inea_participant_requested',
+        17 => 'field_inea_participant',
       ),
     ),
     'fields' => array(
@@ -56,7 +58,9 @@ function h2020_ct_ds_layout_settings_info() {
       'field_inea_h2020_coordinator' => 'right',
       'field_inea_h2020_url' => 'right',
       'field_inea_h2020_cordis_url' => 'right',
-      'field_inea_h2020_participants' => 'right',
+      'field_inea_participant_country' => 'right',
+      'field_inea_participant_requested' => 'right',
+      'field_inea_participant' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
