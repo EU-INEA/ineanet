@@ -10,6 +10,226 @@
 function h2020_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-h2020_project-field_date_4_end'.
+  $field_instances['node-h2020_project-field_date_4_end'] = array(
+    'bundle' => 'h2020_project',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date_4_end',
+    'label' => 'date-4-end',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'site-wide',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance: 'node-h2020_project-field_date_4_start'.
+  $field_instances['node-h2020_project-field_date_4_start'] = array(
+    'bundle' => 'h2020_project',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date_4_start',
+    'label' => 'date-4-start',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'site-wide',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 29,
+    ),
+  );
+
+  // Exported field_instance: 'node-h2020_project-field_duration2'.
+  $field_instances['node-h2020_project-field_duration2'] = array(
+    'bundle' => 'h2020_project',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_duration2',
+    'label' => 'Duration2',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 27,
+    ),
+  );
+
+  // Exported field_instance: 'node-h2020_project-field_inea_duration3'.
+  $field_instances['node-h2020_project-field_inea_duration3'] = array(
+    'bundle' => 'h2020_project',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_inea_duration3',
+    'label' => 'Inea Duration3',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'site-wide',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 28,
+    ),
+  );
+
   // Exported field_instance: 'node-h2020_project-field_inea_h2020_abstract'.
   $field_instances['node-h2020_project-field_inea_h2020_abstract'] = array(
     'bundle' => 'h2020_project',
@@ -401,7 +621,7 @@ function h2020_ct_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
+        'input_format' => 'site-wide',
         'input_format_custom' => '',
         'label_position' => 'above',
         'no_fieldset' => 0,
@@ -1063,7 +1283,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1074,7 +1294,7 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_participant',
-    'label' => 'inea Participant',
+    'label' => 'Participants',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1082,6 +1302,7 @@ function h2020_ct_field_default_field_instances() {
           'basic_html' => 'basic_html',
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'migrate_example' => 0,
           'plain_text' => 'plain_text',
           'wiki' => 'wiki',
         ),
@@ -1097,6 +1318,9 @@ function h2020_ct_field_default_field_instances() {
             ),
             'full_html' => array(
               'weight' => -10,
+            ),
+            'migrate_example' => array(
+              'weight' => 20,
             ),
             'plain_text' => array(
               'weight' => -8,
@@ -1136,7 +1360,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1147,7 +1371,7 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_participant_country',
-    'label' => 'inea Participant Country',
+    'label' => 'Country',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1155,6 +1379,7 @@ function h2020_ct_field_default_field_instances() {
           'basic_html' => 'basic_html',
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'migrate_example' => 0,
           'plain_text' => 'plain_text',
           'wiki' => 'wiki',
         ),
@@ -1170,6 +1395,9 @@ function h2020_ct_field_default_field_instances() {
             ),
             'full_html' => array(
               'weight' => -10,
+            ),
+            'migrate_example' => array(
+              'weight' => 20,
             ),
             'plain_text' => array(
               'weight' => -8,
@@ -1192,7 +1420,7 @@ function h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 22,
+      'weight' => 25,
     ),
   );
 
@@ -1209,7 +1437,7 @@ function h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1220,7 +1448,7 @@ function h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_participant_requested',
-    'label' => 'Participant Requested EC Contribution',
+    'label' => 'Requested EC Contribution',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1228,6 +1456,7 @@ function h2020_ct_field_default_field_instances() {
           'basic_html' => 'basic_html',
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'migrate_example' => 0,
           'plain_text' => 'plain_text',
           'wiki' => 'wiki',
         ),
@@ -1243,6 +1472,9 @@ function h2020_ct_field_default_field_instances() {
             ),
             'full_html' => array(
               'weight' => -10,
+            ),
+            'migrate_example' => array(
+              'weight' => 20,
             ),
             'plain_text' => array(
               'weight' => -8,
@@ -1265,7 +1497,7 @@ function h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 23,
+      'weight' => 26,
     ),
   );
 
@@ -1384,12 +1616,15 @@ function h2020_ct_field_default_field_instances() {
   t('Abstract');
   t('Call for proposals');
   t('Coordinator');
+  t('Country');
   t('Duration');
+  t('Duration2');
   t('EU contribution after total cost');
   t('Funding scheme');
   t('Image');
+  t('Inea Duration3');
   t('Old ID');
-  t('Participant Requested EC Contribution');
+  t('Participants');
   t('Please enter Project start and end dates.');
   t('Please enter Topic Code');
   t('Please enter the url of the project on CORDIS ');
@@ -1398,13 +1633,14 @@ function h2020_ct_field_default_field_instances() {
   t('Project description on CORDIS');
   t('Project reference');
   t('Project website');
+  t('Requested EC Contribution');
   t('Topic');
   t('Total cost');
+  t('date-4-end');
+  t('date-4-start');
   t('h2020 acronym');
   t('h2020 image');
   t('h2020 short summary');
-  t('inea Participant');
-  t('inea Participant Country');
   t('inea h2020 project description');
 
   return $field_instances;

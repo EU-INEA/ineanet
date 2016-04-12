@@ -1224,7 +1224,7 @@ div.block.social-media {
      {
         margin-right: -55%;
      }
-      }
+  }
 @media (min-width:768px){
      #layout-footer {
         margin-top: 175px !important;
@@ -1262,6 +1262,10 @@ div.block.social-media {
     .node-type-h2020-project .group-right .field-items 
      {
         margin-bottom: 20px;
-        }
-    
-    
+     } 
+
+     .node-type-h2020-project .group-right .field-name-field-inea-participant,
+     .node-type-h2020-project .group-right .field-name-field-inea-participant-country,
+     .node-type-h2020-project .group-right .field-name-field-inea-participant-requested
+     { width: 30%;
+      float:left;}

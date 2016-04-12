@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the H2020 Import Participants only feature.
+ */
+
+include_once 'h2020_import_participants_only.features.inc';
