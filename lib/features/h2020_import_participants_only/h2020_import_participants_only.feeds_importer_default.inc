@@ -31,7 +31,7 @@ function h2020_import_participants_only_feeds_importer_default() {
     'parser' => array(
       'plugin_key' => 'FeedsCSVParser',
       'config' => array(
-        'delimiter' => ',',
+        'delimiter' => ';',
         'no_headers' => 0,
         'encoding' => 'UTF-8',
       ),
@@ -66,6 +66,11 @@ function h2020_import_participants_only_feeds_importer_default() {
             'target' => 'field_inea_participant_requested',
             'unique' => FALSE,
             'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Project Number',
+            'target' => 'field_inea_h2020_project_referen',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',

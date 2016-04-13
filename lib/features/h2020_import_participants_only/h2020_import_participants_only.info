@@ -13,5 +13,6 @@ features[feeds_importer][] = h2020_import_participants_only
 features[feeds_tamper][] = h2020_import_participants_only-participant_le_country_code-explode
 features[feeds_tamper][] = h2020_import_participants_only-participant_requested_ec_contribution-explode
 features[feeds_tamper][] = h2020_import_participants_only-participant_requested_ec_contribution-number_format
+features[feeds_tamper][] = h2020_import_participants_only-participant_requested_ec_contribution-sprintf
 features[feeds_tamper][] = h2020_import_participants_only-participant_short_name-explode
 project path = sites/all/modules/features

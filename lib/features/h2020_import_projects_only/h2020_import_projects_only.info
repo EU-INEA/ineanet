@@ -11,6 +11,7 @@ features[ctools][] = feeds_tamper:feeds_tamper_default:2
 features[features_api][] = api:2
 features[feeds_importer][] = h2020_import_projects_only
 features[feeds_tamper][] = h2020_import_projects_only-project_end_date-strtotime
+features[feeds_tamper][] = h2020_import_projects_only-project_end_date-strtotime2
 features[feeds_tamper][] = h2020_import_projects_only-project_start_date-strtotime
 features[feeds_tamper][] = h2020_import_projects_only-project_start_date-timetodate
 project path = sites/all/modules/features

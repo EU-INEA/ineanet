@@ -18,9 +18,9 @@ function h2020_import_participants_only_feeds_tamper_default() {
   $feeds_tamper->source = 'Participant LE Country Code';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
@@ -50,7 +50,7 @@ function h2020_import_participants_only_feeds_tamper_default() {
   $feeds_tamper->source = 'Participant Requested EC Contribution';
   $feeds_tamper->plugin_id = 'number_format';
   $feeds_tamper->settings = array(
-    'decimals' => 0,
+    'decimals' => 2,
     'dec_point' => '.',
     'thousands_sep' => ',',
   );
@@ -61,14 +61,28 @@ function h2020_import_participants_only_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'h2020_import_participants_only-participant_requested_ec_contribution-sprintf';
+  $feeds_tamper->importer = 'h2020_import_participants_only';
+  $feeds_tamper->source = 'Participant Requested EC Contribution';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => '€%s',
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Format string';
+  $export['h2020_import_participants_only-participant_requested_ec_contribution-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'h2020_import_participants_only-participant_short_name-explode';
   $feeds_tamper->importer = 'h2020_import_participants_only';
   $feeds_tamper->source = 'Participant Short Name';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
