@@ -127,6 +127,23 @@ function h2020_import_final_feeds_importer_default() {
             'unique' => FALSE,
             'language' => 'und',
           ),
+          14 => array(
+            'source' => 'Participant Short Name',
+            'target' => 'field_inea_participant',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          15 => array(
+            'source' => 'Participant LE Country Code',
+            'target' => 'field_inea_participant_country',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          16 => array(
+            'source' => 'Participant Requested EC Contribution',
+            'target' => 'field_inea_participant_requested',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'skip',
