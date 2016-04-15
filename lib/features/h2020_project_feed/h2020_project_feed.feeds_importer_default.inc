@@ -133,11 +133,6 @@ function h2020_project_feed_feeds_importer_default() {
             'unique' => 1,
             'language' => 'und',
           ),
-          15 => array(
-            'source' => 'Participant Short Name',
-            'target' => 'field_inea_h2020_participants',
-            'unique' => FALSE,
-          ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'skip',
