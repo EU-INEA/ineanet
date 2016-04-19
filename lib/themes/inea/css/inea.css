@@ -1084,7 +1084,7 @@ div#content-wrapper .front-right div.view .more-link a {
    /*text-decoration: none !important;*/
   }
 .panel-body .view-content ul li .views-field span a:hover, 
-.front-right .pane-content .more-link a:hover,
+.pane-content .more-link a:hover,
  div#content-wrapper .pane-views-clone-of-latest-news-block.front-right.pane-views div.pane-content  div.more-link a:hover,
 .front-right span a:hover
  {
