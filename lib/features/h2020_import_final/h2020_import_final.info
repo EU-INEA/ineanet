@@ -3,6 +3,7 @@ description = H2020 Lucas import h2020 projects from CSV Final version
 core = 7.x
 package = inea
 version = 7.x-1.0
+multisite_version = 2.1
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper
