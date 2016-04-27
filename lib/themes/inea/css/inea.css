@@ -1,59 +1,9 @@
-/*
-<<<<<<< HEAD
-Error: File to import not found or unreadable: compass/reset.
-        on line 6 of sass/screen.scss
-
-1: /* Welcome to Compass.
-2:  * In this file you should write your main styles. (or centralize your imports)
-3:  * Import this file using the following HTML or equivalent:
-4:  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> *\/
-5: 
-6: @import "compass/reset";
-
-Backtrace:
-sass/screen.scss:6
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-/home/tony/.rvm/gems/ruby-2.1.2/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
-/home/tony/.rvm/gems/ruby-2.1.2/bin/sass:23:in `load'
-/home/tony/.rvm/gems/ruby-2.1.2/bin/sass:23:in `<main>'
-/home/tony/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `eval'
-/home/tony/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `<main>'
-*/
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass/reset.\A         on line 6 of sass/screen.scss\A \A 1: /* Welcome to Compass.\A 2:  * In this file you should write your main styles. (or centralize your imports)\A 3:  * Import this file using the following HTML or equivalent:\A 4:  * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\A 5: \A 6: @import \"compass/reset\";"; }
-=======
- * Custom css for the sub theme.
+}
+
+/* Custom css for the sub theme.
  */
 
 /*
@@ -131,7 +81,6 @@ body {
   }
 }
 
-
 /* copied from css injector */
 /* To make sure all images are responsive */
 img {max-width:100%;}
@@ -164,7 +113,7 @@ h1 {color:#111; font-size:24px; }
 /* Content-and-title-padding-left */
 @media (min-width:990px){
     .not-front #content-wrapper {padding-left:56px;}
- 
+}
  /* Latest News Block */
  div#block-views-latest-news-block div.panel-heading {
     background-color: #0065a2;
@@ -290,8 +239,8 @@ hr {
   border-width: 1px;
   -webkit-margin-before: 0.5em;
   -webkit-margin-after: 0.5em;
-  -webkit-margin-start: auto;
-  -webkit-margin-end: auto;
+ /* -webkit-margin-start: auto;
+  -webkit-margin-end: auto;*/
 }
 
 
@@ -328,7 +277,7 @@ This rule now only applies to projects */
 
 .node-type-event div#content-wrapper div.node table td:first-child {
   width: 30px;
-  valign: middle;
+  vertical-align: middle;
   line-height: normal;
 }
 
@@ -356,7 +305,7 @@ This rule now only applies to projects */
 
 .node-type-news div#content-wrapper div.node table td {
   display: table-cell;
-  valign: middle;
+  vertical-align: middle;
   line-height: normal;
 }
 
@@ -398,7 +347,7 @@ div#content-wrapper div.node p.h2 a,
 div#content-wrapper div.view h2,
 div#content-wrapper div.view p.h2 {
   font-size: 17.77777px;
-  font-style: verdana, arial, sans-serif;
+  font-family: verdana, arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   color: #262261;
@@ -411,7 +360,7 @@ div#content-wrapper div.node ul {
 div#content-wrapper div.node h4,
 div#content-wrapper div.view h4 {
   font-size: 12px;
-  font-style: verdana, arial, sans-serif;
+  font-family: verdana, arial, sans-serif;
   font-weight: bold;
   line-height: normal;
   color: #262261;
@@ -1159,7 +1108,7 @@ div.block.social-media {
         margin-right: -55%;
      }
      /* setting width of elements in header top right */
-     .region-header-top #language-selector,
+     .region-header-top #language-selector
      {
         margin-right: -17%;
      }
@@ -1168,8 +1117,7 @@ div.block.social-media {
         margin-right: -27%;
      }
   }
-  }
-
+  
 
 
 @media (min-width:768px){
@@ -1234,4 +1182,4 @@ div.block.social-media {
      .node-type-h2020-project .group-right .field-name-field-inea-participant-requested
      { width: 25%;
       float:left;}
->>>>>>> parent of fb637ed... Multisite-9215 Deleted 3 features. Fixed error in media query in css
+
