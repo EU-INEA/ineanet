@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * h2020_ct.features.inc
+ * inea_h2020_ct.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function h2020_ct_ctools_plugin_api($module = NULL, $api = NULL) {
+function inea_h2020_ct_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
@@ -22,7 +22,7 @@ function h2020_ct_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function h2020_ct_node_info() {
+function inea_h2020_ct_node_info() {
   $items = array(
     'h2020_project' => array(
       'name' => t('H2020 Project'),

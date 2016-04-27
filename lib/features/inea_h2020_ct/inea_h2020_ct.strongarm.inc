@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * h2020_ct.strongarm.inc
+ * inea_h2020_ct.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function h2020_ct_strongarm() {
+function inea_h2020_ct_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

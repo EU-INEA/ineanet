@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * h2020_ct.ds.inc
+ * inea_h2020_ct.ds.inc
  */
 
 /**
  * Implements hook_ds_layout_settings_info().
  */
-function h2020_ct_ds_layout_settings_info() {
+function inea_h2020_ct_ds_layout_settings_info() {
   $export = array();
 
   $ds_layout = new stdClass();

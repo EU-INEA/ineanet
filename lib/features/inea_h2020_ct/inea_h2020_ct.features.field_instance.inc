@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * h2020_ct.features.field_instance.inc
+ * inea_h2020_ct.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function h2020_ct_field_default_field_instances() {
+function inea_h2020_ct_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-h2020_project-field_inea_h2020_abstract'.

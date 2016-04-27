@@ -83,4 +83,3 @@ features[variable][] = node_options_h2020_project
 features[variable][] = node_preview_h2020_project
 features[variable][] = node_submitted_h2020_project
 features[variable][] = pathauto_taxonomy_term_country_pattern
-multisite_version = 2.1
