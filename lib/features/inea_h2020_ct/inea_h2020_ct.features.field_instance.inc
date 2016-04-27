@@ -1281,116 +1281,6 @@ function inea_h2020_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'taxonomy_term-country-field_content_migration_info'.
-  $field_instances['taxonomy_term-country-field_content_migration_info'] = array(
-    'bundle' => 'country',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_content_migration_info',
-    'label' => 'Old ID',
-    'required' => FALSE,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 31,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-country-field_term_image'.
-  $field_instances['taxonomy_term-country-field_term_image'] = array(
-    'bundle' => 'country',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_term_image',
-    'label' => 'Image',
-    'required' => 1,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => 'taxonomy/countries',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'plupload' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 32,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Abstract');
@@ -1400,8 +1290,6 @@ function inea_h2020_ct_field_default_field_instances() {
   t('Duration');
   t('EU contribution after total cost');
   t('Funding scheme');
-  t('Image');
-  t('Old ID');
   t('Participants');
   t('Please enter Project start and end dates.');
   t('Please enter Topic Code');
