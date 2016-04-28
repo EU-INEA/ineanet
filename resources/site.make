@@ -20,9 +20,9 @@ projects[menu_trail_by_path][version] = 2.0
 projects[pathologic][subdir] = contributed
 projects[pathologic][version] = 2.12
 
-projects[webform_simplenews][subdir] = contributed
-projects[webform_simplenews][version] = 1.x-dev
-projects[webform_simplenews][patch][] = patches/webform_simplenews_3.20_compatibility.patch
+;projects[webform_simplenews][subdir] = contributed
+;projects[webform_simplenews][version] = 1.x-dev
+;projects[webform_simplenews][patch][] = https://www.drupal.org/project/webform_simplenews/patches/webform_simplenews_3.20_compatibility.patch
 
 ; =========
 ; Libraries
