@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * h2020_import_final.feeds_importer_default.inc
+ * inea_h2020_project_import_final.feeds_importer_default.inc
  */
 
 /**
  * Implements hook_feeds_importer_default().
  */
-function h2020_import_final_feeds_importer_default() {
+function inea_h2020_project_import_final_feeds_importer_default() {
   $export = array();
 
   $feeds_importer = new stdClass();
@@ -33,7 +33,6 @@ function h2020_import_final_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
-        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
@@ -146,15 +145,13 @@ function h2020_import_final_feeds_importer_default() {
           ),
         ),
         'update_existing' => '2',
-        'update_non_existent' => 'skip',
+        'update_non_existent' => 'unpublish',
         'input_format' => 'plain_text',
         'skip_hash_check' => 1,
         'bundle' => 'h2020_project',
-        'insert_new' => '1',
-        'language' => 'und',
       ),
     ),
-    'content_type' => '',
+    'content_type' => 'h2020_project',
     'update' => 0,
     'import_period' => '-1',
     'expire_period' => 3600,

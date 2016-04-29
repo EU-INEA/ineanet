@@ -1,35 +1,14 @@
 <?php
 /**
  * @file
- * h2020_ct.features.field_base.inc
+ * inea_h2020_ct.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function h2020_ct_field_default_field_bases() {
+function inea_h2020_ct_field_default_field_bases() {
   $field_bases = array();
-
-  // Exported field_base: 'field_content_migration_info'.
-  $field_bases['field_content_migration_info'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_content_migration_info',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
 
   // Exported field_base: 'field_inea_h2020_abstract'.
   $field_bases['field_inea_h2020_abstract'] = array(
@@ -45,7 +24,9 @@ function h2020_ct_field_default_field_bases() {
     ),
     'locked' => 1,
     'module' => 'text',
-    'settings' => array(),
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'text_long',
   );
@@ -65,6 +46,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -86,6 +68,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -107,6 +90,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -133,6 +117,7 @@ function h2020_ct_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -155,6 +140,7 @@ function h2020_ct_field_default_field_bases() {
     'settings' => array(
       'cache_count' => 4,
       'cache_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'granularity' => array(
         'day' => 'day',
         'hour' => 0,
@@ -186,6 +172,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -207,6 +194,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -229,6 +217,9 @@ function h2020_ct_field_default_field_bases() {
     'module' => 'image',
     'settings' => array(
       'default_image' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -250,6 +241,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -271,6 +263,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -292,6 +285,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -313,6 +307,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -334,6 +329,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -360,6 +356,7 @@ function h2020_ct_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -384,6 +381,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -405,6 +403,7 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -426,32 +425,11 @@ function h2020_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'field_term_image'.
-  $field_bases['field_term_image'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_term_image',
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'image',
-    'settings' => array(
-      'default_image' => 0,
-      'uri_scheme' => 'public',
-    ),
-    'translatable' => 0,
-    'type' => 'image',
   );
 
   return $field_bases;

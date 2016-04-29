@@ -1,9 +1,8 @@
-name = H2020 Import Final
+name = Inea H2020 Project Import Final
 description = H2020 Lucas import h2020 projects from CSV Final version
 core = 7.x
 package = inea
 version = 7.x-1.0
-multisite_version = 2.1
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper
@@ -21,4 +20,5 @@ features[feeds_tamper][] = h2020_import_final-project_end_date-strtotime2
 features[feeds_tamper][] = h2020_import_final-project_requested_ec_contribution-sprintf
 features[feeds_tamper][] = h2020_import_final-project_start_date-strtotime
 features[feeds_tamper][] = h2020_import_final-project_total_costs-sprintf
+multisite_version = 2.1
 project path = sites/all/modules/features

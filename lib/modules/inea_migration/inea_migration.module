@@ -1,0 +1,385 @@
+<?php
+/**
+ * @file
+ * Helper functions for the INEA migration.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function inea_migration_menu() {
+  $items = array();
+
+  $items['admin/content/update-links'] = array(
+    'title'            => 'Bulk update INEA links',
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('inea_migration_update_links_form'),
+    'access arguments' => array('administer nodes'),
+    'type'             => MENU_LOCAL_TASK,
+    'weight'           => 11,
+  );
+
+  return $items;
+}
+
+/**
+ * Form definition; update INEA links.
+ */
+function inea_migration_update_links_form() {
+  $form['description'] = array(
+    '#type' => 'markup',
+    '#markup' => t('This will update all old Odeum links and change them to the current path system. There will be no coming back. Make sure to make a database backup before continuing.'),
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Go',
+  );
+  return $form;
+}
+
+/**
+ * Submit callback; update INEA links.
+ */
+function inea_migration_update_links_form_submit($form, &$form_state) {
+
+  $result = db_select('node')
+      ->fields('node', array('nid'))
+      ->execute()
+      ->fetchAll();
+
+  $operations = array();
+
+  foreach ($result as $row) {
+    $nid = $row->nid;
+    $operations[] = array('_inea_migration_update_links_node', array($nid));
+  }
+
+  $batch = array(
+    'operations' => $operations,
+    'finished' => '_inea_migration_update_links_finished',
+  );
+  batch_set($batch);
+  batch_process();
+}
+
+/**
+ * Batch function to update old INEA links.
+ */
+function _inea_migration_update_links_node($nid, &$context) {
+  if (empty($context['sandbox'])) {
+    $text_fields = array(
+      'body',
+      'field_project_description',
+      'field_is_description',
+      'field_project_summary',
+      'field_project_other_info',
+      'field_is_summary',
+      'field_is_other_info',
+    );
+    $context['sandbox']['textfields'] = $text_fields;
+  }
+  $node = node_load($nid);
+  $node->title = decode_entities($node->title);
+  $node->title = trim($node->title, ":");
+  foreach ($context['sandbox']['textfields'] as $textfield) {
+    if (!empty($node->$textfield)) {
+      $field = $node->$textfield;
+      $content = $field['und'][0]['value'];
+      $field['und'][0]['value'] = _inea_migration_update_links($content);
+      $node->$textfield = $field;
+    }
+  }
+  node_save($node);
+  $context['message'] = t('Loading node "@title"', array('@title' => $node->title));
+}
+
+/**
+ * Batch function to finish updating old INEA links.
+ */
+function _inea_migration_update_links_finished($success, $results, $operations) {
+  drupal_set_message("DONE");
+}
+
+/**
+ * Helper function to update old INEA links on a piece of content.
+ */
+function _inea_migration_update_links($content) {
+  $match = FALSE;
+  @$dom = new DOMDocument();
+  $dom->loadHtml(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
+
+  // Get the links.
+  $links = $dom->getElementsByTagName('a');
+  foreach ($links as $link) {
+    $id = trim($link->getAttribute('id'), "@");
+    if (preg_match('/PAGE[0-9]{15}/', $id) || preg_match('/LINK[0-9]{15}/', $id)) {
+      $match = TRUE;
+      $old_id = substr($id, 4);
+      $nid = _inea_migration_load_node_by_old_id($old_id);
+      if ($nid) {
+        $href = base_path() . drupal_get_path_alias('node/' . $nid);
+      }
+      else {
+        $view_map = _inea_migration_view_map();
+        $href = base_path() . $view_map[(integer) $old_id];
+      }
+      if (!isset($href)) {
+        $href = "/URL/NOT/FOUND";
+      }
+      $link->setAttribute('href', $href);
+    }
+    else {
+      $href = $link->getAttribute('href');
+      $result = db_select('inea_url_mapping', 'm')
+        ->fields('m')
+        ->condition('URI', '%' . $href . '%', 'LIKE')
+        ->execute()
+        ->fetchAssoc();
+      if (!empty($result)) {
+        $new_href = '';
+        if (!empty($result['nid'])) {
+          $new_href = base_path() . drupal_get_path_alias("node/" . $result['nid']);
+        }
+        else {
+          $view_map = _inea_migration_view_map();
+          $new_href = base_path() . $view_map[(integer) $result['pageID']];
+        }
+        if (!empty($new_href)) {
+          $link->setAttribute('href', $new_href);
+        }
+      }
+    }
+  }
+  // Get the new HTML.
+  $new_content = $dom->saveHTML();
+
+  // Strip out the tags that loadHTML() introduces to get the clean HTML.
+  $patterns = array("/^\<\!DOCTYPE.*?<html><body>/si", "!</body></html>$!si");
+  $new_content = preg_replace($patterns, '', $new_content);
+  return $new_content;
+}
+
+/**
+ * Helper function to retrieve a node based on the old INEA id.
+ */
+function _inea_migration_load_node_by_old_id($old_id) {
+  return db_select('field_data_field_content_migration_info', 'migration_info')
+    ->fields('migration_info', array('entity_id'))
+    ->condition('field_content_migration_info_value', $old_id, '=')
+    ->execute()
+    ->fetchField();
+}
+
+/**
+ * Helper function to get the mlid of a node.
+ */
+function _inea_migration_get_node_mlid($nid, $menu_name) {
+  return db_select('menu_links', 'ml')
+    ->condition('ml.link_path', 'node/' . $nid)
+    ->condition('ml.menu_name', $menu_name)
+    ->fields('ml', array('mlid'))
+    ->range(0, 1)
+    ->execute()
+    ->fetchField();
+}
+
+/**
+ * Helper function to create a new file entity.
+ */
+function _inea_migration_create_file($file, $uid) {
+  if (!is_object($file)) {
+    $uri = $file;
+    $file = new stdclass();
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+  }
+  if (file_exists($file->uri)) {
+    $existing_files = file_load_multiple(array(), array('uri' => $file->uri));
+    if (count($existing_files)) {
+      $existing = reset($existing_files);
+      return $existing->fid;
+    }
+    $image = new stdclass();
+    $image->uri = $file->uri;
+    $image->uid = $uid;
+    $image->filename = $file->filename;
+    $image->filemime = file_get_mimetype(urldecode($file->uri));
+    $image->status = FILE_STATUS_PERMANENT;
+    $image->type = 'image';
+    $image = file_save($image);
+    return $image->fid;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+/**
+ * Helper function to get a mlid from a path.
+ */
+function _inea_migration_get_mlid($path) {
+  $menu_info = db_select('menu_links', 'ml')
+    ->condition('ml.link_path', $path)
+    ->fields('ml', array('mlid', 'plid'))
+    ->execute()
+    ->fetchAll();
+  foreach ($menu_info as $key => $value) {
+    $mlid[] = $menu_info[$key]->mlid;
+  }
+  return $mlid;
+}
+
+/**
+ * Helper function to get a map of transformed views.
+ */
+function _inea_migration_view_map() {
+  $view_map = &drupal_static(__FUNCTION__);
+  if (!isset($view_map)) {
+    $view_map  = array(
+      // Ten-t projects by country.
+      '112470000000715' => 'ten-t/ten-t-projects/projects-by-country/italy',
+      '112470000000537' => 'ten-t/ten-t-projects/projects-by-country',
+      '112470000000712' => 'ten-t/ten-t-projects/projects-by-country/greece',
+      '112470000000780' => 'ten-t/ten-t-projects/projects-by-country/united-kingdom',
+      '112470000000709' => 'ten-t/ten-t-projects/projects-by-country/finland',
+      '112470000000777' => 'ten-t/ten-t-projects/projects-by-country/slovenia',
+      '112470000000706' => 'ten-t/ten-t-projects/projects-by-country/czech-republic',
+      '112470000000774' => 'ten-t/ten-t-projects/projects-by-country/portugal',
+      '112470000000703' => 'ten-t/ten-t-projects/projects-by-country/belgium',
+      '112470000000719' => 'ten-t/ten-t-projects/projects-by-country/malta',
+      '112470000000716' => 'ten-t/ten-t-projects/projects-by-country/latvia',
+      '112470000000713' => 'ten-t/ten-t-projects/projects-by-country/hungary',
+      '112470000003210' => 'ten-t/ten-t-projects/projects-by-country/multi-country-projects',
+      '112470000000710' => 'ten-t/ten-t-projects/projects-by-country/france',
+      '112470000000778' => 'ten-t/ten-t-projects/projects-by-country/spain',
+      '112470000000707' => 'ten-t/ten-t-projects/projects-by-country/denmark',
+      '112470000000775' => 'ten-t/ten-t-projects/projects-by-country/romania',
+      '112470000000704' => 'ten-t/ten-t-projects/projects-by-country/bulgaria',
+      '112470000000720' => 'ten-t/ten-t-projects/projects-by-country/netherlands',
+      '112470000000717' => 'ten-t/ten-t-projects/projects-by-country/lithuania',
+      '112470000000714' => 'ten-t/ten-t-projects/projects-by-country/ireland',
+      '112470006418960' => 'ten-t/ten-t-projects/projects-by-country/croatia',
+      '112470000000711' => 'ten-t/ten-t-projects/projects-by-country/germany',
+      '112470000000779' => 'ten-t/ten-t-projects/projects-by-country/sweden',
+      '112470000000779' => 'ten-t/ten-t-projects/projects-by-country/sweden',
+      '112470000000708' => 'ten-t/ten-t-projects/projects-by-country/estonia',
+      '112470000000776' => 'ten-t/ten-t-projects/projects-by-country/slovakia',
+      '112470000000705' => 'ten-t/ten-t-projects/projects-by-country/cyprus',
+      '112470000000773' => 'ten-t/ten-t-projects/projects-by-country/poland',
+      '112470000000702' => 'ten-t/ten-t-projects/projects-by-country/austria',
+      '112470000000718' => 'ten-t/ten-t-projects/projects-by-country/luxembourg',
+      '112470000000718' => 'ten-t/ten-t-projects/projects-by-country/luxembourg',
+      // Ten-trojects by transport.
+      '112470000511232' => 'ten-t/ten-t-projects/projects-by-transport-mode/ris',
+      '112470000000662' => 'ten-t/ten-t-projects/projects-by-transport-mode/galileo',
+      '112470000000659' => 'ten-t/ten-t-projects/projects-by-transport-mode/road',
+      '112470000000656' => 'ten-t/ten-t-projects/projects-by-transport-mode/air',
+      '112470000000539' => 'ten-t/ten-t-projects/projects-by-transport-mode',
+      '112470003184569' => 'ten-t/ten-t-projects/projects-by-transport-mode/ppp',
+      '112470000000663' => 'ten-t/ten-t-projects/projects-by-transport-mode/its-for-roads',
+      '112470000000660' => 'ten-t/ten-t-projects/projects-by-transport-mode/water',
+      '112470000000657' => 'ten-t/ten-t-projects/projects-by-transport-mode/co-modality',
+      '112470003184628' => 'ten-t/ten-t-projects/projects-by-transport-mode/greening-transport',
+      '112470000003768' => 'ten-t/ten-t-projects/projects-by-transport-mode/ertms',
+      '112470000000661' => 'ten-t/ten-t-projects/projects-by-transport-mode/sesar',
+      '112470000000658' => 'ten-t/ten-t-projects/projects-by-transport-mode/rail',
+      // EERP projects.
+      '112470000128135' => 'ten-t/ten-t-projects/projects-by-type/eerp',
+      // Priority projects.
+      '112470000000098' => 'ten-t/ten-t-projects/projects-by-priority-project',
+      '112470000000597' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-1',
+      '112470000000599' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-2',
+      '112470000000601' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-3',
+      '112470000000603' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-4',
+      '112470000000605' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-5',
+      '112470000000607' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-6',
+      '112470000000609' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-7',
+      '112470000000611' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-8',
+      '112470000000613' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-9',
+      '112470000000615' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-10',
+      '112470000000617' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-11',
+      '112470000000619' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-12',
+      '112470000000621' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-13',
+      '112470000000623' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-14',
+      '112470000000625' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-15',
+      '112470000000627' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-16',
+      '112470000000629' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-17',
+      '112470000000631' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-18',
+      '112470000000633' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-19',
+      '112470000000635' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-20',
+      '112470000000637' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-21',
+      '112470000000639' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-22',
+      '112470000000641' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-23',
+      '112470000000643' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-24',
+      '112470000000645' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-25',
+      '112470000000647' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-26',
+      '112470000000649' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-27',
+      '112470000000651' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-28',
+      '112470000000653' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-29',
+      '112470000000655' => 'ten-t/ten-t-projects/projects-by-priority-project/priority-project-30',
+      // Implementation successes.
+      '112470000394799' => 'ten-t/ten-t_implementation_successes/project_implementation_successes',
+      // CEF projects by PCI.
+      '112470114517387' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-10',
+      '112470114517373' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-6',
+      '112470114517225' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-3',
+      '112470114517187' => 'connecting-europe-facility/cef-energy/projects-by-common-interest',
+      '112470114517375' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-7',
+      '112470114517229' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-4',
+      '112470114517215' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-1',
+      '112470114517383' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-9',
+      '112470114517379' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-8',
+      '112470114517231' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-5',
+      '112470114517220' => 'connecting-europe-facility/cef-energy/projects-by-common-interest/pci-2',
+      // CEF projects by type.
+      '112470114521407' => 'connecting-europe-facility/cef-energy/projects-by-sector/oil',
+      '112470114521402' => 'connecting-europe-facility/cef-energy/projects-by-sector/gas',
+      '112470114521415' => 'connecting-europe-facility/cef-energy/projects-by-sector/smart-grids',
+      '112470114521391' => 'connecting-europe-facility/cef-energy/projects-by-sector',
+      '112470114521399' => 'connecting-europe-facility/cef-energy/projects-by-sector/electricity',
+      // CEF projects by country.
+      '112470114529042' => 'connecting-europe-facility/cef-energy/projects-by-country/italy',
+      '112470114549881' => 'connecting-europe-facility/cef-energy/projects-by-country/norway',
+      '112470114529021' => 'connecting-europe-facility/cef-energy/projects-by-country/greece',
+      '112470114529133' => 'connecting-europe-facility/cef-energy/projects-by-country/united-kingdom',
+      '112470114529000' => 'connecting-europe-facility/cef-energy/projects-by-country/finland',
+      '112470114529112' => 'connecting-europe-facility/cef-energy/projects-by-country/slovenia',
+      '112470114528979' => 'connecting-europe-facility/cef-energy/projects-by-country/czech-republic',
+      '112470114529091' => 'connecting-europe-facility/cef-energy/projects-by-country/portugal',
+      '112470114528958' => 'connecting-europe-facility/cef-energy/projects-by-country/belgium',
+      '112470114529070' => 'connecting-europe-facility/cef-energy/projects-by-country/malta',
+      '112470114529049' => 'connecting-europe-facility/cef-energy/projects-by-country/latvia',
+      '112470114549898' => 'connecting-europe-facility/cef-energy/projects-by-country/turkey',
+      '112470114529028' => 'connecting-europe-facility/cef-energy/projects-by-country/hungary',
+      '112470114529140' => 'connecting-europe-facility/cef-energy/projects-by-country/multi-country-projects',
+      '112470114529007' => 'connecting-europe-facility/cef-energy/projects-by-country/france',
+      '112470114529119' => 'connecting-europe-facility/cef-energy/projects-by-country/spain',
+      '112470114528986' => 'connecting-europe-facility/cef-energy/projects-by-country/denmark',
+      '112470114529098' => 'connecting-europe-facility/cef-energy/projects-by-country/romania',
+      '112470114528965' => 'connecting-europe-facility/cef-energy/projects-by-country/bulgaria',
+      '112470114529077' => 'connecting-europe-facility/cef-energy/projects-by-country/netherlands',
+      '112470114529056' => 'connecting-europe-facility/cef-energy/projects-by-country/lithuania',
+      '112470114529154' => 'connecting-europe-facility/cef-energy/projects-by-country',
+      '112470114529035' => 'connecting-europe-facility/cef-energy/projects-by-country/ireland',
+      '112470114529147' => 'connecting-europe-facility/cef-energy/projects-by-country/croatia',
+      '112470114529014' => 'connecting-europe-facility/cef-energy/projects-by-country/germany',
+      '112470114529126' => 'connecting-europe-facility/cef-energy/projects-by-country/sweden',
+      '112470114528993' => 'connecting-europe-facility/cef-energy/projects-by-country/estonia',
+      '112470114529105' => 'connecting-europe-facility/cef-energy/projects-by-country/slovakia',
+      '112470114528972' => 'connecting-europe-facility/cef-energy/projects-by-country/cyprus',
+      '112470114529084' => 'connecting-europe-facility/cef-energy/projects-by-country/poland',
+      '112470114528951' => 'connecting-europe-facility/cef-energy/projects-by-country/austria',
+      '112470114529063' => 'connecting-europe-facility/cef-energy/projects-by-country/luxembourg',
+      // News lists.
+      '112470000470427' => 'news-events/newsroom/archive/2009',
+      '112470002387710' => 'news-events/newsroom/archive/2010',
+      '112470001027229' => 'news-events/newsroom/archive/2011',
+      '112470004509098' => 'news-events/newsroom/archive/2012',
+      '112470008075866' => 'news-events/newsroom/archive/2013',
+      '112470114336990' => 'news-events/newsroom/archive/2014',
+      '112470000000118' => 'news-events/newsroom',
+    );
+  }
+  return $view_map;
+}

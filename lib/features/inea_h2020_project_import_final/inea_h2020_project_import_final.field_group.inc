@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * h2020_ct.field_group.inc
+ * inea_h2020_project_import_final.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function h2020_ct_field_group_info() {
+function inea_h2020_project_import_final_field_group_info() {
   $field_groups = array();
 
   $field_group = new stdClass();
