@@ -318,10 +318,19 @@ This rule now only applies to projects */
   color: #151515;
 }
 
+/* all links - changed to like commission site on May 3rd, 2016*/
 div#content-wrapper div.node a,
 div#content-wrapper div.view a {
+  /*text-decoration: underline;
+  color: #0000ff;*/
+  color: #004494;
+  text-decoration: none;
+}
+
+div#content-wrapper div.node a:hover,
+div#content-wrapper div.view a:hover {
   text-decoration: underline;
-  color: #0000ff;
+  color: #404040;
 }
 
 .page-node-14 div#content-wrapper p h3,
@@ -984,8 +993,7 @@ div#content-wrapper .front-right div.view .more-link a {
  div#content-wrapper .pane-views-clone-of-latest-news-block.front-right.pane-views div.pane-content  div.more-link a:hover,
 .front-right span a:hover
  {
-    color: red;
-    /*color: #404040 !important;*/
+    color: #404040 !important;*/
     text-decoration: underline !important;
 }
 
