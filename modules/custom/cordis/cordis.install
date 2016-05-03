@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Newsroom install file.
+ */
+
+/**
+ * Flsuhes the cache when this module is enabled.
+ */
+function cordis_enable() {
+  // Clear the cache to display in Feeds as available plugin.
+  drupal_flush_all_caches();
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}
