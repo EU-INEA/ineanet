@@ -62,7 +62,7 @@ function inea_h2020_project_import_final_feeds_tamper_default() {
   $feeds_tamper->source = 'Participant Requested EC Contribution';
   $feeds_tamper->plugin_id = 'number_format';
   $feeds_tamper->settings = array(
-    'decimals' => 2,
+    'decimals' => 0,
     'dec_point' => '.',
     'thousands_sep' => ',',
   );
@@ -115,6 +115,22 @@ function inea_h2020_project_import_final_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'h2020_import_final-project_requested_ec_contribution-number_format';
+  $feeds_tamper->importer = 'h2020_import_final';
+  $feeds_tamper->source = 'Project Requested EC Contribution';
+  $feeds_tamper->plugin_id = 'number_format';
+  $feeds_tamper->settings = array(
+    'decimals' => 0,
+    'dec_point' => '.',
+    'thousands_sep' => ',',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Format a number';
+  $export['h2020_import_final-project_requested_ec_contribution-number_format'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'h2020_import_final-project_requested_ec_contribution-sprintf';
   $feeds_tamper->importer = 'h2020_import_final';
   $feeds_tamper->source = 'Project Requested EC Contribution';
@@ -122,7 +138,7 @@ function inea_h2020_project_import_final_feeds_tamper_default() {
   $feeds_tamper->settings = array(
     'format' => '€%s',
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Format string';
   $export['h2020_import_final-project_requested_ec_contribution-sprintf'] = $feeds_tamper;
 
@@ -141,6 +157,22 @@ function inea_h2020_project_import_final_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'h2020_import_final-project_total_costs-number_format';
+  $feeds_tamper->importer = 'h2020_import_final';
+  $feeds_tamper->source = 'Project Total Costs';
+  $feeds_tamper->plugin_id = 'number_format';
+  $feeds_tamper->settings = array(
+    'decimals' => 0,
+    'dec_point' => '.',
+    'thousands_sep' => ',',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Format a number';
+  $export['h2020_import_final-project_total_costs-number_format'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'h2020_import_final-project_total_costs-sprintf';
   $feeds_tamper->importer = 'h2020_import_final';
   $feeds_tamper->source = 'Project Total Costs';
@@ -148,7 +180,7 @@ function inea_h2020_project_import_final_feeds_tamper_default() {
   $feeds_tamper->settings = array(
     'format' => '€%s',
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Format string';
   $export['h2020_import_final-project_total_costs-sprintf'] = $feeds_tamper;
 

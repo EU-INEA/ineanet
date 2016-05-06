@@ -22,7 +22,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -43,7 +43,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -65,7 +65,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -87,7 +87,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -105,7 +105,7 @@ function inea_h2020_ct_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_inea_h2020_cordis_url',
     'indexes' => array(),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'link',
     'settings' => array(
       'attributes' => array(
@@ -169,7 +169,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -191,7 +191,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -213,7 +213,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'fid',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'image',
     'settings' => array(
       'default_image' => 0,
@@ -238,7 +238,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -260,7 +260,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -282,7 +282,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -304,7 +304,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -326,7 +326,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -344,7 +344,7 @@ function inea_h2020_ct_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_inea_h2020_url',
     'indexes' => array(),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'link',
     'settings' => array(
       'attributes' => array(
@@ -378,7 +378,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -400,7 +400,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -422,7 +422,7 @@ function inea_h2020_ct_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,

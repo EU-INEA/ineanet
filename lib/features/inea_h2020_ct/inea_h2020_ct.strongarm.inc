@@ -108,7 +108,7 @@ function inea_h2020_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
         'xmlsitemap' => array(
           'weight' => '1',
