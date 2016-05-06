@@ -4,7 +4,7 @@ body:before {
 }
 
 /* Custom css for the sub theme.
- */
+*/
 
 /*
  * General.
@@ -90,21 +90,21 @@ img {max-width:100%;}
 
 /* CEF Transport Project title spacing */
 @media (min-width:768px){
-    .node-type-project #content-wrapper .project-cef-transport-title
-    { 
-        padding-right:15%;
-    }
+  .node-type-project #content-wrapper .project-cef-transport-title
+  { 
+    padding-right:15%;
+  }
 }
-.node-type-project #content-wrapper .project-cef-transport-title a img
-    {   float:left;
-        margin-right: 5px;
-    }
+.node-type-project #content-wrapper .project-cef-transport-title a img {   
+  float:left;
+  margin-right: 5px;
+}
 
 /* Corridor tag */
 .node-type-project div#content-wrapper div.node div.field-name-field-corridor li {
-    color: #ee8032;
-    text-transform: uppercase;
-    font-weight:700;
+  color: #ee8032;
+  text-transform: uppercase;
+  font-weight:700;
 }
 
 /* h1 -titles on all pages */
@@ -112,29 +112,30 @@ h1 {color:#111; font-size:24px; }
 
 /* Content-and-title-padding-left */
 @media (min-width:990px){
-    .not-front #content-wrapper {padding-left:56px;}
+  .not-front #content-wrapper 
+  {padding-left:56px;}
 }
- /* Latest News Block */
- div#block-views-latest-news-block div.panel-heading {
-    background-color: #0065a2;
-    border-color: #ddd;
-    color: #fff;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    padding: 10px 15px;
+/* Latest News Block */
+div#block-views-latest-news-block div.panel-heading {
+  background-color: #0065a2;
+  border-color: #ddd;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 10px 15px;
 }
 div#block-views-latest-news-block div.panel-body {
-    padding: 10px 10px 0px 15px;
+  padding: 10px 10px 0px 15px;
 }
 div#block-views-latest-news-block .views-row {
-    padding-bottom:15px;
-    border-bottom: solid 1px #ccc;
+  padding-bottom:15px;
+  border-bottom: solid 1px #ccc;
 }
 
 /*Commission header FONT*/
- div#layout-header div.container div#sub-title {
-     font-weight:bold;}
+div#layout-header div.container div#sub-title {
+  font-weight:bold;}
 
 /* sEARCH rESULTS */ 
 div#block-system-main.block.block-system.panel.panel-default.clearfix div.panel-body.content ol.search-results.apachesolr_search-results li.search-result div.search-snippet-info p.search-info 
@@ -151,7 +152,8 @@ div#block-system-main.block.block-system.panel.panel-default.clearfix div.panel-
 /* subscription box cef energy faq newsletter hide */
 div.region.region-content-bottom div#block-simplenews-365.block.block-simplenews.contextual-links-region.panel.panel-default.clearfix div.panel-heading {display:none;}
 @media (min-width:751px){
-    div.region.region-content-bottom div#block-simplenews-365.block.block-simplenews.panel.panel-default.clearfix {width:20%;}
+  div.region.region-content-bottom div#block-simplenews-365.block.block-simplenews.panel.panel-default.clearfix
+  {width:20%;}
 }
 #block-simplenews-365 div.panel-heading {display:none;}
 
@@ -228,11 +230,11 @@ div#content-wrapper div.node p,
 div#content-wrapper div.node a,
 .node-type-project div#content-wrapper div.node table,
 div#content-wrapper div.node ul li {
- /* Nov 6, 2015  
-  font-size: 12px;
-  padding: 0;
-  margin: 0;
-  see what effect this has.
+  /* Nov 6, 2015  
+   font-size: 12px;
+   padding: 0;
+   margin: 0;
+   see what effect this has.
   */ 
 }
 
@@ -242,17 +244,15 @@ hr {
   border-width: 1px;
   -webkit-margin-before: 0.5em;
   -webkit-margin-after: 0.5em;
- /* -webkit-margin-start: auto;
-  -webkit-margin-end: auto;*/
+  /* -webkit-margin-start: auto;
+   -webkit-margin-end: auto;*/
 }
-
 
 /* Events page */
 .page-node-43 div#content-wrapper table td p {
   padding: 4px;
   width: 75%;
 }
-
 
 /* changed to allow proper formatting in tables apart from projects. Oct 16, 2015
 This rule now only applies to projects */
@@ -370,7 +370,6 @@ div#content-wrapper div.node ul {
   line-height: normal;
 }
 
-
 /**/
 /* commented out - Nov 5th, 2015
 div#content-wrapper div.node h4,
@@ -411,8 +410,8 @@ div#content-wrapper div.view h4 {
   border-right: solid 1px #e3e3e3;
   background-color: #f0f0f0;
   color: #262261;
-/* font-family: arial, helvetica, sans-serif;   commented out - Nov 5th, 2015 */
-/* copied from cs injector */
+  /* font-family: arial, helvetica, sans-serif;   commented out - Nov 5th, 2015 */
+  /* copied from cs injector */
   font-size:13px; font-size:81.25%;
   font-weight: normal;
   text-transform: uppercase;
@@ -617,7 +616,7 @@ div.view div.views-field-body {
 /* CEF Projects */
 .node-type-project div#content-wrapper h1.project-cef-energy-title,
 .node-type-project div#content-wrapper h1.project-cef-transport-title
- {
+{
   font-size: 18px;
   font-weight: bold;
   color: #ee8032;
@@ -891,47 +890,47 @@ body {
 /*-------------------- here starts the front page css ----------------------*/
 #content-wrapper #page-title,
 #content-wrapper h1{
-    display: none;
+  display: none;
 }
 
 .node .field-name-body {
-    border-bottom: 0 solid #dddddd !important;
+  border-bottom: 0 solid #dddddd !important;
 }  
 /* --------- FRONT TOP ---------- */
 /* top-most block with motto */
 .front-top {
-    color: black;
-    border-bottom: 4px solid #d12c27;
-    margin: 0.1% auto 5%;
-    padding: 2%;
+  color: black;
+  border-bottom: 4px solid #d12c27;
+  margin: 0.1% auto 5%;
+  padding: 2%;
 }
 .front-top p {
-    font-size: 100% !important;
+  font-size: 100% !important;
 }
 
 /* --------- FRONT LEFT ---------- */
 .front-left tbody
 {
-    border-top: 0 solid #eee;
+  border-top: 0 solid #eee;
 }
 .front-left td
 {
-    float: left;
+  float: left;
 }
 .front-left td p
 {
-    margin-left: 12px;
+  margin-left: 12px;
 }
 
 
 /* make underline go all the way across */
 .front-left .panel-body table tr th
 {
-    float: left;
-    color: #004494;
-    font-size: 18px;
-    width: 100%;
-    margin-bottom: 10px;
+  float: left;
+  color: #004494;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* Indent the text in the left side blocks */ 
@@ -939,13 +938,13 @@ div#content-wrapper div.region-content div.panel-body div.front-prog table tbody
 .region-content .front-left .front-prog .panel table tbody tr td p,
 .front-bene .pane-content td
 {
-   margin-left: 12px !important;
-   font-size: 14px!important;
-  }
+  margin-left: 12px !important;
+  font-size: 14px!important;
+}
 
 .front-bene .pane-content td {
-    padding-bottom:12px;
-    }
+  padding-bottom:12px;
+}
 
 
 /* ------ FRONT RIGHT -------------------------*/    
@@ -954,92 +953,90 @@ div#content-wrapper div.region-content div.panel-body div.front-prog table tbody
 }
 
 div.front-left, .front-right, .pane-views {
-   color: black;
-   border: 1px solid #004494;
-   box-shadow: 10px 10px 5px #888888;
-   border-top-left-radius: 3px;
-   border-top-right-radius: 3px;
-   margin: 1% auto 1%;
-   padding: 1% 2% 2% 2%;
- }
+  color: black;
+  border: 1px solid #004494;
+  box-shadow: 10px 10px 5px #888888;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin: 1% auto 1%;
+  padding: 1% 2% 2% 2%;
+}
 
 .pane-content .view-content ul li .views-field span a,
 div#content-wrapper div.node .front-right td a,
 div#content-wrapper div.node .front-left td a,
 .pane-content table tr td a      
- {
-   font-size: 16px !important;
-    color: #004494 !important;
-    text-decoration: none !important;
+{
+  font-size: 16px !important;
+  color: #004494 !important;
+  text-decoration: none !important;
 }
-   
+
 /* read more link */
 .more-link {
-   text-align:left !important;
-   font-size: 16px !important;
-   color: #004494 !important;
-   text-decoration: none !important;
-  }
+  text-align:left !important;
+  font-size: 16px !important;
+  color: #004494 !important;
+  text-decoration: none !important;
+}
 /* read more link */
 div#content-wrapper .front-left div.panel-body  div.view .more-link a,
 div#content-wrapper .front-right div.view .more-link a {
-   text-align:left !important;
-   font-size: 16px !important;
-   color: #004494 !important;
-   /*text-decoration: none !important;*/
-  }
+  text-align:left !important;
+  font-size: 16px !important;
+  color: #004494 !important;
+  /*text-decoration: none !important;*/
+}
 .panel-body .view-content ul li .views-field span a:hover, 
 .front-right .pane-content .more-link a:hover,
- div#content-wrapper .pane-views-clone-of-latest-news-block.front-right.pane-views div.pane-content  div.more-link a:hover,
+div#content-wrapper .pane-views-clone-of-latest-news-block.front-right.pane-views div.pane-content  div.more-link a:hover,
 .front-right span a:hover
- {
-    color: #404040 !important;*/
-    text-decoration: underline !important;
+{
+  color: #404040 !important;
+  text-decoration: underline !important;
 }
-
-
 
 .front-right p, 
 .front-left p {
-    font-size: 14px !important;
+  font-size: 14px !important;
 }
 
 div.block.bottom-banner div.content a {
-    margin: 0 5px !important;
+  margin: 0 5px !important;
 }
 .twit-block .panel-heading{
-    display: none;
+  display: none;
 }
 .region-sidebar-right {
-    margin-top: 15%;
-    } 
+  margin-top: 15%;
+} 
 
 div.block.social-media {
-    border-radius: 0;
-    padding: 5px 0 !important;
-    width: 100% !important;
-    background: #fff !important;
+  border-radius: 0;
+  padding: 5px 0 !important;
+  width: 100% !important;
+  background: #fff !important;
 }
- 
+
 .front-news div.panel-heading {
-    background-color: #ffffff !important;
-    border-color: #dddddd !important;
-    font-size: 18px;
-    font-weight: bold;
-    color: #004494 !important;
-   /* border-top-left-radius: 3px !important;
-    border-top-right-radius: 3px !important;*/
-    padding: 0 15px 0 0 !important;
-    border-bottom: 3px solid #cccccc;
-    width:100%;    
+  background-color: #ffffff !important;
+  border-color: #dddddd !important;
+  font-size: 18px;
+  font-weight: bold;
+  color: #004494 !important;
+  /* border-top-left-radius: 3px !important;
+   border-top-right-radius: 3px !important;*/
+  padding: 0 15px 0 0 !important;
+  border-bottom: 3px solid #cccccc;
+  width:100%;    
 }
 .front-news div.panel-body {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 .front-news div.panel-body a,
 .view-publications .view-content a
 {
-    font-size: 14px !important;
+  font-size: 14px !important;
 }
 
 /* for all views blocks make the created date 11 px */
@@ -1047,195 +1044,193 @@ div.block.social-media {
 .panel-body .view-content .field-content span,
 .panel-body .view-content .field-content .text-muted
 {
-    font-size: 11px;
- }
+  font-size: 11px;
+}
 
 .front-news .panel-body .view-content ul li,
 .front-publi .view-publications .view-content ul li {
-   margin-bottom: 1em;
-   }
+  margin-bottom: 1em;
+}
 
 .front-news .panel-body .views-row {
-   border-bottom: 0px solid #cccccc !important;
-   padding-bottom: 0 !important; 
+  border-bottom: 0px solid #cccccc !important;
+  padding-bottom: 0 !important; 
 }
 .front-news .panel-body .view-footer {
- /*  display: none;*/
+  /*  display: none;*/
 }
 
 .view-events {
-   border: 0px solid #dddddd;
-   }
- .view-events .views-row span a {
-   font-size:14px !important;
-   }
+  border: 0px solid #dddddd;
+}
+.view-events .views-row span a {
+  font-size:14px !important;
+}
 
- .region-site-bottom {
-   margin-top: 20px;
-  }
- .block-fat-footer {
-    text-align: center;
-  }
- 
- .pane-views-clone-of-latest-news-block .pane-title, 
- .pane-views-inea-events-block .pane-title, 
- .pane-views-publications-block .pane-title,
- .front-bene .pane-title,
- .front-fund .pane-title,
- .front-prog .pane-title
- {
-    background-color: #ffffff !important;
-    color: #004494;
-    font-size: 24px;
-    font-weight: bold;
-    border-bottom: 3px solid #cccccc;
-    width:100%;
-    padding-bottom: 0 !important;
-/*    padding-top: 5px !important;*/
-    padding-left: 0 !important;
-  }
-  
-  .front-bene .pane-title,
-  .front-fund .pane-title,
-  .front-prog .pane-title
- {
-    margin-bottom: 16px;
-  }
-  
- .pane-views-clone-of-latest-news-block .pane-title, 
- .pane-views-inea-events-block .pane-title, 
- .pane-views-publications-block .pane-title
- {
-    margin-bottom: 0px;
-  }
+.region-site-bottom {
+  margin-top: 20px;
+}
+.block-fat-footer {
+  text-align: center;
+}
 
-  .front-publi .views-table,
-  .front-event .views-table,
-  .front-news .views-table
+.pane-views-clone-of-latest-news-block .pane-title, 
+.pane-views-inea-events-block .pane-title, 
+.pane-views-publications-block .pane-title,
+.front-bene .pane-title,
+.front-fund .pane-title,
+.front-prog .pane-title
+{
+  background-color: #ffffff !important;
+  color: #004494;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 3px solid #cccccc;
+  width:100%;
+  padding-bottom: 0 !important;
+  /*    padding-top: 5px !important;*/
+  padding-left: 0 !important;
+}
+
+.front-bene .pane-title,
+.front-fund .pane-title,
+.front-prog .pane-title
+{
+  margin-bottom: 16px;
+}
+
+.pane-views-clone-of-latest-news-block .pane-title, 
+.pane-views-inea-events-block .pane-title, 
+.pane-views-publications-block .pane-title
+{
+  margin-bottom: 0px;
+}
+
+.front-publi .views-table,
+.front-event .views-table,
+.front-news .views-table
+{
+  margin-top: 5px;
+} 
+
+@media (min-width:1200px){    
+  /* setting width of elements in sidebar right */
+  .region-sidebar-right .twit-block
   {
-     margin-top: 5px;
-    } 
- 
- @media (min-width:1200px){    
-    /* setting width of elements in sidebar right */
-     .region-sidebar-right .twit-block
-     {
-        margin-right: -55%;
-     }
-     /* setting width of elements in header top right */
-     .region-header-top #language-selector
-     {
-        margin-right: -17%;
-     }
-     .region-header-right #search-block-form .input-group
-     {
-        margin-right: -27%;
-     }
+    margin-right: -55%;
   }
-  
+  /* setting width of elements in header top right */
+  .region-header-top #language-selector
+  {
+    margin-right: -17%;
+  }
+  .region-header-right #search-block-form .input-group
+  {
+    margin-right: -27%;
+  }
+}
+
 
 
 @media (min-width:768px){
-     #layout-footer {
-        margin-top: 175px !important;
-     }
+  #layout-footer {
+    margin-top: 175px !important;
+  }
 }
-     
+
 @media (max-width:767px){
   /* .front-left Column in panels*/
-   #content-wrapper .panel-col-first  {
-        width: 100%;
-    }
+  #content-wrapper .panel-col-first  {
+    width: 100%;
+  }
   /* .front-right Column in panels*/    
-    #content-wrapper .panel-col-last {
-        width: 100%;
-    }
-    #layout-footer {
-        margin-top: 15px !important;
-    }
+  #content-wrapper .panel-col-last {
+    width: 100%;
+  }
+  #layout-footer {
+    margin-top: 15px !important;
+  }
 }
- 
- /* =======================================================================*/   
- /* Bottom banner of our parent DGs */
-    .bot-banner .pane-content p {
-        padding-top: 50px;
-        text-align: center;
-        }
-    
 
-    /* H2020 Project pages */ 
+/* =======================================================================*/   
+/* Bottom banner of our parent DGs */
+.bot-banner .pane-content p {
+  padding-top: 50px;
+  text-align: center;
+}
+
+
+/* H2020 Project pages */ 
 /* H2020 Project pages */
-    .node-type-h2020-project .region-content a {
-       font-size: 16px !important;
-       color: #004494 !important;
-       text-decoration: none !important;
-    }
-    .node-type-h2020-project .region-content a:hover {
-        color: #404040 !important;
-        text-decoration: underline !important;
-    }
-    
-    .node-type-h2020-project .group-left
-    {
-      width: 55%;
-    }
-     .node-type-h2020-project .group-right
-    {
-       width: 42%;
-       float:right;
-    }  
-     .node-type-h2020-project .group-header {
-         font-size: 18px;
-         font-weight:bold;
-         color: #ee8032;
-         margin-bottom: 20px;
-         border-bottom: 1px solid #ccc;
-     }
-    .node-type-h2020-project .fieldset-title {
-        font-size:18px;
-        color: #ee8032;
-    }
+.node-type-h2020-project .region-content a {
+  font-size: 16px !important;
+  color: #004494 !important;
+  text-decoration: none !important;
+}
+.node-type-h2020-project .region-content a:hover {
+  color: #404040 !important;
+  text-decoration: underline !important;
+}
 
-    .node-type-h2020-project .field-name-field-inea-h2020-abstract {
-        text-align: justify;
-    }
-    
-    /*.node-type-h2020-project .group-left .field-label,*/
-     .node-type-h2020-project .field-label
-      {
-         color: #ee8032;
-         }
-     .node-type-h2020-project .group-left .field-items,
-     .node-type-h2020-project .group-right .field-items
-      {
-         margin-bottom: 20px;
-      }
+.node-type-h2020-project .group-left
+{
+  width: 55%;
+}
+.node-type-h2020-project .group-right
+{
+  width: 42%;
+  float:right;
+}  
+.node-type-h2020-project .group-header {
+  font-size: 18px;
+  font-weight:bold;
+  color: #ee8032;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.node-type-h2020-project .fieldset-title {
+  font-size:18px;
+  color: #ee8032;
+}
 
-     
-    .node-type-h2020-project .group-footer  
-    {
-        margin-top:25px;
-    }
+.node-type-h2020-project .field-name-field-inea-h2020-abstract {
+  text-align: justify;
+}
 
-      .node-type-h2020-project .field-name-field-inea-participant .field-label,
-      .node-type-h2020-project .field-name-field-inea-participant-country .field-label  {
-       /*  margin-bottom: 20px; */
-      }
+/*.node-type-h2020-project .group-left .field-label,*/
+.node-type-h2020-project .field-label
+{
+  color: #ee8032;
+}
+.node-type-h2020-project .group-left .field-items,
+.node-type-h2020-project .group-right .field-items
+{
+  margin-bottom: 20px;
+}
+
+.node-type-h2020-project .group-footer  
+{
+  margin-top:25px;
+}
+
+.node-type-h2020-project .field-name-field-inea-participant .field-label,
+.node-type-h2020-project .field-name-field-inea-participant-country .field-label  {
+  /*  margin-bottom: 20px; */
+}
 
 /*  .group-footer*/
-      .node-type-h2020-project .group-footer .field-name-field-inea-participant-country
-      { 
-        width: 15%;
-        float:left;
-        }
-      .node-type-h2020-project .group-footer .field-name-field-inea-participant-requested
-      { 
-        width: 25%;
-        float:left;
-       }
- .node-type-h2020-project .group-footer .field-name-field-inea-participant 
-      { 
-        width: 59%;
-        float:left;
-       }
-       
+.node-type-h2020-project .group-footer .field-name-field-inea-participant-country
+{ 
+  width: 15%;
+  float:left;
+}
+.node-type-h2020-project .group-footer .field-name-field-inea-participant-requested
+{ 
+  width: 25%;
+  float:left;
+}
+.node-type-h2020-project .group-footer .field-name-field-inea-participant 
+{ 
+  width: 59%;
+  float:left;
+}
