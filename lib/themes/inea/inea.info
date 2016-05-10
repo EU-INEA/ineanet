@@ -8,7 +8,7 @@ base theme = ec_resp
 php = 5.2.4
 
 stylesheets[all][] = "css/inea.css"
-; stylesheets[all][] = "css/front-page-test.css"
+;  stylesheets[all][] = "css/front-page-test.css"
 
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
