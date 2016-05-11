@@ -4,7 +4,7 @@
  * inea_h2020_ct.strongarm.inc
  */
 
-/**
+/** 
  * Implements hook_strongarm().
  */
 function inea_h2020_ct_strongarm() {

@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_field_default_field_bases().
+ *  Implements  hook_field_default_field_bases().
  */
 function inea_h2020_ct_field_default_field_bases() {
   $field_bases = array();

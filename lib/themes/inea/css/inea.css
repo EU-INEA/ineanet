@@ -139,6 +139,10 @@ div#block-views-latest-news-block-1 .views-row {
   padding-bottom:15px;
   border-bottom: solid 1px #ccc;
 }
+div#block-views-latest-news-block-1 .view-content .views-row .views-field-created {
+  margin-top: 5px;
+}
+
 div#block-views-latest-news-block-1 a {
   font-size: 12px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -165,8 +169,13 @@ div#block-views-latest-news-block-1 div.view-footer {
   background-position: 4px 4px;
   padding: 0 0 0 25px;
 }
-
-
+div#block-views-latest-news-block-1 .more-link {
+    font-weight: bold;
+    text-align: left !important;
+    color: #0065a2;
+    float: left;
+    padding-left: 1em;
+}
 
 
 
