@@ -4,7 +4,6 @@ core = 7.x
 ;
 ; Contributed modules ====================================================================
 ;
-
 projects[block_class][subdir] = contributed
 projects[block_class][version] = 2.1
 
