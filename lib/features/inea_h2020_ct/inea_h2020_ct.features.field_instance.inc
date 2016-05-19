@@ -18,10 +18,11 @@ function inea_h2020_ct_field_default_field_instances() {
     'description' => 'Project Abstract text field.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 26,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -35,52 +36,17 @@ function inea_h2020_ct_field_default_field_instances() {
     'label' => 'Abstract',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => '',
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_truncate_html' => 0,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 1,
     ),
   );
 
@@ -93,10 +59,9 @@ function inea_h2020_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -153,7 +118,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -227,7 +192,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -243,7 +208,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -300,7 +265,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -316,7 +281,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -343,7 +308,6 @@ function inea_h2020_ct_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
-      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'optional',
       'title_label_use_field_label' => 0,
@@ -358,7 +322,7 @@ function inea_h2020_ct_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 15,
+      'weight' => 13,
     ),
   );
 
@@ -414,7 +378,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'year_range' => '-3:+10',
       ),
       'type' => 'date_text',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -442,40 +406,9 @@ function inea_h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_eu_contribution',
-    'label' => 'EU contribution after total cost',
+    'label' => 'EU contribution',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -483,12 +416,10 @@ function inea_h2020_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -505,7 +436,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -562,7 +493,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -580,7 +511,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -635,7 +566,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 13,
+      'weight' => 11,
     ),
   );
 
@@ -652,7 +583,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -709,7 +640,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 14,
     ),
   );
 
@@ -783,81 +714,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-h2020_project-field_inea_h2020_short_summary'.
-  $field_instances['node-h2020_project-field_inea_h2020_short_summary'] = array(
-    'bundle' => 'h2020_project',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_inea_h2020_short_summary',
-    'label' => 'h2020 short summary',
-    'required' => 1,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 2,
     ),
   );
 
@@ -930,7 +787,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -1003,7 +860,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -1019,7 +876,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1046,9 +903,8 @@ function inea_h2020_ct_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
-      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
-      'title' => 'value',
+      'title' => 'optional',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => 'Project Website',
@@ -1061,7 +917,7 @@ function inea_h2020_ct_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 12,
     ),
   );
 
@@ -1091,41 +947,6 @@ function inea_h2020_ct_field_default_field_instances() {
     'label' => 'Participants',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'migrate_example' => 0,
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'migrate_example' => array(
-              'weight' => 20,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1133,12 +954,10 @@ function inea_h2020_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 15,
     ),
   );
 
@@ -1169,41 +988,6 @@ function inea_h2020_ct_field_default_field_instances() {
     'label' => 'Country',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'migrate_example' => 0,
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'migrate_example' => array(
-              'weight' => 20,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1211,12 +995,10 @@ function inea_h2020_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 25,
+      'weight' => 16,
     ),
   );
 
@@ -1244,44 +1026,9 @@ function inea_h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_participant_requested',
-    'label' => 'Requested EC Contribution',
+    'label' => 'Requested EU Contribution',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'migrate_example' => 0,
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'migrate_example' => array(
-              'weight' => 20,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1289,12 +1036,10 @@ function inea_h2020_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 26,
+      'weight' => 17,
     ),
   );
 
@@ -1305,7 +1050,7 @@ function inea_h2020_ct_field_default_field_instances() {
   t('Coordinator');
   t('Country');
   t('Duration');
-  t('EU contribution after total cost');
+  t('EU contribution');
   t('Funding scheme');
   t('Participants');
   t('Please enter Project start and end dates.');
@@ -1316,12 +1061,11 @@ function inea_h2020_ct_field_default_field_instances() {
   t('Project description on CORDIS');
   t('Project reference');
   t('Project website');
-  t('Requested EC Contribution');
+  t('Requested EU Contribution');
   t('Topic');
   t('Total cost');
   t('h2020 acronym');
   t('h2020 image');
-  t('h2020 short summary');
   t('inea h2020 project description');
 
   return $field_instances;

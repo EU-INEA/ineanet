@@ -33,6 +33,7 @@ function inea_h2020_project_import_final_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
+        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
@@ -103,45 +104,40 @@ function inea_h2020_project_import_final_feeds_importer_default() {
             'language' => 'und',
           ),
           10 => array(
-            'source' => 'Short Description',
-            'target' => 'field_inea_h2020_short_summary',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          11 => array(
             'source' => 'Cordis Link',
             'target' => 'field_inea_h2020_cordis_url:url',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          12 => array(
+          11 => array(
             'source' => 'Project Start Date',
             'target' => 'field_inea_h2020_duration:start',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          13 => array(
+          12 => array(
             'source' => 'Project End date',
             'target' => 'field_inea_h2020_duration:end',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          14 => array(
+          13 => array(
             'source' => 'Participant Short Name',
             'target' => 'field_inea_participant',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          15 => array(
+          14 => array(
             'source' => 'Participant LE Country Code',
             'target' => 'field_inea_participant_country',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          16 => array(
+          15 => array(
             'source' => 'Participant Requested EC Contribution',
             'target' => 'field_inea_participant_requested',
             'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '2',
@@ -149,9 +145,11 @@ function inea_h2020_project_import_final_feeds_importer_default() {
         'input_format' => 'plain_text',
         'skip_hash_check' => 1,
         'bundle' => 'h2020_project',
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
-    'content_type' => 'h2020_project',
+    'content_type' => '',
     'update' => 0,
     'import_period' => '-1',
     'expire_period' => 3600,
