@@ -29,12 +29,13 @@ function inea_h2020_ct_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Participants',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-participants-display field-group-fieldset',
         'id' => '',
+        'classes' => 'group-participants-display field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_participants_display|node|h2020_project|default'] = $field_group;

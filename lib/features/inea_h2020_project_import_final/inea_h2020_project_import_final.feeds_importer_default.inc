@@ -44,10 +44,9 @@ function inea_h2020_project_import_final_feeds_importer_default() {
         'authorize' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'Project Number',
+            'source' => 'Project Acronym',
             'target' => 'title',
             'unique' => 1,
-            'language' => 'und',
           ),
           1 => array(
             'source' => 'Project Number',
@@ -145,7 +144,7 @@ function inea_h2020_project_import_final_feeds_importer_default() {
         'input_format' => 'plain_text',
         'skip_hash_check' => 1,
         'bundle' => 'h2020_project',
-        'insert_new' => 1,
+        'insert_new' => '1',
         'language' => 'und',
       ),
     ),

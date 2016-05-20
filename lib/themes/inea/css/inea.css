@@ -107,6 +107,11 @@ img {max-width:100%;}
   font-weight:700;
 }
 
+/* to space the images on this page: http://ec.europa.eu/inea/connecting-europe-facility/cef-transport/projects-by-corridor;  */
+.view-cef-projects-by-programme .view-content .field-content a img {
+    margin-bottom: 12px;
+}
+
 /* h1 -titles on all pages */
 h1 {color:#111; font-size:24px; }
 
@@ -127,8 +132,8 @@ div#block-views-latest-news-block-1 div.panel-heading {
   padding: 10px 15px;
 }
 div#block-views-latest-news-block-1 .views-row .views-field-created span {
-    margin-left: 10%;
-    font-size: 14px;
+  margin-left: 10%;
+  font-size: 14px;
   font-style: italic;
   color: #000000;
 }
@@ -158,7 +163,9 @@ div#block-views-latest-news-block-1 div.views-field-created span{
 #block-views-latest-news-block-1 {
     border: 1px solid #dddddd;
 }
-
+#block-views-latest-news-block-1 .panel-body {
+    padding: 10px 10px 15px 10px !important;
+}
 div#block-views-latest-news-block-1 div.views-row {
   margin-bottom: 15px;
 }
@@ -176,22 +183,6 @@ div#block-views-latest-news-block-1 .more-link {
     float: left;
     padding-left: 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Commission header FONT*/
 div#layout-header div.container div#sub-title {
@@ -912,8 +903,9 @@ body {
   background-repeat: repeat-x;
   filter: none;
 }
-/* H2020 Project pages */ 
-/* H2020 Project pages */
+/* ============================================================================================*/ 
+/*  H2020 Project pages */ 
+/* ============================================================================================*/ 
 .node-type-h2020-project .region-content a {
   font-size: 16px !important;
   color: #004494 !important;
@@ -936,24 +928,27 @@ body {
 .node-type-h2020-project .group-header {
   font-size: 18px;
   font-weight:bold;
-  color: #ee8032;
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 .node-type-h2020-project .fieldset-title {
   font-size:18px;
-  color: #ee8032;
 }
 
 .node-type-h2020-project .field-name-field-inea-h2020-abstract {
   text-align: justify;
 }
-
-/*.node-type-h2020-project .group-left .field-label,*/
-.node-type-h2020-project .field-label
+.node-type-h2020-project .group-header,
+ .node-type-h2020-project .fieldset-title,
+ .node-type-h2020-project .field-label
 {
-  color: #ee8032;
+   color: #3399cc;
 }
+/* To align vertically with the long title text in the last col */
+.node-type-h2020-project .field-name-field-inea-participant .field-label,
+.node-type-h2020-project .field-name-field-inea-participant-country .field-label  
+  { margin-bottom: 20px;}
+
 .node-type-h2020-project .group-left .field-items,
 .node-type-h2020-project .group-right .field-items
 {
