@@ -3,7 +3,6 @@
  * @file
  * inea_h2020_ct.field_group.inc
  */
-
 /**
  * Implements hook_field_group_info().
  */

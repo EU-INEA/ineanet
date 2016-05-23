@@ -3,7 +3,6 @@
  * @file
  * inea_h2020_ct.features.field_base.inc
  */
-
 /**
  *  Implements  hook_field_default_field_bases().
  */
