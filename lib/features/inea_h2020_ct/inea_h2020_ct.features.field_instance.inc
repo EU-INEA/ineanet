@@ -1,8 +1,9 @@
 <?php
 /**
  * @file
- *  inea_h2020_ct.features.field_instance.inc
+ * inea_h2020_ct.features.field_instance.inc
  */
+
 /**
  * Implements hook_field_default_field_instances().
  */

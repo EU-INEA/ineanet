@@ -3,6 +3,7 @@
  * @file
  * inea_h2020_project_import_final.feeds_importer_default.inc
  */
+
 /**
  * Implements hook_feeds_importer_default().
  */
@@ -78,8 +79,8 @@ function inea_h2020_project_import_final_feeds_importer_default() {
             'language' => 'und',
           ),
           6 => array(
-            'source' => 'Project TOA',
-            'target' => 'field_inea_h2020_funding_scheme',
+            'source' => 'Project Total Costs',
+            'target' => 'field_inea_h2020_total_costs',
             'unique' => FALSE,
             'language' => 'und',
           ),
@@ -90,32 +91,32 @@ function inea_h2020_project_import_final_feeds_importer_default() {
             'language' => 'und',
           ),
           8 => array(
-            'source' => 'Project Start Date',
-            'target' => 'field_inea_h2020_duration:start',
+            'source' => 'Project TOA',
+            'target' => 'field_inea_h2020_funding_scheme',
             'unique' => FALSE,
             'language' => 'und',
           ),
           9 => array(
-            'source' => 'Project End date',
-            'target' => 'field_inea_h2020_duration:end',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          10 => array(
             'source' => 'Coordinator',
             'target' => 'field_inea_h2020_coordinator',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          11 => array(
+          10 => array(
             'source' => 'Cordis Link',
             'target' => 'field_inea_h2020_cordis_url:url',
             'unique' => FALSE,
             'language' => 'und',
           ),
+          11 => array(
+            'source' => 'Project Start Date',
+            'target' => 'field_inea_h2020_duration:start',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
           12 => array(
-            'source' => 'Project Total Costs',
-            'target' => 'field_inea_h2020_total_costs',
+            'source' => 'Project End date',
+            'target' => 'field_inea_h2020_duration:end',
             'unique' => FALSE,
             'language' => 'und',
           ),

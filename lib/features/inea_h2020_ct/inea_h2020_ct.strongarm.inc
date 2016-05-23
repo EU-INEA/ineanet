@@ -4,7 +4,7 @@
  * inea_h2020_ct.strongarm.inc
  */
 
-/** 
+/**
  * Implements hook_strongarm().
  */
 function inea_h2020_ct_strongarm() {
@@ -108,7 +108,7 @@ function inea_h2020_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'xmlsitemap' => array(
           'weight' => '1',

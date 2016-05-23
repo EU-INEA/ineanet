@@ -33,7 +33,6 @@ features[field_base][] = field_inea_participant
 features[field_base][] = field_inea_participant_country
 features[field_base][] = field_inea_participant_requested
 features[field_group][] = group_participants_display|node|h2020_project|default
-features[field_group][] = group_participants|node|h2020_project|form
 features[field_instance][] = node-h2020_project-field_inea_h2020_abstract
 features[field_instance][] = node-h2020_project-field_inea_h2020_acronym
 features[field_instance][] = node-h2020_project-field_inea_h2020_call_for_propos
