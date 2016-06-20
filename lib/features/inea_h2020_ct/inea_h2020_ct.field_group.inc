@@ -35,7 +35,7 @@ function inea_h2020_ct_field_group_info() {
         'classes' => 'group-participants-display field-group-fieldset',
         'description' => '',
       ),
-      'formatter' => 'collapsed',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_participants_display|node|h2020_project|default'] = $field_group;

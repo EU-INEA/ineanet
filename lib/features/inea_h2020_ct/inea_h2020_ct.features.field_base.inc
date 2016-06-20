@@ -53,6 +53,34 @@ function inea_h2020_ct_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_inea_h2020_area_term'.
+  $field_bases['field_inea_h2020_area_term'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_inea_h2020_area_term',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'h2020_field',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_inea_h2020_call_for_propos'.
   $field_bases['field_inea_h2020_call_for_propos'] = array(
     'active' => 1,
@@ -255,6 +283,28 @@ function inea_h2020_ct_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_inea_h2020_project_referen',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_inea_h2020_short_summary'.
+  $field_bases['field_inea_h2020_short_summary'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_inea_h2020_short_summary',
     'indexes' => array(
       'format' => array(
         0 => 'format',
