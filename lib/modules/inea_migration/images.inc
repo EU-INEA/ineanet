@@ -9,6 +9,7 @@
  * Images migration class.
  */
 class ImagesMigration extends IneaBasicMigration {
+
   /**
    * Setup the field mappings between the source and destination.
    */

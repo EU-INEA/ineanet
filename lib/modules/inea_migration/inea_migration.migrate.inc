@@ -50,6 +50,7 @@ function inea_migration_migrate_api() {
  * Abstract class as a base for all our migration classes.
  */
 abstract class IneaBasicMigration extends Migration {
+
   /**
    * Constructor function.
    */

@@ -12,7 +12,6 @@ function inea_portal_form_project_node_form_alter(&$form, &$form_state, $form_id
   $form['body']['#access'] = 0;
 }
 
-
 /**
  * Implements hook_info_alter().
  */
@@ -20,7 +19,6 @@ function inea_portal_form_implementation_success_node_form_alter(&$form, &$form_
   // Disable field body.
   $form['body']['#access'] = 0;
 }
-
 
 /**
  * Implements hook_token_info().

@@ -21,12 +21,12 @@
 <div id="<?php print $id; ?>" class="<?php print $classes; ?>">
     <?php if($container) : ?>
     <div class="container">
-    <?php 
-endif; ?>
+    <?php
+    endif; ?>
     <?php print $parent_link; ?>
     <?php print render($content); ?>
     <?php if($container) : ?>
     </div>
-    <?php 
-endif; ?>
+    <?php
+    endif; ?>
 </div>
