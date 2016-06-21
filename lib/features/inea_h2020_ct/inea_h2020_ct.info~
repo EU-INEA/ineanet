@@ -2,6 +2,7 @@ name = Inea_h2020_ct
 description = H2020 Project Content type for  Inea
 core = 7.x
 package = inea
+version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features

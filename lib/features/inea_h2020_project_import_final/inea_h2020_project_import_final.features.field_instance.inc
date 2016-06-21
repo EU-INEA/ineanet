@@ -1293,7 +1293,7 @@ function inea_h2020_project_import_final_field_default_field_instances() {
   t('Participants');
   t('Please enter Project start and end dates.');
   t('Please enter Topic Code');
-  t('Please enter the url of the project on CORDIS ');
+  t('Please enter the url of the project on CORDIS');
   t('Please enter total cost figure.');
   t('Project Abstract text field.');
   t('Project description on CORDIS');

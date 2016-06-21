@@ -2,6 +2,7 @@ name = Inea H2020 Feed partial modify
 description = Feed to modify some fields in H2020 CT
 core = 7.x
 package = INEA
+version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper

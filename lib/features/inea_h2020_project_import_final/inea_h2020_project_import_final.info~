@@ -2,6 +2,7 @@ name = Inea H2020 Project Import Final
 description = H2020 Lucas import h2020 projects from CSV Final version
 core = 7.x
 package = inea
+version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper
