@@ -76,13 +76,13 @@ function inea_preprocess_page(&$variables) {
     $variables['page_type'] = 'project';
     $node = $variables['node'];
     if (!empty($node->field_tag_transport_mode)) {
-      $tid = $node->field_tag_transport_mode['und'][0]['tid'];
+      $tid = $node->field_tag_transport_mode['LANGUAGE_NONE'][0]['tid'];
     }
     elseif (!empty($node->field_tag_energy_type)) {
-      $tid = $node->field_tag_energy_type['und'][0]['tid'];
+      $tid = $node->field_tag_energy_type['LANGUAGE_NONE'][0]['tid'];
     }
     $term_image = taxonomy_term_load($tid);
-    $tid = $node->field_tag_programme['und'][0]['tid'];
+    $tid = $node->field_tag_programme['LANGUAGE_NONE'][0]['tid'];
     $project_type = taxonomy_term_load($tid);
     if (!empty($project_type)) {
       $type = str_replace(" ", "-", drupal_strtolower($project_type->name));
@@ -101,9 +101,9 @@ function inea_preprocess_page(&$variables) {
       $term_image = reset($terms);
     }
   }
-  if (!empty($term_image) && isset($term_image->field_term_image['und'][0]['uri'])) {
+  if (!empty($term_image) && isset($term_image->field_term_image['LANGUAGE_NONE'][0]['uri'])) {
     $image = theme('image', array(
-      'path' => $term_image->field_term_image['und'][0]['uri'],
+      'path' => $term_image->field_term_image['LANGUAGE_NONE'][0]['uri'],
       'alt' => $term_image->name,
       'title' => $term_image->name,
     ));
@@ -238,7 +238,7 @@ function inea_preprocess_node(&$variables) {
   $variables['prefix_display'] = FALSE;
   $variables['suffix_display'] = FALSE;
 
-  if ((isset($variables['group_content_access'])) && (isset($variables['group_content_access']['und'])) && ($variables['group_content_access']['und'][0]['value'] == 2)) {
+  if ((isset($variables['group_content_access'])) && (isset($variables['group_content_access']['LANGUAGE_NONE'])) && ($variables['group_content_access']['LANGUAGE_NONE'][0]['value'] == 2)) {
     $variables['prefix_display'] = TRUE;
   }
 
@@ -304,10 +304,10 @@ function inea_preprocess_field(&$variables, $hook) {
  */
 function inea_preprocess_block(&$variables) {
 
-  global $user, $language;
+  global $user;
   if (!empty($user) && 0 != $user->uid) {
     $full_user = user_load($user->uid);
-    $name = (isset($full_user->field_firstname['und'][0]['value']) && isset($full_user->field_lastname['und'][0]['value']) ? $full_user->field_firstname['und'][0]['value'] . ' ' . $full_user->field_lastname['und'][0]['value'] : $user->name);
+    $name = (isset($full_user->field_firstname['LANGUAGE_NONE'][0]['value']) && isset($full_user->field_lastname['LANGUAGE_NONE'][0]['value']) ? $full_user->field_firstname['LANGUAGE_NONE'][0]['value'] . ' ' . $full_user->field_lastname['LANGUAGE_NONE'][0]['value'] : $user->name);
     $variables['user_name'] = "<div class='username'>" . t('Welcome,') . ' <strong>' . $name . '</strong></div>';
   }
 

@@ -6,8 +6,7 @@ core = "7.x"
 base theme = ec_resp
 php = 5.2.4
 
-stylesheets[all][] = "css/ineatest.css"
-;stylesheets[all][] = "css/front-page-test.css"
+stylesheets[all][] = "css/inea.css"
 
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
