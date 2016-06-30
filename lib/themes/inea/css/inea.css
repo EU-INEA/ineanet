@@ -897,13 +897,22 @@ body {
   color: #404040 !important;
   text-decoration: underline !important;
 }
-
-.node-type-h2020-project .group-left {
-  width: 55%;
+/* June 30th, 2016 */
+@media (min-width:768px) {
+  .node-type-h2020-project .group-left {
+    width: 55%;
+  }
+  .node-type-h2020-project .group-right {
+    width: 42%;
+    float: right;
+  }
 }
-.node-type-h2020-project .group-right {
-  width: 42%;
-  float: right;
+/* June 30th, 2016 */
+@media (max-width:767px) {
+  .node-type-h2020-project .group-left,
+  .node-type-h2020-project .group-right {
+    width: 100%;
+  }
 }
 .node-type-h2020-project .group-header {
   font-size: 18px;
@@ -958,3 +967,30 @@ body {
   width: 59%;
   float: left;
 }
+
+
+/* Testing and not yet committed */
+
+
+ /* unvisited link */
+div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:link {
+    color: green;
+}
+
+/* visited link */
+div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:visited {
+    color: green;
+}
+
+/* mouse over link */
+div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:hover {
+    color: red;
+    font-size: 17px;
+}
+
+/* selected link */
+div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:active {
+    color: yellow;
+    font-size: 20px;
+} 
+
