@@ -9,6 +9,7 @@
  * Implementation success migration class.
  */
 class ImplementationSuccessesMigration extends IneaBasicMigration {
+
   /**
    * Setup the field mappings between the source and destination.
    */

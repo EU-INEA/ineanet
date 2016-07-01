@@ -1,14 +1,12 @@
 name = inea_sub_theme
 description = Sub theme of default Multisite theme for the INEA portal
 package = Fpfis_cms_theme
-version = "7.x-1.0"
 multisite_version = "2.1"
 core = "7.x"
 base theme = ec_resp
 php = 5.2.4
 
 stylesheets[all][] = "css/inea.css"
-; stylesheets[all][] = "css/front-page-test.css"
 
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
@@ -30,8 +28,3 @@ regions[site_bottom] = "Site Bottom"
 regions[footer] = "Footer"
 
 settings[shortcut_module_link] = 0
-
-
-; Information added by drupal . org packaging script on 2011-01-05
-project = "drupal"
-datestamp = "1294208756"

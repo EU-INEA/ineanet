@@ -9,6 +9,7 @@
  * Defines a base class for testing.
  */
 class IneaQAWebTestCase extends DrupalWebTestCase {
+
   /**
    * Test definition.
    */
@@ -48,10 +49,6 @@ class IneaQAWebTestCase extends DrupalWebTestCase {
     // Ex: php = 5.2.4.
     $this->assertTrue(array_key_exists('php', $info), 'The PHP version info is available.');
     $this->assertEqual($info['php'], '5.2.4');
-
-    // Add version information (check if the version number matches).
-    // Ex: version = 7.x-1.0.
-    $this->assertTrue(array_key_exists('version', $info));
 
     // Add feature information:
     // features[features_api][] = api:2.
