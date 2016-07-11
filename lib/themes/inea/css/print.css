@@ -1,0 +1,155 @@
+body {
+  margin: 1em;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+th {
+  text-align: left; /* LTR */
+  color: #006;
+  border-bottom: 1px solid #ccc;
+}
+tr.odd {
+  background-color: #ddd;
+}
+tr.even {
+  background-color: #fff;
+}
+td {
+  padding: 5px;
+}
+#menu {
+  visibility: hidden;
+}
+#main {
+  margin: 1em;
+}
+a:link {
+  color: #000;
+}
+a:visited {
+  color: #000;
+}
+a:hover {
+  color: #00f;
+}
+a:link img,
+a:visited img {
+  border: 0;
+}
+.print-footnote {
+  font-size: xx-small;
+}
+img.print-logo {
+  border: 0;
+  margin: auto;
+  text-align: center;
+  width: 680px;
+  height: 182px;
+}
+.print-site_name {
+  display: none;
+}
+.print-breadcrumb {
+  font-size: x-small;
+}
+.print-title {
+}
+.print-submitted {
+  font-size: small;
+}
+.print-created {
+  font-size: small;
+}
+.print-taxonomy {
+  text-align: right;
+}
+.print-taxonomy li {
+  display: inline;
+}
+.print-content {
+}
+.print-hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  color: #9e9e9e;
+  background-color: #9e9e9e;
+}
+.print-message {
+  border: medium dotted blue;
+  padding: 1em;
+}
+.print-source_url {
+  font-size: small;
+}
+.print-links {
+  font-size: small;
+}
+.print-footer {
+  text-align: center;
+}
+/* ============================================================================================*/
+/*  H2020 Project pages */
+/* ============================================================================================*/
+.node-h2020-project .group-left,
+.ds-2col-stacked .group-left { 
+  width: 48% !important;
+  float: left;
+}
+.node-h2020-project .group-right,
+.ds-2col-stacked .group-right{
+  width: 42% !important;
+  float: right;
+}
+.node-h2020-project .group-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.node-h2020-project .fieldset-title {
+  font-size: 18px;
+}
+.node-h2020-project .field-name-field-inea-h2020-abstract {
+  text-align: justify;
+}
+.node-h2020-project .group-header,
+.node-h2020-project .fieldset-title,
+.node-h2020-project .field-label { 
+  color: #3399cc;
+}
+/* To align vertically with the long title text in the last col */
+.node-h2020-project .field-name-field-inea-participant .field-label,
+.node-h2020-project .field-name-field-inea-participant-country .field-label {
+  margin-bottom: 0px;
+}
+.node-h2020-project .group-left .field-items,
+.node-h2020-project .group-right .field-items {
+  margin-bottom: 20px;
+}
+.print-content .node-h2020-project .field-name-field-inea-h2020-image-copyright {
+  font-size: 10px;
+  font-style: italic;
+  margin-top: -41px;
+}
+.print-content .node-h2020-project .field-name-field-inea-participant .field-label,
+.print-content .node-h2020-project .field-name-field-inea-participant-country .field-label {
+  margin-bottom: 20px;
+}
+.node-h2020-project .ds-2col-stacked .group-footer {
+  clear: both;
+  margin-top: 25px;
+}
+/*  .group-footer*/
+.node-h2020-project .ds-2col-stacked .group-footer .field-name-field-inea-participant-country {
+  width: 14%;
+  float: left;
+}
+.node-h2020-project .ds-2col-stacked .group-footer .field-name-field-inea-participant-requested {
+  width: 25%;
+  float: left;
+}
+.node-h2020-project .ds-2col-stacked .group-footer .field-name-field-inea-participant {
+  width: 59%;
+  float: left;
+}
