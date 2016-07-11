@@ -43,16 +43,12 @@ img.print-logo {
   border: 0;
   margin: auto;
   text-align: center;
-  width: 680px;
-  height: 182px;
 }
 .print-site_name {
   display: none;
 }
 .print-breadcrumb {
   font-size: x-small;
-}
-.print-title {
 }
 .print-submitted {
   font-size: small;
@@ -65,8 +61,6 @@ img.print-logo {
 }
 .print-taxonomy li {
   display: inline;
-}
-.print-content {
 }
 .print-hr {
   border: 0;
@@ -92,12 +86,12 @@ img.print-logo {
 /*  H2020 Project pages */
 /* ============================================================================================*/
 .node-h2020-project .group-left,
-.ds-2col-stacked .group-left { 
+.ds-2col-stacked .group-left {
   width: 48% !important;
   float: left;
 }
 .node-h2020-project .group-right,
-.ds-2col-stacked .group-right{
+.ds-2col-stacked .group-right {
   width: 42% !important;
   float: right;
 }
@@ -115,7 +109,7 @@ img.print-logo {
 }
 .node-h2020-project .group-header,
 .node-h2020-project .fieldset-title,
-.node-h2020-project .field-label { 
+.node-h2020-project .field-label {
   color: #3399cc;
 }
 /* To align vertically with the long title text in the last col */
