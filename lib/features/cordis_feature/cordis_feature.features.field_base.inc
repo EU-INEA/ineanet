@@ -10,7 +10,7 @@
 function cordis_feature_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field__proj_acronym'
+  // Exported field_base: 'field__proj_acronym'.
   $field_bases['field__proj_acronym'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -39,7 +39,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_cordis_country'
+  // Exported field_base: 'field_cordis_country'.
   $field_bases['field_cordis_country'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -74,7 +74,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_proj_end_date'
+  // Exported field_base: 'field_proj_end_date'.
   $field_bases['field_proj_end_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -103,7 +103,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'datestamp',
   );
 
-  // Exported field_base: 'field_proj_lat'
+  // Exported field_base: 'field_proj_lat'.
   $field_bases['field_proj_lat'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -132,7 +132,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_proj_logo'
+  // Exported field_base: 'field_proj_logo'.
   $field_bases['field_proj_logo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -162,7 +162,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_proj_long'
+  // Exported field_base: 'field_proj_long'.
   $field_bases['field_proj_long'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -191,7 +191,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_proj_programme_acronym'
+  // Exported field_base: 'field_proj_programme_acronym'.
   $field_bases['field_proj_programme_acronym'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -220,7 +220,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_proj_rcn'
+  // Exported field_base: 'field_proj_rcn'.
   $field_bases['field_proj_rcn'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -249,7 +249,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_proj_reference'
+  // Exported field_base: 'field_proj_reference'.
   $field_bases['field_proj_reference'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -278,7 +278,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_proj_start_date'
+  // Exported field_base: 'field_proj_start_date'.
   $field_bases['field_proj_start_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -307,7 +307,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'datestamp',
   );
 
-  // Exported field_base: 'field_proj_summary'
+  // Exported field_base: 'field_proj_summary'.
   $field_bases['field_proj_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -334,7 +334,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_proj_update_date'
+  // Exported field_base: 'field_proj_update_date'.
   $field_bases['field_proj_update_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -362,7 +362,7 @@ function cordis_feature_field_default_field_bases() {
     'type' => 'datestamp',
   );
 
-  // Exported field_base: 'field_project_review'
+  // Exported field_base: 'field_project_review'.
   $field_bases['field_project_review'] = array(
     'active' => 1,
     'cardinality' => 1,

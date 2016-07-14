@@ -10,7 +10,7 @@
 function cordis_feature_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-cordis_importer-body'
+  // Exported field_instance: 'node-cordis_importer-body'.
   $field_instances['node-cordis_importer-body'] = array(
     'bundle' => 'cordis_importer',
     'default_value' => NULL,
@@ -72,7 +72,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-body'
+  // Exported field_instance: 'node-project-body'.
   $field_instances['node-project-body'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -131,7 +131,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field__proj_acronym'
+  // Exported field_instance: 'node-project-field__proj_acronym'.
   $field_instances['node-project-field__proj_acronym'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -216,7 +216,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_cordis_country'
+  // Exported field_instance: 'node-project-field_cordis_country'.
   $field_instances['node-project-field_cordis_country'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -267,7 +267,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_proj_end_date'
+  // Exported field_instance: 'node-project-field_proj_end_date'.
   $field_instances['node-project-field_proj_end_date'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -341,7 +341,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_lat'
+  // Exported field_instance: 'node-project-field_proj_lat'.
   $field_instances['node-project-field_proj_lat'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -400,7 +400,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_logo'
+  // Exported field_instance: 'node-project-field_proj_logo'.
   $field_instances['node-project-field_proj_logo'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -483,7 +483,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_long'
+  // Exported field_instance: 'node-project-field_proj_long'.
   $field_instances['node-project-field_proj_long'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -542,7 +542,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_programme_acronym'
+  // Exported field_instance: 'node-project-field_proj_programme_acronym'.
   $field_instances['node-project-field_proj_programme_acronym'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -601,7 +601,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_rcn'
+  // Exported field_instance: 'node-project-field_proj_rcn'.
   $field_instances['node-project-field_proj_rcn'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -660,7 +660,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_reference'
+  // Exported field_instance: 'node-project-field_proj_reference'.
   $field_instances['node-project-field_proj_reference'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -719,7 +719,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_start_date'
+  // Exported field_instance: 'node-project-field_proj_start_date'.
   $field_instances['node-project-field_proj_start_date'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -793,7 +793,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_summary'
+  // Exported field_instance: 'node-project-field_proj_summary'.
   $field_instances['node-project-field_proj_summary'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -852,7 +852,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_proj_update_date'
+  // Exported field_instance: 'node-project-field_proj_update_date'.
   $field_instances['node-project-field_proj_update_date'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -917,7 +917,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_project_review'
+  // Exported field_instance: 'node-project-field_project_review'.
   $field_instances['node-project-field_project_review'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -995,7 +995,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_shared_country'
+  // Exported field_instance: 'node-project-field_shared_country'.
   $field_instances['node-project-field_shared_country'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1053,7 +1053,7 @@ function cordis_feature_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-project-field_shared_teaser'
+  // Exported field_instance: 'node-project-field_shared_teaser'.
   $field_instances['node-project-field_shared_teaser'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1112,7 +1112,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_short_title'
+  // Exported field_instance: 'node-project-field_short_title'.
   $field_instances['node-project-field_short_title'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1170,7 +1170,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_subprogramme_area'
+  // Exported field_instance: 'node-project-field_subprogramme_area'.
   $field_instances['node-project-field_subprogramme_area'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1221,7 +1221,7 @@ function cordis_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_tags'
+  // Exported field_instance: 'node-project-field_tags'.
   $field_instances['node-project-field_tags'] = array(
     'bundle' => 'project',
     'default_value' => NULL,

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Cordis feature install file.
@@ -73,14 +74,8 @@ function cordis_feature_update_7210() {
 function cordis_feature_update_7220() {
   // Try to match the old taxonomy terms and new by the country code.
   $items = db_select('field_data_field_shared_country', 'f')->distinct();
-  $items->fields('f', array('entity_type',
-      'bundle',
-      'deleted',
-      'entity_id',
-      'revision_id',
-      'language',
-      'delta',
-      'field_shared_country_tid',
+  $items->fields('f', array('entity_type', 'bundle', 'deleted', 'entity_id', 'revision_id', 'language',
+    'delta', 'field_shared_country_tid',
   ));
   $items->fields('i1', array('entity_id'));
   $items->join('field_data_field_country_iso_code', 'i', 'i.entity_id = f.field_shared_country_tid');
