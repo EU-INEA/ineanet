@@ -941,10 +941,7 @@ body {
 .node-type-h2020-project .field-name-field-inea-participant-country .field-label {
   margin-bottom: 20px;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 .node-type-h2020-project .group-left .field-items,
 .node-type-h2020-project .group-right .field-items {
   margin-bottom: 20px;
@@ -968,27 +965,4 @@ body {
 .node-type-h2020-project .group-footer .field-name-field-inea-participant {
   width: 59%;
   float: left;
-<<<<<<< HEAD
-}
-
-/* Testing and not yet committed */
-/* unvisited link */
-div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:link {
-  color: green;
-}
-/* visited link */
-div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:visited {
-  color: green;
-}
-/* mouse over link */
-div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:hover {
-  color: red;
-  font-size: 17px;
-}
-/* selected link */
-div#content-wrapper .view-tax-terms-h2020-field .quicktabs-tabs a:active {
-  color: yellow;
-  font-size: 20px;
-=======
->>>>>>> origin/master
 }
