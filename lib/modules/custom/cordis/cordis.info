@@ -1,9 +1,0 @@
-name = Cordis Items Import
-description = Provides building block for integrating Cordis projects with Connect
-core = 7.x
-dependencies[] = views
-dependencies[] = feeds
-dependencies[] = feeds_tamper
-dependencies[] = feeds_tamper_ui
-dependencies[] = feeds_ui
-dependencies[] = feeds_xpathparser
