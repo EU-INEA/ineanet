@@ -897,13 +897,22 @@ body {
   color: #404040 !important;
   text-decoration: underline !important;
 }
-
-.node-type-h2020-project .group-left {
-  width: 55%;
+/* June 30th, 2016 */
+@media (min-width:768px) {
+  .node-type-h2020-project .group-left {
+    width: 55%;
+  }
+  .node-type-h2020-project .group-right {
+    width: 42%;
+    float: right;
+  }
 }
-.node-type-h2020-project .group-right {
-  width: 42%;
-  float: right;
+/* June 30th, 2016 */
+@media (max-width:767px) {
+  .node-type-h2020-project .group-left,
+  .node-type-h2020-project .group-right {
+    width: 100%;
+  }
 }
 .node-type-h2020-project .group-header {
   font-size: 18px;
@@ -914,7 +923,6 @@ body {
 .node-type-h2020-project .fieldset-title {
   font-size: 18px;
 }
-
 .node-type-h2020-project .field-name-field-inea-h2020-abstract {
   text-align: justify;
 }
