@@ -3,3 +3,7 @@
  * @file
  * Drupal needs this blank file.
  */
+
+function inea_core_print_pdf_mpdf_alter(&$mpdf, &$html, &$meta) {
+    $mpdf->setAutoBottomMargin = 'stretch';
+}
