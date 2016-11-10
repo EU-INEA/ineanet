@@ -8,7 +8,6 @@
 /**
  * Hook from mpdf .
  */
-function inea_core_print_pdf_mpdf_alter(&$mpdf, &$html, &$meta)
+function inea_core_print_pdf_mpdf_alter(&$mpdf, &$html, &$meta) {
   $mpdf->setAutoBottomMargin = 'stretch';
-
 }
