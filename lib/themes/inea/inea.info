@@ -1,7 +1,7 @@
 name = inea_sub_theme
 description = Sub theme of default Multisite theme for the INEA portal
 package = Fpfis_cms_theme
-multisite_version = "2.1"
+multisite_version = "2.2"
 core = "7.x"
 base theme = ec_resp
 php = 5.2.4
