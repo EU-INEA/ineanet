@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Helper functions for the INEA migration.
@@ -44,9 +45,9 @@ function inea_migration_update_links_form() {
 function inea_migration_update_links_form_submit($form, &$form_state) {
 
   $result = db_select('node')
-      ->fields('node', array('nid'))
-      ->execute()
-      ->fetchAll();
+    ->fields('node', array('nid'))
+    ->execute()
+    ->fetchAll();
 
   $operations = array();
 
