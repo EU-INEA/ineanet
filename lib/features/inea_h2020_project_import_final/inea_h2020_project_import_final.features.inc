@@ -1,14 +1,13 @@
 <?php
-
 /**
  * @file
- * inea_h2020_feed_partial_modify.features.inc
+ * inea_h2020_project_import_final.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function inea_h2020_feed_partial_modify_ctools_plugin_api($module = NULL, $api = NULL) {
+function inea_h2020_project_import_final_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "feeds" && $api == "feeds_importer_default") {
     return array("version" => "1");
   }
