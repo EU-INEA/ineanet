@@ -87,7 +87,7 @@
   <?php print $css; ?>
 </head>
 <body>
-<htmlpagefooter name="MyFooter1">
+<htmlpagefooter name="print-footer-stretch">
   <table width="100%" style="margin-top:25mm;">
     <tr>
       <td width="43%"></td>
@@ -96,7 +96,7 @@
     </tr>
   </table>
 </htmlpagefooter>
-<sethtmlpagefooter name="MyFooter1" value="on"/>
+<sethtmlpagefooter name="print-footer-stretch" value="on"/>
 <?php if (!empty($message)): ?>
   <div class="print-message"><?php print $message; ?></div><p/>
 <?php endif; ?>
