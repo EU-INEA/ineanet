@@ -1,5 +1,13 @@
 <?php
+
 /**
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_print_pdf_mpdf_alter().
+ */
+function inea_core_print_pdf_mpdf_alter(&$mpdf, &$html, &$meta) {
+  $mpdf->setAutoBottomMargin = 'stretch';
+}

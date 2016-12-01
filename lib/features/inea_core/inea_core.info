@@ -12,7 +12,10 @@ dependencies[] = inea_portal
 dependencies[] = inea_migration
 dependencies[] = ckeditor
 dependencies[] = ckeditor_link
+
+dependencies[] = print
+
 features[features_api][] = api:2
-multisite_version = 2.0
+multisite_version = 2.2
 php = 5.2.4
 files[] = tests/inea_core.test
