@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the H2020 Import Final Participants feature.
+ */
+
+include_once 'h2020_import_final_participants.features.inc';
