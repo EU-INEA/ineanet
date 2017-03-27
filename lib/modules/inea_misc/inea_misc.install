@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Custom INEA module to render some pages and forms.
+ */
+
+
+/**
+ * Disable and uninstall the module.
+ */
+
+/*  implements hook_update_n */
+
+function inea_misc_update_7000()
+{
+  if (module_exists('inea_migration')) {
+    module_disable(array('inea_migration'));
+    drupal_uninstall_modules(array('inea_migration'));
+  }
+}

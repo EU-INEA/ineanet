@@ -8,7 +8,7 @@
 /**
  * Topic migration class.
  */
-class TopicsMigration extends IneaBasicMigration {
+class IneaMigration_TopicsMigration extends IneaBasicMigration {
 
   /**
    * Setup the field mappings between the source and destination.
@@ -41,7 +41,7 @@ class TopicsMigration extends IneaBasicMigration {
         $name = 'Multi-country projects';
       }
       else {
-        $name = substr($row->name, 0, -2);
+        $name = drupal_substr($row->name, 0, -2);
       }
       $terms = taxonomy_get_term_by_name($name);
       if (!empty($terms)) {
@@ -54,7 +54,7 @@ class TopicsMigration extends IneaBasicMigration {
         $row->catalog = 'countries';
       }
     }
-    $vocab_machine_name = str_replace(' ', '_', strtolower($row->catalog));
+    $vocab_machine_name = str_replace(' ', '_', drupal_strtolower($row->catalog));
     $vocab_machine_name = preg_replace('/[^A-Za-z0-9\_]/', '', $vocab_machine_name);
     if (!taxonomy_vocabulary_machine_name_load($vocab_machine_name)) {
       if (!field_info_field('field_content_migration_info')) {

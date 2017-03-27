@@ -25,7 +25,7 @@ class IneaQAWebTestCase extends DrupalWebTestCase {
    * TestFile inea_core.info file.
    */
   public function testInfoFile() {
-    $module = basename(__FILE__, ".test");
+    $module = drupal_basename(__FILE__, ".test");
     $path = drupal_get_path('module', $module) . '/' . $module . '.info';
     $info = drupal_parse_info_file($path);
 
@@ -75,7 +75,7 @@ class IneaQAWebTestCase extends DrupalWebTestCase {
    * Test Install file.
    */
   public function testInstallFile() {
-    $module = basename(__FILE__, ".test");
+    $module = drupal_basename(__FILE__, ".test");
     $path = drupal_get_path('module', $module) . '/' . $module . '.install';
     $data = file_get_contents($path);
     $this->assertTrue(strpos($data, $module . '_install'), 'The module contains a hook_install');

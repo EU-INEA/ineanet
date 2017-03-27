@@ -228,7 +228,7 @@ function _inea_generate_term_path($term) {
   $vocabulary = taxonomy_vocabulary_load($vid);
   $machine_name = str_replace("_", "-", $vocabulary->machine_name);
   $path[] = 'projects-by-' . $machine_name;
-  $path[] = str_replace(" ", "-", strtolower($term->name));
+  $path[] = str_replace(" ", "-", drupal_strtolower($term->name));
   return implode("/", $path);
 }
 
@@ -392,10 +392,10 @@ function inea_preprocess_block(&$variables) {
 function inea_menu_link__main_menu(array $variables) {
   $element = $variables['element'];
   $dropdown = '';
-  $name_id = strtolower(strip_tags(str_replace(' ', '', $element['#title'])));
+  $name_id = drupal_strtolower(strip_tags(str_replace(' ', '', $element['#title'])));
   // Remove colons and anything past colons.
   if (strpos($name_id, ':')) {
-    $name_id = substr($name_id, 0, strpos($name_id, ':'));
+    $name_id = drupal_substr($name_id, 0, strpos($name_id, ':'));
   }
   // Preserve alphanumerics and numbers, everything else goes away.
   $pattern = '/([^a-z]+)([^0-9]+)/';

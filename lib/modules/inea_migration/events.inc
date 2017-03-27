@@ -53,8 +53,8 @@ class EventsMigration extends IneaBasicMigration {
    * Prepare row to transform the data.
    */
   public function prepareRow(stdClass $row) {
-    if (strrpos($row->title, 'Registration', -strlen($haystack)) !== FALSE ||
-      strrpos($row->title, 'Thank', -strlen($haystack)) !== FALSE) {
+    if (strrpos($row->title, 'Registration', -drupal_strlen($haystack)) !== FALSE ||
+      strrpos($row->title, 'Thank', -drupal_strlen($haystack)) !== FALSE) {
       return FALSE;
     }
     $content = explode("---", $row->content);
