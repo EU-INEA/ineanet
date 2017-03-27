@@ -12,7 +12,7 @@
 
 /*  implements hook_update_n */
 
-function inea_misc_update_7000()
+function inea_misc_update_7200()
 {
   if (module_exists('inea_migration')) {
     module_disable(array('inea_migration'));
