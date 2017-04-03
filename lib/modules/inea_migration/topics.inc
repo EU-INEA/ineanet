@@ -112,7 +112,7 @@ class IneaMigration_TopicsMigration extends IneaBasicMigration {
    */
   public function prepare($entity, stdClass $row) {
     $entity->field_content_migration_info = array(
-      'und' => array(
+      LANGUAGE_NONE => array(
         array(
           'value' => $row->id,
         ),
