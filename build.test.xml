@@ -32,6 +32,9 @@
             features and modules which need to be enabled after installation.
          -->
          <phingcall target="enable-install-modules" />
+
+        <!-- Rebuild node access after Subsites modules activation -->
+        <phingcall target="rebuild-node-access" />
     </target>
 
     <!-- Enable required modules after installation of the profile. -->
@@ -82,11 +85,26 @@
             files="${phpcs.files}"
             globalConfig="${phpcs.global.config}"
             ignorePatterns="${phpcs.ignore}"
+            passWarnings = "${phpcs.passwarnings}"
             report="${phpcs.report}"
             showProgress="${phpcs.progress}"
             showSniffCodes="${phpcs.sniffcodes}"
-            standard="${phpcs.standard}"
+            standards="${phpcs.standards}"
         />
+
+        <!-- Set up the git pre-push hook. -->
+        <phingcall target="disable-pre-push"/>
+        <if>
+            <equals arg1="${phpcs.prepush.enable}" arg2="1" />
+            <then>
+                <symlink link="${phpcs.prepush.destination}" target="${phpcs.prepush.source}" overwrite="true" />
+            </then>
+        </if>
+    </target>
+
+    <!-- Disable the PHP CodeSniffer pre-push hook. -->
+    <target name="disable-pre-push" description="Disable the coding standards check when pushing to a git repository.">
+        <delete file="${phpcs.prepush.destination}" failonerror="false" />
     </target>
 
     <!-- Set up Behat. -->
@@ -125,19 +143,33 @@
     <!-- Check that the subsite starterkit is up-to-date. -->
     <target name="check-starterkit">
         <echo msg="Checking if the subsite starterkit is up-to-date." />
-        <checkstarterkit
-            starterkitRepository="${starterkit.repository}"
-            starterkitBranch="${starterkit.branch}"
-            starterkitRemote="${starterkit.remote}"
-            subsiteRepository="${project.basedir}"
+        <exec
+            command="bin/qa check:ssk
+                --repository=${starterkit.repository}
+                --branch=${starterkit.branch}
+                --remote=${starterkit.remote}
+                --basedir=${project.basedir}
+                --no-interaction
+                --ansi"
+            passthru="true"
+            checkreturn="true"
+        />
+    </target>
+
+    <!-- Do quality assurance checks. -->
+    <target name="quality-assurance">
+        <exec
+            command="bin/qa review:full --no-interaction --ansi"
+            passthru="true"
+            checkreturn="true"
         />
     </target>
 
     <!-- Run a full static analysis. -->
     <target
         name="mjolnir"
-        description="The Hammer Of Thor will execute a full static analysis. Run this before sending a delivery to QA. Before starting this, make sure to do a full clean build + installation."
-        depends="check-starterkit, setup-behat, behat"
+        description="The Hammer Of Thor will execute a full static analysis on the deployment package. Run this before sending a delivery to QA."
+        depends="setup-php-codesniffer, quality-assurance"
     />
 
     <!-- Install a development version of the subsite. -->
@@ -147,4 +179,15 @@
         depends="install, enable-development-modules"
     />
 
+    <!-- Rebuild node access. -->
+    <target name="rebuild-node-access">
+        <drush
+            command="php-eval"
+            assume="yes"
+            root="${platform.build.dir}"
+            bin="${drush.bin}"
+            verbose="${drush.verbose}">
+            <param>"node_access_rebuild()"</param>
+        </drush>
+    </target>
 </project>

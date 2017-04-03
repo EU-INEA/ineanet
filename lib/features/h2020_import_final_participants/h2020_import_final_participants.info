@@ -1,0 +1,14 @@
+name = H2020 Import Final Participants
+description = H2020 Import Final Participants with tamper
+core = 7.x
+package = Features
+php = 5.2.4
+multisite_version = 2.2
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_ui
+dependencies[] = feeds_ui
+features[ctools][] = feeds:feeds_importer_default:1
+features[features_api][] = api:2
+features[feeds_importer][] = h2020_import_final_participants

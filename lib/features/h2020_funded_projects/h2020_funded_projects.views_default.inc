@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * h2020_funded_projects.views_default.inc

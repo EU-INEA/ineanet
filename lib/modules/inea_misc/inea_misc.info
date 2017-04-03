@@ -1,0 +1,6 @@
+name = INEA Misc
+description = Custom INEA module to disable inea_migration
+package = inea
+core = 7.x
+php = 5.2.4
+multisite_version = 2.2

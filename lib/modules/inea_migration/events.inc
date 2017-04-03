@@ -53,8 +53,8 @@ class EventsMigration extends IneaBasicMigration {
    * Prepare row to transform the data.
    */
   public function prepareRow(stdClass $row) {
-    if (strrpos($row->title, 'Registration', -strlen($haystack)) !== FALSE ||
-      strrpos($row->title, 'Thank', -strlen($haystack)) !== FALSE) {
+    if (strrpos($row->title, 'Registration', -drupal_strlen($haystack)) !== FALSE ||
+      strrpos($row->title, 'Thank', -drupal_strlen($haystack)) !== FALSE) {
       return FALSE;
     }
     $content = explode("---", $row->content);
@@ -75,7 +75,7 @@ class EventsMigration extends IneaBasicMigration {
           $fids[] = array('fid' => $fid);
         }
       }
-      $entity->field_inea_event_picture_ga['und'] = $fids;
+      $entity->field_inea_event_picture_ga[LANGUAGE_NONE] = $fids;
     }
     $parent_nid = _inea_migration_load_node_by_old_id('112470000000120');
     $mlids = _inea_migration_get_mlid('node/' . $parent_nid);

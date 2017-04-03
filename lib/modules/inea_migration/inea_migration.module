@@ -86,8 +86,8 @@ function _inea_migration_update_links_node($nid, &$context) {
   foreach ($context['sandbox']['textfields'] as $textfield) {
     if (!empty($node->$textfield)) {
       $field = $node->$textfield;
-      $content = $field['und'][0]['value'];
-      $field['und'][0]['value'] = _inea_migration_update_links($content);
+      $content = $field[LANGUAGE_NONE][0]['value'];
+      $field[LANGUAGE_NONE][0]['value'] = _inea_migration_update_links($content);
       $node->$textfield = $field;
     }
   }
@@ -116,7 +116,7 @@ function _inea_migration_update_links($content) {
     $id = trim($link->getAttribute('id'), "@");
     if (preg_match('/PAGE[0-9]{15}/', $id) || preg_match('/LINK[0-9]{15}/', $id)) {
       $match = TRUE;
-      $old_id = substr($id, 4);
+      $old_id = drupal_substr($id, 4);
       $nid = _inea_migration_load_node_by_old_id($old_id);
       if ($nid) {
         $href = base_path() . drupal_get_path_alias('node/' . $nid);
