@@ -10,6 +10,7 @@ core = 7.x
 ; Contributed modules
 ; ===================
 
+<<<<<<< HEAD:resources/site.make.example
 projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.5"
 
@@ -28,12 +29,3 @@ projects[pathologic][version] = 2.12
 ;projects[webform_simplenews][subdir] = contributed
 ;projects[webform_simplenews][version] = 1.x-dev
 ;projects[webform_simplenews][patch][] = https://www.drupal.org/project/webform_simplenews/patches/webform_simplenews_3.20_compatibility.patch
-
-; =========
-; Libraries
-; =========
-
-
-; ======
-; Themes
-; ======
