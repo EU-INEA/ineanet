@@ -86,8 +86,8 @@ function _inea_migration_update_links_node($nid, &$context) {
   foreach ($context['sandbox']['textfields'] as $textfield) {
     if (!empty($node->$textfield)) {
       $field = $node->$textfield;
-      $content = $field[LANGUAGE_NONE][0]['value'];
-      $field[LANGUAGE_NONE][0]['value'] = _inea_migration_update_links($content);
+      $content = $field['und'][0]['value'];
+      $field['und'][0]['value'] = _inea_migration_update_links($content);
       $node->$textfield = $field;
     }
   }

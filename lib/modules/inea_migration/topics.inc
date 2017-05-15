@@ -8,7 +8,7 @@
 /**
  * Topic migration class.
  */
-class IneaMigration_TopicsMigration extends IneaBasicMigration {
+class TopicsMigration extends IneaBasicMigration {
 
   /**
    * Setup the field mappings between the source and destination.
@@ -112,7 +112,7 @@ class IneaMigration_TopicsMigration extends IneaBasicMigration {
    */
   public function prepare($entity, stdClass $row) {
     $entity->field_content_migration_info = array(
-      LANGUAGE_NONE => array(
+      'und' => array(
         array(
           'value' => $row->id,
         ),
