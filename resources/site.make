@@ -5,10 +5,6 @@ core = 7.x
 ; Contributed modules
 ; ===================
 
-<<<<<<< HEAD:resources/site.make.example
-projects[panels][subdir] = "contrib"
-projects[panels][version] = "3.5"
-
 projects[block_class][subdir] = contributed
 projects[block_class][version] = 2.1
 
