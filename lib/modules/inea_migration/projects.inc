@@ -86,7 +86,7 @@ class ProjectsMigration extends IneaBasicMigration {
     $term = reset(taxonomy_get_term_by_name($programme));
     if (!empty($term)) {
       $tid = array('tid' => $term->tid);
-      $entity->field_tag_programme['und'][] = $tid;
+      $entity->field_tag_programme[LANGUAGE_NONE][] = $tid;
     }
 
     if (!empty($entity->field_project_tags)) {
@@ -98,27 +98,27 @@ class ProjectsMigration extends IneaBasicMigration {
         $vocabulary = taxonomy_vocabulary_load($term->vid);
         switch ($vocabulary->machine_name) {
           case 'country':
-            $entity->field_tag_country['und'][] = array('tid' => $tid);
+            $entity->field_tag_country[LANGUAGE_NONE][] = array('tid' => $tid);
             break;
 
           case 'transport_mode':
-            $entity->field_tag_transport_mode['und'][] = array('tid' => $tid);
+            $entity->field_tag_transport_mode[LANGUAGE_NONE][] = array('tid' => $tid);
             break;
 
           case 'priority_project':
-            $entity->field_tag_priority_projects['und'][] = array('tid' => $tid);
+            $entity->field_tag_priority_projects[LANGUAGE_NONE][] = array('tid' => $tid);
             break;
 
           case 'energy_10_pci':
-            $entity->field_tag_energy_10_pci['und'][] = array('tid' => $tid);
+            $entity->field_tag_energy_10_pci[LANGUAGE_NONE][] = array('tid' => $tid);
             break;
 
           case 'energy_type':
-            $entity->field_tag_energy_type['und'][] = array('tid' => $tid);
+            $entity->field_tag_energy_type[LANGUAGE_NONE][] = array('tid' => $tid);
             break;
 
           case 'type':
-            $entity->field_tag_type_of_project['und'][] = array('tid' => $tid);
+            $entity->field_tag_type_of_project[LANGUAGE_NONE][] = array('tid' => $tid);
             break;
         }
       }
