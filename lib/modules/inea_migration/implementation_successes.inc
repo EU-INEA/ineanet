@@ -79,7 +79,7 @@ class ImplementationSuccessesMigration extends IneaBasicMigration {
           $fids[] = array('fid' => $fid);
         }
       }
-      $entity->field_is_picture_gallery['und'] = $fids;
+      $entity->field_is_picture_gallery[LANGUAGE_NONE] = $fids;
     }
   }
 

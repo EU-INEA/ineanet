@@ -77,14 +77,14 @@ class NewsMigration extends IneaBasicMigration {
     }
     $term = reset(taxonomy_get_term_by_name($news_type));
     $tid = array('tid' => $term->tid);
-    $entity->field_news_type['und'][] = $tid;
+    $entity->field_news_type[LANGUAGE_NONE][] = $tid;
     if (!empty($row->gallery)) {
       $files = file_scan_directory(variable_get('file_default_scheme', 'public') . '://' . $row->gallery, '/.*\.(jpg|png|gif)$/', array('recurse' => FALSE));
       $fids = array();
       foreach ($files as $file) {
         $fids[] = array('fid' => _inea_migration_create_file($file, $entity->uid));
       }
-      $entity->field_news_picture_gallery['und'] = $fids;
+      $entity->field_news_picture_gallery[LANGUAGE_NONE] = $fids;
     }
   }
 
