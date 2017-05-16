@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_rules.rules_defaults.inc

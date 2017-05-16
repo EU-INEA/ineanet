@@ -24,4 +24,8 @@
         <severity>0</severity>
     </rule>
     -->
+
+    <!-- Exclude inea_migration, code will be removed in next release. -->
+    <exclude-pattern>**/inea_migration</exclude-pattern>
+
 </ruleset>

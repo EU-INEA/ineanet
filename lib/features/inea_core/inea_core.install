@@ -45,4 +45,3 @@ function inea_core_update_7001() {
     drupal_uninstall_modules(array('inea_migration'));
   }
 }
-
