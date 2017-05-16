@@ -8,7 +8,7 @@
 /**
  * Defines a base class for testing.
  */
-class IneaQAWebTestCase extends DrupalWebTestCase {
+class IneaCoreWebTestCase extends DrupalWebTestCase {
 
   /**
    * Test definition.

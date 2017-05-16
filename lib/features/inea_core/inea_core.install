@@ -6,9 +6,16 @@
  */
 
 /**
- * Implements hook_enable().
+ * Implements hook_install().
  */
-function inea_core_enable() {
+function inea_core_install() {
+
+  // Enable your project active themes and set the default theme.
+  $themes = array(
+    'inea',
+  );
+  theme_enable($themes);
+  variable_set('theme_default', $themes[0]);
 
   // Remove default blocks from sitewide context.
   multisite_drupal_toolbox_remove_block_context('site_wide', 'system-user-menu');
@@ -18,6 +25,30 @@ function inea_core_enable() {
   // Set IPG classification.
   variable_set('meta_configuration', '16000');
 
+  // Features to enable.
+  $features = array(
+    'h2020_funded_projects',
+    'h2020_import_final_participants',
+    'inea_h2020_ct',
+    'inea_h2020_feed_partial_modify',
+    'inea_h2020_project_import_final',
+    'inea_rules',
+  );
+
+  // Modules to enable.
+  $modules = array(
+    'inea_portal',
+  );
+
+  $enable = array_merge($features, $modules);
+
+  module_enable($enable);
+}
+
+/**
+ * Implements hook_enable().
+ */
+function inea_core_enable() {
   $module = system_get_info('module', 'inea_core');
   drupal_set_message(t('INEA Core feature is now active on your site.', array('%v' => $module['version'])));
 }
@@ -28,4 +59,20 @@ function inea_core_enable() {
 function inea_core_disable() {
   $module = system_get_info('module', 'inea_core');
   drupal_set_message(t('INEA Core %v feature is now inactive on your site.', array('%v' => $module['version'])));
+}
+
+/**
+ * Install inea_rules and uninstall inea_migration.
+ */
+function inea_core_update_7001() {
+
+  // Install new feature "inea_rules".
+  $enable = array('inea_rules');
+  module_enable($enable);
+
+  // Uninstall "inea_migration".
+  if (module_exists('inea_migration')) {
+    module_disable(array('inea_migration'));
+    drupal_uninstall_modules(array('inea_migration'));
+  }
 }

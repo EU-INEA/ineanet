@@ -1,0 +1,12 @@
+name = Rules for inea project
+description = Gathering of rules for inea project
+core = 7.x
+multisite_version = 2.2
+php = 5.2.4
+package = INEA
+dependencies[] = entity
+dependencies[] = rules
+dependencies[] = simplenews_rules
+dependencies[] = webform_rules
+features[features_api][] = api:2
+features[rules_config][] = rules_webform_to_newsletter
