@@ -29,3 +29,20 @@ function inea_core_disable() {
   $module = system_get_info('module', 'inea_core');
   drupal_set_message(t('INEA Core %v feature is now inactive on your site.', array('%v' => $module['version'])));
 }
+
+/**
+ * Install inea_rules and uninstall inea_migration.
+ */
+function inea_core_update_7001() {
+
+  // Install new feature "inea_rules".
+  $enable = array('inea_rules');
+  module_enable($enable);
+
+  // Uninstall "inea_migration".
+  if (module_exists('inea_migration')) {
+    module_disable(array('inea_migration'));
+    drupal_uninstall_modules(array('inea_migration'));
+  }
+}
+

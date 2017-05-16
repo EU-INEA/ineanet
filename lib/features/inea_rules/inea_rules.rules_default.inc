@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * newsletter_subscription_form.rules_defaults.inc
+ * inea_rules.rules_defaults.inc
  */
 
 /**
  * Implements hook_default_rules_configuration().
  */
-function newsletter_subscription_form_default_rules_configuration() {
+function inea_rules_default_rules_configuration() {
   $items = array();
   $items['rules_webform_to_newsletter'] = entity_import('rules_config', '{ "rules_webform_to_newsletter" : {
       "LABEL" : "Webform to newsletter",
