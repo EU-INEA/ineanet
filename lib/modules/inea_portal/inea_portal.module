@@ -47,7 +47,7 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
       foreach ($tokens as $name => $original) {
         switch ($name) {
           case 'programme':
-            $tid = $node->field_tag_programme['und'][0]['tid'];
+            $tid = $node->field_tag_programme[LANGUAGE_NONE][0]['tid'];
             $term = taxonomy_term_load($tid);
             switch ($term->name) {
               case 'CEF-Energy':
@@ -78,7 +78,7 @@ function inea_portal_tokens($type, $tokens, $data, $options) {
             break;
 
           case 'country':
-            $countries = $node->field_tag_country['und'];
+            $countries = $node->field_tag_country[LANGUAGE_NONE];
             if (count($countries) > 1) {
               $name = 'multi-country';
             }
