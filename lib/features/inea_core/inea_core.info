@@ -9,7 +9,6 @@ dependencies[] = menu_trail_by_path
 dependencies[] = pathologic
 dependencies[] = migrate
 dependencies[] = inea_portal
-dependencies[] = ckeditor
 dependencies[] = ckeditor_link
 
 dependencies[] = print
