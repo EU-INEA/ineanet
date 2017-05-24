@@ -11,3 +11,18 @@
 function inea_core_print_pdf_mpdf_alter(&$mpdf, &$html, &$meta) {
   $mpdf->setAutoBottomMargin = 'stretch';
 }
+
+/**
+ * Implements hook_webform_submission_insert().
+ *
+ * Subscribe the user to a newsletter.
+ */
+function inea_core_webform_submission_insert($node, $submission) {
+  if ($node->webform['nid'] == '1927') {
+    foreach ($submission->data[21] as $newsletter_tid) {
+      $mail = $submission->data[3][0];
+      $source = 'webform';
+      simplenews_subscribe_user($mail, $newsletter_tid, FALSE, $source);
+    }
+  }
+}
