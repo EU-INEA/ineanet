@@ -8,6 +8,7 @@ php = 5.2.4
 
 stylesheets[all][] = "css/inea.css"
 stylesheets[all][] = "css/print.css"
+stylesheets[all][] = "css/injector.css"
 
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
