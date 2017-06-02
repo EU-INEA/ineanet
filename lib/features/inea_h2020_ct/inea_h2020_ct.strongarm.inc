@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_h2020_ct.strongarm.inc
@@ -109,10 +108,10 @@ function inea_h2020_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
-          'weight' => '1',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -168,7 +167,9 @@ function inea_h2020_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_h2020_project';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'status',
+  );
   $export['node_options_h2020_project'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -189,7 +190,7 @@ function inea_h2020_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_h2020_project_pattern';
-  $strongarm->value = 'horizon-2020/projects/[node:title]';
+  $strongarm->value = 'horizon-2020/projects/[node:field_inea_h2020_programme]/[node:title]';
   $export['pathauto_node_h2020_project_pattern'] = $strongarm;
 
   return $export;
