@@ -92,4 +92,3 @@ features[variable][] = node_options_h2020_project
 features[variable][] = node_preview_h2020_project
 features[variable][] = node_submitted_h2020_project
 features[variable][] = pathauto_node_h2020_project_pattern
-features[variable][] = pathauto_taxonomy_term_programmes_pattern
