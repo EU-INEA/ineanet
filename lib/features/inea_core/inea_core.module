@@ -23,7 +23,7 @@ function inea_core_webform_submission_insert($node, $submission) {
     foreach ($submission->data[21] as $newsletter_tid) {
       $mail = $submission->data[3][0];
       $source = 'webform';
-      simplenews_subscribe_user($mail, $newsletter_tid, TRUE, $source);
+      simplenews_subscribe_user($mail, $newsletter_tid, FALSE, $source);
     }
   }
 }
