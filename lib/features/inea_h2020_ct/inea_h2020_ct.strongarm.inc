@@ -193,5 +193,5 @@ function inea_h2020_ct_strongarm() {
   $strongarm->value = 'horizon-2020/projects/[node:field_inea_h2020_programme]/[node:title]';
   $export['pathauto_node_h2020_project_pattern'] = $strongarm;
 
-   return $export;
+  return $export;
 }
