@@ -966,3 +966,17 @@ body {
   width: 59%;
   float: left;
 }
+/* H2020 Pages - copyright field smaller and up and Page titles bold*/
+.node-type-h2020-project .field-name-field-inea-h2020-image-copyright {
+  font-size: 10px;
+  font-style: italic;
+  margin-top: -21px;
+}
+.node-type-h2020-project #page-title {
+  font-weight: bold;
+}
+/* from css injector 56 */
+.views-field-field-inea-h2020-acronym {
+    margin-top:20px;
+    font-weight:bold;
+}
