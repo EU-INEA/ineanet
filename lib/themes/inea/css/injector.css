@@ -343,16 +343,6 @@ table .media .file .file-icon {
   margin-top: 0 !important;
 }*/
 
-/* H2020 Pages - copyright field smaller and up and Page titles bold*/
-.node-type-h2020-project .field-name-field-inea-h2020-image-copyright {
-  font-size: 10px;
-  font-style: italic;
-  margin-top: -21px;
-}
-
-.node-type-h2020-project #page-title {
-  font-weight: bold;
-}
 
 /* hide pdf icon on non h2020 projects */
 .node-type-project .print-pdf {
