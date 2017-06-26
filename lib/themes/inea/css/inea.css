@@ -966,3 +966,8 @@ body {
   width: 59%;
   float: left;
 }
+/* from css injector 56 */
+.views-field-field-inea-h2020-acronym {
+  margin-top: 20px;
+  font-weight: bold;
+}
