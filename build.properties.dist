@@ -2,13 +2,13 @@
 # ---------------------
 
 # The site name.
-subsite.name = Inea
+subsite.name = My Project
 
 # The make file containing the dependencies of the subsite.
 subsite.make = ${subsite.resources.dir}/site.make
 
 # Modules to enable after installation. Separate multiple modules with spaces.
-subsite.install.modules = inea_core
+subsite.install.modules = myproject_core
 
 # Subsite clone configuration.
 #-----------------------------
