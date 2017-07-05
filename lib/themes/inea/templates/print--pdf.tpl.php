@@ -107,7 +107,7 @@
 <div class="print-site_name"><?php print theme('print_published'); ?></div>
 <p/>
 <div class="print-breadcrumb"><?php print theme('print_breadcrumb', array('node' => $node)); ?></div>
-<hr class="print-hr"/>
+
 <?php if (!isset($node->type)): ?>
   <h2 class="print-title"><?php print $print_title; ?></h2>
 <?php endif; ?>
