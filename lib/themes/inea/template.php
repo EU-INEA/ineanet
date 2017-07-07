@@ -112,7 +112,10 @@ function inea_preprocess_page(&$variables) {
     $variables['title_image'] = theme('link', array(
       'path' => $path,
       'text' => $image,
-      'options' => array('html' => TRUE),
+      'options' => array(
+          'html' => TRUE,
+          'attributes' => [],
+          ),
     ));
   }
 }
