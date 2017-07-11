@@ -1,5 +1,4 @@
 <?php
-/** comments **/
 /**
  * @file
  * Default theme implementation to display a printer-friendly version page.
@@ -109,7 +108,9 @@
 <div class="print-breadcrumb"><?php print theme('print_breadcrumb', array('node' => $node)); ?></div>
 
 <?php if (!isset($node->type)): ?>
-  <h2 class="print-title"><?php print $print_title; ?></h2>
+  <h2 class="print-title"><?php print $print_titl
+
+    e; ?></h2>
 <?php endif; ?>
 <div class="print-content"><?php print $content; ?></div>
 <div class="print-footer"><?php print theme('print_footer'); ?></div>
