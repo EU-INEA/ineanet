@@ -1,5 +1,4 @@
 <?php
-/** comments **/
 /**
  * @file
  * Default theme implementation to display a printer-friendly version page.
