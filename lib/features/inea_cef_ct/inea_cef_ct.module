@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the INEA CEF CT feature.
+ */
+
+include_once 'inea_cef_ct.features.inc';
