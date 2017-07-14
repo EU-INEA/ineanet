@@ -3,10 +3,10 @@
   background-image: url("../images/H2020_project_fiches_header.jpg");
   background-repeat: no-repeat;
   background-image-resize: 4;
-  margin-top: 5.25cm;
+  margin-top: 4cm; /* waldo */
   /* Drop the first page footer so it touches the bottom of the page. */
   /* margin-bottom: 12%;*/
-  margin-footer: -15mm;
+  margin-footer: -5mm;
 }
 
 @page {
@@ -21,8 +21,8 @@
   background-image: url("../images/pdf-footer-sm.jpg");
   background-repeat: no-repeat;
   padding-top: 30.5mm;
-  padding-right: 19.5mm; /* old waldo */
-  padding-left: 15.5mm;  /* waldo */
+  padding-right: 17.5mm;
+  padding-left: 17.5mm;
 }
 
 #page-title {
