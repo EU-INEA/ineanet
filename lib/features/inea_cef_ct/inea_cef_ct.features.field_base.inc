@@ -31,76 +31,13 @@ function inea_cef_ct_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_cef_action_code'.
-  $field_bases['field_cef_action_code'] = array(
+  // Exported field_base: 'field_cef_action_status'.
+  $field_bases['field_cef_action_status'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_cef_action_code',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_cef_action_description'.
-  $field_bases['field_cef_action_description'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_cef_action_description',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_cef_action_sector'.
-  $field_bases['field_cef_action_sector'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_cef_action_sector',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_cef_action_title'.
-  $field_bases['field_cef_action_title'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_cef_action_title',
+    'field_name' => 'field_cef_action_status',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -163,13 +100,13 @@ function inea_cef_ct_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_inea_cef_action_status'.
-  $field_bases['field_inea_cef_action_status'] = array(
+  // Exported field_base: 'field_inea_cef_action_code'.
+  $field_bases['field_inea_cef_action_code'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_inea_cef_action_status',
+    'field_name' => 'field_inea_cef_action_code',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -184,13 +121,13 @@ function inea_cef_ct_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_inea_cef_beneficiary'.
-  $field_bases['field_inea_cef_beneficiary'] = array(
+  // Exported field_base: 'field_inea_cef_action_des'.
+  $field_bases['field_inea_cef_action_des'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_inea_cef_beneficiary',
+    'field_name' => 'field_inea_cef_action_des',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -205,13 +142,13 @@ function inea_cef_ct_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_inea_cef_coordinator'.
-  $field_bases['field_inea_cef_coordinator'] = array(
+  // Exported field_base: 'field_inea_cef_action_sector'.
+  $field_bases['field_inea_cef_action_sector'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_inea_cef_coordinator',
+    'field_name' => 'field_inea_cef_action_sector',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -226,168 +163,13 @@ function inea_cef_ct_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_inea_cef_energy_sector'.
-  $field_bases['field_inea_cef_energy_sector'] = array(
+  // Exported field_base: 'field_inea_cef_action_title'.
+  $field_bases['field_inea_cef_action_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_inea_cef_energy_sector',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_inea_cef_eu_contribution'.
-  $field_bases['field_inea_cef_eu_contribution'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_eu_contribution',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_inea_cef_pci'.
-  $field_bases['field_inea_cef_pci'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_pci',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_inea_cef_project_cost'.
-  $field_bases['field_inea_cef_project_cost'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_project_cost',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_inea_cef_smart_grid'.
-  $field_bases['field_inea_cef_smart_grid'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_smart_grid',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_inea_cef_start_date'.
-  $field_bases['field_inea_cef_start_date'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_start_date',
-    'indexes' => array(),
-    'locked' => 1,
-    'module' => 'date',
-    'settings' => array(
-      'cache_count' => 4,
-      'cache_enabled' => 0,
-      'granularity' => array(
-        'day' => 0,
-        'hour' => 0,
-        'minute' => 0,
-        'month' => 'month',
-        'second' => 0,
-        'year' => 'year',
-      ),
-      'timezone_db' => '',
-      'todate' => 'required',
-      'tz_handling' => 'none',
-    ),
-    'translatable' => 0,
-    'type' => 'datestamp',
-  );
-
-  // Exported field_base: 'field_inea_cef_support_percent'.
-  $field_bases['field_inea_cef_support_percent'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_support_percent',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_inea_cef_transport_mode'.
-  $field_bases['field_inea_cef_transport_mode'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_inea_cef_transport_mode',
+    'field_name' => 'field_inea_cef_action_title',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -414,7 +196,7 @@ function inea_cef_ct_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
