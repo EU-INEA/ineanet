@@ -3,7 +3,7 @@
   background-image: url("../images/H2020_project_fiches_header.jpg");
   background-repeat: no-repeat;
   background-image-resize: 4;
-  margin-top: 4cm; /* waldo */
+  margin-top: 4cm;
   /* Drop the first page footer so it touches the bottom of the page. */
   /* margin-bottom: 12%;*/
   margin-footer: -5mm;
@@ -50,7 +50,7 @@ hr:nth-child(2),
     width: 55% !important;
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .group-right,
