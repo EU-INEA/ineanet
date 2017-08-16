@@ -9,7 +9,7 @@
  */
 function inea_cef_ct_taxonomy_default_vocabularies() {
   return array(
-    'corridor' => (object) array(
+    'corridor' => array(
       'name' => 'Corridor',
       'machine_name' => 'corridor',
       'description' => '"Core network corridors"',
@@ -35,7 +35,7 @@ function inea_cef_ct_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'country' => (object) array(
+    'country' => array(
       'name' => 'Countries',
       'machine_name' => 'country',
       'description' => '',

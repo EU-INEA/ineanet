@@ -26,7 +26,9 @@ function inea_cef_ct_field_default_field_bases() {
     ),
     'locked' => 1,
     'module' => 'text',
-    'settings' => array(),
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'text_with_summary',
   );
@@ -46,6 +48,7 @@ function inea_cef_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -67,6 +70,7 @@ function inea_cef_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -94,6 +98,7 @@ function inea_cef_ct_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'options_list_callback' => 'i18n_taxonomy_allowed_values',
     ),
     'translatable' => 0,
@@ -115,6 +120,7 @@ function inea_cef_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -136,6 +142,7 @@ function inea_cef_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -157,6 +164,7 @@ function inea_cef_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -178,6 +186,7 @@ function inea_cef_ct_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -205,6 +214,7 @@ function inea_cef_ct_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'options_list_callback' => 'i18n_taxonomy_allowed_values',
     ),
     'translatable' => 0,
