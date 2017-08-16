@@ -10,7 +10,7 @@
 }
 
 @page {
-  /* Imitate a header for each page, so we can use entire width of the page */
+  /* Imitate a header for each page, so we can use entire width of thte page */
   background-image: url("../images/H2020_project_fiches_header_no-logo.jpg");
   background-repeat: no-repeat;
   background-image-resize: 4;
