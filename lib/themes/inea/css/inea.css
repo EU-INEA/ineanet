@@ -645,6 +645,7 @@ div.view div.views-field-body {
 .node-type-project div#content-wrapper div.node div.field-name-field-tag-programme li {
   color: #ee8032;
   text-transform: uppercase;
+  margin-right: 5px;
 }
 
 .node-type-project div#content-wrapper div.field-name-field-project-description {
