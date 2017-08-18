@@ -2,6 +2,8 @@ name = INEA CEF Project Importer
 description = Import INEA CEF projects
 core = 7.x
 package = INEA
+php = 5.6
+multisite_version = 2.3
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper
@@ -11,4 +13,4 @@ features[ctools][] = feeds_tamper:feeds_tamper_default:2
 features[features_api][] = api:2
 features[feeds_importer][] = inea_cef_project_importer
 features[feeds_tamper][] = inea_cef_project_importer-beneficiaries-explode
-multisite_version = 2.2
+

@@ -156,12 +156,12 @@ div#block-views-latest-news-block-1 .view-content .views-row .views-field-create
   margin-top: 5px;
 }
 
-div#block-views-latest-news-block-1 a {
+/*div#block-views-latest-news-block-1 a {
   font-size: 12px;
   font-family: verdana, arial, helvetica, sans-serif;
   color: #0000ff;
   text-decoration: underline;
-}
+}*/
 
 div#block-views-latest-news-block-1 div.views-field-created span {
   font-size: 14px;
@@ -190,6 +190,7 @@ div#block-views-latest-news-block-1 .more-link {
   color: #0065a2;
   float: left;
   padding-left: 1em;
+  padding-top: 1em;
 }
 /*Commission header */
 div#layout-header div.container div#sub-title {
@@ -644,6 +645,7 @@ div.view div.views-field-body {
 .node-type-project div#content-wrapper div.node div.field-name-field-tag-programme li {
   color: #ee8032;
   text-transform: uppercase;
+  margin-right: 5px;
 }
 
 .node-type-project div#content-wrapper div.field-name-field-project-description {

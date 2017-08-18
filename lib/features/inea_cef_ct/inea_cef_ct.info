@@ -1,6 +1,8 @@
 name = INEA CEF CT
 description = CEF Project Content type
 core = 7.x
+php = 5.6
+multisite_version = 2.3
 package = INEA
 dependencies[] = ctools
 dependencies[] = date
@@ -53,4 +55,4 @@ features[variable][] = node_submitted_cef_project
 features[variable][] = pathauto_taxonomy_term_corridor_pattern
 features[variable][] = pathauto_taxonomy_term_country_pattern
 features[variable][] = xmlsitemap_settings_node_cef_project
-multisite_version = 2.2
+
