@@ -1,8 +1,8 @@
 name = Rules for inea project
 description = Gathering of rules for inea project
 core = 7.x
-multisite_version = 2.2
-php = 5.2.4
+multisite_version = 2.3
+php = 5.6
 package = INEA
 dependencies[] = entity
 dependencies[] = rules
