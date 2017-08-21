@@ -113,9 +113,9 @@ function inea_preprocess_page(&$variables) {
       'path' => $path,
       'text' => $image,
       'options' => array(
-          'html' => TRUE,
-          'attributes' => [],
-          ),
+        'html' => TRUE,
+        'attributes' => [],
+      ),
     ));
   }
 }

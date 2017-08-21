@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * inea_cef_project.features.field_base.inc
+ * inea_cef_project_content_type.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function inea_cef_project_field_default_field_bases() {
+function inea_cef_project_content_type_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'body'.
@@ -33,41 +33,19 @@ function inea_cef_project_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_cef_action_code'.
-  $field_bases['field_cef_action_code'] = array(
+  // Exported field_base: 'field_cef_3rd_cntry'.
+  $field_bases['field_cef_3rd_cntry'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_cef_action_code',
+    'field_name' => 'field_cef_3rd_cntry',
     'indexes' => array(
       'format' => array(
         0 => 'format',
       ),
     ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'field_cef_action_description'.
-  $field_bases['field_cef_action_description'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_cef_action_description',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -89,7 +67,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -111,7 +89,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -119,6 +97,62 @@ function inea_cef_project_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_cef_energy_sector'.
+  $field_bases['field_cef_energy_sector'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_cef_energy_sector',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'cef_energy_sector',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_cef_pci'.
+  $field_bases['field_cef_pci'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_cef_pci',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'cef_pci',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_cef_project_cost'.
@@ -133,7 +167,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -177,12 +211,12 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'energy_type',
+          'vocabulary' => 'programmes',
           'parent' => 0,
         ),
       ),
@@ -201,7 +235,7 @@ function inea_cef_project_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_inea_cef_date',
     'indexes' => array(),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'date',
     'settings' => array(
       'cache_count' => 4,
@@ -223,6 +257,34 @@ function inea_cef_project_field_default_field_bases() {
     'type' => 'datestamp',
   );
 
+  // Exported field_base: 'field_inea_cef_dsi'.
+  $field_bases['field_inea_cef_dsi'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_inea_cef_dsi',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'cef_dsi',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_inea_cef_ener_corridor'.
   $field_bases['field_inea_cef_ener_corridor'] = array(
     'active' => 1,
@@ -235,7 +297,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
@@ -263,7 +325,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -285,7 +347,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -307,7 +369,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
@@ -335,7 +397,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -357,7 +419,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
@@ -385,12 +447,12 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'corridor',
+          'vocabulary' => 'cef_trans_corridor',
           'parent' => 0,
         ),
       ),
@@ -401,19 +463,19 @@ function inea_cef_project_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_pci_summary'.
-  $field_bases['field_pci_summary'] = array(
+  // Exported field_base: 'field_project_description'.
+  $field_bases['field_project_description'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_pci_summary',
+    'field_name' => 'field_project_description',
     'indexes' => array(
       'format' => array(
         0 => 'format',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -422,38 +484,10 @@ function inea_cef_project_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_tag_energy_10_pci'.
-  $field_bases['field_tag_energy_10_pci'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_tag_energy_10_pci',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'common_interest',
-          'parent' => 0,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'options_list_callback' => 'i18n_taxonomy_allowed_values',
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
-  );
-
   // Exported field_base: 'field_tag_transport_mode'.
   $field_bases['field_tag_transport_mode'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_tag_transport_mode',
@@ -462,7 +496,7 @@ function inea_cef_project_field_default_field_bases() {
         0 => 'tid',
       ),
     ),
-    'locked' => 0,
+    'locked' => 1,
     'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
