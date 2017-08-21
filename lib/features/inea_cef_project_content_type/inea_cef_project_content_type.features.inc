@@ -1,13 +1,19 @@
 <?php
 /**
  * @file
- * inea_cef_project.features.inc
+ * inea_cef_project_content_type.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function inea_cef_project_ctools_plugin_api($module = NULL, $api = NULL) {
+function inea_cef_project_content_type_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,7 +22,7 @@ function inea_cef_project_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function inea_cef_project_node_info() {
+function inea_cef_project_content_type_node_info() {
   $items = array(
     'inea_cef_project' => array(
       'name' => t('INEA CEF Project'),

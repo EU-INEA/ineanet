@@ -12,5 +12,11 @@ features[ctools][] = feeds:feeds_importer_default:1
 features[ctools][] = feeds_tamper:feeds_tamper_default:2
 features[features_api][] = api:2
 features[feeds_importer][] = inea_cef_project_importer
+features[feeds_tamper][] = inea_cef_project_importer-action_sector-sprintf
 features[feeds_tamper][] = inea_cef_project_importer-beneficiaries-explode
-
+features[feeds_tamper][] = inea_cef_project_importer-end_date-strtotime
+features[feeds_tamper][] = inea_cef_project_importer-ms-explode
+features[feeds_tamper][] = inea_cef_project_importer-pci-explode
+features[feeds_tamper][] = inea_cef_project_importer-start_date-strtotime
+features[feeds_tamper][] = inea_cef_project_importer-trans_corridor-explode
+git

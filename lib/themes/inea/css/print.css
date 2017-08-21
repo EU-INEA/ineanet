@@ -3,14 +3,14 @@
   background-image: url("../images/H2020_project_fiches_header.jpg");
   background-repeat: no-repeat;
   background-image-resize: 4;
-  margin-top: 4cm;
+  margin-top: 5.25cm; /* was 4 */
   /* Drop the first page footer so it touches the bottom of the page. */
   /* margin-bottom: 12%;*/
-  margin-footer: -5mm;
+  margin-footer: -15mm;  /* was 5 */
 }
 
 @page {
-  /* Imitate a header for each page, so we can use entire width of thte page */
+  /* Imitate a header for each page, so we can use entire width of the page */
   background-image: url("../images/H2020_project_fiches_header_no-logo.jpg");
   background-repeat: no-repeat;
   background-image-resize: 4;
@@ -21,8 +21,8 @@
   background-image: url("../images/pdf-footer-sm.jpg");
   background-repeat: no-repeat;
   padding-top: 30.5mm;
-  padding-right: 17.5mm;
-  padding-left: 17.5mm;
+  /*padding-right: 13.5mm;
+  padding-left: 13.5mm;*/
 }
 
 #page-title {
@@ -44,40 +44,49 @@ hr:nth-child(2),
     font-style: italic;
     margin-top: -14px;
   }
-
+  .field-name-field-inea-h2020-acronym {
+    color: #0065a2;
+    font-size: 18px;
+  }
+  .field-name-field-inea-h2020-project-descrip {
+    font-size: 14px;
+  }
+  .field-name-field-inea-h2020-project-referen {
+    color: #0065a2;
+    font-size: 14px;
+  }
+  .field-name-field-inea-h2020-abstract {
+    text-align: justify;
+  }
   .group-left,
   .ds-2col-stacked .group-left {
-    width: 55% !important;
+    width: 35% !important;
+    /*height: 17cm !important;*/
     float: left;
+    font-size: 10px  !important;
     font-family: "Verdana, Geneva, sans-serif";
-    font-size: 12px;
   }
 
   .group-right,
   .ds-2col-stacked .group-right {
-    width: 40% !important;
+    width: 59% !important;
     font-family: "Verdana, Geneva, sans-serif";
+    font-size: 12px  !important;
     float: right;
-    font-size: 12px;
   }
 
   .group-header {
-    font-size: 18px;
+    /*font-size: 18px;*/
     font-weight: bold;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+    /*border-bottom: 1px solid #ccc;*/
   }
 
   .fieldset-title {
-    font-size: 18px;
-  }
-
-  .field-name-field-inea-h2020-abstract {
-    text-align: justify;
+    font-size: 14px;
   }
 
   .group-header,
-  .fieldset-title,
   .group-right .field-label,
   .group-left .field-label,
   .group-footer .field-label {
@@ -91,6 +100,7 @@ hr:nth-child(2),
 
   /*  .group-footer*/
   .group-footer {
+    page-break-before: always;
     clear: both;
     margin-top: 25px;
     font-size: 12px;
