@@ -2,6 +2,7 @@ name = H2020 Funded Projects
 description = 2 related views to display H2020 projects by tax terms
 core = 7.x
 php = 5.6
+
 multisite_version = 2.3
 package = Features
 dependencies[] = views
