@@ -1,9 +1,9 @@
 name = INEA CEF Project Importer
 description = Import INEA CEF projects
 core = 7.x
-package = INEA
 php = 5.6
 multisite_version = 2.3
+package = INEA
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper
@@ -19,4 +19,3 @@ features[feeds_tamper][] = inea_cef_project_importer-ms-explode
 features[feeds_tamper][] = inea_cef_project_importer-pci-explode
 features[feeds_tamper][] = inea_cef_project_importer-start_date-strtotime
 features[feeds_tamper][] = inea_cef_project_importer-trans_corridor-explode
-git
