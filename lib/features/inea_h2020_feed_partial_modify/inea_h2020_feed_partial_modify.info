@@ -1,8 +1,8 @@
 name = Inea H2020 Feed partial modify
 description = Feed to modify some fields in H2020 CT
 core = 7.x
-php = 5.2.4
-multisite_version = 2.2
+php = 5.6
+multisite_version = 2.
 package = INEA
 dependencies[] = ctools
 dependencies[] = feeds

@@ -4,9 +4,8 @@
   background-repeat: no-repeat;
   background-image-resize: 4;
   margin-top: 5.25cm;
-  /* Drop the first page footer so it touches the bottom of the page. */
-  /* margin-bottom: 12%;*/
-  margin-footer: -15mm;
+  /* Drop the first page footer so it touches the bottom of the page. save code for possible reuse after PG test - margin-bottom: 12%;*/
+  margin-footer: -15mm;  /*  PG test - was 5 */
 }
 
 @page {
@@ -21,8 +20,7 @@
   background-image: url("../images/pdf-footer-sm.jpg");
   background-repeat: no-repeat;
   padding-top: 30.5mm;
-  padding-right: 19.5mm; /* old waldo */
-  padding-left: 15.5mm;  /* waldo */
+  /* save this code for possible reuse PG test --- padding-right: 13.5mm;  padding-left: 13.5mm;*/
 }
 
 #page-title {
@@ -45,43 +43,37 @@ hr:nth-child(2),
     margin-top: -14px;
   }
 
-  .group-left,
-  .ds-2col-stacked .group-left {
-    width: 55% !important;
-    float: left;
-    font-family: "Verdana, Geneva, sans-serif";
+  .field-name-field-inea-h2020-acronym {
+    color: #0065a2;
+    font-size: 18px;
+  }
+
+  .field-name-field-inea-h2020-project-descrip {
     font-size: 14px;
   }
 
-  .group-right,
-  .ds-2col-stacked .group-right {
-    width: 40% !important;
-    font-family: "Verdana, Geneva, sans-serif";
-    float: right;
-    font-size: 12px;
-  }
-
-  .group-header {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .fieldset-title {
-    font-size: 18px;
+  .field-name-field-inea-h2020-project-referen {
+    color: #0065a2;
+    font-size: 14px;
   }
 
   .field-name-field-inea-h2020-abstract {
     text-align: justify;
   }
 
-  .group-header,
-  .fieldset-title,
-  .group-right .field-label,
-  .group-left .field-label,
-  .group-footer .field-label {
-    color: #3399cc;
+  /* GROUP-LEFT */
+  /* Colors for all INEA CEF PROJECT nodes */
+  .group-left .node-inea-cef-project {
+    background-color: #C0EEAC;
+  }
+
+  .group-left,
+  .ds-2col-stacked .group-left {
+    width: 35% !important;
+    /*height: 17cm !important;*/
+    float: left;
+    font-size: 10px !important;
+    font-family: "Verdana, Geneva, sans-serif";
   }
 
   .group-left .field-items,
@@ -89,8 +81,35 @@ hr:nth-child(2),
     margin-bottom: 20px;
   }
 
+  /* GROUP-RIGHT */
+  .group-right,
+  .ds-2col-stacked .group-right {
+    width: 59% !important;
+    font-family: "Verdana, Geneva, sans-serif";
+    font-size: 12px !important;
+    float: right;
+  }
+
+  /* GROUP-HEADER */
+  .group-header {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .fieldset-title {
+    font-size: 14px;
+  }
+
+  .group-header,
+  .group-right .field-label,
+  .group-left .field-label,
+  .group-footer .field-label {
+    color: #3399cc;
+  }
+
   /*  .group-footer*/
   .group-footer {
+    page-break-before: always;
     clear: both;
     margin-top: 25px;
     font-size: 12px;
