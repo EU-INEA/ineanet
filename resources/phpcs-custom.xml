@@ -14,5 +14,7 @@
         <exclude-pattern>**/inea_cef_ct.strongarm.inc</exclude-pattern>
     </rule>
 
+    <!-- Exclude inea_migration, code will be removed in next release. -->
+    <exclude-pattern>**/inea_migration</exclude-pattern>
 </ruleset>
 
