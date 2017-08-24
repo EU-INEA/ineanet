@@ -1,9 +1,8 @@
 name = H2020 Funded Projects
 description = 2 related views to display H2020 projects by tax terms
 core = 7.x
-php = 5.6
-
-multisite_version = 2.3
+php = 5.2.4
+multisite_version = 2.2
 package = Features
 dependencies[] = views
 dependencies[] = views_bootstrap
