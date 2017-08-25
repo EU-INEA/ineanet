@@ -60,27 +60,25 @@ hr:nth-child(2),
     text-align: justify;
   }
 
-  /* GROUP-LEFT */
-  /* Colors for CEF PROJECT nodes */
-  .node-inea-cef-project .group-left {
+  .node-inea-cef-project  .group-left {
     background-color: #c0eeac;
   }
-  /* Colors for all H2020 PROJECT nodes */
-  .node-type-h2020-project .group-left {
-    background-color: #00b3ee;
-  }
-
+  /* Code will be implemented soon
+  .node-h2020-project  .group-left {
+    background-color: #666666;
+  } */
   .group-left,
   .ds-2col-stacked .group-left {
-    width: 55% !important;
+    width: 35% !important;
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
-    font-size: 12px;
+    font-size: 11px;
+    padding: 11px;  /* to position because of colored bg */
   }
 
   .group-right,
   .ds-2col-stacked .group-right {
-    width: 40% !important;
+    width: 57% !important;
     font-family: "Verdana, Geneva, sans-serif";
     float: right;
     font-size: 12px;

@@ -90,9 +90,9 @@
 <htmlpagefooter name="print-footer-stretch">
   <table width="100%" style="margin-top:25mm;">
     <tr>
-      <td width="43%"></td>
+      <td width="41%"></td>
       <td width="13%" class="footer-pdf"></td>
-      <td width="44%"></td>
+      <td width="46%"></td>
     </tr>
   </table>
 </htmlpagefooter>

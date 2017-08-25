@@ -1,8 +1,6 @@
 name = Inea_h2020_ct
 description = H2020 Project Content type for  Inea
 core = 7.x
-multisite_version = 2.3
-php = 5.6
 package = inea
 dependencies[] = ctools
 dependencies[] = date
@@ -94,3 +92,4 @@ features[variable][] = node_submitted_h2020_project
 features[variable][] = pathauto_node_h2020_project_pattern
 features[variable][] = pathauto_taxonomy_term_h2020_field_pattern
 features[variable][] = xmlsitemap_settings_node_h2020_project
+multisite_version = 2.3
