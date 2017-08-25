@@ -117,3 +117,4 @@ features[variable][] = xmlsitemap_settings_taxonomy_term_cef_pci
 features[variable][] = xmlsitemap_settings_taxonomy_term_cef_trans_corridor
 features[variable][] = xmlsitemap_settings_taxonomy_term_project_status
 multisite_version = 2.3
+php = 5.6

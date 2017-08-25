@@ -226,63 +226,63 @@ function inea_cef_project_content_type_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_cef_dsi_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_cef_dsi_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_cef_energy_corridor_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_cef_energy_corridor_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_cef_energy_sector_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_cef_energy_sector_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_cef_pci_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_cef_pci_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_cef_trans_corridor_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_cef_trans_corridor_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_country_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_country_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_programmes_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_programmes_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_project_status_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_project_status_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_transport_mode_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '1';
   $export['pathauto_taxonomy_term_transport_mode_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
