@@ -262,8 +262,7 @@ function inea_preprocess_node(&$variables) {
 function inea_preprocess_field(&$variables, $hook) {
   $element = $variables['element'];
   if ($element['#field_name'] == 'field_project_map' || $element['#field_name'] == 'field_is_map'
-      || $element['#field_name'] == 'field_pp_map' || $element['#field_name'] == 'field_pp_map_2'
-  ) {
+    || $element['#field_name'] == 'field_pp_map' || $element['#field_name'] == 'field_pp_map_2') {
     $variables['items'][0]['#suffix'] = '<p>Click map to view enlarged version<p>';
   }
   if ($element['#field_name'] == 'field_tag_priority_projects') {
@@ -407,8 +406,7 @@ function inea_menu_link__main_menu(array $variables) {
   $element['#attributes']['class'][] = 'item' . $element['#original_link']['mlid'];
 
   if ($element['#below'] && !theme_get_setting('disable_dropdown_menu')
-      && $element['#original_link']['depth'] > 1
-  ) {
+    && $element['#original_link']['depth'] > 1) {
     // Menu item has dropdown.
     if (!in_array('dropdown-submenu', $element['#attributes']['class'])) {
       $element['#title'] .= '<b class="caret"></b>';

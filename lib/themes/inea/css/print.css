@@ -72,47 +72,46 @@ hr:nth-child(2),
 
   .group-left,
   .ds-2col-stacked .group-left {
-    width: 35% !important;
-    /*height: 17cm !important;*/
+    width: 55% !important;
     float: left;
-    font-size: 10px !important;
     font-family: "Verdana, Geneva, sans-serif";
-  }
-
-  .group-left .field-items,
-  .group-right .field-items {
-    margin-bottom: 20px;
-  }
-
-  /* GROUP-RIGHT */
-  .group-right,
-  .ds-2col-stacked .group-right {
-    width: 59% !important;
-    font-family: "Verdana, Geneva, sans-serif";
-    font-size: 12px !important;
-    float: right;
-  }
-
-  /* GROUP-HEADER */
-  .group-header {
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .fieldset-title {
     font-size: 14px;
   }
 
+  .group-right,
+  .ds-2col-stacked .group-right {
+    width: 40% !important;
+    font-family: "Verdana, Geneva, sans-serif";
+    float: right;
+    font-size: 12px;
+  }
+
+  .group-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .fieldset-title {
+    font-size: 18px;
+  }
+
+  .field-name-field-inea-h2020-abstract {
+    text-align: justify;
+  }
+
   .group-header,
+  .fieldset-title,
   .group-right .field-label,
   .group-left .field-label,
   .group-footer .field-label {
     color: #3399cc;
   }
 
-  /* .group-footer*/
+  /*  .group-footer*/
   .group-footer {
-    page-break-before: always;
+page-break-before:always;
     clear: both;
     margin-top: 25px;
     font-size: 12px;
