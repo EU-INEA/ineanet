@@ -156,13 +156,6 @@ div#block-views-latest-news-block-1 .view-content .views-row .views-field-create
   margin-top: 5px;
 }
 
-div#block-views-latest-news-block-1 a {
-  font-size: 12px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  color: #0000ff;
-  text-decoration: underline;
-}
-
 div#block-views-latest-news-block-1 div.views-field-created span {
   font-size: 14px;
   font-style: italic;
@@ -190,6 +183,7 @@ div#block-views-latest-news-block-1 .more-link {
   color: #0065a2;
   float: left;
   padding-left: 1em;
+  margin-top:18px;
 }
 /*Commission header */
 div#layout-header div.container div#sub-title {
@@ -274,19 +268,6 @@ div.block#block-cce-basic-config-footer-ipg {
 h1#page-title {
   padding-left: 0px;
 }
-/* changed to allow proper formatting in tables apart from projects. Oct 16, 2015
-This rule now only applies to projects */
-/*div#content-wrapper div.node p,
-div#content-wrapper div.node a,
-.node-type-project div#content-wrapper div.node table,
-div#content-wrapper div.node ul li { */
-/* Nov 6, 2015
-   font-size: 12px;
-   padding: 0;
-   margin: 0;
-   see what effect this has.
-
-}*/
 hr {
   display: block;
   border-style: inset;
@@ -386,33 +367,9 @@ div#content-wrapper span.h3 {
   line-height: normal;
 }
 
-/* commented out - Nov 5th, 2015
-div#content-wrapper div.node h2,
-div#content-wrapper div.node p.h2,
-div#content-wrapper div.node p.h2 a,
-div#content-wrapper div.view h2,
-div#content-wrapper div.view p.h2 {
-  font-size: 17.77777px;
-  font-family: verdana, arial, sans-serif;
-  font-weight: normal;
-  line-height: normal;
-  color: #262261;
-}*/
-
 div#content-wrapper div.node ul {
   line-height: normal;
 }
-
-/**/
-/* commented out - Nov 5th, 2015
-div#content-wrapper div.node h4,
-div#content-wrapper div.view h4 {
-  font-size: 12px;
-  font-family: verdana, arial, sans-serif;
-  font-weight: bold;
-  line-height: normal;
-  color: #262261;
-}*/
 
 /*
  *  Main Menu
@@ -443,7 +400,6 @@ div#content-wrapper div.view h4 {
   border-right: solid 1px #e3e3e3;
   background-color: #f0f0f0;
   color: #262261;
-  /* font-family: arial, helvetica, sans-serif;   commented out - Nov 5th, 2015 */
   /* copied from cs injector */
   font-size: 13px;
   font-size: 81.25%;
@@ -885,8 +841,6 @@ body {
   background-repeat: repeat-x;
   filter: none;
 }
-<<<<<<< HEAD
-=======
 /* ============================================================================================*/
 /*  H2020 Project pages */
 /* ============================================================================================*/
@@ -948,10 +902,6 @@ body {
 .node-type-h2020-project .group-right .field-items {
   margin-bottom: 20px;
 }
-/* .node-type-h2020-project .field-name-field-inea-participant .field-label,
-.node-type-h2020-project .field-name-field-inea-participant-country .field-label {
-   margin-bottom: 20px;
-} */
 /*  .group-footer*/
 .node-type-h2020-project .group-footer {
   margin-top: 25px;
@@ -982,4 +932,3 @@ body {
   margin-top: 20px;
   font-weight: bold;
 }
->>>>>>> reference/master
