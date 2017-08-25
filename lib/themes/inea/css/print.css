@@ -75,7 +75,7 @@ hr:nth-child(2),
     width: 55% !important;
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .group-right,
@@ -111,7 +111,7 @@ hr:nth-child(2),
 
   /*  .group-footer*/
   .group-footer {
-page-break-before:always;
+    page-break-before: always;
     clear: both;
     margin-top: 25px;
     font-size: 12px;
