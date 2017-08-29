@@ -4,9 +4,8 @@
   background-repeat: no-repeat;
   background-image-resize: 4;
   margin-top: 5.25cm;
-  /* Drop the first page footer so it touches the bottom of the page. */
-  /* margin-bottom: 12%;*/
-  margin-footer: -15mm;
+  /* Drop the first page footer so it touches the bottom of the page. save code for possible reuse after PG test - margin-bottom: 12%;*/
+  margin-footer: -15mm; /* PG test - was 5 */
 }
 
 @page {
@@ -21,8 +20,7 @@
   background-image: url("../images/pdf-footer-sm.jpg");
   background-repeat: no-repeat;
   padding-top: 30.5mm;
-  padding-right: 19.5mm; /* old waldo */
-  padding-left: 15.5mm;  /* waldo */
+  /* save this code for possible reuse PG test --- padding-right: 13.5mm; padding-left: 13.5mm;*/
 }
 
 #page-title {
@@ -35,9 +33,8 @@ hr:nth-child(2),
 }
 
 /* ============================================================================================*/
-/*  H2020 Project pages */
+/* H2020 Project pages */
 /* ============================================================================================*/
-
 @media print {
   .field-name-field-inea-h2020-image-copyright {
     font-size: 10px;
@@ -45,17 +42,43 @@ hr:nth-child(2),
     margin-top: -14px;
   }
 
+  .field-name-field-inea-h2020-acronym {
+    color: #0065a2;
+    font-size: 18px;
+  }
+
+  .field-name-field-inea-h2020-project-descrip {
+    font-size: 14px;
+  }
+
+  .field-name-field-inea-h2020-project-referen {
+    color: #0065a2;
+    font-size: 14px;
+  }
+
+  .field-name-field-inea-h2020-abstract {
+    text-align: justify;
+  }
+
+  .node-inea-cef-project  .group-left {
+    background-color: #c0eeac;
+  }
+  /* Code will be implemented soon
+  .node-h2020-project  .group-left {
+    background-color: #666666;
+  } */
   .group-left,
   .ds-2col-stacked .group-left {
-    width: 55% !important;
+    width: 35% !important;
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
-    font-size: 14px;
+    font-size: 11px;
+    padding: 11px;  /* to position because of colored bg */
   }
 
   .group-right,
   .ds-2col-stacked .group-right {
-    width: 40% !important;
+    width: 57% !important;
     font-family: "Verdana, Geneva, sans-serif";
     float: right;
     font-size: 12px;
@@ -84,13 +107,9 @@ hr:nth-child(2),
     color: #3399cc;
   }
 
-  .group-left .field-items,
-  .group-right .field-items {
-    margin-bottom: 20px;
-  }
-
   /*  .group-footer*/
   .group-footer {
+    page-break-before: always;
     clear: both;
     margin-top: 25px;
     font-size: 12px;

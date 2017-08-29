@@ -1,32 +1,24 @@
 name = inea_sub_theme
 description = Sub theme of default Multisite theme for the INEA portal
 package = Fpfis_cms_theme
-multisite_version = "2.2"
+multisite_version = "2.3"
 core = "7.x"
 base theme = ec_resp
-php = 5.2.4
-
+php = 5.6
 stylesheets[all][] = "css/inea.css"
 stylesheets[all][] = "css/print.css"
 stylesheets[all][] = "css/injector.css"
-
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
-
 regions[featured] = "Featured"
 regions[tools] = "Tools"
 regions[help] = "Help"
-
 regions[sidebar_left] = "Sidebar Left"
 regions[sidebar_right] = "Sidebar Right"
-
 regions[content_top] = "Content Top"
 regions[content] = "Content"
 regions[content_right] = "Content Right"
 regions[content_bottom] = "Content Bottom"
-
 regions[site_bottom] = "Site Bottom"
-
 regions[footer] = "Footer"
-
 settings[shortcut_module_link] = 0

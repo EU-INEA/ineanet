@@ -193,5 +193,22 @@ function inea_h2020_ct_strongarm() {
   $strongarm->value = 'horizon-2020/projects/[node:field_inea_h2020_programme]/[node:title]';
   $export['pathauto_node_h2020_project_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_h2020_field_pattern';
+  $strongarm->value = '1';
+  $export['pathauto_taxonomy_term_h2020_field_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_h2020_project';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_h2020_project'] = $strongarm;
+
   return $export;
 }
