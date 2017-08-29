@@ -84,6 +84,11 @@ hr:nth-child(2),
     font-size: 12px;
   }
 
+  .group-left .field-items,
+  .group-right .field-items {
+    margin-bottom: 20px;
+  }
+
   .group-header {
     font-size: 18px;
     font-weight: bold;
