@@ -33,6 +33,8 @@ function inea_core_install() {
     'inea_h2020_feed_partial_modify',
     'inea_h2020_project_import_final',
     'inea_rules',
+    'inea_cef_project_content_type',
+    'inea_cef_project_importer',
   );
 
   // Modules to enable.
@@ -69,10 +71,17 @@ function inea_core_update_7001() {
   // Install new feature "inea_rules".
   $enable = array('inea_rules');
   module_enable($enable);
+}
 
-  // Uninstall "inea_migration".
-  if (module_exists('inea_migration')) {
-    module_disable(array('inea_migration'));
-    drupal_uninstall_modules(array('inea_migration'));
-  }
+/**
+ * Install nea_cef_project_content_type and inea_cef_project_importer.
+ */
+function inea_core_update_7002() {
+
+  // Install new features.
+  $features = array(
+    'inea_cef_project_content_type',
+    'inea_cef_project_importer',
+  );
+  module_enable($features);
 }

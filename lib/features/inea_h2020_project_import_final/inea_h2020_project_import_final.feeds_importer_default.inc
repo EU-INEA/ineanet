@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_h2020_project_import_final.feeds_importer_default.inc
@@ -34,7 +33,6 @@ function inea_h2020_project_import_final_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
-        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
@@ -45,108 +43,108 @@ function inea_h2020_project_import_final_feeds_importer_default() {
         'authorize' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'Project Acronym',
-            'target' => 'title',
-            'unique' => 1,
+            'source' => 'Programme Term',
+            'target' => 'field_inea_h2020_programme',
+            'unique' => FALSE,
           ),
           1 => array(
             'source' => 'Project Number',
             'target' => 'field_inea_h2020_project_referen',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
           2 => array(
-            'source' => 'Project Title',
-            'target' => 'field_inea_h2020_project_descrip',
-            'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
-          ),
-          3 => array(
             'source' => 'Project Call Id',
             'target' => 'field_inea_h2020_call_for_propos',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
-          4 => array(
+          3 => array(
             'source' => 'Project Topic Code',
             'target' => 'field_inea_h2020_topic',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Project Acronym',
+            'target' => 'title',
+            'unique' => 1,
           ),
           5 => array(
-            'source' => 'Project Acronym',
-            'target' => 'field_inea_h2020_acronym',
+            'source' => 'Project Title',
+            'target' => 'field_inea_h2020_project_descrip',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
           6 => array(
-            'source' => 'Project Total Costs',
-            'target' => 'field_inea_h2020_total_costs',
-            'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
-          ),
-          7 => array(
-            'source' => 'Project Requested EC Contribution',
-            'target' => 'field_inea_h2020_eu_contribution',
-            'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
-          ),
-          8 => array(
-            'source' => 'Project TOA',
-            'target' => 'field_inea_h2020_funding_scheme',
-            'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
-          ),
-          9 => array(
-            'source' => 'Coordinator',
-            'target' => 'field_inea_h2020_coordinator',
-            'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
-          ),
-          10 => array(
-            'source' => 'Cordis Link',
-            'target' => 'field_inea_h2020_cordis_url:url',
-            'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
-          ),
-          11 => array(
             'source' => 'Project Start Date',
             'target' => 'field_inea_h2020_duration:start',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
-          12 => array(
+          7 => array(
             'source' => 'Project End date',
             'target' => 'field_inea_h2020_duration:end',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
+          ),
+          8 => array(
+            'source' => 'Project Total Costs',
+            'target' => 'field_inea_h2020_total_costs',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          9 => array(
+            'source' => 'Project Requested EC Contribution',
+            'target' => 'field_inea_h2020_eu_contribution',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'Project TOA',
+            'target' => 'field_inea_h2020_funding_scheme',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'Coordinator',
+            'target' => 'field_inea_h2020_coordinator',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          12 => array(
+            'source' => 'Field Term',
+            'target' => 'field_inea_h2020_project_field',
+            'unique' => FALSE,
           ),
           13 => array(
-            'source' => 'Participant Short Name',
-            'target' => 'field_inea_participant',
+            'source' => 'Project Acronym',
+            'target' => 'field_inea_h2020_acronym',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
           14 => array(
-            'source' => 'Participant LE Country Code',
-            'target' => 'field_inea_participant_country',
+            'source' => 'Summary',
+            'target' => 'field_inea_h2020_short_summary',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
           ),
           15 => array(
-            'source' => 'Participant Requested EC Contribution',
-            'target' => 'field_inea_participant_requested',
+            'source' => 'Project Abstract',
+            'target' => 'field_inea_h2020_abstract',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+          ),
+          16 => array(
+            'source' => 'Cordis Link',
+            'target' => 'field_inea_h2020_cordis_url:url',
+            'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'unpublish',
-        'input_format' => 'plain_text',
+        'input_format' => 'full_html',
         'skip_hash_check' => 1,
         'bundle' => 'h2020_project',
-        'insert_new' => '1',
-        'language' => LANGUAGE_NONE,
       ),
     ),
     'content_type' => '',

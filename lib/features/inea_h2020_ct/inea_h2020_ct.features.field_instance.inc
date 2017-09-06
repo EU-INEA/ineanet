@@ -22,14 +22,14 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'print' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -95,7 +95,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 1,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -112,7 +112,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -197,7 +197,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -277,7 +277,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -357,7 +357,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_plain',
-        'weight' => 12,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -435,7 +435,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -493,7 +493,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -542,7 +542,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -617,7 +617,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -627,7 +627,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -696,20 +696,15 @@ function inea_h2020_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'print' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -780,13 +775,13 @@ function inea_h2020_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 14,
       ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -831,7 +826,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -904,7 +899,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'print' => array(
         'label' => 'above',
@@ -955,7 +950,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1028,7 +1023,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1114,7 +1109,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1194,7 +1189,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1274,7 +1269,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_plain',
-        'weight' => 11,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1363,7 +1358,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1412,7 +1407,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1461,7 +1456,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
