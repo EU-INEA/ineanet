@@ -71,10 +71,17 @@ function inea_core_update_7001() {
   // Install new feature "inea_rules".
   $enable = array('inea_rules');
   module_enable($enable);
-  // Install new feature "inea_cef_project_content_type".
-  $enable = array('inea_cef_project_content_type');
-  module_enable($enable);
-  // Install new feature "inea_cef_project_importer".
-  $enable = array('inea_cef_project_importer');
-  module_enable($enable);
+}
+
+/**
+ * Install nea_cef_project_content_type and inea_cef_project_importer.
+ */
+function inea_core_update_7002() {
+
+  // Install new features.
+  $features = array(
+    'inea_cef_project_content_type',
+    'inea_cef_project_importer',
+  );
+  module_enable($features);
 }
