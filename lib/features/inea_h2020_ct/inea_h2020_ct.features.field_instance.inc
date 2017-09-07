@@ -1470,7 +1470,7 @@ function inea_h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_participant_requested',
-    'label' => 'Requested EU contribution',
+    'label' => 'EU contribution (in €)',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1655,6 +1655,7 @@ function inea_h2020_ct_field_default_field_instances() {
   t('Country');
   t('Duration');
   t('EU contribution');
+  t('EU contribution (in €)');
   t('Funding scheme');
   t('Image');
   t('Inea h2020 Programme');
@@ -1667,7 +1668,6 @@ function inea_h2020_ct_field_default_field_instances() {
   t('Project description on CORDIS');
   t('Project reference');
   t('Project website');
-  t('Requested EU contribution');
   t('Topic');
   t('Total cost');
   t('Whether this project is an H2020 Energy or Transport project');
