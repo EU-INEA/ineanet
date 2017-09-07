@@ -60,9 +60,10 @@ hr:nth-child(2),
     text-align: justify;
   }
 
-  .node-inea-cef-project  .group-left {
+  .node-inea-cef-project .group-left {
     background-color: #c0eeac;
   }
+
   /* Code will be implemented soon
   .node-h2020-project  .group-left {
     background-color: #666666;
@@ -73,7 +74,7 @@ hr:nth-child(2),
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
     font-size: 11px;
-    padding: 11px;  /* to position because of colored bg */
+    padding: 11px; /* to position because of colored bg */
   }
 
   .group-right,
@@ -116,14 +117,7 @@ hr:nth-child(2),
   .group-footer {
     page-break-before: always;
     clear: both;
-    margin-top: 25px;
-    font-size: 12px;
-  }
-
-  /* To align vertically with the long title text in the last col */
-  .field-name-field-inea-participant .field-label,
-  .field-name-field-inea-participant-country .field-label {
-    margin-bottom: 20px;
+    font-size: 10px;
   }
 
   .group-footer .field-name-field-inea-participant {
