@@ -201,7 +201,7 @@ function inea_h2020_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Participants',
-    'weight' => '15',
+    'weight' => '14',
     'children' => array(
       0 => 'field_inea_participant',
       1 => 'field_inea_participant_country',

@@ -90,6 +90,12 @@ hr:nth-child(2),
     margin-bottom: 10px;
   }
 
+  .group-left .field-name-field-inea-h2020-programme .links li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
   .group-header {
     font-size: 18px;
     font-weight: bold;

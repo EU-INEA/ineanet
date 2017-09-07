@@ -22,7 +22,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -95,7 +95,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 24,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -617,7 +617,7 @@ function inea_h2020_ct_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -776,12 +776,13 @@ function inea_h2020_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 3,
       ),
       'print' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -793,7 +794,7 @@ function inea_h2020_ct_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_h2020_programme',
-    'label' => 'Inea h2020 Programme',
+    'label' => 'Programme',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1658,12 +1659,12 @@ function inea_h2020_ct_field_default_field_instances() {
   t('EU contribution (in €)');
   t('Funding scheme');
   t('Image');
-  t('Inea h2020 Programme');
   t('Participants');
   t('Please enter Project start and end dates.');
   t('Please enter Topic Code');
   t('Please enter the url of the project on CORDIS ');
   t('Please enter total cost figure.');
+  t('Programme');
   t('Project Abstract text field.');
   t('Project description on CORDIS');
   t('Project reference');
