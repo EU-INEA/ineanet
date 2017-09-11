@@ -90,9 +90,8 @@ hr:nth-child(2),
     margin-bottom: 10px;
   }
 
-  .group-left .field-name-field-inea-h2020-programme .links li {
-    list-style-type: none;
-    margin: 0;
+  .group-left .field-type-taxonomy-term-reference ul.links {
+    list-style: outside none none;
     padding: 0;
   }
 

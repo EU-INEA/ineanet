@@ -93,3 +93,4 @@ features[variable][] = pathauto_node_h2020_project_pattern
 features[variable][] = pathauto_taxonomy_term_h2020_field_pattern
 features[variable][] = xmlsitemap_settings_node_h2020_project
 multisite_version = 2.3
+php = 5.6
