@@ -4,4 +4,4 @@
  * Code for the Inea H2020 Import Final  feature.
  */
 
-include_once 'inea_h2020_import_final_.features.inc';
+include_once 'inea_h2020_import_final.features.inc';

@@ -7,7 +7,7 @@
 /**
  * Implements hook_feeds_tamper_default().
  */
-function inea_h2020_import_final__feeds_tamper_default() {
+function inea_h2020_import_final_feeds_tamper_default() {
   $export = array();
 
   $feeds_tamper = new stdClass();
