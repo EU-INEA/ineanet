@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * inea_h2020_import_final_.features.inc
+ * inea_h2020_import_final.features.inc
  */
 
 /**

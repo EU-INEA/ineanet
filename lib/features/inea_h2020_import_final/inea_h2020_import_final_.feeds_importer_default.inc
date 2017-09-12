@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * inea_h2020_import_final_.feeds_importer_default.inc
+ * inea_h2020_import_final.feeds_importer_default.inc
  */
 
 /**
