@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * h2020_import_final_participants.feeds_importer_default.inc
@@ -52,24 +51,24 @@ function h2020_import_final_participants_feeds_importer_default() {
             'source' => 'Participant Short Name',
             'target' => 'field_inea_participant',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
           2 => array(
             'source' => 'Participant LE Country Code',
             'target' => 'field_inea_participant_country',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
           3 => array(
             'source' => 'Participant Requested EC Contribution',
             'target' => 'field_inea_participant_requested',
             'unique' => FALSE,
-            'language' => LANGUAGE_NONE,
+            'language' => 'und',
           ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'skip',
-        'input_format' => 'plain_text',
+        'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'h2020_project',
       ),

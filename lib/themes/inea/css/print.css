@@ -90,6 +90,11 @@ hr:nth-child(2),
     margin-bottom: 10px;
   }
 
+  .group-left .field-type-taxonomy-term-reference ul.links {
+    list-style: outside none none;
+    padding: 0;
+  }
+
   .group-header {
     font-size: 18px;
     font-weight: bold;
