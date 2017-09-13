@@ -19,4 +19,3 @@ features[feeds_tamper][] = h2020_import_final-project_total_costs-number_format
 features[feeds_tamper][] = h2020_import_final-project_total_costs-rewrite
 features[feeds_tamper][] = h2020_import_final-project_total_costs-sprintf
 multisite_version = 2.3
-php = 5.6
