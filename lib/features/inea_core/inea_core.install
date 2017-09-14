@@ -31,11 +31,10 @@ function inea_core_install() {
     'h2020_import_final_participants',
     'inea_h2020_ct',
     'inea_h2020_feed_partial_modify',
-    'inea_h2020_project_import_final',
+    'inea_h2020_import_final',
     'inea_rules',
     'inea_cef_project_content_type',
     'inea_cef_project_importer',
-    'inea_h2020_import_final',
   ];
 
   // Modules to enable.
@@ -83,6 +82,7 @@ function inea_core_update_7002() {
   $features = [
     'inea_cef_project_content_type',
     'inea_cef_project_importer',
+    'inea_h2020_import_final',
   ];
   module_enable($features);
 }
