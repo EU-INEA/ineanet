@@ -26,7 +26,7 @@ function inea_core_install() {
   variable_set('meta_configuration', '16000');
 
   // Features to enable.
-  $features = array(
+  $features = [
     'h2020_funded_projects',
     'h2020_import_final_participants',
     'inea_h2020_ct',
@@ -35,7 +35,8 @@ function inea_core_install() {
     'inea_rules',
     'inea_cef_project_content_type',
     'inea_cef_project_importer',
-  );
+    'inea_h2020_import_final',
+  ];
 
   // Modules to enable.
   $modules = array(
@@ -79,9 +80,9 @@ function inea_core_update_7001() {
 function inea_core_update_7002() {
 
   // Install new features.
-  $features = array(
+  $features = [
     'inea_cef_project_content_type',
     'inea_cef_project_importer',
-  );
+  ];
   module_enable($features);
 }
