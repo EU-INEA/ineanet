@@ -68,8 +68,7 @@
  */
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0"
       dir="<?php print $language->dir; ?>">
 <head>
@@ -87,9 +86,11 @@
   endif; ?>
   <?php print $css; ?>
 </head>
-<body class="cef">
-hi there
-<htmlpagefooter name="print-footer-stretch">
+  <body class="cef">
+  <? $mpdf->SetHTMLHeader('<div style="background: url(../images/istanbul.png) no-repeat;background-image-resize: 4;margin-top: 5.25cm; margin-footer: -15mm;"); ?>
+  
+  <htmlpagefooter name="print-footer-stretch">
+
   <table width="100%" style="margin-top:25mm;">
     <tr>
       <td width="43%"></td>

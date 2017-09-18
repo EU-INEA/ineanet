@@ -31,7 +31,9 @@ function inea_cef_project_content_type_field_group_info() {
       5 => 'field_inea_cef_member_state',
       6 => 'field_inea_cef_project_status',
       7 => 'field_inea_cef_trans_corridor',
-      8 => 'field_tag_transport_mode',
+      8 => 'field_cef_call_year',
+      9 => 'field_inea_cef_horizontal_priori',
+      10 => 'field_inea_cef_transport_mode',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -56,7 +58,7 @@ function inea_cef_project_content_type_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'CEF Project fields',
-    'weight' => '6',
+    'weight' => '8',
     'children' => array(
       0 => 'group_cef_tags',
       1 => 'group_proj_top_1',

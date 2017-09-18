@@ -10,7 +10,6 @@ dependencies[] = field_group
 dependencies[] = i18n_taxonomy
 dependencies[] = image
 dependencies[] = inea_h2020_ct
-dependencies[] = media
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
