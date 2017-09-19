@@ -86,14 +86,15 @@ function inea_core_update_7002() {
   ];
   module_enable($features);
 }
+
 /**
  * Install Media Browser Plusnd inea_cef_project_importer.
  */
 function inea_core_update_7003() {
   module_enable(array('media_browser_plus', 'media_bulk_upload'));
 
-// Alter Media browser settings (swap old tabs with MBP tabs).
-// We update from here to avoid feature conflicts with ec_embedded_video.
+  // Alter Media browser settings (swap old tabs with MBP tabs).
+  // We update from here to avoid feature conflicts with ec_embedded_video.
   $value = array(
     0 => 'upload',
     1 => 'media_browser_plus--media_browser_thumbnails',

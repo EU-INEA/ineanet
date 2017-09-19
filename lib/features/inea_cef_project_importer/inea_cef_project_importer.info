@@ -21,3 +21,4 @@ features[feeds_tamper][] = inea_cef_project_importer-eu_contrib-sprintf
 features[feeds_tamper][] = inea_cef_project_importer-ms-explode
 features[feeds_tamper][] = inea_cef_project_importer-start_date-strtotime
 multisite_version = 2.2
+php = 5.6

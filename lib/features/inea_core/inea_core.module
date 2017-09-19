@@ -27,6 +27,7 @@ function inea_core_webform_submission_insert($node, $submission) {
     }
   }
 }
+
 /**
  * Implements hook_core_strongarm_alter().
  */
@@ -43,6 +44,7 @@ function inea_core_strongarm_alter() {
     $items['media_wysiwyg_wysiwyg_browser_plugins']->value = $value;
   }
 }
+
 /**
  * Implements hook_views_default_views_alter().
  */
@@ -53,8 +55,9 @@ function inea_core_views_default_views_alter(&$views) {
     $views['media_browser_plus']->display['media_browser_my_files']->display_options['title'] = t('My files');
   }
 }
+
 /**
-* Implements hook_entity_view_alter().
+ * Implements hook_entity_view_alter().
  */
 function inea_core_entity_view_alter(&$build, $type) {
   if ($type == 'file') {
