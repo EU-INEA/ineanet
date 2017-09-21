@@ -33,7 +33,7 @@ function inea_cef_project_importer_feeds_importer_default() {
     'parser' => array(
       'plugin_key' => 'FeedsCSVParser',
       'config' => array(
-        'delimiter' => ',',
+        'delimiter' => '|',
         'no_headers' => 0,
         'encoding' => 'UTF-8',
       ),
@@ -101,94 +101,95 @@ function inea_cef_project_importer_feeds_importer_default() {
           8 => array(
             'source' => 'ENER_CORRIDOR',
             'target' => 'field_inea_cef_ener_corridor',
-            'unique' => FALSE,
-            'language' => 'und',
+            'term_search' => '0',
+            'autocreate' => 0,
           ),
           9 => array(
-            'source' => 'TRANSPORT_MODE',
-            'target' => 'field_tag_transport_mode',
-            'unique' => FALSE,
+            'source' => 'TRANS_CORRIDOR',
+            'target' => 'field_inea_cef_trans_corridor',
+            'term_search' => '0',
+            'autocreate' => 0,
             'language' => 'und',
           ),
           10 => array(
-            'source' => 'TRANS_CORRIDOR',
-            'target' => 'field_inea_cef_trans_corridor',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          11 => array(
             'source' => 'TRANSPORT_MODE',
             'target' => 'field_inea_cef_transport_mode',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          12 => array(
+          11 => array(
             'source' => 'HORIZONTAL_PRIORITY',
             'target' => 'field_inea_cef_horizontal_priori',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          13 => array(
+          12 => array(
             'source' => 'MS',
             'target' => 'field_inea_cef_member_state',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          14 => array(
+          13 => array(
             'source' => 'DSI',
             'target' => 'field_inea_cef_dsi',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          15 => array(
+          14 => array(
             'source' => 'START_DATE',
             'target' => 'field_inea_cef_date:start',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          16 => array(
+          15 => array(
             'source' => 'END_DATE',
             'target' => 'field_inea_cef_date:end',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          17 => array(
+          16 => array(
             'source' => 'COST',
             'target' => 'field_cef_project_cost',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          18 => array(
+          17 => array(
             'source' => 'EU_CONTRIB',
             'target' => 'field_inea_cef_eu_contrib',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          19 => array(
+          18 => array(
             'source' => 'SUPPORT_PERC',
             'target' => 'field_inea_cef_eu_percent',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          20 => array(
+          19 => array(
             'source' => 'COORDINATOR',
             'target' => 'field_cef_coordinator',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          21 => array(
+          20 => array(
             'source' => 'BENEFICIARIES',
             'target' => 'field_inea_cef_participants',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          22 => array(
+          21 => array(
             'source' => 'OK_TO_PUBLISH',
             'target' => 'field_inea_cef_publish',
             'unique' => FALSE,
+            'language' => 'und',
+          ),
+          22 => array(
+            'source' => 'IMAGE',
+            'target' => 'field_project_map:uri',
+            'file_exists' => '1',
             'language' => 'und',
           ),
         ),

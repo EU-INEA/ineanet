@@ -367,6 +367,10 @@ This rule now only applies to projects */
   margin: 0;
 }
 
+.page-news-events-newsroom #content-wrapper .view-footer .stripes td {
+  padding: 10px;
+}
+
 .node-type-news div#content-wrapper div.node table td {
   display: table-cell;
   vertical-align: middle;

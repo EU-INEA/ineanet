@@ -12,15 +12,17 @@
   border-bottom: 1px solid #ccc;
 }
 .node-type-inea-cef-project .fieldset-title {
+  color: #ee8032;
   font-size: 18px;
 }
 .node-type-inea-cef-project .field-name-field-project-description {
   text-align: justify;
 }
+
 .node-type-inea-cef-project .group-header,
 .node-type-inea-cef-project .fieldset-title,
 .node-type-inea-cef-project .field-label {
-  color: #0065a2;
+  color: #ee8032;
 }
 
 .node-type-inea-cef-project .group-left .field-items,
