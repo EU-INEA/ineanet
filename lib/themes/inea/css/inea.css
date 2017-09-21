@@ -128,7 +128,7 @@ h1 {
 /* Content-and-title-padding-left */
 @media screen and  (min-width: 990px) {
   .not-front #content-wrapper {
-    padding-left: 56px;
+    padding-left: 56px;news
   }
 }
 
@@ -365,6 +365,10 @@ This rule now only applies to projects */
   padding-right: 2%;
   line-height: normal;
   margin: 0;
+}
+
+.page-news-events-newsroom #content-wrapper .view-footer .stripes td {
+  padding: 10px;
 }
 
 .node-type-news div#content-wrapper div.node table td {

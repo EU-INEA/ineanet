@@ -31,7 +31,7 @@ function inea_core_webform_submission_insert($node, $submission) {
 /**
  * Implements hook_core_strongarm_alter().
  */
-function inea_core_strongarm_alter() {
+function inea_core_strongarm_alter(&$items) {
   if (!empty($items['media_wysiwyg_wysiwyg_browser_plugins'])) {
     // Prevent platform override.
     $value = array(
