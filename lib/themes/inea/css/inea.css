@@ -128,7 +128,7 @@ h1 {
 /* Content-and-title-padding-left */
 @media screen and  (min-width: 990px) {
   .not-front #content-wrapper {
-    padding-left: 56px;news
+    padding-left: 56px;
   }
 }
 
