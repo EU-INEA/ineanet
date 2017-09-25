@@ -45,7 +45,6 @@ function inea_cef_project_content_type_field_default_field_bases() {
       ),
     ),
     'locked' => 1,
-
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,

@@ -29,7 +29,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -106,13 +106,9 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 19,
       ),
       'teaser' => array(
@@ -191,8 +187,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -313,10 +309,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 15,
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -358,10 +357,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 16,
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -485,10 +487,10 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -599,10 +601,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 14,
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -648,10 +653,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 13,
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -854,8 +862,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -903,9 +911,12 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -1031,9 +1042,9 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -1083,7 +1094,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1129,9 +1140,12 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -1180,8 +1194,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1609,7 +1623,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Implementation schedule');
   t('Map');
   t('Member State(s)');
-  t('ONLY for Telecom projects. "Call" field in GA');
+  t('ONLY for Telecom projects. "Call" field in GA ');
   t('Old ID');
   t('PCI');
   t('Programme');
