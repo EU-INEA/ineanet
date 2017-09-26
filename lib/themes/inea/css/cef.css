@@ -1,20 +1,11 @@
 /* June 30th, 2016 */
-@media screen and  (max-width:767px) {
+@media screen and  (max-width: 767px) {
   .node-type-inea-cef-project .group-left,
   .node-type-inea-cef-project .group-right {
     width: 100%;
   }
 }
-.node-type-inea-cef-project .group-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-}
-.node-type-inea-cef-project .fieldset-title {
-  color: #ee8032;
-  font-size: 18px;
-}
+
 .node-type-inea-cef-project .field-name-field-project-description {
   text-align: justify;
 }
@@ -23,6 +14,18 @@
 .node-type-inea-cef-project .fieldset-title,
 .node-type-inea-cef-project .field-label {
   color: #ee8032;
+}
+
+.node-type-inea-cef-project .group-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.node-type-inea-cef-project .fieldset-title {
+  color: #ee8032;
+  font-size: 18px;
 }
 
 .node-type-inea-cef-project .group-left .field-items,
