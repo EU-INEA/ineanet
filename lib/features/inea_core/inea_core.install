@@ -74,7 +74,7 @@ function inea_core_update_7001() {
   module_enable($enable);
 }
 
-/**
+/* *
  * Install Inea_cef_project_content_type and inea_cef_project_importer.
  */
 function inea_core_update_7002() {
@@ -88,7 +88,8 @@ function inea_core_update_7002() {
 }
 
 /**
- * Install Media Browser Plusnd inea_cef_project_importer.
+ * Install Media Browser Plusgit status
+ * .
  */
 function inea_core_update_7003() {
   module_enable(array('media_browser_plus', 'media_bulk_upload'));
