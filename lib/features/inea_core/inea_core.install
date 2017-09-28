@@ -68,8 +68,6 @@ function inea_core_disable() {
  * Install inea_rules and uninstall inea_migration.
  */
 function inea_core_update_7001() {
-
-  // Install new feature "inea_rules".
   $enable = array('inea_rules');
   module_enable($enable);
 }
@@ -88,7 +86,7 @@ function inea_core_update_7002() {
 }
 
 /**
- * Install Media Browser Plusnd inea_cef_project_importer.
+ * Install Media Browser Plus.
  */
 function inea_core_update_7003() {
   module_enable(array('media_browser_plus', 'media_bulk_upload'));
