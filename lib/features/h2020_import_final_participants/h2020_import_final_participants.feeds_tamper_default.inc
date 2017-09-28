@@ -66,7 +66,7 @@ function h2020_import_final_participants_feeds_tamper_default() {
   $feeds_tamper->source = 'Participant Requested EC Contribution';
   $feeds_tamper->plugin_id = 'sprintf';
   $feeds_tamper->settings = array(
-    'format' => '€%s',
+    'format' => '%s',
   );
   $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Format string';

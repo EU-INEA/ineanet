@@ -9,7 +9,7 @@
  */
 function inea_cef_project_content_type_taxonomy_default_vocabularies() {
   return array(
-    'cef_call_year' => (object) array(
+    'cef_call_year' => array(
       'name' => 'CEF CALL YEAR',
       'machine_name' => 'cef_call_year',
       'description' => 'CALL YEAR OF CEF PROJECT',
@@ -35,7 +35,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_dsi' => (object) array(
+    'cef_dsi' => array(
       'name' => 'CEF DSI',
       'machine_name' => 'cef_dsi',
       'description' => '"Call" Field in GA',
@@ -61,7 +61,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_energy_corridor' => (object) array(
+    'cef_energy_corridor' => array(
       'name' => 'CEF Energy Corridor',
       'machine_name' => 'cef_energy_corridor',
       'description' => '',
@@ -87,7 +87,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_energy_sector' => (object) array(
+    'cef_energy_sector' => array(
       'name' => 'CEF Energy Sector',
       'machine_name' => 'cef_energy_sector',
       'description' => 'Gas or Electricity (ENER only); blank for Transport',
@@ -113,7 +113,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_horizontal_priority' => (object) array(
+    'cef_horizontal_priority' => array(
       'name' => 'CEF Horizontal priority',
       'machine_name' => 'cef_horizontal_priority',
       'description' => 'Not the same as transport mode',
@@ -139,7 +139,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_pci' => (object) array(
+    'cef_pci' => array(
       'name' => 'CEF PCI',
       'machine_name' => 'cef_pci',
       'description' => 'PCI Codes',
@@ -165,7 +165,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_publish' => (object) array(
+    'cef_publish' => array(
       'name' => 'CEF Publish',
       'machine_name' => 'cef_publish',
       'description' => 'Yes/no flag if CEF Project should be published',
@@ -191,7 +191,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_trans_corridor' => (object) array(
+    'cef_trans_corridor' => array(
       'name' => 'CEF Trans Corridor',
       'machine_name' => 'cef_trans_corridor',
       'description' => '',
@@ -217,7 +217,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_transport_mode' => (object) array(
+    'cef_transport_mode' => array(
       'name' => 'CEF Transport Mode',
       'machine_name' => 'cef_transport_mode',
       'description' => '',
@@ -243,7 +243,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'country' => (object) array(
+    'country' => array(
       'name' => 'Countries',
       'machine_name' => 'country',
       'description' => '',
@@ -269,7 +269,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'project_status' => (object) array(
+    'project_status' => array(
       'name' => 'CEF Project status',
       'machine_name' => 'project_status',
       'description' => '',
@@ -295,7 +295,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'transport_mode' => (object) array(
+    'transport_mode' => array(
       'name' => 'Transport mode',
       'machine_name' => 'transport_mode',
       'description' => NULL,

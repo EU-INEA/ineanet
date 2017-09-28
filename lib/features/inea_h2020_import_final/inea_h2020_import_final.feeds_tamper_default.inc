@@ -51,7 +51,7 @@ function inea_h2020_import_final_feeds_tamper_default() {
   $export['h2020_import_final-project_requested_ec_contribution-number_format'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'h2020_import_final-project_requested_ec_contribution-rewrite';
   $feeds_tamper->importer = 'h2020_import_final';
@@ -107,7 +107,7 @@ function inea_h2020_import_final_feeds_tamper_default() {
   $export['h2020_import_final-project_total_costs-number_format'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'h2020_import_final-project_total_costs-rewrite';
   $feeds_tamper->importer = 'h2020_import_final';

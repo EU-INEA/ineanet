@@ -88,7 +88,7 @@
 </head>
 <body>
 <htmlpagefooter name="print-footer-stretch">
-  <table width="100%" style="margin-top:25mm;">
+  <table width="100%" class="foot-table" style="margin-top:25mm;">
     <tr>
       <td width="41%"></td>
       <td width="13%" class="footer-pdf"></td>
@@ -112,7 +112,6 @@
 <?php endif; ?>
 <div class="print-content"><?php print $content; ?></div>
 <div class="print-footer"><?php print theme('print_footer'); ?></div>
-<hr class="print-hr"/>
 <?php if ($sourceurl_enabled): ?>
   <div class="print-source_url">
     <?php print theme('print_sourceurl', array(

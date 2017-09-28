@@ -9,7 +9,7 @@
  */
 function inea_h2020_ct_taxonomy_default_vocabularies() {
   return array(
-    'h2020_field' => (object) array(
+    'h2020_field' => array(
       'name' => 'H2020 field',
       'machine_name' => 'h2020_field',
       'description' => '',
@@ -35,7 +35,7 @@ function inea_h2020_ct_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'programmes' => (object) array(
+    'programmes' => array(
       'name' => 'Programmes',
       'machine_name' => 'programmes',
       'description' => '',
