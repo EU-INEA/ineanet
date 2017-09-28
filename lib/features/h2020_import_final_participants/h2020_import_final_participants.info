@@ -17,4 +17,3 @@ features[feeds_tamper][] = h2020_import_final_participants-participant_requested
 features[feeds_tamper][] = h2020_import_final_participants-participant_requested_ec_contribution-sprintf
 features[feeds_tamper][] = h2020_import_final_participants-participant_short_name-explode
 multisite_version = 2.3
-php = 5.6
