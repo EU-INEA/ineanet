@@ -460,7 +460,7 @@ function inea_h2020_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'site-wide',
         'input_format_custom' => '',
         'label_position' => 'none',

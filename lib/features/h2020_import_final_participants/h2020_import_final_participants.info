@@ -1,7 +1,7 @@
 name = H2020 Import Final Participants
 description = H2020 Import Final Participants with tamper
 core = 7.x
-package = inea
+package = Inea
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper

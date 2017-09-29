@@ -1,7 +1,7 @@
 name = Inea H2020 Import Final
 description = feeds importer for Inea H2020 Project fiches without participants info
 core = 7.x
-package = inea
+package = Inea
 dependencies[] = ctools
 dependencies[] = feeds
 dependencies[] = feeds_tamper

@@ -26,6 +26,7 @@ function h2020_import_final_participants_feeds_importer_default() {
         'allowed_schemes' => array(
           'public' => 'public',
         ),
+        'delete_uploaded_file' => FALSE,
       ),
     ),
     'parser' => array(
@@ -33,13 +34,14 @@ function h2020_import_final_participants_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
+        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
         'expire' => '-1',
-        'author' => 0,
+        'author' => '48',
         'authorize' => 0,
         'mappings' => array(
           0 => array(
@@ -71,6 +73,8 @@ function h2020_import_final_participants_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'h2020_project',
+        'insert_new' => '1',
+        'language' => 'und',
       ),
     ),
     'content_type' => '',
