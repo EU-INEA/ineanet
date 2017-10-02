@@ -624,7 +624,7 @@ function inea_h2020_ct_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'medium',
+          'image_style' => 'h2020_pdf_image_200___200',
         ),
         'type' => 'image',
         'weight' => 0,
