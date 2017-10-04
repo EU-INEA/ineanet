@@ -148,3 +148,4 @@ features[views_view][] = new_cef_telecom_projects_by_vocabs
 features[views_view][] = new_cef_transport_projects_by_vocabs
 features[views_view][] = new_inea_cef_projects_by_terms
 multisite_version = 2.3
+php = 5.6
