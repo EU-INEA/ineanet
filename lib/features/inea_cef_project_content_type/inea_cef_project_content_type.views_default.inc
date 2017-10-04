@@ -590,16 +590,16 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['vocabulary'] = 'cef_publish';
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['hierarchy'] = 1;
   /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['id'] = 'field_inea_cef_action_sector2_tid_1';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['table'] = 'field_data_field_inea_cef_action_sector2';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['field'] = 'field_inea_cef_action_sector2_tid';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['expose']['operator_id'] = 'field_inea_cef_action_sector2_tid_1_op';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['expose']['label'] = 'Programme';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['expose']['description'] = 'Energy, Transport, Telecom etc';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['expose']['operator'] = 'field_inea_cef_action_sector2_tid_1_op';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['expose']['identifier'] = 'field_inea_cef_action_sector2_tid_1';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['operator_id'] = 'field_inea_cef_action_sector2_tid_op';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['label'] = 'Programme from CEF Project';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['operator'] = 'field_inea_cef_action_sector2_tid_op';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['identifier'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
@@ -607,9 +607,7 @@ function inea_cef_project_content_type_views_default_views() {
     5 => 0,
     6 => 0,
   );
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['type'] = 'select';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['vocabulary'] = 'programmes';
-  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid_1']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
   $handler->display->display_options['path'] = 'admin/content/cefprojects';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'CEF Projects';
