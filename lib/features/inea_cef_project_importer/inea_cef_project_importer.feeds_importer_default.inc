@@ -103,6 +103,7 @@ function inea_cef_project_importer_feeds_importer_default() {
             'target' => 'field_inea_cef_ener_corridor',
             'term_search' => '0',
             'autocreate' => 0,
+            'language' => 'und',
           ),
           9 => array(
             'source' => 'TRANS_CORRIDOR',
@@ -115,8 +116,7 @@ function inea_cef_project_importer_feeds_importer_default() {
             'source' => 'TRANSPORT_MODE',
             'target' => 'field_inea_cef_transport_mode',
             'term_search' => '0',
-            'autocreate' => 1,
-            'language' => 'und',
+            'autocreate' => 0,
           ),
           11 => array(
             'source' => 'HORIZONTAL_PRIORITY',

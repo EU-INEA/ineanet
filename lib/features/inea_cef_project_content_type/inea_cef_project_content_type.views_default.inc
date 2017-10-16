@@ -666,7 +666,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['empty'] = 'No projects found.';
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Field: Content: Action Code */
+  /* Field: Content: Project number */
   $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
@@ -683,7 +683,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['empty'] = 'No projects found.';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Sort criterion: Content: Action Code (field_cef_action_code) */
+  /* Sort criterion: Content: Project number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -757,7 +757,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Action Code (field_cef_action_code) */
+  /* Sort criterion: Content: Project number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -890,7 +890,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Field: Content: Action Code */
+  /* Field: Content: Project number */
   $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
@@ -907,7 +907,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['title']['empty'] = 'No project(s) found';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Action Code (field_cef_action_code) */
+  /* Sort criterion: Content: Project number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -926,7 +926,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programme' => 'programme',
+    'programmes' => 'programmes',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   /* Contextual filter: Content: Has taxonomy term ID */
@@ -958,7 +958,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Action Code (field_cef_action_code) */
+  /* Sort criterion: Content: Project number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -1196,7 +1196,7 @@ function inea_cef_project_content_type_views_default_views() {
 
   $view = new view();
   $view->name = 'new_cef_synergy_projects_by_vocabs';
-  $view->description = 'CEF Telecom projects overview of individual Tax vocabularies terms';
+  $view->description = 'CEF Synergy projects overview of individual Tax vocabularies terms';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'NEW CEF-Synergy Projects by VOCABS';
@@ -1866,7 +1866,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'cef_transport_mode' => 'cef_transport_mode',
+    'transport_mode' => 'transport_mode',
   );
   $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-mode';
   $export['new_cef_transport_projects_by_vocabs'] = $view;

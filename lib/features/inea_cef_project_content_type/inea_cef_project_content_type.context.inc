@@ -115,7 +115,7 @@ function inea_cef_project_content_type_context_default_contexts() {
   );
   $context->reactions = array(
     'theme_html' => array(
-      'class' => 'cef-transport-tm',
+      'class' => 'cef-transport',
     ),
   );
   $context->condition_mode = 1;

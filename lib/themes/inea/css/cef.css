@@ -10,11 +10,46 @@
   text-align: justify;
 }
 
-.node-type-inea-cef-project .group-header,
-.node-type-inea-cef-project .fieldset-title,
-.node-type-inea-cef-project .field-label {
+
+.cef-transport .group-header,
+.cef-transport #content-wrapper #page-title,
+.cef-transport #content-wrapper h1,
+.cef-transport .fieldset-title,
+.cef-transport .field-label,
+.cef-transport .field-name-field-inea-cef-action-sector2 li {
   color: #ee8032;
 }
+
+.cef-telecom .group-header,
+.cef-telecom #page-title,
+.cef-telecom #content-wrapper #page-title,
+.cef-telecom #content-wrapper h1,
+.cef-telecom .fieldset-title,
+.cef-telecom .field-label,
+.cef-telecom .field-name-field-inea-cef-action-sector2 li {
+  color: #7d5599;
+}
+
+.cef-energy .group-header,
+.cef-energy .fieldset-title,
+.cef-energy #content-wrapper #page-title,
+.cef-energy #content-wrapper h1,
+.cef-energy #page-title,
+.cef-energy .field-label,
+.cef-energy .field-name-field-inea-cef-action-sector2 li {
+  color: #38a15b;
+}
+
+.cef-synergy .group-header,
+.cef-synergy .fieldset-title,
+.cef-synergy #content-wrapper #page-title,
+.cef-synergy #content-wrapper h1,
+.cef-synergy #page-title,
+.cef-synergy .field-label,
+.cef-synergy .field-name-field-inea-cef-action-sector2 li {
+  color: #e9e365;
+}
+
 
 .node-type-inea-cef-project .group-header {
   font-size: 18px;
@@ -24,7 +59,6 @@
 }
 
 .node-type-inea-cef-project .fieldset-title {
-  color: #ee8032;
   font-size: 18px;
 }
 
@@ -41,4 +75,9 @@
 .node-type-inea-cef-project div#content-wrapper div.node ul li,
 .field-name-field-inea-cef-member-state .links li {
   margin-right: 10px !important;
+}
+
+/* default in EC-Resp was nowrap */
+.node-type-inea-cef-project .field-type-taxonomy-term-reference ul.links li {
+  white-space: normal !important;
 }

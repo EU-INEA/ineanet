@@ -202,7 +202,12 @@ div#block-views-latest-news-block-1 .more-link {
 div#layout-header div.container div#sub-title {
   font-weight: bold;
 }
-
+/* Override EC-RESP */
+@media screen and (max-width: 406px) {
+  #layout-header {
+    background-image: none;
+  }
+}
 /* sEARCH rESULTS */
 div#block-system-main.block.block-system.panel.panel-default.clearfix div.panel-body.content ol.search-results.apachesolr_search-results li.search-result div.search-snippet-info p.search-info {
   display: none;

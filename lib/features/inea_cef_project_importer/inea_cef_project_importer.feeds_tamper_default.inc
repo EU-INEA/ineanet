@@ -13,6 +13,21 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inea_cef_project_importer-action_title-required';
+  $feeds_tamper->importer = 'inea_cef_project_importer';
+  $feeds_tamper->source = 'ACTION_TITLE';
+  $feeds_tamper->plugin_id = 'required';
+  $feeds_tamper->settings = array(
+    'invert' => 0,
+    'log' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Required field';
+  $export['inea_cef_project_importer-action_title-required'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inea_cef_project_importer-beneficiaries-explode';
   $feeds_tamper->importer = 'inea_cef_project_importer';
   $feeds_tamper->source = 'BENEFICIARIES';

@@ -23,8 +23,10 @@
   padding-top: 30.5mm;
 }
 
-#page-title {
+#page-title,
+.node-inea-cef-project .field-name-title {
   font-weight: bold;
+  color: #0065a2;
 }
 
 hr:nth-child(2),
@@ -49,10 +51,6 @@ hr:nth-child(2),
 }
 
 @media print {
-  .node-inea-cef-project .group-left {
-    background-color: #c0eeac;
-  }
-
   .group-left,
   .ds-2col-stacked .group-left {
     width: 35% !important;
@@ -75,12 +73,15 @@ hr:nth-child(2),
     margin-bottom: 10px;
   }
 
-  .group-header,
-  .fieldset-title,
+  h1 {
+    color: #0065a2;
+  }
+
+  .group-header .fieldset-title,
   .group-right .field-label,
   .group-left .field-label,
   .group-footer .field-label {
-    color: #3399cc;
+    color: #0065a2;
   }
 
   /* ============================================================================================*/
@@ -98,6 +99,7 @@ hr:nth-child(2),
   }
 
   .field-name-field-inea-h2020-project-descrip {
+    color: #0065a2;
     font-size: 14px;
   }
 
@@ -133,7 +135,6 @@ hr:nth-child(2),
   }
 
   .node-h2020-project .group-footer {
-    background-color: indianred;
     font-size: 10px;
   }
 
@@ -146,7 +147,55 @@ hr:nth-child(2),
   /* ======================================================================== */
   /*  CEF FICHES                                                              */
   /* ======================================================================== */
-  .node-inea-cef-project .group-left {
-    background-color: #c0eeac;
+  /* to be implemented later
+    None of this stuff works until I can add the classes to the print-content region with a theme hook */
+  /*.node-inea-cef-project .group-left {  */
+
+  /* background-color: #c0eeac; */
+  /*}*/
+
+  .cef-transport .group-left {
+    background-color: red;
   }
+
+
+  .cef-transport .group-header,
+  .cef-transport #content-wrapper #page-title,
+  .cef-transport #content-wrapper h1,
+  .cef-transport .fieldset-title,
+  .cef-transport .field-label,
+  .cef-transport .field-name-field-inea-cef-action-sector2 li {
+    color: #ee8032;
+  }
+
+  .cef-telecom .group-header,
+  .cef-telecom #page-title,
+  .cef-telecom #content-wrapper #page-title,
+  .cef-telecom #content-wrapper h1,
+  .cef-telecom .fieldset-title,
+  .cef-telecom .field-label,
+  .cef-telecom .field-name-field-inea-cef-action-sector2 li {
+    color: #7d5599;
+  }
+
+  .cef-energy .group-header,
+  .cef-energy .fieldset-title,
+  .cef-energy #content-wrapper #page-title,
+  .cef-energy #content-wrapper h1,
+  .cef-energy #page-title,
+  .cef-energy .field-label,
+  .cef-energy .field-name-field-inea-cef-action-sector2 li {
+    color: #38a15b;
+  }
+
+  .cef-synergy .group-header,
+  .cef-synergy .fieldset-title,
+  .cef-synergy #content-wrapper #page-title,
+  .cef-synergy #content-wrapper h1,
+  .cef-synergy #page-title,
+  .cef-synergy .field-label,
+  .cef-synergy .field-name-field-inea-cef-action-sector2 li {
+    color: #e9e365;
+  }
+
 }

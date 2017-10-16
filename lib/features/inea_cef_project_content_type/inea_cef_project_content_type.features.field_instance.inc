@@ -120,7 +120,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_action_code',
-    'label' => 'Action Code',
+    'label' => 'Project number',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -421,7 +421,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_project_cost',
-    'label' => 'Cost',
+    'label' => 'Estimated total cost of the project',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -480,9 +480,9 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'i18n_taxonomy',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
       ),
       'print' => array(
@@ -526,12 +526,12 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -715,7 +715,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_cef_eu_contrib',
-    'label' => 'EU Contribution',
+    'label' => 'Maximum EU contribution',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -794,7 +794,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_cef_eu_percent',
-    'label' => 'EU Percentage',
+    'label' => 'Percentage of EU support',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1603,7 +1603,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Action Code');
   t('Action Description');
   t('Beneficiaries');
   t('CEF 3rd Cntry');
@@ -1611,22 +1610,23 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Call year');
   t('Coordinator');
   t('Corresponds to col OK_TO_PUBLISH in spreadsheets');
-  t('Cost');
   t('DSI');
-  t('EU Contribution');
-  t('EU Percentage');
   t('Energy Corridor');
   t('Energy sector');
+  t('Estimated total cost of the project');
   t('Horizontal priorities - not the same as transport mode');
   t('Horizontal priority');
   t('Image');
   t('Implementation schedule');
   t('Map');
+  t('Maximum EU contribution');
   t('Member State(s)');
   t('ONLY for Telecom projects. "Call" field in GA');
   t('Old ID');
   t('PCI');
+  t('Percentage of EU support');
   t('Programme');
+  t('Project number');
   t('Status');
   t('Transport Corridor');
   t('Transport mode');
