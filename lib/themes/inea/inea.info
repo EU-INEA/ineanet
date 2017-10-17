@@ -8,6 +8,7 @@ php = 5.6
 stylesheets[all][] = "css/inea.css"
 stylesheets[all][] = "css/print.css"
 stylesheets[all][] = "css/cef.css"
+stylesheets[all][] = "css/h2020.css"
 stylesheets[all][] = "css/injector.css"
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"

@@ -117,6 +117,7 @@ function inea_cef_project_importer_feeds_importer_default() {
             'target' => 'field_inea_cef_transport_mode',
             'term_search' => '0',
             'autocreate' => 0,
+            'language' => 'und',
           ),
           11 => array(
             'source' => 'HORIZONTAL_PRIORITY',
@@ -191,6 +192,11 @@ function inea_cef_project_importer_feeds_importer_default() {
             'target' => 'field_project_map:uri',
             'file_exists' => '1',
             'language' => 'und',
+          ),
+          23 => array(
+            'source' => 'IMAGE',
+            'target' => 'field_inea_cef_map:uri',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '1',

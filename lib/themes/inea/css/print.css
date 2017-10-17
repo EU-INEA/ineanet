@@ -37,6 +37,7 @@ hr:nth-child(2),
 .group-left .field-type-taxonomy-term-reference ul.links {
   list-style: outside none none;
   padding: 0;
+  margin: 0 0 10px -30px;
 }
 
 .group-header {
@@ -57,7 +58,7 @@ hr:nth-child(2),
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
     font-size: 11px;
-    padding: 11px; /* to position because of colored bg */
+  /*  padding: 11px; */ /* to position because of colored bg */
   }
 
   .group-right,
@@ -71,6 +72,7 @@ hr:nth-child(2),
   .group-left .field-items,
   .group-right .field-items {
     margin-bottom: 10px;
+    margin-left: 5px;
   }
 
   h1 {
@@ -154,7 +156,7 @@ hr:nth-child(2),
   /* background-color: #c0eeac; */
   /*}*/
 
-  .cef-transport .group-left {
+  /*.cef-transport .group-left {
     background-color: red;
   }
 
@@ -197,5 +199,5 @@ hr:nth-child(2),
   .cef-synergy .field-name-field-inea-cef-action-sector2 li {
     color: #e9e365;
   }
-
+*/
 }
