@@ -50,7 +50,7 @@
 .node-type-h2020-project .group-header,
 .node-type-h2020-project .fieldset-title,
 .node-type-h2020-project .field-label {
-  color: #3399cc;
+  color: #0065a2;
 }
 
 .node-type-h2020-project .field-name-field-inea-h2020-image-copyright {
@@ -82,7 +82,7 @@
 .h2020-transport .fieldset-title,
 .h2020-transport .field-label,
 .h2020-transport .field_inea_h2020_programme li {
-  color: #21b1e6;
+  color: #0065a2;
 }
 
 /* colors of labels  and some fields*/
@@ -92,5 +92,5 @@
 .h2020-energy .fieldset-title,
 .h2020-energy .field-label,
 .h2020-energy .field_inea_h2020_programme li {
-  color: #8bbe46;
+  color: #0065a2;
 }
