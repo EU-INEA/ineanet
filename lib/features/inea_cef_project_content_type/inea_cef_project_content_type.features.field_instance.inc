@@ -1856,7 +1856,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Map');
   t('Maximum EU contribution');
   t('Member State(s)');
-  t('ONLY for Telecom projects. "Call" field in GA ');
+  t('ONLY for Telecom projects. "Call" field in GA');
   t('Old ID');
   t('PCI');
   t('Percentage of EU support');
