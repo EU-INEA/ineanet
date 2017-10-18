@@ -23,8 +23,10 @@
   padding-top: 30.5mm;
 }
 
-#page-title {
+#page-title,
+.node-inea-cef-project .field-name-title {
   font-weight: bold;
+  color: #0065a2;
 }
 
 hr:nth-child(2),
@@ -35,6 +37,7 @@ hr:nth-child(2),
 .group-left .field-type-taxonomy-term-reference ul.links {
   list-style: outside none none;
   padding: 0;
+  margin: 0 0 10px -30px;
 }
 
 .group-header {
@@ -49,17 +52,13 @@ hr:nth-child(2),
 }
 
 @media print {
-  .node-inea-cef-project .group-left {
-    background-color: #c0eeac;
-  }
-
   .group-left,
   .ds-2col-stacked .group-left {
     width: 35% !important;
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
     font-size: 11px;
-    padding: 11px; /* to position because of colored bg */
+    /*  padding: 11px; */ /* to position because of colored bg */
   }
 
   .group-right,
@@ -73,14 +72,18 @@ hr:nth-child(2),
   .group-left .field-items,
   .group-right .field-items {
     margin-bottom: 10px;
+    margin-left: 5px;
   }
 
-  .group-header,
-  .fieldset-title,
+  h1 {
+    color: #0065a2;
+  }
+
+  .group-header .fieldset-title,
   .group-right .field-label,
   .group-left .field-label,
   .group-footer .field-label {
-    color: #3399cc;
+    color: #0065a2;
   }
 
   /* ============================================================================================*/
@@ -98,6 +101,7 @@ hr:nth-child(2),
   }
 
   .field-name-field-inea-h2020-project-descrip {
+    color: #0065a2;
     font-size: 14px;
   }
 
@@ -133,7 +137,6 @@ hr:nth-child(2),
   }
 
   .node-h2020-project .group-footer {
-    background-color: indianred;
     font-size: 10px;
   }
 
@@ -141,12 +144,5 @@ hr:nth-child(2),
   .node-h2020-project .group-footer {
     clear: both;
     page-break-before: always;
-  }
-
-  /* ======================================================================== */
-  /*  CEF FICHES                                                              */
-  /* ======================================================================== */
-  .node-inea-cef-project .group-left {
-    background-color: #c0eeac;
   }
 }
