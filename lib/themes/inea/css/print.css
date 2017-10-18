@@ -37,7 +37,7 @@ hr:nth-child(2),
 .group-left .field-type-taxonomy-term-reference ul.links {
   list-style: outside none none;
   padding: 0;
-  margin: 0 0 10px -30px;
+  margin: 0 0 10px 5px;
 }
 
 .group-header {
