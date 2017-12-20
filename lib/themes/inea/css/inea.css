@@ -59,15 +59,15 @@ body {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  #layout-footer div.container div.block.footer-block div.content {
-    width: 750px;
-  }
-}
-
 @media screen and (max-width: 751px) {
   .region-featured #main-menu {
     padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #layout-footer div.container div.block.footer-block div.content {
+    width: 750px;
   }
 }
 
@@ -82,6 +82,28 @@ body {
     width: 1170px;
   }
 }
+
+/* adjust width of footer block content to be responsive*/
+.footer-b {
+  height: 30px;
+}
+
+.footer-b .footer-block-left {
+  width: 50%;
+  float: left;
+  margin-right: 1em;
+}
+
+.footer-b .footer-block-right {
+  width: 50%;
+  float: right;
+}
+
+.footer-b .footer-block-right span {
+  float: right;
+}
+
+/* adjust width of footer block content */
 
 /* copied from css injector */
 /* To make sure all images are responsive */
@@ -202,12 +224,14 @@ div#block-views-latest-news-block-1 .more-link {
 div#layout-header div.container div#sub-title {
   font-weight: bold;
 }
+
 /* Override EC-RESP */
 @media screen and (max-width: 406px) {
   #layout-header {
     background-image: none;
   }
 }
+
 /* sEARCH rESULTS */
 div#block-system-main.block.block-system.panel.panel-default.clearfix div.panel-body.content ol.search-results.apachesolr_search-results li.search-result div.search-snippet-info p.search-info {
   display: none;
