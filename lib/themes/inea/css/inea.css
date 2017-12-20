@@ -85,8 +85,9 @@ body {
 
 /* adjust width of footer block content to be responsive*/
 .footer-b {
-  height:30px;
+  height: 30px;
 }
+
 .footer-b .footer-block-left {
   width: 50%;
   float: left;
