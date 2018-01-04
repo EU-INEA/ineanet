@@ -100,3 +100,11 @@ function inea_core_update_7003() {
 
   variable_set('media_wysiwyg_wysiwyg_browser_plugins', $value);
 }
+
+/**
+ * Disable and uninstall module multisite_notifications_core.
+ */
+function inea_core_update_7004() {
+  module_disable(array('multisite_notifications_core', 'maxlength'));
+  drupal_uninstall_modules(array('multisite_notifications_core', 'maxlength'));
+}
