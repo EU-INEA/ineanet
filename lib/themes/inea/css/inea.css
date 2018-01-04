@@ -858,7 +858,8 @@ div#content-wrapper h3.seeproj {
 }
 
 /* May 26 */
-.view-cef-projects-by-programme .view-content .grid-item {
+.view-cef-projects-by-programme .view-content .grid-item,
+.view-new-inea-cef-projects-by-terms .view-content .grid-item {
   padding-bottom: 7px;
 }
 
