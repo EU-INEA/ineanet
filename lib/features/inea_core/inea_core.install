@@ -108,3 +108,10 @@ function inea_core_update_7004() {
   module_disable(array('multisite_notifications_core', 'maxlength'));
   drupal_uninstall_modules(array('multisite_notifications_core', 'maxlength'));
 }
+
+/**
+ * Uninstall subscriptions module(s).
+ */
+function inea_core_update_7005() {
+  drupal_uninstall_modules(array('subscriptions, subscriptions_content, subscriptions_mail, subscriptions_taxonomy, subscriptions_ui'), FALSE);
+}
