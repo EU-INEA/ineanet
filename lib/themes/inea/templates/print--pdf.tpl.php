@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Default theme implementation to display a printer-friendly version page.
@@ -126,3 +127,4 @@
 <?php print $footer_scripts; ?>
 </body>
 </html>
+
