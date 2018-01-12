@@ -4,6 +4,7 @@
     "continuousphp/aws-sdk-phing": "~0.5.0",
     "continuousphp/phing-tasks": "~0.2.0",
     "continuousphp/sdk": "~0.6.0",
+    "cpliakas/git-wrapper": "^1.7.0",
     "drupal/phing-drush-task": "1.0",
     "drush/drush": "8.1.15",
     "ext-json": "*",
@@ -13,7 +14,7 @@
     "pear/versioncontrol_git": "dev-master",
     "pfrenssen/phpcs-pre-push": "1.0",
     "phing/phing": "~2.16.0",
-    "php": ">=5.4.0",
+    "php": ">=5.6.0",
     "typhonius/behattask": "1.0"
   },
   "minimum-stability": "dev",
@@ -25,6 +26,7 @@
   },
   "require-dev": {
     "behat/behat": "~3.4.3",
+    "drupal/coder": "8.2.12",
     "drupal/drupal-extension": "~v4.0.0alpha2",
     "ec-europa/qa-automation": "^3.0.5",
     "symfony/console": "^3.4.2"
