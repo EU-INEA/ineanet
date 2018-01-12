@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_cef_project_content_type.features.field_instance.inc
@@ -102,7 +103,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'print' => array(
         'label' => 'above',
@@ -169,6 +170,177 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-inea_cef_project-field_cef_action_title'.
+  $field_instances['node-inea_cef_project-field_cef_action_title'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 20,
+          'trim_link' => 0,
+          'trim_options' => array(
+            'text' => 0,
+          ),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 0,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cef_action_title',
+    'label' => 'Action Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+          'wiki' => 'wiki',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 5,
+            ),
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'wiki' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-inea_cef_project-field_cef_additional_info'.
+  $field_instances['node-inea_cef_project-field_cef_additional_info'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 36,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cef_additional_info',
+    'label' => 'Additional information',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'full_html_track' => 'full_html_track',
+          'plain_text' => 'plain_text',
+          'wiki' => 'wiki',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 5,
+            ),
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'full_html_track' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'wiki' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 24,
+    ),
+  );
+
   // Exported field_instance: 'node-inea_cef_project-field_cef_call_year'.
   $field_instances['node-inea_cef_project-field_cef_call_year'] = array(
     'bundle' => 'inea_cef_project',
@@ -181,14 +353,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -226,14 +398,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -374,7 +546,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_pci',
-    'label' => 'PCI',
+    'label' => 'Project(s) of Common Interest',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -403,14 +575,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -421,7 +593,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_project_cost',
-    'label' => 'Estimated total cost of the project',
+    'label' => 'Estimated total cost',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -480,16 +652,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -526,7 +696,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'short',
+          'format_type' => 'month_year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -534,13 +704,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'short',
+          'format_type' => 'month_year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -548,7 +718,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -697,14 +867,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -776,14 +946,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -853,17 +1023,15 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 31,
       ),
       'print' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -911,7 +1079,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1052,14 +1220,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1132,14 +1300,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1182,13 +1350,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 34,
       ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1230,7 +1398,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator_localized',
-        'weight' => 11,
+        'weight' => 2,
       ),
       'print' => array(
         'label' => 'above',
@@ -1240,7 +1408,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 11,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1281,15 +1449,15 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_link' => 0,
           'taxonomy_term_separator' => ', ',
         ),
-        'type' => 'ds_taxonomy_separator',
-        'weight' => 2,
+        'type' => 'ds_taxonomy_separator_localized',
+        'weight' => 3,
       ),
       'print' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1317,6 +1485,93 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-inea_cef_project-field_inea_programme_text'.
+  $field_instances['node-inea_cef_project-field_inea_programme_text'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is just the ACTION_SECTOR without the dash in the middle',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_inea_programme_text',
+    'label' => 'Programme',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'full_html_track' => 'full_html_track',
+          'plain_text' => 'plain_text',
+          'wiki' => 'wiki',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 5,
+            ),
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'full_html_track' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'wiki' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 21,
+    ),
+  );
+
   // Exported field_instance: 'node-inea_cef_project-field_project_description'.
   $field_instances['node-inea_cef_project-field_project_description'] = array(
     'bundle' => 'inea_cef_project',
@@ -1325,14 +1580,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'print' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1409,13 +1664,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 33,
       ),
       'print' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1470,6 +1725,429 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-inea_cef_project-field_pub_link'.
+  $field_instances['node-inea_cef_project-field_pub_link'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 35,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pub_link',
+    'label' => 'Executive Summary',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-inea_cef_project-field_tag_transport_mode'.
+  $field_instances['node-inea_cef_project-field_tag_transport_mode'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tag_transport_mode',
+    'label' => 'CEF Transport mode',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-cef_energy_corridor-field_cef_term_image'.
+  $field_instances['taxonomy_term-cef_energy_corridor-field_cef_term_image'] = array(
+    'bundle' => 'cef_energy_corridor',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cef_term_image',
+    'label' => 'cef term Image',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-cef_energy_sector-field_cef_term_image'.
+  $field_instances['taxonomy_term-cef_energy_sector-field_cef_term_image'] = array(
+    'bundle' => 'cef_energy_sector',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cef_term_image',
+    'label' => 'cef term Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-cef_horizontal_priority-field_cef_term_image'.
+  $field_instances['taxonomy_term-cef_horizontal_priority-field_cef_term_image'] = array(
+    'bundle' => 'cef_horizontal_priority',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cef_term_image',
+    'label' => 'cef term Image',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-cef_trans_corridor-field_cef_term_image'.
+  $field_instances['taxonomy_term-cef_trans_corridor-field_cef_term_image'] = array(
+    'bundle' => 'cef_trans_corridor',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cef_term_image',
+    'label' => 'cef term Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-cef_transport_mode-field_cef_term_image'.
+  $field_instances['taxonomy_term-cef_transport_mode-field_cef_term_image'] = array(
+    'bundle' => 'cef_transport_mode',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cef_term_image',
+    'label' => 'cef term Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 31,
     ),
   );
 
@@ -1838,8 +2516,11 @@ function inea_cef_project_content_type_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Action Description');
+  t('Action Title');
+  t('Additional information');
   t('Beneficiaries');
   t('CEF 3rd Cntry');
+  t('CEF Transport mode');
   t('CEF publish');
   t('Call year');
   t('Cef map');
@@ -1848,7 +2529,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('DSI');
   t('Energy Corridor');
   t('Energy sector');
-  t('Estimated total cost of the project');
+  t('Estimated total cost');
+  t('Executive Summary');
   t('Horizontal priorities - not the same as transport mode');
   t('Horizontal priority');
   t('Image');
@@ -1858,14 +2540,16 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Member State(s)');
   t('ONLY for Telecom projects. "Call" field in GA');
   t('Old ID');
-  t('PCI');
   t('Percentage of EU support');
   t('Programme');
   t('Project number');
+  t('Project(s) of Common Interest');
   t('Status');
   t('Summary');
+  t('This is just the ACTION_SECTOR without the dash in the middle');
   t('Transport Corridor');
   t('Transport mode');
+  t('cef term Image');
 
   return $field_instances;
 }

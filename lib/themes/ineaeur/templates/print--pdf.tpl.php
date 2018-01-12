@@ -127,4 +127,3 @@
 <?php print $footer_scripts; ?>
 </body>
 </html>
-

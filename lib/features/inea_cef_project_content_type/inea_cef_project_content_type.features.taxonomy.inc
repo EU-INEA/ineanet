@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_cef_project_content_type.features.taxonomy.inc
@@ -9,7 +10,7 @@
  */
 function inea_cef_project_content_type_taxonomy_default_vocabularies() {
   return array(
-    'cef_call_year' => array(
+    'cef_call_year' => (object) array(
       'name' => 'CEF CALL YEAR',
       'machine_name' => 'cef_call_year',
       'description' => 'CALL YEAR OF CEF PROJECT',
@@ -35,7 +36,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_dsi' => array(
+    'cef_dsi' => (object) array(
       'name' => 'CEF DSI',
       'machine_name' => 'cef_dsi',
       'description' => '"Call" Field in GA',
@@ -61,7 +62,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_energy_corridor' => array(
+    'cef_energy_corridor' => (object) array(
       'name' => 'CEF Energy Corridor',
       'machine_name' => 'cef_energy_corridor',
       'description' => '',
@@ -87,7 +88,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_energy_sector' => array(
+    'cef_energy_sector' => (object) array(
       'name' => 'CEF Energy Sector',
       'machine_name' => 'cef_energy_sector',
       'description' => 'Gas or Electricity (ENER only); blank for Transport',
@@ -113,7 +114,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_horizontal_priority' => array(
+    'cef_horizontal_priority' => (object) array(
       'name' => 'CEF Horizontal priority',
       'machine_name' => 'cef_horizontal_priority',
       'description' => 'Not the same as transport mode',
@@ -139,7 +140,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_pci' => array(
+    'cef_pci' => (object) array(
       'name' => 'CEF PCI',
       'machine_name' => 'cef_pci',
       'description' => 'PCI Codes',
@@ -165,7 +166,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_publish' => array(
+    'cef_publish' => (object) array(
       'name' => 'CEF Publish',
       'machine_name' => 'cef_publish',
       'description' => 'Yes/no flag if CEF Project should be published',
@@ -191,7 +192,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_trans_corridor' => array(
+    'cef_trans_corridor' => (object) array(
       'name' => 'CEF Trans Corridor',
       'machine_name' => 'cef_trans_corridor',
       'description' => '',
@@ -217,7 +218,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'cef_transport_mode' => array(
+    'cef_transport_mode' => (object) array(
       'name' => 'CEF Transport Mode',
       'machine_name' => 'cef_transport_mode',
       'description' => '',
@@ -243,7 +244,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'common_interest' => array(
+    'common_interest' => (object) array(
       'name' => 'Energy Priority Corridor',
       'machine_name' => 'common_interest',
       'description' => '',
@@ -269,7 +270,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'country' => array(
+    'country' => (object) array(
       'name' => 'Countries',
       'machine_name' => 'country',
       'description' => '',
@@ -295,7 +296,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'project_status' => array(
+    'project_status' => (object) array(
       'name' => 'CEF Project status',
       'machine_name' => 'project_status',
       'description' => '',
@@ -321,7 +322,7 @@ function inea_cef_project_content_type_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'transport_mode' => array(
+    'transport_mode' => (object) array(
       'name' => 'Transport mode',
       'machine_name' => 'transport_mode',
       'description' => NULL,

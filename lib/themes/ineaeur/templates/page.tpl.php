@@ -349,12 +349,12 @@ global $base_url;
               <li class="ecl-footer__menu-item">
                 <a class="ecl-link ecl-footer__link"
                    href="https://www.linkedin.com/company/3034908/"><span
-                    class="ecl-icon ecl-icon--linkedin"></span>hereLinkedIn</a>
+                    class="ecl-icon ecl-icon--linkedin"></span>LinkedIn</a>
               </li>
               <li class="ecl-footer__menu-item">
                 <a class="ecl-link ecl-footer__link"
                    href="https://twitter.com/inea_eu"><span
-                    class="ecl-icon ecl-icon--twitter"></span>hereTwitter</a>
+                    class="ecl-icon ecl-icon--twitter"></span>Twitter</a>
               </li>
               <li class="ecl-footer__menu-item">
                 <a class="ecl-link ecl-footer__link ecl-link--external"
@@ -405,7 +405,7 @@ global $base_url;
               class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
               <li class="ecl-footer__menu-item">
                 <a class="ecl-link ecl-footer__link" href="#"><span
-                    class="ecl-icon ecl-icon-social--linkedin ecl-footer__social-icon"></span>LinkedIn</a>
+                    class="ecl-icon ecl-icon--linkedin ecl-footer__social-icon"></span>LinkedIn</a>
               </li>
               <li class="ecl-footer__menu-item">
                 <a class="ecl-link ecl-footer__link" href="#"><span

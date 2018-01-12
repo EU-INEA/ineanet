@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_cef_project_importer.feeds_importer_default.inc
@@ -71,135 +72,143 @@ function inea_cef_project_importer_feeds_importer_default() {
             'language' => 'und',
           ),
           4 => array(
+            'source' => 'PROGRAMME_TEXT',
+            'target' => 'field_inea_programme_text',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
             'source' => 'CALL_YEAR',
             'target' => 'field_cef_call_year',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          5 => array(
+          6 => array(
             'source' => 'ACTION_STATUS',
             'target' => 'field_inea_cef_project_status',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          6 => array(
+          7 => array(
             'source' => 'ENERGY_SECTOR',
             'target' => 'field_cef_energy_sector',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          7 => array(
+          8 => array(
             'source' => 'PCI',
             'target' => 'field_cef_pci',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          8 => array(
+          9 => array(
             'source' => 'ENER_CORRIDOR',
             'target' => 'field_inea_cef_ener_corridor',
             'term_search' => '0',
-            'autocreate' => 0,
-            'language' => 'und',
-          ),
-          9 => array(
-            'source' => 'TRANS_CORRIDOR',
-            'target' => 'field_inea_cef_trans_corridor',
-            'term_search' => '0',
-            'autocreate' => 0,
+            'autocreate' => 1,
             'language' => 'und',
           ),
           10 => array(
-            'source' => 'TRANSPORT_MODE',
-            'target' => 'field_inea_cef_transport_mode',
+            'source' => 'TRANS_CORRIDOR',
+            'target' => 'field_inea_cef_trans_corridor',
             'term_search' => '0',
-            'autocreate' => 0,
+            'autocreate' => 1,
             'language' => 'und',
           ),
           11 => array(
+            'source' => 'TRANSPORT_MODE',
+            'target' => 'field_inea_cef_transport_mode',
+            'term_search' => '0',
+            'autocreate' => 1,
+            'language' => 'und',
+          ),
+          12 => array(
             'source' => 'HORIZONTAL_PRIORITY',
             'target' => 'field_inea_cef_horizontal_priori',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          12 => array(
+          13 => array(
             'source' => 'MS',
             'target' => 'field_inea_cef_member_state',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          13 => array(
+          14 => array(
             'source' => 'DSI',
             'target' => 'field_inea_cef_dsi',
             'term_search' => '0',
             'autocreate' => 1,
             'language' => 'und',
           ),
-          14 => array(
+          15 => array(
             'source' => 'START_DATE',
             'target' => 'field_inea_cef_date:start',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          15 => array(
+          16 => array(
             'source' => 'END_DATE',
             'target' => 'field_inea_cef_date:end',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          16 => array(
+          17 => array(
             'source' => 'COST',
             'target' => 'field_cef_project_cost',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          17 => array(
+          18 => array(
             'source' => 'EU_CONTRIB',
             'target' => 'field_inea_cef_eu_contrib',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          18 => array(
+          19 => array(
             'source' => 'SUPPORT_PERC',
             'target' => 'field_inea_cef_eu_percent',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          19 => array(
+          20 => array(
             'source' => 'COORDINATOR',
             'target' => 'field_cef_coordinator',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          20 => array(
+          21 => array(
             'source' => 'BENEFICIARIES',
             'target' => 'field_inea_cef_participants',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          21 => array(
+          22 => array(
             'source' => 'OK_TO_PUBLISH',
             'target' => 'field_inea_cef_publish',
-            'unique' => FALSE,
+            'term_search' => '0',
+            'autocreate' => 1,
             'language' => 'und',
           ),
-          22 => array(
+          23 => array(
             'source' => 'IMAGE',
             'target' => 'field_project_map:uri',
             'file_exists' => '1',
             'language' => 'und',
           ),
-          23 => array(
+          24 => array(
             'source' => 'IMAGE',
             'target' => 'field_inea_cef_map:uri',
             'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
-        'update_existing' => '1',
+        'update_existing' => '2',
         'update_non_existent' => 'skip',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,

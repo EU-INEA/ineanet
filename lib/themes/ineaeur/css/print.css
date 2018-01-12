@@ -54,7 +54,7 @@ hr:nth-child(2),
 @media print {
   .group-left,
   .ds-2col-stacked .group-left {
-    width: 35% !important;
+    width: 33% !important;
     float: left;
     font-family: "Verdana, Geneva, sans-serif";
     font-size: 11px;
@@ -63,7 +63,7 @@ hr:nth-child(2),
 
   .group-right,
   .ds-2col-stacked .group-right {
-    width: 57% !important;
+    width: 63% !important;
     font-family: "Verdana, Geneva, sans-serif";
     float: right;
     font-size: 12px;

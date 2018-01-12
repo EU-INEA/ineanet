@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_cef_project_content_type.ds.inc
@@ -18,9 +19,14 @@ function inea_cef_project_content_type_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '21',
+      'weight' => '22',
       'label' => 'hidden',
       'format' => 'default',
+    ),
+    'changed_date' => array(
+      'weight' => '18',
+      'label' => 'above',
+      'format' => 'ds_post_date_month_year',
     ),
   );
   $export['node|inea_cef_project|default'] = $ds_fieldsetting;
@@ -40,7 +46,7 @@ function inea_cef_project_content_type_ds_field_settings_info() {
     'changed_date' => array(
       'weight' => '18',
       'label' => 'above',
-      'format' => 'ds_post_date_long',
+      'format' => 'ds_post_date_month_year',
     ),
   );
   $export['node|inea_cef_project|print'] = $ds_fieldsetting;
@@ -64,39 +70,41 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'header' => array(
-        0 => 'field_inea_cef_action_sector2',
+        0 => 'field_cef_action_title',
       ),
       'left' => array(
-        1 => 'field_inea_cef_horizontal_priori',
-        2 => 'field_inea_cef_transport_mode',
-        3 => 'field_cef_call_year',
-        4 => 'field_inea_cef_date',
-        5 => 'field_inea_cef_eu_contrib',
-        6 => 'field_cef_project_cost',
-        7 => 'field_inea_cef_eu_percent',
-        8 => 'field_inea_cef_participants',
-        9 => 'field_cef_coordinator',
-        10 => 'field_inea_cef_project_status',
-        11 => 'field_inea_cef_trans_corridor',
+        1 => 'field_inea_programme_text',
+        2 => 'field_inea_cef_trans_corridor',
+        3 => 'field_inea_cef_transport_mode',
+        4 => 'field_cef_call_year',
+        5 => 'field_inea_cef_date',
+        6 => 'field_inea_cef_eu_contrib',
+        7 => 'field_cef_project_cost',
+        8 => 'field_inea_cef_eu_percent',
+        9 => 'field_inea_cef_participants',
+        10 => 'field_cef_coordinator',
+        11 => 'field_inea_cef_project_status',
         12 => 'field_inea_cef_member_state',
         13 => 'field_cef_3rd_cntry',
         14 => 'field_inea_cef_ener_corridor',
         15 => 'field_inea_cef_dsi',
         16 => 'field_cef_energy_sector',
         17 => 'field_cef_pci',
+        18 => 'changed_date',
       ),
       'right' => array(
-        18 => 'field_cef_action_code',
-        19 => 'field_inea_cef_map',
-        20 => 'field_project_description',
+        19 => 'field_cef_action_code',
+        20 => 'field_inea_cef_map',
+        21 => 'field_project_description',
       ),
       'footer' => array(
-        21 => 'comments',
+        22 => 'comments',
       ),
     ),
     'fields' => array(
-      'field_inea_cef_action_sector2' => 'header',
-      'field_inea_cef_horizontal_priori' => 'left',
+      'field_cef_action_title' => 'header',
+      'field_inea_programme_text' => 'left',
+      'field_inea_cef_trans_corridor' => 'left',
       'field_inea_cef_transport_mode' => 'left',
       'field_cef_call_year' => 'left',
       'field_inea_cef_date' => 'left',
@@ -106,13 +114,13 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
       'field_inea_cef_participants' => 'left',
       'field_cef_coordinator' => 'left',
       'field_inea_cef_project_status' => 'left',
-      'field_inea_cef_trans_corridor' => 'left',
       'field_inea_cef_member_state' => 'left',
       'field_cef_3rd_cntry' => 'left',
       'field_inea_cef_ener_corridor' => 'left',
       'field_inea_cef_dsi' => 'left',
       'field_cef_energy_sector' => 'left',
       'field_cef_pci' => 'left',
+      'changed_date' => 'left',
       'field_cef_action_code' => 'right',
       'field_inea_cef_map' => 'right',
       'field_project_description' => 'right',
@@ -144,8 +152,8 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'field_inea_cef_action_sector2',
-        1 => 'field_inea_cef_horizontal_priori',
+        0 => 'field_inea_programme_text',
+        1 => 'field_inea_cef_trans_corridor',
         2 => 'field_inea_cef_transport_mode',
         3 => 'field_cef_call_year',
         4 => 'field_inea_cef_date',
@@ -155,25 +163,24 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
         8 => 'field_inea_cef_participants',
         9 => 'field_cef_coordinator',
         10 => 'field_inea_cef_project_status',
-        11 => 'field_inea_cef_trans_corridor',
-        12 => 'field_inea_cef_member_state',
-        13 => 'field_cef_3rd_cntry',
-        14 => 'field_inea_cef_ener_corridor',
-        15 => 'field_inea_cef_dsi',
-        16 => 'field_cef_energy_sector',
-        17 => 'field_cef_pci',
-        18 => 'changed_date',
+        11 => 'field_inea_cef_member_state',
+        12 => 'field_cef_3rd_cntry',
+        13 => 'field_inea_cef_ener_corridor',
+        14 => 'field_inea_cef_dsi',
+        15 => 'field_cef_energy_sector',
+        16 => 'field_cef_pci',
+        17 => 'changed_date',
       ),
       'right' => array(
-        19 => 'title',
-        20 => 'field_cef_action_code',
-        21 => 'field_inea_cef_map',
-        22 => 'field_project_description',
+        18 => 'title',
+        19 => 'field_cef_action_code',
+        20 => 'field_inea_cef_map',
+        21 => 'field_project_description',
       ),
     ),
     'fields' => array(
-      'field_inea_cef_action_sector2' => 'left',
-      'field_inea_cef_horizontal_priori' => 'left',
+      'field_inea_programme_text' => 'left',
+      'field_inea_cef_trans_corridor' => 'left',
       'field_inea_cef_transport_mode' => 'left',
       'field_cef_call_year' => 'left',
       'field_inea_cef_date' => 'left',
@@ -183,7 +190,6 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
       'field_inea_cef_participants' => 'left',
       'field_cef_coordinator' => 'left',
       'field_inea_cef_project_status' => 'left',
-      'field_inea_cef_trans_corridor' => 'left',
       'field_inea_cef_member_state' => 'left',
       'field_cef_3rd_cntry' => 'left',
       'field_inea_cef_ener_corridor' => 'left',

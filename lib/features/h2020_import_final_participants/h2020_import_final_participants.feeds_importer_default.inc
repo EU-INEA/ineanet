@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * h2020_import_final_participants.feeds_importer_default.inc
@@ -68,12 +69,12 @@ function h2020_import_final_participants_feeds_importer_default() {
             'language' => 'und',
           ),
         ),
-        'update_existing' => '2',
+        'update_existing' => '1',
         'update_non_existent' => 'skip',
-        'input_format' => 'full_html',
+        'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'h2020_project',
-        'insert_new' => '1',
+        'insert_new' => '0',
         'language' => 'und',
       ),
     ),
