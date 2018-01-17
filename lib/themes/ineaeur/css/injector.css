@@ -13,13 +13,13 @@
     width: 50%;
   }
 
-  /* Nathalie's form and survey and 2016 info day and help us improve forms and Horizon-2020 evaluation forms */
+/* Nathalie's form and survey and 2016 info day and help us improve forms and Horizon-2020 evaluation forms */
   #webform-client-form-1994 .webform-component .form-control,
-  /* horizon-2020/h2020-energy-research-virtual-info-day-evaluation-form*/
+/* horizon-2020/h2020-energy-research-virtual-info-day-evaluation-form*/
   .webform-client-form-3122 .webform-component .form-control,
-  /* horizon-2020/horizon-2020-smart-grids-and-storage-info-day-evaluation-form*/
+/* horizon-2020/horizon-2020-smart-grids-and-storage-info-day-evaluation-form*/
   .webform-client-form-3120 .webform-component .form-control,
-  /* horizon-2020/horizon-2020-smart-cities-and-communities-info-day-evaluation-form */
+/* horizon-2020/horizon-2020-smart-cities-and-communities-info-day-evaluation-form */
   .webform-client-form-3121 .webform-component .form-control,
   .page-node #block-webform-client-block-1981 .webform-client-form .webform-component .form-control {
     width: 100% !important;
