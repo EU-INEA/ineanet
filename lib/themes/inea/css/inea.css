@@ -923,6 +923,10 @@ div#content-wrapper h3.seeproj {
   margin-bottom: 2%;
 }
 
+.node-type-inea-events .field-name-field-dates .date-display-single {
+  font-weight: bold;
+}
+
 .node-type-implementation-success div#content-wrapper div.field-name-field-is-picture-gallery div.field-label,
 .node-type-inea-events div#content-wrapper div.field-name-field-inea-event-picture-ga div.field-label {
   margin-top: 10%;

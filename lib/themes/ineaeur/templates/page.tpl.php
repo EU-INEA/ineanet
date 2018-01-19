@@ -319,15 +319,7 @@ global $base_url;
         </div>
       <?php endif; ?>
     </div>
-  </div><!-- /#layout-body -->
-
-  <!--  <div id="layout-footer">-->
-  <!--    <div class="container">-->
-  <!--      --><?php
-// Print $regions['footer'];. ?>
-  <!--    </div>-->
-  <!--  </div><!-- /#layout-footer -->-->
-
+  </div>
   <footer class="ecl-footer">
     <div class="ecl-footer__site-identity">
       <div class="ecl-container">

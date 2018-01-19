@@ -27,6 +27,7 @@
 .node-inea-cef-project .field-name-title {
   font-weight: bold;
   color: #0065a2;
+  margin-top: -20px;
 }
 
 hr:nth-child(2),
