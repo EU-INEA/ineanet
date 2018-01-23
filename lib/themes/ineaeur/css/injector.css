@@ -1,0 +1,356 @@
+/* ----------------------------- */
+/*  Css copied from css injector */
+/* ----------------------------- */
+
+/* Field width of form fields apart from admin page*/
+@media (min-width: 768px) {
+  .page-node .webform-client-form .webform-component .form-control,
+  .page-node .webform-client-form .webform-component--nationality {
+    width: 50%;
+  }
+
+  #edit-captcha-response {
+    width: 50%;
+  }
+
+/* Nathalie's form and survey and 2016 info day and help us improve forms and Horizon-2020 evaluation forms */
+  #webform-client-form-1994 .webform-component .form-control,
+/* horizon-2020/h2020-energy-research-virtual-info-day-evaluation-form*/
+  .webform-client-form-3122 .webform-component .form-control,
+/* horizon-2020/horizon-2020-smart-grids-and-storage-info-day-evaluation-form*/
+  .webform-client-form-3120 .webform-component .form-control,
+/* horizon-2020/horizon-2020-smart-cities-and-communities-info-day-evaluation-form */
+  .webform-client-form-3121 .webform-component .form-control,
+  .page-node #block-webform-client-block-1981 .webform-client-form .webform-component .form-control {
+    width: 100% !important;
+  }
+}
+
+/* right sidebar home - only on front */
+.front #sidebar-right #block-views-latest-news-block .panel-heading {
+  background-color: #0065a2;
+  color: white;
+  text-align: center;
+}
+
+/* Classes to be used by editors */
+/* Table padding - not checked if they would be overriden by platform */
+.padleft5 {
+  padding-left: 5px !important;
+}
+
+.padright5 {
+  padding-right: 5px !important;
+}
+
+.padtop5 {
+  padding-top: 5px !important;
+}
+
+.padbot5 {
+  padding-bottom: 5px !important;
+}
+
+/* changed November 19th, 2015 */
+.node-type-page div#content-wrapper div.node table td,
+.node-type-page div#content-wrapper div.node table th,
+.node-type-news div#content-wrapper div.node table td,
+.node-type-news div#content-wrapper div.node table th {
+  padding: 5px 5px 5px 5px !important;
+}
+
+/* Classes to be used by editors                */
+/* Table striping */
+.even_stripes tr:nth-of-type(2n+0) {
+  background-color: #ebebeb;
+}
+
+.stripes tr:nth-of-type(2n+3),
+.stripeswo tr:nth-of-type(2n+3) {
+  background-color: #ebebeb;
+}
+
+/* stripeswo is stripes without the first darker blue header row */
+.stripeswo tr:first-of-type {
+  background-color: #ebebeb;
+}
+
+.stripes tr:first-of-type,
+.stripes tr:first-of-type p,
+.even_stripes tr:first-of-type {
+  background-color: #00426f !important;
+  color: white;
+}
+
+.stripes tr th,
+.even_stripes tr th {
+  background-color: #00426f !important;
+  padding: 5px;
+}
+
+/* stripes when one chooses the first row to be a header */
+.stripes-head tr:nth-of-type(2n+3) {
+  background-color: #ebebeb;
+}
+
+.stripes-head tr th {
+  background-color: #00426f !important;
+  color: white;
+}
+
+/* margin on images in newsroom */
+.page-news-events-newsroom .region-content div.view-content div.field-content a img {
+  margin: 5px 10px 0 5px;
+}
+
+/* feedback form - block 1701 */
+#block-webform-client-block-1701 .panel-heading {
+  display: none;
+}
+
+/* Newsletter sub forms */
+div#content-wrapper .block-simplenews div.panel-body.content a.feed-icon {
+  display: none;
+}
+
+#block-simplenews-147 .panel-heading {
+  display: none;
+}
+
+/* we don't want to see previous issues of a newsletter and we don't want to see the RSS feed */
+.issues-link,
+#block-simplenews-371 img {
+  display: none;
+}
+
+/* Font size in tables on page: 2015-cef-telecom-call-eid-2015-cef-tc-2 */
+.page-node-1595 div#content-wrapper div.node p,
+div#content-wrapper div.node a,
+div#content-wrapper div.node ul li {
+  font-size: 14px !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global changes from 12px to 14px plus Changes to Ten-Tec projects */
+.page-node-1595 td p,
+.page-node-1595 a {
+  font-size: 14px !important;
+}
+
+td p,
+a {
+  font-size: 14px !important;
+}
+
+#path .menu-breadcrumb,
+#path .easy-breadcrumb,
+#path .menu-breadcrumb a,
+#path .menu-breadcrumb span,
+#path .easy-breadcrumb a,
+#path .easy-breadcrumb span {
+  font-size: 11px !important;
+}
+
+div#content-wrapper div.node p,
+div#content-wrapper div.node ul li {
+  font-size: 14px !important;
+}
+
+div#content-wrapper div.node table {
+  font-size: 14px !important;
+  padding: 0;
+  margin: 0;
+}
+
+div#content-wrapper div.node a {
+  font-size: 14px !important;
+}
+
+div#content-wrapper div.node h4,
+div#content-wrapper div.view h4 {
+  /* font-size: 18px !important;*/
+  /*  font-style: verdana, arial, sans-serif;*/
+  font-weight: bold;
+  line-height: normal;
+  color: #262261;
+}
+
+/*the disclaimer text of the project description field and the text under the maps */
+.node-type-project div#content-wrapper .region-content div.panel-body.content .field-name-field-project-description table:last-child tbody tr td p,
+.node-type-project div#content-wrapper .region-content div.panel-body.content .field-name-field-project-description table:last-child tbody tr td {
+  font-size: 11px !important;
+}
+
+.node-type-project #page-title {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.node-type-project .field-name-field-project-description div.field-items div.field-item.even table:last-child tbody tr td p,
+.node-type-project div#content-wrapper .field-name-field-project-map p:first-child {
+  font-size: 11px !important;
+}
+
+/* Newsroom */
+.page-news-events-newsroom #content-wrapper .view-header p {
+  font-size: 14px !important;
+}
+
+/* CEF Telecom FAQ Page  #block-simplenews-369 */
+#block-simplenews-369 {
+  margin-top: 15px;
+}
+
+/* CEF TELECOM PAGES display none */
+.project-cef-telecom .field-name-field-tag-programme {
+  display: none;
+}
+
+.project-cef-telecom .field-name-field-project-map .field-items .field-item .even p:first-child {
+  display: none;
+}
+
+.node-type-project div#content-wrapper .project-cef-telecom div.field.field-name-field-project-map.field-type-image.field-label-hidden div.field-items div.field-item.even p {
+  display: none;
+}
+
+/* https://ec.europa.eu/inea/en/connecting-europe-facility/useful-documents-and-forms */
+.page-node-1852 div#content-wrapper table tbody tr td div.media.media-element-container.media-default {
+  margin-top: 2px !important;
+}
+
+.page-node-1852 div#content-wrapper table tbody tr td {
+  padding: 5px 0 0 5px;
+}
+
+/* Tax terms on corridor view */
+.node-type-project .panel-body.content div.field.field-name-field-corridor.field-type-taxonomy-term-reference ul.links li {
+  clear: left;
+}
+
+.taxonomy-term-reference-0 {
+  clear: left;
+}
+
+.view-cef-projects-by-programme .view-content .field-content a img {
+  margin-bottom: 12px;
+}
+
+/* pre element */
+pre {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div#content-wrapper div.node pre a {
+  font-size: 10.5px !important;
+}
+
+/* Chrome img  */
+/* Max-width applies to block elements.  is neither block nor inline. Ambiguous enough? haha. You can use display:block; max-width:1000px and forget about width:100%. Chrome and Safari follow the rules!
+ from: http://stackoverflow.com/questions/4019604/chrome-safari-ignoring-max-width-in-table */
+@media (max-width: 768px) {
+  table img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+/*(newsroom) images in chrome. */
+td.views-field.views-field-field-term-image {
+  min-width: 100px;
+}
+
+/* for the rock and roll video */
+html.js body.js.html.not-front.logged-in.no-sidebars.page-node.page-node-.page-node-2164.node-type-page.i18n-en.admin-menu.coffee-processed div#layout-body.container div.row div#content-wrapper.col-lg-8.col-md-9.col-sm-12.col-md-12 div.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12.common div.region.region-content div#block-system-main.block.block-system.panel.panel-default.clearfix div.panel-body.content div#node-2164.node.node-page.node-full.clearfix div.content.clearfix div.field.field-name-body.field-type-text-with-summary.field-label-hidden div.field-items div.field-item.even table tbody tr td div.media.media-element-container.media-default div#file-1490.file.file-image.file-image-jpeg div.content img.media-element.file-default {
+  min-width: 100px;
+}
+
+/* Job opportunities page */
+.page-node-2164 h2 {
+  font-weight: bold !important;
+}
+
+/* pdf icons in media */
+table .media .file .file-icon {
+  width: 15px !important;
+  float: left;
+}
+
+/* events page table icon img  and new events content type */
+/* events page OLD */
+.region-content #node-43 table td img {
+  width: 15px;
+  float: left;
+}
+
+.node-type-inea-events .region-content .field-items .media .file img {
+  width: 15px;
+}
+
+.node-type-inea-events .region-content tbody {
+  border-top: 1px solid black !important;
+}
+
+.node-type-inea-events .region-content .notb {
+  border-top: 0px solid black !important;
+}
+
+.node-type-inea-events .panel-body .field-name-field-dates {
+  margin-bottom: 10px;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+  background-color: #ebebeb !important;
+}
+
+/* sidebar-right below 1199px */
+/* The sidebar right and the social media icons */
+/*@media {max-width:1199px;}
+
+  #block-block-2 .panel-body .content a{
+    padding-right: 20px;
+  }
+}*/
+/* Bring back me titles specific to front and news pages */
+#content-wrapper #page-title,
+#content-wrapper h1 {
+  display: inline !important;
+  color: #0065a2;
+}
+
+.node-type-news #content-wrapper #page-title,
+.node-type-news #content-wrapper h1 {
+  color: #000;
+}
+
+.front #content-wrapper #page-title,
+.front #content-wrapper h1 {
+  display: none !important;
+  font-weight: bold;
+}
+
+/* FRONT PAGE CURRENT - SPACING/MARGIN IN HEADER -lang selector and search block */
+/* .front .region-header-top #language-selector,
+.region-header-right #search-block-form .input-group  {
+  margin-right: 0 !important;
+}
+.front div.block.social-media div.content p {
+  margin: 0 0 !important;
+}
+.front .region-sidebar-right {
+  margin-top: 0 !important;
+}*/
+
+/* hide pdf icon on non h2020 projects */
+.node-type-project .print-pdf {
+  display: none;
+}
+
+/* CEF Project Image gallery positioning */
+.node-type-project .field-name-field-project-picture-gallery {
+  float: left;
+  margin-right: 2%;
+  margin-top: 2%;
+  width: 55%;
+}

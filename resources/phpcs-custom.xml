@@ -16,5 +16,8 @@
 
     <!-- Exclude inea_migration, code will be removed in next release. -->
     <exclude-pattern>**/inea_migration</exclude-pattern>
+
+    <!-- Exclude EC-Europa theme assets folder. -->
+    <exclude-pattern>**/lib/themes/ineaeur/assets</exclude-pattern>
 </ruleset>
 

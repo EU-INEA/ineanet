@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_h2020_import_final.feeds_importer_default.inc
@@ -26,6 +27,7 @@ function inea_h2020_import_final_feeds_importer_default() {
         'allowed_schemes' => array(
           'public' => 'public',
         ),
+        'delete_uploaded_file' => FALSE,
       ),
     ),
     'parser' => array(
@@ -33,19 +35,21 @@ function inea_h2020_import_final_feeds_importer_default() {
       'config' => array(
         'delimiter' => ',',
         'no_headers' => 0,
+        'encoding' => 'UTF-8',
       ),
     ),
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
         'expire' => '-1',
-        'author' => 0,
+        'author' => '48',
         'authorize' => 0,
         'mappings' => array(
           0 => array(
             'source' => 'Programme Term',
             'target' => 'field_inea_h2020_programme',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'Project Number',
@@ -69,6 +73,7 @@ function inea_h2020_import_final_feeds_importer_default() {
             'source' => 'Project Acronym',
             'target' => 'title',
             'unique' => 1,
+            'language' => 'und',
           ),
           5 => array(
             'source' => 'Project Title',
@@ -116,6 +121,7 @@ function inea_h2020_import_final_feeds_importer_default() {
             'source' => 'Field Term',
             'target' => 'field_inea_h2020_project_field',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           13 => array(
             'source' => 'Project Acronym',
@@ -127,15 +133,23 @@ function inea_h2020_import_final_feeds_importer_default() {
             'source' => 'Summary',
             'target' => 'field_inea_h2020_short_summary',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           15 => array(
             'source' => 'Project Abstract',
             'target' => 'field_inea_h2020_abstract',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           16 => array(
             'source' => 'Cordis Link',
             'target' => 'field_inea_h2020_cordis_url:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          17 => array(
+            'source' => 'Project website',
+            'target' => 'field_inea_h2020_url:url',
             'unique' => FALSE,
             'language' => 'und',
           ),
@@ -145,6 +159,8 @@ function inea_h2020_import_final_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 1,
         'bundle' => 'h2020_project',
+        'insert_new' => '0',
+        'language' => 'und',
       ),
     ),
     'content_type' => '',

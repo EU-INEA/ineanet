@@ -257,7 +257,7 @@ div#content-wrapper div.node pre a {
   }
 }
 
-/*(newsroom) images in chrome */
+/*(newsroom) images in chrome. */
 td.views-field.views-field-field-term-image {
   min-width: 100px;
 }
