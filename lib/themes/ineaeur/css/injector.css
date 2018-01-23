@@ -138,8 +138,8 @@ div#content-wrapper div.node ul li {
   font-size: 14px !important;
 }
 
-td p,
-a {
+.content td p,
+.content a {
   font-size: 14px !important;
 }
 
