@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_cef_project_content_type.features.field_instance.inc
@@ -30,7 +29,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -110,7 +109,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -200,7 +199,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -270,16 +269,15 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 36,
       ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -360,7 +358,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -398,7 +396,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'print' => array(
         'label' => 'above',
@@ -487,7 +485,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -535,7 +533,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -575,7 +573,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'print' => array(
         'label' => 'above',
@@ -654,13 +652,13 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 30,
       ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -704,7 +702,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'print' => array(
         'label' => 'above',
@@ -760,7 +758,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'bundle' => 'inea_cef_project',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'ONLY for Telecom projects. "Call" field in GA ',
+    'description' => 'ONLY for Telecom projects. "Call" field in GA',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -777,7 +775,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -829,7 +827,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -867,7 +865,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'print' => array(
         'label' => 'above',
@@ -946,7 +944,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'print' => array(
         'label' => 'above',
@@ -1031,7 +1029,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1095,7 +1093,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1169,7 +1167,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 12,
+        'weight' => 5,
       ),
       'print' => array(
         'label' => 'above',
@@ -1179,7 +1177,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 12,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1220,7 +1218,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'print' => array(
         'label' => 'above',
@@ -1300,7 +1298,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'print' => array(
         'label' => 'above',
@@ -1356,7 +1354,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1457,7 +1455,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1591,7 +1589,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1670,7 +1668,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1737,16 +1735,15 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 35,
       ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1808,7 +1805,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
