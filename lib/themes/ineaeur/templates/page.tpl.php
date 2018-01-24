@@ -327,10 +327,15 @@ global $base_url;
           <div class="ecl-col-sm ecl-footer__column">
 
             <h4 class="ecl-h4">
-              <a class="ecl-link ecl-footer__link" href="#">Digital single
+              <a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/commission/priorities/digital-single-market_en">Digital single
                 market</a>
             </h4>
-
+            <h4 class="ecl-h4">
+              <a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/commission/priorities/jobs-growth-and-investment_en">Jobs, growth and investment</a>
+            </h4>
+            <h4 class="ecl-h4">
+              <a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/commission/priorities/energy-union-and-climate_en">Energy union and climate</a>
+            </h4>
           </div>
           <div class="ecl-col-sm ecl-footer__column">
 
@@ -348,9 +353,15 @@ global $base_url;
                    href="https://twitter.com/inea_eu"><span
                     class="ecl-icon ecl-icon--twitter"></span>Twitter</a>
               </li>
+            </ul>
+            <ul class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
               <li class="ecl-footer__menu-item">
                 <a class="ecl-link ecl-footer__link ecl-link--external"
-                   href="#">Other social media</a>
+                   href="https://ec.europa.eu/commission/priorities/internal-market_en">Internal Market</a>
+              </li>
+              <li class="ecl-footer__menu-item">
+                <a class="ecl-link ecl-footer__link ecl-link--external"
+                   href="https://ec.europa.eu/commission/priorities/stronger-global-actor_en">A stronger global actor</a>
               </li>
             </ul>
           </div>

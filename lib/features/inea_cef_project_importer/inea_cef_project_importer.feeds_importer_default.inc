@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_cef_project_importer.feeds_importer_default.inc
@@ -214,7 +215,7 @@ function inea_cef_project_importer_feeds_importer_default() {
           ),
           26 => array(
             'source' => 'EXEC_SUM',
-            'target' => 'field_pub_link:url',
+            'target' => 'field_cef_executive_summary:url',
             'unique' => FALSE,
           ),
         ),
