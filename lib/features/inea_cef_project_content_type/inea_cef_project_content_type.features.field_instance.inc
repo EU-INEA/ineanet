@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * inea_cef_project_content_type.features.field_instance.inc
@@ -508,6 +509,52 @@ function inea_cef_project_content_type_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-inea_cef_project-field_cef_executive_summary'.
+  $field_instances['node-inea_cef_project-field_cef_executive_summary'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 37,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cef_executive_summary',
+    'label' => 'CEF executive summary',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 25,
     ),
   );
 
@@ -1726,68 +1773,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-inea_cef_project-field_pub_link'.
-  $field_instances['node-inea_cef_project-field_pub_link'] = array(
-    'bundle' => 'inea_cef_project',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 35,
-      ),
-      'print' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 29,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_pub_link',
-    'label' => 'Executive Summary',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 23,
-    ),
-  );
-
   // Exported field_instance: 'node-inea_cef_project-field_tag_transport_mode'.
   $field_instances['node-inea_cef_project-field_tag_transport_mode'] = array(
     'bundle' => 'inea_cef_project',
@@ -2518,6 +2503,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Beneficiaries');
   t('CEF 3rd Cntry');
   t('CEF Transport mode');
+  t('CEF executive summary');
   t('CEF publish');
   t('Call year');
   t('Cef map');
@@ -2527,7 +2513,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Energy Corridor');
   t('Energy sector');
   t('Estimated total cost');
-  t('Executive Summary');
   t('Horizontal priorities - not the same as transport mode');
   t('Horizontal priority');
   t('Image');
