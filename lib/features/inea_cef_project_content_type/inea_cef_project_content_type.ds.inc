@@ -19,7 +19,7 @@ function inea_cef_project_content_type_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '22',
+      'weight' => '24',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -91,14 +91,17 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
         16 => 'field_cef_energy_sector',
         17 => 'field_cef_pci',
         18 => 'changed_date',
+        19 => 'field_cef_executive_summary',
+        20 => 'field_cef_additional_info',
+        25 => 'field_testfield',
       ),
       'right' => array(
-        19 => 'field_cef_action_code',
-        20 => 'field_inea_cef_map',
-        21 => 'field_project_description',
+        21 => 'field_cef_action_code',
+        22 => 'field_inea_cef_map',
+        23 => 'field_project_description',
       ),
       'footer' => array(
-        22 => 'comments',
+        24 => 'comments',
       ),
     ),
     'fields' => array(
@@ -121,10 +124,13 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
       'field_cef_energy_sector' => 'left',
       'field_cef_pci' => 'left',
       'changed_date' => 'left',
+      'field_cef_executive_summary' => 'left',
+      'field_cef_additional_info' => 'left',
       'field_cef_action_code' => 'right',
       'field_inea_cef_map' => 'right',
       'field_project_description' => 'right',
       'comments' => 'footer',
+      'field_testfield' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(

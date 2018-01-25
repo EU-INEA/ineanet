@@ -103,7 +103,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'print' => array(
         'label' => 'above',
@@ -270,9 +270,10 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 36,
+        'type' => 'text_default',
+        'weight' => 20,
       ),
       'print' => array(
         'label' => 'above',
@@ -522,10 +523,14 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 37,
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 19,
       ),
       'print' => array(
         'label' => 'above',
@@ -579,7 +584,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -734,7 +739,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 32,
       ),
       'print' => array(
         'label' => 'above',
@@ -1105,7 +1110,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 33,
       ),
       'print' => array(
         'label' => 'above',
@@ -1159,7 +1164,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'colorbox_node_style_first' => '',
         ),
         'type' => 'colorbox',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1430,7 +1435,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 36,
       ),
       'print' => array(
         'label' => 'above',
@@ -1664,7 +1669,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1744,7 +1749,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 35,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1819,7 +1824,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 34,
       ),
       'print' => array(
         'label' => 'above',
