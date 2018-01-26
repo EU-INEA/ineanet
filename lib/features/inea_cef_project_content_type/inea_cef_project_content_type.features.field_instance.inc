@@ -547,7 +547,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_executive_summary',
-    'label' => 'CEF executive summary',
+    'label' => 'Executive summary',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -2543,7 +2543,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Beneficiaries');
   t('CEF 3rd Cntry');
   t('CEF Transport mode');
-  t('CEF executive summary');
   t('CEF publish');
   t('Call year');
   t('Cef map');
@@ -2553,6 +2552,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Energy Corridor');
   t('Energy sector');
   t('Estimated total cost');
+  t('Executive summary');
   t('Horizontal priorities - not the same as transport mode');
   t('Horizontal priority');
   t('Image');
