@@ -3,11 +3,6 @@
 <ruleset name="INEA">
     <description>Custom ruleset for subsite usage.</description>
 
-    <!-- Views handlers not strictly follow Drupal class name conventions. -->
-    <rule ref="Drupal.Semantics.FunctionT.WhiteSpace">
-        <exclude-pattern>**/inea_h2020_ct.features.field_instance.inc</exclude-pattern>
-    </rule>
-
     <!-- Temporary fix to get green report -->
     <rule ref="QualityAssurance.Generic.EmptySettings.Strongarm">
         <exclude-pattern>**/inea_cef_project_content_type.strongarm.inc</exclude-pattern>
