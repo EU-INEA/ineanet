@@ -133,14 +133,9 @@ div#content-wrapper div.node ul li {
   padding: 0;
 }
 
-/* Global changes from 12px to 14px plus Changes to Ten-Tec projects */
-.page-node-1595 td p,
-.page-node-1595 a {
-  font-size: 14px !important;
-}
-
-td p,
-a {
+/* Global changes from 12px to 14px */
+.content td p,
+.content a {
   font-size: 14px !important;
 }
 

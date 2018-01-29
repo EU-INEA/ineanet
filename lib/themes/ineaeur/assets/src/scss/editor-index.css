@@ -4,14 +4,14 @@ Error: File to import not found or unreadable: node_modules/@ec-europa/ecl-base.
 
 1: // Import normalize.css
 2: @import-normalize;
-3: 
+3:
 4: // Core variables, mixins and reset
 5: @import 'node_modules/@ec-europa/ecl-base';
 6: @import 'node_modules/@ec-europa/ecl-base/reset';
-7: 
+7:
 8: // Icons & Images
 9: @import 'node_modules/@ec-europa/ecl-icons';
-10: 
+10:
 
 Backtrace:
 editor-index.scss:5
@@ -57,4 +57,5 @@ editor-index.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: node_modules/@ec-europa/ecl-base.\A         on line 5 of editor-index.scss\A \A 1: // Import normalize.css\A 2: @import-normalize;\A 3: \A 4: // Core variables, mixins and reset\A 5: @import 'node_modules/@ec-europa/ecl-base';\A 6: @import 'node_modules/@ec-europa/ecl-base/reset';\A 7: \A 8: // Icons & Images\A 9: @import 'node_modules/@ec-europa/ecl-icons';\A 10: "; }
+  content: "Error: File to import not found or unreadable: node_modules/@ec-europa/ecl-base.\A         on line 5 of editor-index.scss\A \A 1: // Import normalize.css\A 2: @import-normalize;\A 3: \A 4: // Core variables, mixins and reset\A 5: @import 'node_modules/@ec-europa/ecl-base';\A 6: @import 'node_modules/@ec-europa/ecl-base/reset';\A 7: \A 8: // Icons & Images\A 9: @import 'node_modules/@ec-europa/ecl-icons';\A 10: ";
+}

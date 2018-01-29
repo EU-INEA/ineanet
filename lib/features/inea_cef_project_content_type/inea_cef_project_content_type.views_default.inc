@@ -1999,7 +1999,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'You can see below the Actions supported by the CEF for each corridor. The entire list of PCIs is available here.';
+  $handler->display->display_options['header']['area']['content'] = 'You can see below the Actions supported by the CEF for each corridor. The entire list of PCIs is available.</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Taxonomy term: cef term Image */

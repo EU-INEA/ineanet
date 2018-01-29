@@ -108,357 +108,372 @@ global $base_url;
 
 <header class="ecl-site-header" role="banner">
 
-  <div class="ecl-container">
+    <div class="ecl-container">
 
-    <nav class="ecl-navigation-list-wrapper ecl-u-f-r">
-      <h2 class="ecl-u-sr-only">User menu</h2>
-      <ul class="ecl-navigation-list ecl-navigation-list--small">
-        <li class="ecl-navigation-list__item">
-          <a class="ecl-navigation-list__link ecl-link" href="#">My
-            workbench</a>
-        </li>
-        <li class="ecl-navigation-list__item">
-          <a class="ecl-navigation-list__link ecl-link" href="#">My account</a>
-        </li>
-        <li class="ecl-navigation-list__item">
-          <a class="ecl-navigation-list__link ecl-link" href="#">Log out</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+        <nav class="ecl-navigation-list-wrapper ecl-u-f-r">
+            <h2 class="ecl-u-sr-only">User menu</h2>
+            <ul class="ecl-navigation-list ecl-navigation-list--small">
+                <li class="ecl-navigation-list__item">
+                    <a class="ecl-navigation-list__link ecl-link" href="#">My
+                        workbench</a>
+                </li>
+                <li class="ecl-navigation-list__item">
+                    <a class="ecl-navigation-list__link ecl-link" href="#">My
+                        account</a>
+                </li>
+                <li class="ecl-navigation-list__item">
+                    <a class="ecl-navigation-list__link ecl-link" href="#">Log
+                        out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-  <div class="ecl-site-switcher ecl-site-switcher--header">
-    <ul class="ecl-site-switcher__list ecl-container">
-      <li class="ecl-site-switcher__option"><a
-          class="ecl-link ecl-site-switcher__link" href="#">Commission and its
-          priorities</a></li>
-      <li
-        class="ecl-site-switcher__option ecl-site-switcher__option--is-selected">
-        <a class="ecl-link ecl-site-switcher__link" href="#">Policies,
-          information and services</a></li>
-    </ul>
-  </div>
+    <div class="ecl-site-switcher ecl-site-switcher--header">
+        <ul class="ecl-site-switcher__list ecl-container">
+            <li class="ecl-site-switcher__option"><a
+                        class="ecl-link ecl-site-switcher__link" href="#">Commission
+                    and its
+                    priorities</a></li>
+            <li
+                    class="ecl-site-switcher__option ecl-site-switcher__option--is-selected">
+                <a class="ecl-link ecl-site-switcher__link" href="#">Policies,
+                    information and services</a></li>
+        </ul>
+    </div>
 
-  <div class="ecl-container ecl-site-header__banner">
+    <div class="ecl-container ecl-site-header__banner">
 
-    <a href="https://ec.europa.eu"
-       class="ecl-logo ecl-logo--logotype ecl-site-header__logo"
-       title="Home - European Commission">
-      <!--      <span class="ecl-u-sr-only">Home - European Commission</span>-->
-      <img alt="European Commission logo" id="banner-flag"
-           src="<?php print $logo; ?>"/>
-    </a>
+        <a href="https://ec.europa.eu"
+           class="ecl-logo ecl-logo--logotype ecl-site-header__logo"
+           title="Home - European Commission">
+            <!--      <span class="ecl-u-sr-only">Home - European Commission</span>-->
+            <img alt="European Commission logo" id="banner-flag"
+                 src="<?php print $logo; ?>"/>
+        </a>
 
-    <div class="ecl-lang-select-sites ecl-site-header__lang-select-sites">
-      <a href="#" class="ecl-lang-select-sites__link">
-        <span class="ecl-lang-select-sites__label">English</span>
-        <span class="ecl-lang-select-sites__code">
+        <div class="ecl-lang-select-sites ecl-site-header__lang-select-sites">
+            <a href="#" class="ecl-lang-select-sites__link">
+                <span class="ecl-lang-select-sites__label">English</span>
+                <span class="ecl-lang-select-sites__code">
       <span
-        class="ecl-icon ecl-icon--language ecl-lang-select-sites__icon"></span>
+              class="ecl-icon ecl-icon--language ecl-lang-select-sites__icon"></span>
       <span class="ecl-lang-select-sites__code-text">en</span>
     </span>
-      </a>
+            </a>
+        </div>
+
+        <form class="ecl-search-form ecl-site-header__search">
+            <label class="ecl-search-form__textfield-wrapper">
+                <span class="ecl-u-sr-only">Search this website</span>
+
+                <input
+                        type="search"
+                        class="ecl-text-input ecl-search-form__textfield"
+                        id="global-search"
+                        name="default-name"
+
+                />
+            </label>
+
+            <button class="ecl-button ecl-button--form ecl-search-form__button"
+                    type="submit">Search
+            </button>
+        </form>
     </div>
 
-    <form class="ecl-search-form ecl-site-header__search">
-      <label class="ecl-search-form__textfield-wrapper">
-        <span class="ecl-u-sr-only">Search this website</span>
+    <div
+            class="region-featured-wrapper <?php print ($has_responsive_sidebar ? 'sidebar-visible-sm' : ''); ?>">
+      <?php if ($menu_visible || $has_responsive_sidebar): ?>
+          <div class="mobile-user-bar navbar navbar-default visible-xs"
+               data-spy="affix" data-offset-top="82">
+              <div class="container">
 
-        <input
-          type="search"
-          class="ecl-text-input ecl-search-form__textfield"
-          id="global-search"
-          name="default-name"
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header" data-spy="affix"
+                       data-offset-top="165">
+                    <?php if ($menu_visible): ?>
+                        <button id="menu-button" type="button"
+                                class="navbar-toggle"
+                                data-toggle="collapse"
+                                data-target=".navbar-ex1-collapse">
+                            <div class="arrow-down"></div>
+                        </button>
+                    <?php endif; ?>
 
-        />
-      </label>
+                    <?php if ($has_responsive_sidebar): ?>
+                        <div class="sidebar-button-wrapper">
+                            <button class="sidebar-button">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                  </div>
+              </div><!-- /.container -->
+          </div><!-- /.navbar -->
+      <?php endif; ?>
 
-      <button class="ecl-button ecl-button--form ecl-search-form__button"
-              type="submit">Search
-      </button>
-    </form>
-  </div>
+      <?php print $regions['featured']; ?>
 
-  <div
-    class="region-featured-wrapper <?php print ($has_responsive_sidebar ? 'sidebar-visible-sm' : ''); ?>">
-    <?php if ($menu_visible || $has_responsive_sidebar): ?>
-      <div class="mobile-user-bar navbar navbar-default visible-xs"
-           data-spy="affix" data-offset-top="82">
-        <div class="container">
-
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header" data-spy="affix" data-offset-top="165">
-            <?php if ($menu_visible): ?>
-              <button id="menu-button" type="button" class="navbar-toggle"
-                      data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <div class="arrow-down"></div>
-              </button>
-            <?php endif; ?>
-
-            <?php if ($has_responsive_sidebar): ?>
-              <div class="sidebar-button-wrapper">
-                <button class="sidebar-button">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-            <?php endif; ?>
-          </div>
-        </div><!-- /.container -->
-      </div><!-- /.navbar -->
-    <?php endif; ?>
-
-    <?php print $regions['featured']; ?>
-
-  </div>
+    </div>
 
   <?php if ($has_responsive_sidebar): ?>
-    <div id="responsive-sidebar">
-      <div id="responsive-header-right"></div>
-      <div id="responsive-sidebar-left"></div>
-      <div id="responsive-sidebar-right"></div>
-    </div><!-- /#responsive-sidebar-->
+      <div id="responsive-sidebar">
+          <div id="responsive-header-right"></div>
+          <div id="responsive-sidebar-left"></div>
+          <div id="responsive-sidebar-right"></div>
+      </div><!-- /#responsive-sidebar-->
   <?php endif; ?>
 
-  <div id="layout-body" class="container">
-    <div class="row">
+    <div id="layout-body" class="container">
+        <div class="row">
 
-      <div
-        class="col-lg-<?php print $cols['tools']['lg']; ?> col-md-<?php print $cols['tools']['md']; ?> col-sm-<?php print $cols['tools']['sm']; ?> col-xs-<?php print $cols['tools']['xs']; ?>">
-        <?php print $regions['tools']; ?>
-      </div>
-    </div>
-
-    <?php if ($messages): ?>
-      <div id="messages">
-        <?php print $messages; ?>
-      </div><!-- /#messages -->
-    <?php endif; ?>
-
-    <div class="row">
-      <?php if ($regions['sidebar_left']): ?>
-        <div id="sidebar-left"
-             class="col-lg-<?php print ($cols['sidebar_left']['lg']); ?> col-md-<?php print ($cols['sidebar_left']['md']); ?> col-sm-<?php print ($cols['sidebar_left']['sm']); ?> col-xs-<?php print ($cols['sidebar_left']['xs']); ?> sidebar-left visible-lg visible-md">
-          <?php print $regions['sidebar_left']; ?>
+            <div
+                    class="col-lg-<?php print $cols['tools']['lg']; ?> col-md-<?php print $cols['tools']['md']; ?> col-sm-<?php print $cols['tools']['sm']; ?> col-xs-<?php print $cols['tools']['xs']; ?>">
+              <?php print $regions['tools']; ?>
+            </div>
         </div>
+
+      <?php if ($messages): ?>
+          <div id="messages">
+            <?php print $messages; ?>
+          </div><!-- /#messages -->
       <?php endif; ?>
-
-      <div id="content-wrapper"
-           class="col-lg-<?php print $cols['content_main']['lg']; ?> col-md-<?php print $cols['content_main']['md']; ?> col-sm-<?php print $cols['content_main']['sm']; ?> col-md-<?php print $cols['content_main']['xs']; ?>">
-
-        <a id="content"></a>
-
-        <?php print render($title_prefix); ?>
-
-        <?php if ($title): ?>
-          <h1
-            class="col-lg-<?php print $cols['title']['lg']; ?> col-md-<?php print $cols['title']['md']; ?> col-sm-<?php print $cols['title']['sm']; ?> col-xs-<?php print $cols['title']['xs']; ?> <?php print $page_type; ?>-title"
-            id="page-title">
-            <?php if ($title_image): ?>
-              <?php print $title_image; ?>
-            <?php endif; ?>
-            <?php print $title; ?>
-          </h1>
-        <?php endif; ?>
-
-        <?php print render($title_suffix); ?>
-
-        <?php print $regions['content_top']; ?>
-
-        <a id="main-content"></a>
-
-        <?php if ($tabs): ?>
-          <div class="tabs">
-            <?php print render($tabs); ?>
-          </div>
-        <?php endif; ?>
-
-        <?php print $regions['help']; ?>
-
-        <?php if ($action_links): ?>
-          <ul class="action-links">
-            <?php print render($action_links); ?>
-          </ul>
-        <?php endif; ?>
 
         <div class="row">
-          <div
-            class="col-lg-<?php print $cols['content']['lg']; ?> col-md-<?php print $cols['content']['md']; ?> col-sm-<?php print $cols['content']['sm']; ?> col-xs-<?php print $cols['content']['xs']; ?>  <?php print $page_type; ?>">
-            <?php print $regions['content']; ?>
-          </div>
+          <?php if ($regions['sidebar_left']): ?>
+              <div id="sidebar-left"
+                   class="col-lg-<?php print ($cols['sidebar_left']['lg']); ?> col-md-<?php print ($cols['sidebar_left']['md']); ?> col-sm-<?php print ($cols['sidebar_left']['sm']); ?> col-xs-<?php print ($cols['sidebar_left']['xs']); ?> sidebar-left visible-lg visible-md">
+                <?php print $regions['sidebar_left']; ?>
+              </div>
+          <?php endif; ?>
 
-          <div
-            class="col-lg-<?php print $cols['content_right']['lg']; ?> col-md-<?php print $cols['content_right']['md']; ?> col-sm-<?php print $cols['content_right']['sm']; ?> col-xs-<?php print $cols['content_right']['xs']; ?>">
-            <?php print $regions['content_right']; ?>
-          </div>
+            <div id="content-wrapper"
+                 class="col-lg-<?php print $cols['content_main']['lg']; ?> col-md-<?php print $cols['content_main']['md']; ?> col-sm-<?php print $cols['content_main']['sm']; ?> col-md-<?php print $cols['content_main']['xs']; ?>">
+
+                <a id="content"></a>
+
+              <?php print render($title_prefix); ?>
+
+              <?php if ($title): ?>
+                  <h1
+                          class="col-lg-<?php print $cols['title']['lg']; ?> col-md-<?php print $cols['title']['md']; ?> col-sm-<?php print $cols['title']['sm']; ?> col-xs-<?php print $cols['title']['xs']; ?> <?php print $page_type; ?>-title"
+                          id="page-title">
+                    <?php if ($title_image): ?>
+                      <?php print $title_image; ?>
+                    <?php endif; ?>
+                    <?php print $title; ?>
+                  </h1>
+              <?php endif; ?>
+
+              <?php print render($title_suffix); ?>
+
+              <?php print $regions['content_top']; ?>
+
+                <a id="main-content"></a>
+
+              <?php if ($tabs): ?>
+                  <div class="tabs">
+                    <?php print render($tabs); ?>
+                  </div>
+              <?php endif; ?>
+
+              <?php print $regions['help']; ?>
+
+              <?php if ($action_links): ?>
+                  <ul class="action-links">
+                    <?php print render($action_links); ?>
+                  </ul>
+              <?php endif; ?>
+
+                <div class="row">
+                    <div
+                            class="col-lg-<?php print $cols['content']['lg']; ?> col-md-<?php print $cols['content']['md']; ?> col-sm-<?php print $cols['content']['sm']; ?> col-xs-<?php print $cols['content']['xs']; ?>  <?php print $page_type; ?>">
+                      <?php print $regions['content']; ?>
+                    </div>
+
+                    <div
+                            class="col-lg-<?php print $cols['content_right']['lg']; ?> col-md-<?php print $cols['content_right']['md']; ?> col-sm-<?php print $cols['content_right']['sm']; ?> col-xs-<?php print $cols['content_right']['xs']; ?>">
+                      <?php print $regions['content_right']; ?>
+                    </div>
+                </div>
+
+              <?php print $feed_icons; ?>
+
+              <?php print $regions['content_bottom']; ?>
+            </div>
+
+            <div class="clearfix visible-sm visible-xs"></div>
+          <?php if ($cols['sidebar_right']['md'] == 12): ?>
+              <div class="clearfix visible-md"></div>
+          <?php endif; ?>
+
+          <?php if ($regions['sidebar_right']): ?>
+              <div id="sidebar-right"
+                   class="col-lg-<?php print ($cols['sidebar_right']['lg']); ?> col-md-<?php print ($cols['sidebar_right']['md']); ?> col-sm-<?php print ($cols['sidebar_right']['sm']); ?> col-xs-<?php print ($cols['sidebar_right']['xs']); ?> sidebar-right visible-lg visible-md">
+                <?php print $regions['sidebar_right']; ?>
+              </div>
+          <?php endif; ?>
         </div>
-
-        <?php print $feed_icons; ?>
-
-        <?php print $regions['content_bottom']; ?>
-      </div>
-
-      <div class="clearfix visible-sm visible-xs"></div>
-      <?php if ($cols['sidebar_right']['md'] == 12): ?>
-        <div class="clearfix visible-md"></div>
-      <?php endif; ?>
-
-      <?php if ($regions['sidebar_right']): ?>
-        <div id="sidebar-right"
-             class="col-lg-<?php print ($cols['sidebar_right']['lg']); ?> col-md-<?php print ($cols['sidebar_right']['md']); ?> col-sm-<?php print ($cols['sidebar_right']['sm']); ?> col-xs-<?php print ($cols['sidebar_right']['xs']); ?> sidebar-right visible-lg visible-md">
-          <?php print $regions['sidebar_right']; ?>
+        <div class="row">
+          <?php if ($regions['site_bottom']): ?>
+              <div id="site-bottom"
+                   class="col-lg-12 col-md-12 col-sm-12 col-xs-12 site-bottom visible-lg visible-md">
+                <?php print $regions['site_bottom']; ?>
+              </div>
+          <?php endif; ?>
         </div>
-      <?php endif; ?>
     </div>
-    <div class="row">
-      <?php if ($regions['site_bottom']): ?>
-        <div id="site-bottom"
-             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 site-bottom visible-lg visible-md">
-          <?php print $regions['site_bottom']; ?>
+    <footer class="ecl-footer">
+        <div class="ecl-footer__site-identity">
+            <div class="ecl-container">
+                <div class="ecl-row">
+                    <div class="ecl-col-sm ecl-footer__column">
+
+                        <ul class="ecl-footer__menu">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://ec.europa.eu/commission/priorities/digital-single-market_en">Digital single                                   single
+                                    market</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://ec.europa.eu/commission/priorities/energy-union-and-climate_en">Energy
+                                    union and climate</a>
+                            </li>
+
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://ec.europa.eu/commission/priorities/jobs-growth-and-investment_en">Jobs,
+                                    growth and investment</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ecl-col-sm ecl-footer__column">
+                        <ul class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://www.linkedin.com/company/3034908/"><span
+                                            class="ecl-icon ecl-icon--linkedin"></span>LinkedIn</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://twitter.com/inea_eu"><span
+                                            class="ecl-icon ecl-icon--twitter"></span>Twitter</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="ecl-col-sm ecl-footer__column">
+
+                        <ul class="ecl-footer__menu ecl-list--unstyled">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="mission-objectives/contact-us">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      <?php endif; ?>
-    </div>
-  </div>
-  <footer class="ecl-footer">
-    <div class="ecl-footer__site-identity">
-      <div class="ecl-container">
-        <div class="ecl-row">
-          <div class="ecl-col-sm ecl-footer__column">
+        <div class="ecl-footer__site-corporate">
+            <div class="ecl-container">
+                <div class="ecl-row">
+                    <div class="ecl-col-sm ecl-footer__column">
 
-            <h4 class="ecl-h4">
-              <a class="ecl-link ecl-footer__link" href="#">Digital single
-                market</a>
-            </h4>
+                        <h4 class="ecl-h4 ecl-footer__title">European
+                            Commission</h4>
 
-          </div>
-          <div class="ecl-col-sm ecl-footer__column">
+                        <ul class="ecl-footer__menu">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://ec.europa.eu/commission/index_en">Commission
+                                    and its priorities</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="https://ec.europa.eu/info/index_en">Policies
+                                    information and services</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ecl-col-sm ecl-footer__column">
 
-            <p class="ecl-footer__label">Follow us:</p>
+                        <h4 class="ecl-h4 ecl-footer__title">Follow the European
+                            Commission</h4>
 
-            <ul
-              class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="https://www.linkedin.com/company/3034908/"><span
-                    class="ecl-icon ecl-icon--linkedin"></span>LinkedIn</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="https://twitter.com/inea_eu"><span
-                    class="ecl-icon ecl-icon--twitter"></span>Twitter</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link ecl-link--external"
-                   href="#">Other social media</a>
-              </li>
-            </ul>
-          </div>
-          <div class="ecl-col-sm ecl-footer__column">
+                        <ul
+                                class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="#"><span
+                                            class="ecl-icon ecl-icon--linkedin ecl-footer__social-icon"></span>LinkedIn</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="#"><span
+                                            class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link ecl-link--external"
+                                   href="#">Other social media</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ecl-col-sm ecl-footer__column">
 
-            <ul class="ecl-footer__menu ecl-list--unstyled">
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link" href="#">Contact</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link" href="#">Site map</a>
-              </li>
-            </ul>
-          </div>
+                        <h4 class="ecl-h4 ecl-footer__title">European Union</h4>
+
+                        <ul class="ecl-footer__menu">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link ecl-link--external"
+                                   href="#">EU institutions</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link ecl-link--external"
+                                   href="#">European Union</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="ecl-footer__site-corporate">
-      <div class="ecl-container">
-        <div class="ecl-row">
-          <div class="ecl-col-sm ecl-footer__column">
+        <div class="ecl-footer__ec">
+            <div class="ecl-container">
+                <div class="ecl-row">
+                    <div class="ecl-col-sm ">
 
-            <h4 class="ecl-h4 ecl-footer__title">European Commission</h4>
-
-            <ul class="ecl-footer__menu">
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="https://ec.europa.eu/commission/index_en">Commission
-                  and its priorities</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="https://ec.europa.eu/info/index_en">Policies
-                  information and services</a>
-              </li>
-            </ul>
-          </div>
-          <div class="ecl-col-sm ecl-footer__column">
-
-            <h4 class="ecl-h4 ecl-footer__title">Follow the European
-              Commission</h4>
-
-            <ul
-              class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link" href="#"><span
-                    class="ecl-icon ecl-icon--linkedin ecl-footer__social-icon"></span>LinkedIn</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link" href="#"><span
-                    class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link ecl-link--external"
-                   href="#">Other social media</a>
-              </li>
-            </ul>
-          </div>
-          <div class="ecl-col-sm ecl-footer__column">
-
-            <h4 class="ecl-h4 ecl-footer__title">European Union</h4>
-
-            <ul class="ecl-footer__menu">
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link ecl-link--external"
-                   href="#">EU institutions</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link ecl-link--external"
-                   href="#">European Union</a>
-              </li>
-            </ul>
-          </div>
+                        <ul class="ecl-list--inline ecl-footer__menu">
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="http://ec.europa.eu/info/about-commissions-new-web-presence_en">About
+                                    the Commission's new web presence</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="http://ec.europa.eu/info/resources-partners_en">Resources
+                                    for partners</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="http://ec.europa.eu/info/cookies_en">Cookies</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="http://ec.europa.eu/info/legal-notice_en">Legal
+                                    notice</a>
+                            </li>
+                            <li class="ecl-footer__menu-item">
+                                <a class="ecl-link ecl-footer__link"
+                                   href="http://ec.europa.eu/info/contact_en">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="ecl-footer__ec">
-      <div class="ecl-container">
-        <div class="ecl-row">
-          <div class="ecl-col-sm ">
-
-            <ul class="ecl-list--inline ecl-footer__menu">
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="http://ec.europa.eu/info/about-commissions-new-web-presence_en">About
-                  the Commission's new web presence</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="http://ec.europa.eu/info/resources-partners_en">Resources
-                  for partners</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="http://ec.europa.eu/info/cookies_en">Cookies</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="http://ec.europa.eu/info/legal-notice_en">Legal
-                  notice</a>
-              </li>
-              <li class="ecl-footer__menu-item">
-                <a class="ecl-link ecl-footer__link"
-                   href="http://ec.europa.eu/info/contact_en">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
