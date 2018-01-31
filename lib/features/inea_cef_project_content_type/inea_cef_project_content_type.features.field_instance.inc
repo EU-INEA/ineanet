@@ -121,7 +121,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_action_code',
-    'label' => 'Project number',
+    'label' => 'Action number',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -129,6 +129,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'basic_html' => 'basic_html',
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'full_html_track' => 0,
           'plain_text' => 'plain_text',
           'wiki' => 'wiki',
         ),
@@ -144,6 +145,9 @@ function inea_cef_project_content_type_field_default_field_instances() {
             ),
             'full_html' => array(
               'weight' => -10,
+            ),
+            'full_html_track' => array(
+              'weight' => -9,
             ),
             'plain_text' => array(
               'weight' => -8,
@@ -161,8 +165,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -327,7 +329,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1151,7 +1153,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'colorbox',
         'settings' => array(
           'colorbox_caption' => 'auto',
@@ -1323,7 +1325,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_inea_cef_participants',
-    'label' => 'Beneficiaries',
+    'label' => 'Other beneficiaries',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1331,6 +1333,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'basic_html' => 'basic_html',
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'full_html_track' => 0,
           'plain_text' => 'plain_text',
           'wiki' => 'wiki',
         ),
@@ -1346,6 +1349,9 @@ function inea_cef_project_content_type_field_default_field_instances() {
             ),
             'full_html' => array(
               'weight' => -10,
+            ),
+            'full_html_track' => array(
+              'weight' => -9,
             ),
             'plain_text' => array(
               'weight' => -8,
@@ -1363,8 +1369,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -2539,8 +2543,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Action Description');
   t('Action Title');
+  t('Action number');
   t('Additional information');
-  t('Beneficiaries');
   t('CEF 3rd Cntry');
   t('CEF Transport mode');
   t('CEF publish');
@@ -2562,9 +2566,9 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Member State(s)');
   t('ONLY for Telecom projects. "Call" field in GA');
   t('Old ID');
+  t('Other beneficiaries');
   t('Percentage of EU support');
   t('Programme');
-  t('Project number');
   t('Project(s) of Common Interest');
   t('Status');
   t('Summary');

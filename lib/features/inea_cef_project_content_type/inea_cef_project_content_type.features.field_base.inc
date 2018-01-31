@@ -92,7 +92,7 @@ function inea_cef_project_content_type_field_default_field_bases() {
     'locked' => 1,
     'module' => 'text',
     'settings' => array(
-      'max_length' => 255,
+      'max_length' => 500,
     ),
     'translatable' => 0,
     'type' => 'text',
