@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_cef_project_content_type.ds.inc
@@ -93,7 +92,6 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
         18 => 'changed_date',
         19 => 'field_cef_executive_summary',
         20 => 'field_cef_additional_info',
-        25 => 'field_testfield',
       ),
       'right' => array(
         21 => 'field_cef_action_code',
@@ -130,7 +128,6 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
       'field_inea_cef_map' => 'right',
       'field_project_description' => 'right',
       'comments' => 'footer',
-      'field_testfield' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
