@@ -197,6 +197,27 @@ function inea_cef_project_content_type_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_cef_participant_country'.
+  $field_bases['field_cef_participant_country'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_cef_participant_country',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_cef_pci'.
   $field_bases['field_cef_pci'] = array(
     'active' => 1,
