@@ -95,6 +95,7 @@ function inea_cef_project_content_type_field_group_info() {
       4 => 'field_inea_cef_eu_contrib',
       5 => 'field_inea_cef_eu_percent',
       6 => 'field_inea_cef_participants',
+      7 => 'field_cef_participant_country',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
