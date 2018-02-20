@@ -4,11 +4,11 @@
  * @file
  * Default theme implementation to display a printer-friendly version page.
  *
- * This file is akin to Drupal's page.tpl.php template. The contents being
+ * This file is akin to Drupal's page.tpl.php.bak template. The contents being
  * displayed are all included in the $content variable, while the rest of the
  * template focuses on positioning and theming the other page elements.
  *
- * All the variables available in the page.tpl.php template should also be
+ * All the variables available in the page.tpl.php.bak template should also be
  * available in this template. In addition to those, the following variables
  * defined by the print module(s) are available:
  *
@@ -63,7 +63,7 @@
  * @see theme_print_footer
  * @see theme_print_sourceurl
  * @see theme_print_url_list
- * @see page.tpl.php
+ * @see page.tpl.php.bak
  *
  * @ingroup print
  */

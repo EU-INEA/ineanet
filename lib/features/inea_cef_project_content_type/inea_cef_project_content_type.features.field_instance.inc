@@ -99,14 +99,18 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h4',
+        ),
+        'type' => 'title_linked',
         'weight' => 21,
       ),
       'print' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -121,7 +125,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cef_action_code',
-    'label' => 'Action number',
+    'label' => 'Number',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -329,7 +333,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -610,9 +614,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 37,
       ),
       'print' => array(
@@ -2624,7 +2627,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Action Description');
   t('Action Title');
-  t('Action number');
   t('Additional information');
   t('Beneficiary country');
   t('CEF 3rd Cntry');
@@ -2646,6 +2648,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Map');
   t('Maximum EU contribution');
   t('Member State(s)');
+  t('Number');
   t('ONLY for Telecom projects. "Call" field in GA');
   t('Old ID');
   t('Other beneficiaries');

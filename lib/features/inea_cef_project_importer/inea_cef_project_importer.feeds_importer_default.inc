@@ -226,7 +226,7 @@ function inea_cef_project_importer_feeds_importer_default() {
             'language' => 'und',
           ),
         ),
-        'update_existing' => '2',
+        'update_existing' => '1',
         'update_non_existent' => 'skip',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,

@@ -330,18 +330,6 @@ table .media .file .file-icon {
   font-weight: bold;
 }
 
-/* FRONT PAGE CURRENT - SPACING/MARGIN IN HEADER -lang selector and search block */
-/* .front .region-header-top #language-selector,
-.region-header-right #search-block-form .input-group  {
-  margin-right: 0 !important;
-}
-.front div.block.social-media div.content p {
-  margin: 0 0 !important;
-}
-.front .region-sidebar-right {
-  margin-top: 0 !important;
-}*/
-
 /* hide pdf icon on non h2020 projects */
 .node-type-project .print-pdf {
   display: none;

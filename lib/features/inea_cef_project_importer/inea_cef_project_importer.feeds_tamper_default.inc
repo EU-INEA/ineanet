@@ -34,9 +34,9 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->source = 'BENE_CTRY';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
@@ -50,9 +50,9 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->source = 'BENEFICIARIES';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
@@ -75,6 +75,18 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $export['inea_cef_project_importer-coordinator-explode'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inea_cef_project_importer-cost-array_filter';
+  $feeds_tamper->importer = 'inea_cef_project_importer';
+  $feeds_tamper->source = 'COST';
+  $feeds_tamper->plugin_id = 'array_filter';
+  $feeds_tamper->settings = array();
+  $feeds_tamper->weight = 3;
+  $feeds_tamper->description = 'Filter empty items';
+  $export['inea_cef_project_importer-cost-array_filter'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inea_cef_project_importer-cost-number_format';
@@ -86,12 +98,12 @@ function inea_cef_project_importer_feeds_tamper_default() {
     'dec_point' => '.',
     'thousands_sep' => ',',
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 4;
   $feeds_tamper->description = 'Format a number';
   $export['inea_cef_project_importer-cost-number_format'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inea_cef_project_importer-cost-rewrite';
   $feeds_tamper->importer = 'inea_cef_project_importer';
@@ -100,7 +112,7 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->settings = array(
     'text' => '€[cost]',
   );
-  $feeds_tamper->weight = 2;
+  $feeds_tamper->weight = 5;
   $feeds_tamper->description = 'Rewrite';
   $export['inea_cef_project_importer-cost-rewrite'] = $feeds_tamper;
 
@@ -114,7 +126,7 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->settings = array(
     'format' => '%s',
   );
-  $feeds_tamper->weight = 1;
+  $feeds_tamper->weight = 6;
   $feeds_tamper->description = 'Format string';
   $export['inea_cef_project_importer-cost-sprintf'] = $feeds_tamper;
 
@@ -182,9 +194,9 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->source = 'MS';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
@@ -203,6 +215,22 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->weight = 1;
   $feeds_tamper->description = 'Rewrite';
   $export['inea_cef_project_importer-ms-rewrite'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inea_cef_project_importer-pci-explode';
+  $feeds_tamper->importer = 'inea_cef_project_importer';
+  $feeds_tamper->source = 'PCI';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => '|',
+    'limit' => '',
+    'real_separator' => '|',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['inea_cef_project_importer-pci-explode'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
