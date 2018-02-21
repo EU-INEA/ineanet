@@ -66,6 +66,17 @@
   margin-bottom: 30px;
 }
 
+.node-type-inea-cef-project .group-footer .field-name-field-inea-cef-participants {
+  width: 50%;
+  float: left;
+}
+
+.node-type-inea-cef-project .group-footer .field-name-field-inea-cef-participant-country {
+  width: 45%;
+  float: left;
+}
+
+
 .node-type-inea-cef-project #page-title {
   font-weight: bold;
 }

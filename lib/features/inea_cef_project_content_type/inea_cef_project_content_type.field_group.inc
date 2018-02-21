@@ -14,6 +14,35 @@ function inea_cef_project_content_type_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_benes|node|inea_cef_project|default';
+  $field_group->group_name = 'group_benes';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'inea_cef_project';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Other Beneficiaries',
+    'weight' => '24',
+    'children' => array(
+      0 => 'field_inea_cef_participants',
+      1 => 'field_cef_participant_country',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Other Beneficiaries',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-benes field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_benes|node|inea_cef_project|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_cef_tags|node|inea_cef_project|form';
   $field_group->group_name = 'group_cef_tags';
   $field_group->entity_type = 'node';
@@ -96,6 +125,7 @@ function inea_cef_project_content_type_field_group_info() {
       5 => 'field_inea_cef_eu_percent',
       6 => 'field_inea_cef_participants',
       7 => 'field_cef_participant_country',
+      8 => 'field_inea_ener_beneficiaries',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -113,6 +143,7 @@ function inea_cef_project_content_type_field_group_info() {
   // Included for use with string extractors like potx.
   t('CEF Project fields');
   t('Diverse fields');
+  t('Other Beneficiaries');
   t('Tags');
 
   return $field_groups;
