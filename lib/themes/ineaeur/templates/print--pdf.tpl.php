@@ -63,7 +63,7 @@
  * @see theme_print_footer
  * @see theme_print_sourceurl
  * @see theme_print_url_list
- * @see page.tpl.php.bak
+ * @see page.tpl.php
  *
  * @ingroup print
  */

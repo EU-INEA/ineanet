@@ -44,7 +44,7 @@
  * - $menu_visible: Checking if the main menu is available in the
  *    region featured
  *
- * Page content (in order of occurrence in the default page.tpl.php):
+ * Page content (in order of occurrence in the default page.tpl.php.bak):
  * - $title_prefix (array): An array containing additional output populated by
  *   modules, intended to be displayed in front of the main title tag that
  *   appears in the template.
