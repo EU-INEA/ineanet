@@ -19,6 +19,7 @@ features[feeds_tamper][] = inea_cef_project_importer-cost-number_format
 features[feeds_tamper][] = inea_cef_project_importer-cost-rewrite
 features[feeds_tamper][] = inea_cef_project_importer-cost-sprintf
 features[feeds_tamper][] = inea_cef_project_importer-end_date-strtotime
+features[feeds_tamper][] = inea_cef_project_importer-enerbeneficiaries-explode
 features[feeds_tamper][] = inea_cef_project_importer-eu_contrib-number_format
 features[feeds_tamper][] = inea_cef_project_importer-eu_contrib-rewrite
 features[feeds_tamper][] = inea_cef_project_importer-eu_contrib-sprintf

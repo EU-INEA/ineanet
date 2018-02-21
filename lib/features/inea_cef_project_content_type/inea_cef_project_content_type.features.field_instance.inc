@@ -614,9 +614,10 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
+        'type' => 'text_default',
+        'weight' => 26,
       ),
       'print' => array(
         'label' => 'above',
@@ -681,7 +682,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -826,7 +827,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 35,
       ),
       'print' => array(
         'label' => 'above',
@@ -1197,7 +1198,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 36,
       ),
       'print' => array(
         'label' => 'above',
@@ -1238,7 +1239,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'colorbox',
         'settings' => array(
           'colorbox_caption' => 'auto',
@@ -1389,9 +1390,10 @@ function inea_cef_project_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
+        'type' => 'text_default',
+        'weight' => 25,
       ),
       'print' => array(
         'label' => 'above',
@@ -1456,7 +1458,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 21,
     ),
   );
 
@@ -1523,7 +1525,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 39,
       ),
       'print' => array(
         'label' => 'above',
@@ -1655,6 +1657,87 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-inea_cef_project-field_inea_ener_beneficiaries'.
+  $field_instances['node-inea_cef_project-field_inea_ener_beneficiaries'] = array(
+    'bundle' => 'inea_cef_project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'THIS FIELD ONLY FILLED FOR CEF-ENERGY FICHES',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_inea_ener_beneficiaries',
+    'label' => 'Beneficiaries',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'full_html_track' => 'full_html_track',
+          'plain_text' => 'plain_text',
+          'wiki' => 'wiki',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 5,
+            ),
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'full_html_track' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'wiki' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 20,
     ),
   );
 
@@ -1837,7 +1920,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 38,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1912,7 +1995,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 37,
       ),
       'print' => array(
         'label' => 'above',
@@ -2628,6 +2711,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Action Description');
   t('Action Title');
   t('Additional information');
+  t('Beneficiaries');
   t('Beneficiary country');
   t('CEF 3rd Cntry');
   t('CEF Transport mode');
@@ -2657,6 +2741,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Project(s) of Common Interest');
   t('Status');
   t('Summary');
+  t('THIS FIELD ONLY FILLED FOR CEF-ENERGY FICHES');
   t('This is just the ACTION_SECTOR without the dash in the middle');
   t('Transport Corridor');
   t('Transport mode');
