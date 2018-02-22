@@ -1,7 +1,0 @@
-name = Core search
-core = 7.x
-package = Inea
-features[features_api][] = api:2
-description = Core search
-multisite_version = 2.3
-php = 5.6
