@@ -662,6 +662,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -915,11 +916,11 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Summary (field_project_summary:format) */
-  $handler->display->display_options['sorts']['field_project_summary_format']['id'] = 'field_project_summary_format';
-  $handler->display->display_options['sorts']['field_project_summary_format']['table'] = 'field_data_field_project_summary';
-  $handler->display->display_options['sorts']['field_project_summary_format']['field'] = 'field_project_summary_format';
-  $handler->display->display_options['sorts']['field_project_summary_format']['order'] = 'DESC';
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -991,10 +992,11 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Summary (field_project_summary) */
-  $handler->display->display_options['sorts']['field_project_summary_value']['id'] = 'field_project_summary_value';
-  $handler->display->display_options['sorts']['field_project_summary_value']['table'] = 'field_data_field_project_summary';
-  $handler->display->display_options['sorts']['field_project_summary_value']['field'] = 'field_project_summary_value';
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -1039,6 +1041,12 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 HORIZONTAL PRIORITY';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';

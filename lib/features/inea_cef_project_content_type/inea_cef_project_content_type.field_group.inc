@@ -21,7 +21,7 @@ function inea_cef_project_content_type_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Other Beneficiaries',
+    'label' => 'Beneficiaries:',
     'weight' => '24',
     'children' => array(
       0 => 'field_inea_cef_participants',
@@ -29,7 +29,7 @@ function inea_cef_project_content_type_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Other Beneficiaries',
+      'label' => 'Beneficiaries:',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-benes field-group-fieldset',
@@ -141,9 +141,9 @@ function inea_cef_project_content_type_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Beneficiaries:');
   t('CEF Project fields');
   t('Diverse fields');
-  t('Other Beneficiaries');
   t('Tags');
 
   return $field_groups;
