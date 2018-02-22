@@ -567,7 +567,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['empty'] = 'No projects found.';
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Field: Content: Action number */
+  /* Field: Content: Number */
   $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
@@ -584,7 +584,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['empty'] = 'No projects found.';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Sort criterion: Content: Action number (field_cef_action_code) */
+  /* Sort criterion: Content: Number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -658,7 +658,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Action number (field_cef_action_code) */
+  /* Sort criterion: Content: Number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -724,7 +724,7 @@ function inea_cef_project_content_type_views_default_views() {
     5 => 0,
     6 => 0,
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-countryx/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-country/%';
 
   /* Display: CEF Projects by 1 ENERGY CORRIDOR */
   $handler = $view->new_display('page', 'CEF Projects by 1 ENERGY CORRIDOR', 'page_3');
@@ -773,7 +773,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-energy-corridorx/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-energy-corridor/%';
 
   /* Display: CEF Projects by 1 ENERGY SECTOR */
   $handler = $view->new_display('page', 'CEF Projects by 1 ENERGY SECTOR', 'page_5');
@@ -791,7 +791,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Field: Content: Action number */
+  /* Field: Content: Number */
   $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
@@ -808,7 +808,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['title']['empty'] = 'No project(s) found';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Action number (field_cef_action_code) */
+  /* Sort criterion: Content: Number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -849,7 +849,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-sectorx/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-sector/%';
 
   /* Display: CEF projects by 1 CALL YEAR */
   $handler = $view->new_display('page', 'CEF projects by 1 CALL YEAR', 'page_8');
@@ -859,7 +859,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Action number (field_cef_action_code) */
+  /* Sort criterion: Content: Number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
@@ -898,7 +898,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-yearx/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-year/%';
 
   /* Display: CEF Projects by 1 TRANSPORT CORRIDOR */
   $handler = $view->new_display('page', 'CEF Projects by 1 TRANSPORT CORRIDOR', 'page_2');
@@ -981,7 +981,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = '';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'cef_trans_corridor';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-transport-corridorx/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-transport-corridor/%';
 
   /* Display: CEF Projects by 1 TRANSPORT MODE */
   $handler = $view->new_display('page', 'CEF Projects by 1 TRANSPORT MODE', 'page_4');
@@ -1030,7 +1030,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-transport-modex/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-transport-mode/%';
 
   /* Display: CEF Projects by 1 HORIZONTAL PRIORITY */
   $handler = $view->new_display('page', 'CEF Projects by 1 HORIZONTAL PRIORITY', 'page_6');
@@ -1074,7 +1074,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-horizontal-priorityx/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-horizontal-priority/%';
 
   /* Display: CEF Projects by 1 DSI */
   $handler = $view->new_display('page', 'CEF Projects by 1 DSI', 'page_10');
@@ -1118,7 +1118,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-dsix/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-dsi/%';
   $export['new_cef_projects_by_tags'] = $view;
 
   $view = new view();
@@ -1578,7 +1578,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'country' => 'country',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-countryx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-country';
 
   /* Display: CEF Transport Projects by corridor */
   $handler = $view->new_display('page', 'CEF Transport Projects by corridor', 'page_1');
@@ -1680,7 +1680,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_trans_corridor' => 'cef_trans_corridor',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-corridorx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-corridor';
 
   /* Display: CEF Transport projects by horizontal priority */
   $handler = $view->new_display('page', 'CEF Transport projects by horizontal priority', 'page_2');
@@ -1733,7 +1733,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_horizontal_priority' => 'cef_horizontal_priority',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-horizontal-priorityx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-horizontal-priority';
 
   /* Display: CEF  Projects by year */
   $handler = $view->new_display('page', 'CEF  Projects by year', 'page_6');
@@ -1778,7 +1778,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_call_year' => 'cef_call_year',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-yearx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-year';
 
   /* Display: CEF Transport Projects by transport mode */
   $handler = $view->new_display('page', 'CEF Transport Projects by transport mode', 'page_3');
@@ -1865,7 +1865,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_transport_mode' => 'cef_transport_mode',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-modex';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-mode';
   $export['new_cef_transport_projects_by_vocabs'] = $view;
 
   $view = new view();
@@ -1966,7 +1966,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-countryx/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-country/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -1982,7 +1982,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'country' => 'country',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-countryx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-country';
 
   /* Display: CEF Energy Projects by corridor */
   $handler = $view->new_display('page', 'CEF Energy Projects by corridor', 'page_1');
@@ -2022,7 +2022,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-energy-corridorx/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-energy-corridor/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -2038,7 +2038,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_energy_corridor' => 'cef_energy_corridor',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-energy-corridorx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-energy-corridor';
 
   /* Display: CEF Energy Projects by sector */
   $handler = $view->new_display('page', 'CEF Energy Projects by sector', 'page_2');
@@ -2078,7 +2078,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-sectorx/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-sector/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -2094,7 +2094,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_energy_sector' => 'cef_energy_sector',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-sectorx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-sector';
 
   /* Display: CEF Energy Projects by year */
   $handler = $view->new_display('page', 'CEF Energy Projects by year', 'page_6');
@@ -2138,7 +2138,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-yearx/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-energy/projects-by-year/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -2153,7 +2153,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'cef_call_year' => 'cef_call_year',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-yearx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-year';
 
   /* Display: CEF Synergy Projects by country */
   $handler = $view->new_display('page', 'CEF Synergy Projects by country', 'page_3');
@@ -2197,7 +2197,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-synergy/projects-by-countryx/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-synergy/projects-by-country/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -2213,7 +2213,7 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'country' => 'country',
   );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-synergy/projects-by-countryx';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-synergy/projects-by-country';
   $export['new_inea_cef_projects_by_terms'] = $view;
 
   return $export;

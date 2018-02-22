@@ -11,6 +11,12 @@ stylesheets[all][] = "assets/css/europa.css"
 stylesheets[all][] = "css/print.css"
 stylesheets[all][] = "css/cef.css"
 stylesheets[all][] = "css/h2020.css"
+
+; ========================================
+; Regions
+; ========================================
+; here
+regions[header] = "Header"
 regions[header_top] = "Header Top"
 regions[header_right] = "Header Right"
 regions[featured] = "Featured"
@@ -23,5 +29,5 @@ regions[content] = "Content"
 regions[content_right] = "Content Right"
 regions[content_bottom] = "Content Bottom"
 regions[site_bottom] = "Site Bottom"
-regions[footer] = "Footer"
+regions[footer_middle] = "Footer"
 settings[shortcut_module_link] = 0

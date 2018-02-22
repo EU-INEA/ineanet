@@ -107,38 +107,38 @@ global $base_url;
   </div>-->
 
 <header class="ecl-site-header" role="banner">
-
     <div class="ecl-container">
-
-        <nav class="ecl-navigation-list-wrapper ecl-u-f-r">
-            <h2 class="ecl-u-sr-only">User menu</h2>
-            <ul class="ecl-navigation-list ecl-navigation-list--small">
-                <li class="ecl-navigation-list__item">
-                    <a class="ecl-navigation-list__link ecl-link" href="#">My
-                        workbench</a>
-                </li>
-                <li class="ecl-navigation-list__item">
-                    <a class="ecl-navigation-list__link ecl-link" href="#">My
-                        account</a>
-                </li>
-                <li class="ecl-navigation-list__item">
-                    <a class="ecl-navigation-list__link ecl-link" href="#">Log
-                        out</a>
-                </li>
-            </ul>
-        </nav>
+      <?php if ($logged_in): ?>
+          <nav class="ecl-navigation-list-wrapper ecl-u-f-r">
+              <h2 class="ecl-u-sr-only">User menu</h2>
+              <ul class="ecl-navigation-list ecl-navigation-list--small">
+                  <li class="ecl-navigation-list__item">
+                      <a class="ecl-navigation-list__link ecl-link"
+                         href="admin/workbench">My workbench</a>
+                  </li>
+                  <li class="ecl-navigation-list__item">
+                      <a class="ecl-navigation-list__link ecl-link" href="#">My
+                          account</a>
+                  </li>
+                  <li class="ecl-navigation-list__item">
+                      <a class="ecl-navigation-list__link ecl-link"
+                         href="ecas/logout">Log
+                          out</a>
+                  </li>
+              </ul>
+          </nav>
+      <?php endif; ?>
     </div>
-
     <div class="ecl-site-switcher ecl-site-switcher--header">
         <ul class="ecl-site-switcher__list ecl-container">
             <li class="ecl-site-switcher__option"><a
                         class="ecl-link ecl-site-switcher__link" href="#">Commission
-                    and its
-                    priorities</a></li>
-            <li
-                    class="ecl-site-switcher__option ecl-site-switcher__option--is-selected">
+                    and its priorities</a>
+            </li>
+            <li class="ecl-site-switcher__option ecl-site-switcher__option--is-selected">
                 <a class="ecl-link ecl-site-switcher__link" href="#">Policies,
-                    information and services</a></li>
+                    information and services</a>
+            </li>
         </ul>
     </div>
 
@@ -147,32 +147,193 @@ global $base_url;
         <a href="https://ec.europa.eu"
            class="ecl-logo ecl-logo--logotype ecl-site-header__logo"
            title="Home - European Commission">
-            <!--      <span class="ecl-u-sr-only">Home - European Commission</span>-->
-            <img alt="European Commission logo" id="banner-flag"
-                 src="<?php print $logo; ?>"/>
+            <span class="ecl-u-sr-only">Home - European Commission</span>
         </a>
-
-        <div class="ecl-lang-select-sites ecl-site-header__lang-select-sites">
-            <a href="#" class="ecl-lang-select-sites__link">
-                <span class="ecl-lang-select-sites__label">English</span>
+        <div class="ecl-language-list ecl-language-list--overlay ecl-site-header__language-list">
+            <div id="ecl-overlay-language-list"
+                 class="ecl-dialog__overlay ecl-dialog__overlay--blue"
+                 aria-hidden="true">
+            </div>
+            <div class="ecl-lang-select-sites ecl-link"
+                 data-ecl-dialog="ecl-dialog"
+                 id="ecl-lang-select-sites__overlay">
+                <a href="#" class="ecl-lang-select-sites__link">
+                    <span class="ecl-lang-select-sites__label">English</span>
                 <span class="ecl-lang-select-sites__code">
-      <span
-              class="ecl-icon ecl-icon--language ecl-lang-select-sites__icon"></span>
-      <span class="ecl-lang-select-sites__code-text">en</span>
-    </span>
-            </a>
+                    <span class="ecl-icon ecl-icon--language ecl-lang-select-sites__icon"></span>
+                    <span class="ecl-lang-select-sites__code-text">en</span>
+                 </span>
+                </a>
+            </div>
+
+            <div class="ecl-dialog ecl-dialog--transparent ecl-dialog--wide"
+                 id="ecl-dialog" aria-labelledby="ecl-dialog-title"
+                 aria-describedby="ecl-dialog-description" aria-hidden="true"
+                 role="dialog">
+                <h3 id="ecl-dialog-title"
+                    class="ecl-heading ecl-heading--h3 ecl-u-sr-only">
+                    Dialog</h3>
+                <div class="ecl-dialog__body">
+                    <section>
+                        <div>
+                            <div class="ecl-container">
+                                <div class="ecl-row">
+                                    <div class="ecl-col-lg-8 ecl-offset-lg-2">
+                                        <h2 lang="en"
+                                            class="ecl-heading ecl-heading--h2 ecl-dialog__title">
+                                            <span class="ecl-icon ecl-icon--generic-lang"></span>
+                                            Select your language
+                                        </h2>
+                                        <div class="ecl-row">
+                                            <div class="ecl-col-md-6">
+
+                                                <a href="index_bg"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="bg" hreflang="bg"
+                                                   rel="alternate">български</a>
+
+                                                <a href="index_cs"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="cs" hreflang="cs"
+                                                   rel="alternate">čeština</a>
+
+                                                <a href="index_da"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="da" hreflang="da"
+                                                   rel="alternate">dansk</a>
+
+                                                <a href="index_de"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="de" hreflang="de"
+                                                   rel="alternate">Deutsch</a>
+
+                                                <a href="index_et"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="et" hreflang="et"
+                                                   rel="alternate">eesti</a>
+
+                                                <a href="index_el"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="el" hreflang="el"
+                                                   rel="alternate">ελληνικά</a>
+
+                                                <a href="index_en"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button ecl-language-list__button--active"
+                                                   lang="en" hreflang="en"
+                                                   rel="alternate">English<span
+                                                            class="ecl-icon ecl-icon--check ecl-u-f-r"></span></a>
+
+                                                <a href="index_es"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="es" hreflang="es"
+                                                   rel="alternate">español</a>
+
+                                                <a href="index_fr"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="fr" hreflang="fr"
+                                                   rel="alternate">français</a>
+
+                                                <a href="index_ga"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="ga" hreflang="ga"
+                                                   rel="alternate">Gaeilge</a>
+
+                                                <a href="index_hr"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="hr" hreflang="hr"
+                                                   rel="alternate">hrvatski</a>
+
+                                                <a href="index_it"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="it" hreflang="it"
+                                                   rel="alternate">italiano</a>
+                                            </div>
+                                            <div class="ecl-col-md-6">
+
+                                                <a href="index_lv"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="lv" hreflang="lv"
+                                                   rel="alternate">latviešu</a>
+
+                                                <a href="index_lt"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="lt" hreflang="lt"
+                                                   rel="alternate">lietuvių</a>
+
+                                                <a href="index_hu"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="hu" hreflang="hu"
+                                                   rel="alternate">magyar</a>
+
+                                                <a href="index_mt"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="mt" hreflang="mt"
+                                                   rel="alternate">Malti</a>
+
+                                                <a href="index_nl"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="nl" hreflang="nl"
+                                                   rel="alternate">Nederlands</a>
+
+                                                <a href="index_pl"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="pl" hreflang="pl"
+                                                   rel="alternate">polski</a>
+
+                                                <a href="index_pt"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="pt-pt" hreflang="pt"
+                                                   rel="alternate">português</a>
+
+                                                <a href="index_ro"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="ro" hreflang="ro"
+                                                   rel="alternate">română</a>
+
+                                                <a href="index_sk"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="sk" hreflang="sk"
+                                                   rel="alternate">slovenčina</a>
+
+                                                <a href="index_sl"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="sl" hreflang="sl"
+                                                   rel="alternate">slovenščina</a>
+
+                                                <a href="index_fi"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="fi" hreflang="fi"
+                                                   rel="alternate">suomi</a>
+
+                                                <a href="index_sv"
+                                                   class="ecl-button ecl-button--default ecl-button--block ecl-language-list__button"
+                                                   lang="sv" hreflang="sv"
+                                                   rel="alternate">svenska</a>
+                                            </div>
+                                            <button class="ecl-message__dismiss ecl-message__dismiss--inverted">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
         </div>
 
-        <form class="ecl-search-form ecl-site-header__search">
+        <form action="http://ec.europa.eu/geninfo/query/index.do?"
+              class="ecl-search-form ecl-site-header__search">
             <label class="ecl-search-form__textfield-wrapper">
-                <span class="ecl-u-sr-only">Search this website</span>
+                <span class="ecl-u-sr-only">Search the Commission's websites</span>
 
-                <input
-                        type="search"
-                        class="ecl-text-input ecl-search-form__textfield"
-                        id="global-search"
-                        name="default-name"
-
+                <input type="search"
+                       class="ecl-text-input ecl-search-form__textfield"
+                       id="global-search"
+                       name="default-name"
                 />
             </label>
 
@@ -182,8 +343,7 @@ global $base_url;
         </form>
     </div>
 
-    <div
-            class="region-featured-wrapper <?php print ($has_responsive_sidebar ? 'sidebar-visible-sm' : ''); ?>">
+    <div class="region-featured-wrapper <?php print ($has_responsive_sidebar ? 'sidebar-visible-sm' : ''); ?>">
       <?php if ($menu_visible || $has_responsive_sidebar): ?>
           <div class="mobile-user-bar navbar navbar-default visible-xs"
                data-spy="affix" data-offset-top="82">
@@ -330,53 +490,38 @@ global $base_url;
         <div class="ecl-footer__site-identity">
             <div class="ecl-container">
                 <div class="ecl-row">
-                    <div class="ecl-col-sm ecl-footer__column">
+                    <div class="ecl-col-sm ecl-footer__column"
+                    <h4 class="ecl-h4">
+                        <a class="ecl-link ecl-footer__link" href="/"><b>INEA
+                                Home</b></a>
+                    </h4>
+                </div>
+                <div class="ecl-col-sm ecl-footer__column">
 
-                        <ul class="ecl-footer__menu">
-                            <li class="ecl-footer__menu-item">
-                                <a class="ecl-link ecl-footer__link"
-                                   href="https://ec.europa.eu/commission/priorities/digital-single-market_en">Digital single                                   single
-                                    market</a>
-                            </li>
-                            <li class="ecl-footer__menu-item">
-                                <a class="ecl-link ecl-footer__link"
-                                   href="https://ec.europa.eu/commission/priorities/energy-union-and-climate_en">Energy
-                                    union and climate</a>
-                            </li>
+                    <p class="ecl-footer__label">Follow us: </p>
+                    <p>
+                    <ul class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
+                        <li class="ecl-footer__menu-item">
+                            <a class="ecl-link ecl-footer__link"
+                               href="https://www.linkedin.com/company/3034908/"><span
+                                        class="ecl-icon ecl-icon--linkedin ecl-footer__social-icon"></span>LinkedIn</a>
+                        </li>
+                        <li class="ecl-footer__menu-item">
+                            <a class="ecl-link ecl-footer__link"
+                               href="https://twitter.com/inea_eu"><span
+                                        class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="ecl-col-sm ecl-footer__column">
 
-                            </li>
-                            <li class="ecl-footer__menu-item">
-                                <a class="ecl-link ecl-footer__link"
-                                   href="https://ec.europa.eu/commission/priorities/jobs-growth-and-investment_en">Jobs,
-                                    growth and investment</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="ecl-col-sm ecl-footer__column">
-                        <ul class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
-                            <li class="ecl-footer__menu-item">
-                                <a class="ecl-link ecl-footer__link"
-                                   href="https://www.linkedin.com/company/3034908/"><span
-                                            class="ecl-icon ecl-icon--linkedin"></span>LinkedIn</a>
-                            </li>
-                            <li class="ecl-footer__menu-item">
-                                <a class="ecl-link ecl-footer__link"
-                                   href="https://twitter.com/inea_eu"><span
-                                            class="ecl-icon ecl-icon--twitter"></span>Twitter</a>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="ecl-col-sm ecl-footer__column">
-
-                        <ul class="ecl-footer__menu ecl-list--unstyled">
-                            <li class="ecl-footer__menu-item">
-                                <a class="ecl-link ecl-footer__link"
-                                   href="mission-objectives/contact-us">Contact</a>
-                            </li>
-
-                        </ul>
-                    </div>
+                    <ul class="ecl-footer__menu ecl-list--unstyled">
+                        <li class="ecl-footer__menu-item">
+                            <a class="ecl-link ecl-footer__link"
+                               href="mission-objectives/contact-us">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -403,7 +548,8 @@ global $base_url;
                     </div>
                     <div class="ecl-col-sm ecl-footer__column">
 
-                        <h4 class="ecl-h4 ecl-footer__title">Follow the European
+                        <h4 class="ecl-h4 ecl-footer__title">Follow the
+                            European
                             Commission</h4>
 
                         <ul
@@ -426,7 +572,8 @@ global $base_url;
                     </div>
                     <div class="ecl-col-sm ecl-footer__column">
 
-                        <h4 class="ecl-h4 ecl-footer__title">European Union</h4>
+                        <h4 class="ecl-h4 ecl-footer__title">European
+                            Union</h4>
 
                         <ul class="ecl-footer__menu">
                             <li class="ecl-footer__menu-item">

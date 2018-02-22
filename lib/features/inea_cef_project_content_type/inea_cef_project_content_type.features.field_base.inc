@@ -682,6 +682,27 @@ function inea_cef_project_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_inea_ener_beneficiaries'.
+  $field_bases['field_inea_ener_beneficiaries'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_inea_ener_beneficiaries',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_inea_programme_text'.
   $field_bases['field_inea_programme_text'] = array(
     'active' => 1,
