@@ -14,6 +14,22 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inea_cef_project_importer-action_sector-explode';
+  $feeds_tamper->importer = 'inea_cef_project_importer';
+  $feeds_tamper->source = 'ACTION_SECTOR';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => '|',
+    'limit' => '',
+    'real_separator' => '|',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['inea_cef_project_importer-action_sector-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inea_cef_project_importer-action_title-required';
   $feeds_tamper->importer = 'inea_cef_project_importer';
   $feeds_tamper->source = 'ACTION_TITLE';
@@ -145,6 +161,22 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inea_cef_project_importer-ener_corridor-explode';
+  $feeds_tamper->importer = 'inea_cef_project_importer';
+  $feeds_tamper->source = 'ENER_CORRIDOR';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => '|',
+    'limit' => '',
+    'real_separator' => '|',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['inea_cef_project_importer-ener_corridor-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inea_cef_project_importer-enerbeneficiaries-explode';
   $feeds_tamper->importer = 'inea_cef_project_importer';
   $feeds_tamper->source = 'ENERBENEFICIARIES';
@@ -210,9 +242,9 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->source = 'MS';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
@@ -268,9 +300,9 @@ function inea_cef_project_importer_feeds_tamper_default() {
   $feeds_tamper->source = 'TRANS_CORRIDOR';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
-    'separator' => ',',
+    'separator' => '|',
     'limit' => '',
-    'real_separator' => ',',
+    'real_separator' => '|',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';

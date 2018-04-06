@@ -14,6 +14,37 @@ function inea_cef_project_content_type_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_bene_print_pdf|node|inea_cef_project|print';
+  $field_group->group_name = 'group_bene_print_pdf';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'inea_cef_project';
+  $field_group->mode = 'print';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Beneficiaries:',
+    'weight' => '22',
+    'children' => array(
+      0 => 'field_inea_cef_participants',
+      1 => 'field_cef_participant_country',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Beneficiaries:',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-bene-print-pdf field-group-div field-label',
+        'element' => 'h4',
+        'show_label' => '1',
+        'label_element' => 'h4',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_bene_print_pdf|node|inea_cef_project|print'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_benes|node|inea_cef_project|default';
   $field_group->group_name = 'group_benes';
   $field_group->entity_type = 'node';

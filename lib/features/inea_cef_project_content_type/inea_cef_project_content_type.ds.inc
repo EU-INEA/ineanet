@@ -181,8 +181,9 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
         21 => 'field_project_description',
       ),
       'footer' => array(
-        22 => 'field_inea_cef_participants',
-        23 => 'field_cef_participant_country',
+        22 => 'group_bene_print_pdf',
+        23 => 'field_inea_cef_participants',
+        24 => 'field_cef_participant_country',
       ),
     ),
     'fields' => array(
@@ -208,6 +209,7 @@ function inea_cef_project_content_type_ds_layout_settings_info() {
       'field_cef_action_code' => 'right',
       'field_inea_cef_map' => 'right',
       'field_project_description' => 'right',
+      'group_bene_print_pdf' => 'footer',
       'field_inea_cef_participants' => 'footer',
       'field_cef_participant_country' => 'footer',
     ),

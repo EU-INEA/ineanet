@@ -1,0 +1,11 @@
+/* Custom css for the INEA sub theme.
+   Styling of outgoing mail.
+*/
+
+.node-type-simplenews h1 {
+  color: #0065a2;
+  font-size: 20px;
+}
+.node-type-simplenews p {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
