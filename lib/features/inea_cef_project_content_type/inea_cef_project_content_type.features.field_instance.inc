@@ -2615,80 +2615,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-country-field_testpdf'.
-  $field_instances['taxonomy_term-country-field_testpdf'] = array(
-    'bundle' => 'country',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_testpdf',
-    'label' => 'testpdf',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'basic_html' => 'basic_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'full_html_track' => 'full_html_track',
-          'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'basic_html' => array(
-              'weight' => 5,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'full_html_track' => array(
-              'weight' => -9,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'wiki' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 33,
-    ),
-  );
-
   // Exported field_instance:
   // 'taxonomy_term-transport_mode-field_content_migration_info'.
   $field_instances['taxonomy_term-transport_mode-field_content_migration_info'] = array(
@@ -2827,7 +2753,6 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Transport corridor');
   t('Transport mode');
   t('cef term Image');
-  t('testpdf');
 
   return $field_instances;
 }
