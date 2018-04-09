@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_cef_project_content_type.features.field_base.inc
@@ -844,27 +843,6 @@ function inea_cef_project_content_type_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
-  );
-
-  // Exported field_base: 'field_testpdf'.
-  $field_bases['field_testpdf'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_testpdf',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 1,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
   );
 
   return $field_bases;

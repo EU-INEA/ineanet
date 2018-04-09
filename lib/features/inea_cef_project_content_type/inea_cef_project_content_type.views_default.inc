@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_cef_project_content_type.views_default.inc
