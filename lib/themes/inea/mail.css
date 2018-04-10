@@ -2,10 +2,16 @@
    Styling of outgoing mail.
 */
 
+#mimemail-body h1,
 .node-type-simplenews h1 {
   color: #0065a2;
   font-size: 20px;
 }
+#mimemail-body h2,
+.node-type-simplenews h2 {
+  display: none;
+}
+#mimemail-body p,
 .node-type-simplenews p {
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
