@@ -303,7 +303,8 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['field_inea_cef_action_sector2']['id'] = 'field_inea_cef_action_sector2';
   $handler->display->display_options['fields']['field_inea_cef_action_sector2']['table'] = 'field_data_field_inea_cef_action_sector2';
   $handler->display->display_options['fields']['field_inea_cef_action_sector2']['field'] = 'field_inea_cef_action_sector2';
-  $handler->display->display_options['fields']['field_inea_cef_action_sector2']['type'] = 'ds_taxonomy_view_mode';
+  $handler->display->display_options['fields']['field_inea_cef_action_sector2']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_inea_cef_action_sector2']['delta_offset'] = '0';
   /* Field: Content: All taxonomy terms */
   $handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
@@ -526,7 +527,7 @@ function inea_cef_project_content_type_views_default_views() {
   $view->description = 'CEF projects filtered by country, energy corridor, energy sector, call year and other tags';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'NEW CEF Projects by TAGS';
+  $view->human_name = 'NEW CEF Energy Projects by TAGS';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -642,6 +643,16 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = array(
+    37 => '37',
+    782 => '782',
+  );
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
 
   /* Display: CEF Projects by 1 COUNTRY */
   $handler = $view->new_display('page', 'CEF Projects by 1 COUNTRY', 'page_1');
@@ -665,27 +676,12 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = '%2';
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
   $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
@@ -697,35 +693,7 @@ function inea_cef_project_content_type_views_default_views() {
   );
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'inea_cef_project' => 'inea_cef_project',
-  );
-  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
-  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
-  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
-  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  $handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-  );
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-country/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-country/%';
 
   /* Display: CEF Projects by 1 ENERGY CORRIDOR */
   $handler = $view->new_display('page', 'CEF Projects by 1 ENERGY CORRIDOR', 'page_3');
@@ -741,27 +709,12 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
   $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = ' %2';
+  $handler->display->display_options['arguments']['tid_1']['title'] = ' %1';
   $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
@@ -774,7 +727,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-energy-corridor/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-energy-corridor/%';
 
   /* Display: CEF Projects by 1 ENERGY SECTOR */
   $handler = $view->new_display('page', 'CEF Projects by 1 ENERGY SECTOR', 'page_5');
@@ -815,29 +768,12 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['title'] = '%1 projects by country';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
   $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = '%2';
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
   $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
@@ -850,7 +786,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-sector/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-sector/%';
 
   /* Display: CEF projects by 1 CALL YEAR */
   $handler = $view->new_display('page', 'CEF projects by 1 CALL YEAR', 'page_8');
@@ -866,27 +802,12 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
   $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = ' %2';
+  $handler->display->display_options['arguments']['tid_1']['title'] = ' %1';
   $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
@@ -899,51 +820,23 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-year/%';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-year/%';
 
-  /* Display: CEF Projects by 1 TRANSPORT CORRIDOR */
-  $handler = $view->new_display('page', 'CEF Projects by 1 TRANSPORT CORRIDOR', 'page_2');
+  /* Display: CEF Projects by 1 DSI */
+  $handler = $view->new_display('page', 'CEF Projects by 1 DSI', 'page_10');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'CEF Projects by one TRANSPORT CORRIDOR';
-  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 TRANSPORT CORRIDOR';
+  $handler->display->display_options['title'] = '  CEF Projects by 1 DSI';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 DSI';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = 'Please note that the listing below is not exhaustive. More action information will be added as this website continues to be enhanced and updated.';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Number (field_cef_action_code) */
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = '%2';
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
   $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
@@ -951,7 +844,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
-    'cef_trans_corridor' => 'cef_trans_corridor',
+    'cef_dsi' => 'cef_dsi',
   );
   $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
@@ -976,157 +869,17 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = '';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'cef_trans_corridor';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-transport-corridor/%';
-
-  /* Display: CEF Projects by 1 TRANSPORT MODE */
-  $handler = $view->new_display('page', 'CEF Projects by 1 TRANSPORT MODE', 'page_4');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'CEF Projects by one Transport Mode';
-  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 TRANSPORT MODE';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Number (field_cef_action_code) */
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
+  /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = array(
+    37 => '37',
+    782 => '782',
   );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = '%2';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
-    'cef_transport_mode' => 'cef_transport_mode',
-  );
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-transport-mode/%';
-
-  /* Display: CEF Projects by 1 HORIZONTAL PRIORITY */
-  $handler = $view->new_display('page', 'CEF Projects by 1 HORIZONTAL PRIORITY', 'page_6');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '  CEF Projects by 1 HORIZONTAL PRIORITY';
-  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 HORIZONTAL PRIORITY';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Number (field_cef_action_code) */
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
-  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = '%2';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
-    'cef_horizontal_priority' => 'cef_horizontal_priority',
-  );
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-horizontal-priority/%';
-
-  /* Display: CEF Projects by 1 DSI */
-  $handler = $view->new_display('page', 'CEF Projects by 1 DSI', 'page_10');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '  CEF Projects by 1 DSI';
-  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 DSI';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'programmes' => 'programmes',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['title'] = '%2';
-  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
-    'cef_dsi' => 'cef_dsi',
-  );
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
-  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
-  $handler->display->display_options['path'] = 'connecting-europe-facility/%/projects-by-dsi/%';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-energy/projects-by-dsi/%';
   $export['new_cef_projects_by_tags'] = $view;
 
   $view = new view();
@@ -1244,6 +997,255 @@ function inea_cef_project_content_type_views_default_views() {
   );
   $handler->display->display_options['path'] = 'connecting-europe-facility/cef-synergy/projects-by-year';
   $export['new_cef_synergy_projects_by_vocabs'] = $view;
+
+  $view = new view();
+  $view->name = 'new_cef_telecom_projects_by_tags';
+  $view->description = 'CEF projects filtered by country, energy corridor, energy sector, call year and other tags';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'NEW CEF Telecom Projects by TAGS';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'CEF Projects by country';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No results';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No project(s) found!';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  /* Relationship: Content: Country (field_tag_country) */
+  $handler->display->display_options['relationships']['field_tag_country_tid']['id'] = 'field_tag_country_tid';
+  $handler->display->display_options['relationships']['field_tag_country_tid']['table'] = 'field_data_field_tag_country';
+  $handler->display->display_options['relationships']['field_tag_country_tid']['field'] = 'field_tag_country_tid';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Number */
+  $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['label'] = '';
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_cef_action_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cef_action_code']['empty'] = 'No projects found.';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'cef_energy_sector' => 'cef_energy_sector',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'inea_cef_project' => 'inea_cef_project',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = array(
+    39 => '39',
+  );
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
+
+  /* Display: CEF Projects by 1 COUNTRY */
+  $handler = $view->new_display('page', 'CEF Projects by 1 COUNTRY', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'CEF Projects by one country';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 COUNTRY';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'Please note that the listing below is not exhaustive. More action information will be added as this website continues to be enhanced and updated.';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'country' => 'country',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-telecom/projects-by-country/%';
+
+  /* Display: CEF projects by 1 CALL YEAR */
+  $handler = $view->new_display('page', 'CEF projects by 1 CALL YEAR', 'page_8');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'CEF Projects by 1 CALL YEAR';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 Call Year';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = ' %1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'cef_call_year' => 'cef_call_year',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-telecom/projects-by-year/%';
+
+  /* Display: CEF Projects by 1 DSI */
+  $handler = $view->new_display('page', 'CEF Projects by 1 DSI', 'page_10');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '  CEF Projects by 1 DSI';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 DSI';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'cef_dsi' => 'cef_dsi',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'inea_cef_project' => 'inea_cef_project',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = array(
+    39 => '39',
+  );
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-telecom/projects-by-dsi/%';
+  $export['new_cef_telecom_projects_by_tags'] = $view;
 
   $view = new view();
   $view->name = 'new_cef_telecom_projects_by_vocabs';
@@ -1527,6 +1529,303 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['name']['value'] = '2017';
   $handler->display->display_options['path'] = 'connecting-europe-facility/cef-telecom/projects-by-year';
   $export['new_cef_telecom_projects_by_vocabs'] = $view;
+
+  $view = new view();
+  $view->name = 'new_cef_transport_projects_by_tags';
+  $view->description = 'CEF projects filtered by country, energy corridor, energy sector, call year and other tags';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'NEW CEF-Transport Projects by TAGS';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'CEF Projects by country';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No results';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No project(s) found!';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  /* Relationship: Content: Country (field_tag_country) */
+  $handler->display->display_options['relationships']['field_tag_country_tid']['id'] = 'field_tag_country_tid';
+  $handler->display->display_options['relationships']['field_tag_country_tid']['table'] = 'field_data_field_tag_country';
+  $handler->display->display_options['relationships']['field_tag_country_tid']['field'] = 'field_tag_country_tid';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Number */
+  $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['label'] = '';
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_cef_action_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cef_action_code']['empty'] = 'No projects found.';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'country' => 'country',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'inea_cef_project' => 'inea_cef_project',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = array(
+    38 => '38',
+  );
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
+
+  /* Display: CEF Projects by 1 COUNTRY */
+  $handler = $view->new_display('page', 'CEF Projects by 1 COUNTRY', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'CEF Transport Projects by one country';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 COUNTRY';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'Please note that the listing below is not exhaustive. More action information will be added as this website continues to be enhanced and updated.';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-country/%';
+
+  /* Display: CEF projects by 1 CALL YEAR */
+  $handler = $view->new_display('page', 'CEF projects by 1 CALL YEAR', 'page_8');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'CEF Projects by 1 CALL YEAR';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 Call Year';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = ' %1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'cef_call_year' => 'cef_call_year',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-year/%';
+
+  /* Display: CEF Projects by 1 TRANSPORT CORRIDOR */
+  $handler = $view->new_display('page', 'CEF Projects by 1 TRANSPORT CORRIDOR', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'CEF Projects by one TRANSPORT CORRIDOR';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 TRANSPORT CORRIDOR';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'Please note that the listing below is not exhaustive. More action information will be added as this website continues to be enhanced and updated.';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'cef_trans_corridor' => 'cef_trans_corridor',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'inea_cef_project' => 'inea_cef_project',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = '';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'cef_trans_corridor';
+  /* Filter criterion: Content: Programme (field_inea_cef_action_sector2) */
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['value'] = array(
+    38 => '38',
+  );
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['vocabulary'] = 'programmes';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-corridor/%';
+
+  /* Display: CEF Projects by 1 TRANSPORT MODE */
+  $handler = $view->new_display('page', 'CEF Projects by 1 TRANSPORT MODE', 'page_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'CEF Projects by one Transport Mode';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 TRANSPORT MODE';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['arguments']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid_1']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['title'] = '%1';
+  $handler->display->display_options['arguments']['tid_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['vocabularies'] = array(
+    'cef_transport_mode' => 'cef_transport_mode',
+  );
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid_1']['validate']['fail'] = 'empty';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-transport-mode/%';
+
+  /* Display: CEF Projects by 1 HORIZONTAL PRIORITY */
+  $handler = $view->new_display('page', 'CEF Projects by 1 HORIZONTAL PRIORITY', 'page_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '  CEF Projects by 1 HORIZONTAL PRIORITY';
+  $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 HORIZONTAL PRIORITY';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['sorts']['field_cef_action_code_value']['order'] = 'DESC';
+  $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-horizontal-priority/%';
+  $export['new_cef_transport_projects_by_tags'] = $view;
 
   $view = new view();
   $view->name = 'new_cef_transport_projects_by_vocabs';
