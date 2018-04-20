@@ -67,15 +67,20 @@
 }
 
 .node-type-inea-cef-project .group-footer .field-name-field-inea-cef-participants {
-  width: 50%;
+  width: 83%;
   float: left;
 }
 
-.node-type-inea-cef-project .group-footer .field-name-field-inea-cef-participant-country {
-  width: 45%;
-  float: left;
+.node-type-inea-cef-project .group-footer .field-name-field-cef-participant-country {
+  width: 17%;
+  float: right;
 }
 
+div#content-wrapper div.node .group-footer .group-benes .field-name-field-inea-cef-participants .field-items .field-item  p,
+div#content-wrapper div.node .group-footer .group-benes .field-name-field-cef-participant-country .field-items .field-item  p {
+  font-size: 12px !important;
+  margin: 5px 0 0 0;
+}
 
 .node-type-inea-cef-project #page-title {
   font-weight: bold;

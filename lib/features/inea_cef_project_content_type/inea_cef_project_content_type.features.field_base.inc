@@ -148,6 +148,29 @@ function inea_cef_project_content_type_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_cef_dsipdf'.
+  $field_bases['field_cef_dsipdf'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_cef_dsipdf',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 1,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
   // Exported field_base: 'field_cef_energy_sector'.
   $field_bases['field_cef_energy_sector'] = array(
     'active' => 1,

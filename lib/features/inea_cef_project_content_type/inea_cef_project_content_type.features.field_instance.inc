@@ -2032,6 +2032,65 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-cef_dsi-field_cef_dsipdf'.
+  $field_instances['taxonomy_term-cef_dsi-field_cef_dsipdf'] = array(
+    'bundle' => 'cef_dsi',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cef_dsipdf',
+    'label' => 'cef dsipdf',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt pdf doc docx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'avportal' => 0,
+          'dailymotion' => 0,
+          'node' => 0,
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'elibrary_browser_tab--media_browser_1' => 'elibrary_browser_tab--media_browser_1',
+          'media_browser_plus--media_browser_my_files' => 0,
+          'media_browser_plus--media_browser_thumbnails' => 0,
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance:
   // 'taxonomy_term-cef_energy_corridor-field_cef_term_image'.
   $field_instances['taxonomy_term-cef_energy_corridor-field_cef_term_image'] = array(
@@ -2752,6 +2811,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('This is the field for other beneficiaries.');
   t('Transport corridor');
   t('Transport mode');
+  t('cef dsipdf');
   t('cef term Image');
 
   return $field_instances;

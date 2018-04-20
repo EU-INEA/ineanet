@@ -293,6 +293,10 @@ function inea_cef_project_content_type_views_default_views() {
       'label' => '',
     ),
   );
+  /* Field: Content: Number */
+  $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -409,12 +413,32 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title']['group'] = 0;
+  $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['label'] = 'Title contains';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  /* Filter criterion: Content: Number (field_cef_action_code) */
+  $handler->display->display_options['filters']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['field'] = 'field_cef_action_code_value';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['operator'] = 'contains';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_cef_action_code_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_cef_action_code_value']['expose']['operator_id'] = 'field_cef_action_code_value_op';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['expose']['label'] = 'Project number contains';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['expose']['operator'] = 'field_cef_action_code_value_op';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['expose']['identifier'] = 'field_cef_action_code_value';
+  $handler->display->display_options['filters']['field_cef_action_code_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    7 => 0,
+    6 => 0,
+  );
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -422,7 +446,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'inea_cef_project' => 'inea_cef_project',
   );
-  $handler->display->display_options['filters']['type']['group'] = 0;
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
@@ -440,7 +464,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '0';
-  $handler->display->display_options['filters']['promote']['group'] = 0;
+  $handler->display->display_options['filters']['promote']['group'] = 1;
   $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['promote']['expose']['label'] = 'Promoted';
   $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
@@ -449,8 +473,8 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '0';
-  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['value'] = 'All';
+  $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['exposed'] = TRUE;
   $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
@@ -470,6 +494,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['id'] = 'field_inea_cef_publish_tid';
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['table'] = 'field_data_field_inea_cef_publish';
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['field'] = 'field_inea_cef_publish_tid';
+  $handler->display->display_options['filters']['field_inea_cef_publish_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['expose']['operator_id'] = 'field_inea_cef_publish_tid_op';
   $handler->display->display_options['filters']['field_inea_cef_publish_tid']['expose']['label'] = 'CEF publish?';
@@ -492,6 +517,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['id'] = 'field_inea_cef_action_sector2_tid';
   $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['table'] = 'field_data_field_inea_cef_action_sector2';
   $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['field'] = 'field_inea_cef_action_sector2_tid';
+  $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['operator_id'] = 'field_inea_cef_action_sector2_tid_op';
   $handler->display->display_options['filters']['field_inea_cef_action_sector2_tid']['expose']['label'] = 'Programme from CEF Project';
@@ -1126,6 +1152,33 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = 'Please note that the listing below is not exhaustive. More action information will be added as this website continues to be enhanced and updated.';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Number */
+  $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['label'] = '';
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_cef_action_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cef_action_code']['empty'] = 'No projects found.';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Number (field_cef_action_code) */
   $handler->display->display_options['sorts']['field_cef_action_code_value']['id'] = 'field_cef_action_code_value';
@@ -1194,7 +1247,93 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['title'] = '  CEF Projects by 1 DSI';
   $handler->display->display_options['display_description'] = 'CEF Projects filtered by 1 DSI';
   $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No results';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No project(s) found!';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['empty']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'dsi term';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'cef_dsi' => 'cef_dsi',
+    'cef_call_year' => 0,
+    'cef_energy_corridor' => 0,
+    'cef_energy_sector' => 0,
+    'cef_horizontal_priority' => 0,
+    'cef_pci' => 0,
+    'project_status' => 0,
+    'cef_publish' => 0,
+    'cef_trans_corridor' => 0,
+    'cef_transport_mode' => 0,
+    'cef_tc' => 0,
+    'classification' => 0,
+    'corridor' => 0,
+    'country' => 0,
+    'dsi' => 0,
+    'ec_world_countries' => 0,
+    'common_interest' => 0,
+    'energy_type' => 0,
+    'faq_categories' => 0,
+    'h2020_field' => 0,
+    'media_folders' => 0,
+    'media_tags' => 0,
+    'news' => 0,
+    'newsletter' => 0,
+    'priority_project' => 0,
+    'programmes' => 0,
+    'project_years' => 0,
+    'resources' => 0,
+    'tags' => 0,
+    'transport_mode' => 0,
+    'type' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: cef dsipdf */
+  $handler->display->display_options['fields']['field_cef_dsipdf']['id'] = 'field_cef_dsipdf';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['table'] = 'field_data_field_cef_dsipdf';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['field'] = 'field_cef_dsipdf';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_cef_dsipdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['type'] = 'file_download_link';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['settings'] = array(
+    'text' => 'CEF Telecom: [file:name]',
+  );
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Number */
+  $handler->display->display_options['fields']['field_cef_action_code']['id'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['table'] = 'field_data_field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['field'] = 'field_cef_action_code';
+  $handler->display->display_options['fields']['field_cef_action_code']['label'] = '';
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_cef_action_code']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_cef_action_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cef_action_code']['empty'] = 'No projects found.';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['empty'] = 'No projects found.';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid_1']['id'] = 'tid_1';
@@ -1314,7 +1453,6 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
-  $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -1370,8 +1508,8 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['field_content_migration_info_value']['id'] = 'field_content_migration_info_value';
   $handler->display->display_options['filters']['field_content_migration_info_value']['table'] = 'field_data_field_content_migration_info';
   $handler->display->display_options['filters']['field_content_migration_info_value']['field'] = 'field_content_migration_info_value';
-  $handler->display->display_options['filters']['field_content_migration_info_value']['operator'] = '!=';
-  $handler->display->display_options['filters']['field_content_migration_info_value']['value'] = '0';
+  $handler->display->display_options['filters']['field_content_migration_info_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_content_migration_info_value']['value'] = 'ten';
   $handler->display->display_options['path'] = 'connecting-europe-facility/cef-telecom/projects-by-country';
 
   /* Display: CEF Telecom Projects by DSI */
@@ -1384,6 +1522,7 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = array(
     'field_term_image' => 'field_term_image',
     'name' => 'field_term_image',
+    'field_cef_dsipdf' => 'field_term_image',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -1391,10 +1530,17 @@ function inea_cef_project_content_type_views_default_views() {
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => '',
+      'separator' => '<br/>',
       'empty_column' => 0,
     ),
     'name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_cef_dsipdf' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -1432,12 +1578,24 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path'] = 'connecting-europe-facility/cef-telecom/projects-by-dsi/[name]';
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_type'] = 'strong';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: cef dsipdf */
+  $handler->display->display_options['fields']['field_cef_dsipdf']['id'] = 'field_cef_dsipdf';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['table'] = 'field_data_field_cef_dsipdf';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['field'] = 'field_cef_dsipdf';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['type'] = 'file_download_link';
+  $handler->display->display_options['fields']['field_cef_dsipdf']['settings'] = array(
+    'text' => '[file:name]',
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -1895,7 +2053,6 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
-  $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -1951,8 +2108,8 @@ function inea_cef_project_content_type_views_default_views() {
   $handler->display->display_options['filters']['field_content_migration_info_value']['id'] = 'field_content_migration_info_value';
   $handler->display->display_options['filters']['field_content_migration_info_value']['table'] = 'field_data_field_content_migration_info';
   $handler->display->display_options['filters']['field_content_migration_info_value']['field'] = 'field_content_migration_info_value';
-  $handler->display->display_options['filters']['field_content_migration_info_value']['operator'] = '!=';
-  $handler->display->display_options['filters']['field_content_migration_info_value']['value'] = '0';
+  $handler->display->display_options['filters']['field_content_migration_info_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_content_migration_info_value']['value'] = 'eleven';
   $handler->display->display_options['path'] = 'connecting-europe-facility/cef-transport/projects-by-country';
 
   /* Display: CEF Transport Projects by corridor */
@@ -2357,7 +2514,6 @@ Click on a corridor below to see the list of projects along it!
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
-  $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';

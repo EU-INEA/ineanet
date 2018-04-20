@@ -143,8 +143,7 @@ function inea_cef_project_importer_feeds_importer_default() {
             'source' => 'DSI',
             'target' => 'field_inea_cef_dsi',
             'term_search' => '0',
-            'autocreate' => 1,
-            'language' => 'und',
+            'autocreate' => 0,
           ),
           15 => array(
             'source' => 'START_DATE',
