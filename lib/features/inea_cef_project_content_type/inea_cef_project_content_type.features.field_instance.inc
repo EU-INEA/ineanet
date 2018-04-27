@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_cef_project_content_type.features.field_instance.inc
@@ -2059,7 +2058,7 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'avportal' => 0,
@@ -2085,8 +2084,23 @@ function inea_cef_project_content_type_field_default_field_instances() {
           'media_internet' => 'media_internet',
           'upload' => 'upload',
         ),
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => 31,
     ),
   );
@@ -2341,6 +2355,65 @@ function inea_cef_project_content_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-cef_trans_corridor-field_cor_pdf'.
+  $field_instances['taxonomy_term-cef_trans_corridor-field_cor_pdf'] = array(
+    'bundle' => 'cef_trans_corridor',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cor_pdf',
+    'label' => 'cor pdf',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt docx doc pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'avportal' => 0,
+          'dailymotion' => 0,
+          'node' => 0,
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'elibrary_browser_tab--media_browser_1' => 0,
+          'media_browser_plus--media_browser_my_files' => 0,
+          'media_browser_plus--media_browser_thumbnails' => 0,
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance:
   // 'taxonomy_term-cef_transport_mode-field_cef_term_image'.
   $field_instances['taxonomy_term-cef_transport_mode-field_cef_term_image'] = array(
@@ -2559,6 +2632,70 @@ function inea_cef_project_content_type_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-country-field_cntpdf'.
+  $field_instances['taxonomy_term-country-field_cntpdf'] = array(
+    'bundle' => 'country',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_cntpdf',
+    'label' => 'cntpdf',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 33,
     ),
   );
 
@@ -2813,6 +2950,8 @@ function inea_cef_project_content_type_field_default_field_instances() {
   t('Transport mode');
   t('cef dsipdf');
   t('cef term Image');
+  t('cntpdf');
+  t('cor pdf');
 
   return $field_instances;
 }

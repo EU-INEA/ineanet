@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * inea_cef_project_importer.feeds_importer_default.inc
@@ -49,7 +48,7 @@ function inea_cef_project_importer_feeds_importer_default() {
           0 => array(
             'source' => 'ACTION_TITLE',
             'target' => 'title',
-            'unique' => 1,
+            'unique' => 0,
             'language' => 'und',
           ),
           1 => array(
@@ -144,6 +143,7 @@ function inea_cef_project_importer_feeds_importer_default() {
             'target' => 'field_inea_cef_dsi',
             'term_search' => '0',
             'autocreate' => 0,
+            'language' => 'und',
           ),
           15 => array(
             'source' => 'START_DATE',
