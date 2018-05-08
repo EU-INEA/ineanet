@@ -1,6 +1,0 @@
-name = INEA Misc
-description = Custom INEA module for miscellaneous tasks
-package = inea
-core = 7.x
-php = 5.2.4
-multisite_version = 2.2
